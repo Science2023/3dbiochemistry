@@ -34,6 +34,11 @@ button:focus {
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
 
 
+  @font-face {
+    font-family: "Iransans";
+    src:url("  https://rawcdn.githack.com/Science2023/3dbiochemistry/c065b449096ea869cf626633f22ec986ffb81b6d/Iranian-Sans.woff")  format("woff"),
+   
+}
 
   @font-face {
     font-family: "Yekan";
@@ -106,11 +111,10 @@ margin-bottom:20px;
 position: sticky;
 top:15.1vh;
 left:30px;
-font-size:2vh;
+font-size:1.6vh;
 font-family: 'yekan';
 text-align: center;
-color:rgb(255, 255, 255);
-border-bottom: 1px solid yellow;
+color:yellow;
 display: flex;
 justify-content: center;
 margin-top:10px;
@@ -121,8 +125,8 @@ box-sizing: border-box;
 height:4vh; 
 backdrop-filter: blur(10px );
 -webkit-backdrop-filter: blur( 10px );
- background: rgba(255, 255, 255, 0.2);
- z-index: 20;
+background: rgba(0, 0, 0, 0.4);
+ z-index: 500;
  }
 
 
@@ -232,7 +236,7 @@ h1 span:nth-child(4){
         display: flex;
         text-align: center;
         justify-content: center;
-        font-size: 1.8vw;
+        font-size: 1.4vw;
         align-items: center;
         height:6vh;
         top:6vh;
@@ -291,14 +295,14 @@ h1 span:nth-child(4){
 .btnframe{
   flex:0 0 auto;
   display: flex;
-
+  font-family: 'Yekan';
   top: 5px;
   position: relative;
   justify-content: center;
   align-items: center;
   height: 70px;
   z-index:0;
-  width:300px
+  width:300px;
 
 }
 .light {
@@ -318,7 +322,7 @@ h1 span:nth-child(4){
 
 .link{
 	position: relative;
-  font-size: 10px;
+  font-size: 14px;
 bottom: 15px;
 	width: 90%;
 	height: 10px;
@@ -335,7 +339,7 @@ bottom: 15px;
 	letter-spacing: 1px;
 	text-decoration: none;
 	overflow: hidden;
-	color: #fff;
+	color: white;
 	font-weight: 400px;
 	z-index: 2;
 	transition: 0.5s;
@@ -375,7 +379,7 @@ bottom: 15px;
   z-index: -2;
 }
 .link.one::after{
-  background: linear-gradient(5deg, #ff1fff,transparent, #ff1fff);
+  background: linear-gradient(5deg, blue,transparent, blue);
   -webkit-mask: 
   linear-gradient(to right, rgb(255, 1, 1), rgb(51, 255, 0)) content-box, 
   linear-gradient(to right, rgb(255, 1, 1), rgb(51, 255, 0));
@@ -386,7 +390,7 @@ bottom: 15px;
  mask-composite: exclude;
 }
 .link.two::after{
-  background: linear-gradient(5deg, rgb(162, 2, 255),transparent, rgb(217, 2, 255));
+  background: linear-gradient(5deg, red,transparent, red);
   -webkit-mask: 
   linear-gradient(to right, rgb(255, 1, 1), rgb(51, 255, 0)) content-box, 
   linear-gradient(to right, rgb(255, 1, 1), rgb(51, 255, 0));
@@ -481,10 +485,14 @@ bottom: 15px;
 }
 
 .btnframe.active .link{
-	letter-spacing: 1.5px;
-  font-weight: bold;
+	letter-spacing:1.5px;
+  
 }
 
+#btnone{
+    margin-left: 50vw;
+
+  }
 
 
 .btnframe.active .light /*lightup button*/ {
@@ -501,14 +509,14 @@ top:10px
 
  /* 2*/
 #one{
-	background: #ff1fff;
-	box-shadow: 0 0 5px #ff1fff, 0 0 15px #ff1fff, 0 0 30px #ff1fff,
-		0 0 60px #ff1fff;
+	background: blue;
+	box-shadow: 0 0 5px blue, 0 0 15px blue, 0 0 30px blue,
+		0 0 60px blue;
 }
 #two{
-	background: #c11dda;
-	box-shadow: 0 0 5px #c11dda, 0 0 15px #c11dda, 0 0 30px #c11dda,
-		0 0 60px#c11dda;
+	background: red;
+	box-shadow: 0 0 5px red, 0 0 15px red, 0 0 30px red,
+		0 0 60px red;
 }
 
 #three {
@@ -1024,7 +1032,7 @@ z-index: 2;
   width:98%;
   margin:vw;
   box-shadow:2px 10px #008aff white inset;
-  border-radius: 10px;
+  border-radius: 5px;
  border: 1px solid rgba( 255, 255, 255, 0.5 );
   height:100%;
 }
@@ -1194,14 +1202,47 @@ box-sizing: border-box;
 width:100%;
 border-radius: 10px 10px 10px 10px;
 text-align:justify;
-background: rgba(0, 0, 0, 0.4);
+background: rgba(0, 0, 0, 0.1);
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.5 );
 text-justify:auto;
-display: inline-block;
+}
+.h1parrent{
+  position:relative;
+top:100px;
+padding: 0px;
+height:fit-content;
+box-sizing: border-box;
+width:100%;
+border-radius: 10px 10px 10px 10px;
+text-align:justify;
+background: rgba(0, 0, 0, 0.1);
+text-justify:auto;
+top:5px;
+width:100%;
+  position: relative;
+  display:grid;
+  margin:auto;color:white;
+  text-align:justify;
+  font-family: 'Estedad';
+  line-height: 250%;
+  font-size: 1.5vh;
+}
+@media all and (orientation: landscape) {
+  .h1parrent{
+    font-size: 1.5vw;
+  }
+
 }
 
+.glass{
+  width:100%;
+  position: relative;
+  display:grid;
+  backdrop-filter: blur(30px );
+  -webkit-backdrop-filter: blur( 30px );
+}
 
 
 .title{
@@ -1398,7 +1439,7 @@ align-items: center;
 }
 .blur{
   text-align:justify ;
-  background: rgba( 0, 0, 0, 0.4 );
+  background: rgba( 0, 0, 0, 0.1);
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 
 border-radius: 10px;
@@ -1410,7 +1451,7 @@ justify-content: center;
 
     .wrap{
   position: relative;
-  width: 80%;
+  width: 70%;
  height:60vh;
  display: flex;
  justify-content: center;
@@ -1469,6 +1510,10 @@ z-index: 2;
     align-items: center;
     top:5px;
     height: 40px;
+  
+  }
+  #btnone{
+    margin-left:;
 
   }
   .link{
@@ -2040,7 +2085,7 @@ top: 19.1vh;
 @media all and (orientation:landscape){
 
 .h2{
-    font-size:1.2vw;
+    font-size:1.4vw;
     background: rgba(255, 255, 255, 0.1);
     top:12vh;
     width:100%;
@@ -2806,6 +2851,7 @@ opacity:0
  section{
   z-index:2;
   transition: all 0.7s ease-in-out  ;
+
  }
  #musicmenu::-webkit-scrollbar {
     display: none;
@@ -3450,12 +3496,12 @@ background: rgba(0, 0, 0, 0.4);
   color:yellow;
   text-align: center;
   backdrop-filter: blur(10px );
-  -webkit-backdrop-filter: blur( 30px );
+  -webkit-backdrop-filter: blur( 10px );
   display:flex;
   align-items:center;
   justify-content:center;
   position:sticky;
-  top:11.1vh;
+  top:11vh;
   z-index:10}
     @media all and (orientation: landscape) {
 
@@ -3695,174 +3741,520 @@ background: rgba(0, 0, 0, 0.4);
     <button  id="voiceicon2"  id="voice-icon2" onmousedown="mouseDown()" onmouseup="mouseUp()"><img class="voice2" src="voice.png" ><input type="range"   min="0" max="100" value="100" class="slider2" style="display:block" id="volume-slider2"></button> 
 
   
-<section class=" titr one"    dir="rtl">
-
-<div class="maintitr" Style="z-index: 1000;">  مقدمه‌ای بر علم بیوشیمی </div>
-<div class="blur "  Style="top:5px" >
-  <div style="position:relative;z-index: 5;">
-    <div Style="width:100%;position: relative;display:grid;justify-content:center;backdrop-filter: blur(30px );-webkit-backdrop-filter: blur( 30px );">
-     <img class="pic" src="Picture55.png"><br>
-    </div>
-  </div>
-  <div style="position:relative;z-index: 5;">
-   <div class="h1">تاریخچه</div>
-   <div> 
-    <div Style="width:100%;position: relative;display:grid;backdrop-filter: blur(30px );-webkit-backdrop-filter: blur( 30px );">
-      <div class="text" style="position: relative;width:97%;margin:10px;color:white;text-align:justify;font-family: 'Estedad';line-height: 250%;" >
-        <span style="color:yellow" >●</span>بیشتر یافته ها در نیم قرن اخیر
-        <span style="color:yellow" >●</span>فردریک ولر:سنتز اوره(ماده آلی) از آمونیوم سیانات(ماده غیر آلی)
-        <span style="color:yellow" >●</span>ویتالیسم: سنتز ماده آلی فقط در موجود زنده و عدم تبعیت از قوانین شیمی و فیزیک
-        <span style="color:yellow" >●</span>هانس بوکنر:تخمیر قند به اتانول توسط عصاره مخمر کشته شده     (شروع آزمایشات In vitro  )
-        <span style="color:yellow" >●</span>جیمز سومنر:کریستالیزاسیون آنزیم اورئاز  ←  ساختار آنزیم ها با قوانین شیمی قابل تحلیل است
-        <span style="color:yellow" >●</span>رابرت هوک:مشاهده ی سلول زیر میکروسکوپ
-        <span style="color:yellow" >●</span>والتر فلمینگ:کشف کروموزوم
-        <span style="color:yellow" >●</span>مندل: ژن به عنوان واحد اطلاعات ژنتیکی
-        <span style="color:yellow" >●</span> فردریک میشر:استخراج ماده اسیدی از هسته سلول(نوکلئیک اسید)
-        <span style="color:yellow" >●</span> واتسون و کریک:شناسایی ساختار دابل هلیکس DNA   ← در هم تنیدن علوم بیوشیمی ،زیست سلولی و ژنتیک
-        <span style="color:yellow" >●</span>اختراع ابزارهای دقیق مطالعه سلول:میکروسکوپ الکترونی،دستگاه اشعه X و NMR 
-      </div>
-    </div>
-  </div>
-  </div>
-  <div style="position:relative;z-index: 5;">
-  <div class="h1">بیوشیمی علمی بین رشته‌ای</div>
-   <div> 
-    <div Style="width:100%;position: relative;display:grid;backdrop-filter: blur(30px );-webkit-backdrop-filter: blur( 30px );">
-      <div class="text" style="position: relative;width:97%;margin:10px;color:white;text-align:justify;font-family: 'Estedad';line-height: 250%;" >
-        <span style="color:yellow" >اشتراکات بیوشیمی با علوم دیگر:</span>
-        <span style="color:yellow" >●</span>شیمی آلی: توضیح ویژگی های بیومولکول ها
-        <span style="color:yellow" >●</span>شیمی فیزیک: ترمودینامیک،ویژگی های آب،ویژگی های الکتریکی واکنش های اکسایش-کاهش
-        <span style="color:yellow" >●</span>بیوفیزیک:ابزارهای فیزیکی برای مطالعه ساختار و عملکرد بیومولکول ها
-        <span style="color:yellow" >●</span>علوم پزشکی: درک مولکولی بیماری ها
-        <span style="color:yellow" >●</span>تغذیه: تحلیل متابولیسم با توضیح نیازهای غذایی برای سلامت بدن
-          <span style="color:yellow" >●</span>میکروبیولوژی: مطالعه ی ارگانیسم های تک سلولی به عنوان مدل های ساده برای بررسی مسیرهای متابولیک و مکانیسم های تنظیمی
-            <span style="color:yellow" >●</span>فیزیولوژی: بررسی فرایندهای حیاتی در سطوح بالاتر مثل بافت ،دستگاه و ارگانیسم
-              <span style="color:yellow" >●</span>زیست سلولی: تشریح تقسیم کار متابولیکی و مکانیکی در سلول
-                <span style="color:yellow" >●</span>ژنتیک: توضیح مکانیسم هایی که به سلول ها و ارگانیسم های خاص ویژگی های خاص بیوشیمیایی می دهد.
-                  <br><span style="color:yellow" >●</span>انحصارات بیوشیمی:
-                    <span style="color:yellow" >●</span>تمرکز بر ساختارها و واکنش های بیومولکول ها به خصوص آنزیم ها
-                      <span style="color:yellow" >●</span>تشریح مسیرهای متابولیکی و کنترل آن ها
-                        <span style="color:yellow" >●</span>مطالعه اصول فرایندهای حیاتی قابل درک توسط قوانین شیمی و فیزیک
-      </div>
-    </div>
-</div>
-</div>
-<div style="position:relative;z-index: 5;">
-  <div class="h1">نظریه های منشأ حیات</div>
-   <div> 
-    <div Style="width:100%;position: relative;display:grid;backdrop-filter: blur(30px );-webkit-backdrop-filter: blur( 30px );">
-      <div class="text" style="position: relative;width:97%;margin:10px;color:white;text-align:justify;font-family: 'Estedad';line-height: 250%;" >
-        C،H،O،N،P ،CaوS  حدود 90 % وزن خشک بدن انسان ، %70 اکثر موجودات آب، نظریه¬های آبیوژنز(Abiogenesis) و بیوژنز(Biogenesis) ،شروع دوران پریبیوتیک(پیش حیاتی):6/4 میلیاردسال پیش با پیدایش زمین ← شواهد فسیلی آغاز حیات 5/3 میلیارد سال پیش ← جو اولیه زمین دارای H<sub>2</sub>، NH<sub>3</sub>، CH<sub>4</sub>،CO<sub>2</sub>،H<sub>2</sub>O ← اپارین و هالدان: مدل سوپ بنیادین(تکامل شیمیایی مولکول های کربن دار): تشکیل مولکول¬های آلی(کربن¬دار)ساده مثل آمینواسیدها در اثر ماوراء¬بنفش خورشید و رعد¬و¬برق و پلیمریزاسیون مونومرهای اولیه در اقیانوس های گرم ← میلر و اوری:جرقه الکتریکی بر ترکیبی از H<sub>2</sub>، NH<sub>3</sub>، CH<sub>4</sub>،H<sub>2</sub>O   بعد از یک هفته:تشکیل مولکول های آلی ساده مثل برخی آمینواسیدها← مدل حباب:تشکیل مونومرها در حباب¬های تشکیل شده در اثر فوران محلول-های داغ سولفیدهای فلزی از شکاف های کف اقیانوس ها ← کاتالیز پلیمریزاسیون مونومرها توسط مواد معدنی و تبدیل سیستم انتخاب رندوم به سیستم مبتنی بر الگو در اثر تشکیل گروه های عامل مکمل(مثل جفت شدن بازهای DNA)
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<br><br>
-<br>
-<br>
-<br>
-
-</section>
-<section class=" titr two"    dir="rtl">
-
-<div class="maintitr" Style="z-index: 1000;">  مبانی شیمیایی</div>
-<div class="blur "  Style="top:5px" >
-<div style="position:relative;z-index: 5;">
-  <div class="h1">عناصر سازنده موجودات زنده</div>
-  <div> 
-   <div Style="width:100%;position: relative;display:grid;backdrop-filter: blur(30px );-webkit-backdrop-filter: blur( 30px );">
-     <div class="text" style="position: relative;width:97%;margin:10px;color:white;text-align:justify;font-family: 'Estedad';line-height: 250%;" >
-       C،H،O،N،P ،CaوS  حدود 90 % وزن خشک بدن انسان ، %70 اکثر موجودات آب، نظریه¬های آبیوژنز(Abiogenesis) و بیوژنز(Biogenesis) ،شروع دوران پریبیوتیک(پیش حیاتی):6/4 میلیاردسال پیش با پیدایش زمین ← شواهد فسیلی آغاز حیات 5/3 میلیارد سال پیش ← جو اولیه زمین دارای H<sub>2</sub>، NH<sub>3</sub>، CH<sub>4</sub>،CO<sub>2</sub>،H<sub>2</sub>O ← اپارین و هالدان: مدل سوپ بنیادین(تکامل شیمیایی مولکول های کربن دار): تشکیل مولکول¬های آلی(کربن¬دار)ساده مثل آمینواسیدها در اثر ماوراء¬بنفش خورشید و رعد¬و¬برق و پلیمریزاسیون مونومرهای اولیه در اقیانوس های گرم ← میلر و اوری:جرقه الکتریکی بر ترکیبی از H<sub>2</sub>، NH<sub>3</sub>، CH<sub>4</sub>،H<sub>2</sub>O   بعد از یک هفته:تشکیل مولکول های آلی ساده مثل برخی آمینواسیدها← مدل حباب:تشکیل مونومرها در حباب¬های تشکیل شده در اثر فوران محلول-های داغ سولفیدهای فلزی از شکاف های کف اقیانوس ها ← کاتالیز پلیمریزاسیون مونومرها توسط مواد معدنی و تبدیل سیستم انتخاب رندوم به سیستم مبتنی بر الگو در اثر تشکیل گروه های عامل مکمل(مثل جفت شدن بازهای DNA)
-     </div>
-   </div>
- </div>
-</div>
-<div style="position:relative;z-index: 5;">
-  <div class="h1">پیوندهای شیمیایی موجود در بیومولکول ها</div>
-  <div> 
-   <div Style="width:100%;position: relative;display:grid;backdrop-filter: blur(30px );-webkit-backdrop-filter: blur( 30px );">
-     <div class="text" style="position: relative;width:97%;margin:10px;color:white;text-align:justify;font-family: 'Estedad';line-height: 250%;" >
-        <span style="color:yellow"> ۱-کوالانسی:</span> اشتراک الکترون های لایه ظرفیت اتم ها.مثال:
-        <br> پیوند کربن با چهار اتم دیگر ((مثل متان)):ساختار چهار وجهی یا تتراهدرون
-
-        <div class="wrap">
-          <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/methane.html" allowfullscreen="true">   
-            </iframe>
-        </div><br>
-         پیوند یگانه کربن-کربن: هر کربن یک ساختار چهار وجهی  (مثل اتان)<br>
-          در مولکول های آلی مثل گلوکز هر کربن با چهار پیوند یگانه دارای ساختار چهار وجهی با گروه متصل به آن است یعنی با وصل کردن اتم های متصل به کربن با یکدیگر یک شکل چهاروجهی بدست می آید<br>
-        <div class="wrap">
-            <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/ethane.html" allowfullscreen="true">
-            </iframe><br>
-
-        </div>
-        <div class="wrap" style="width: 98%;">
-          <p style="text-align: justify;display: flex;right:0px;">مولکول گلوکز:دقت کنید هر اتم کربن(آبی) دارای ساختار چهار وجهی با چهار اتم متصل به آن است و به همین دلیل کونفورماسیون های قایق و صندلی در گلوکز شکل میگیرد</p><br>
-
-          <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/Glucose.html" allowfullscreen="true">
-          </iframe><br>
-
-      </div>
-        پیوند دوگانه کربن-کربن<br>
-
-        <div class="wrap">
-            <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/ethene.html" allowfullscreen="true">
-            </iframe>
+<section class="titr one" id="titrone" dir="rtl" >
+      <div class="maintitr" style="z-index: 1000;">  مقدمه‌ای بر علم بیوشیمی </div>
+      <div class="blur "  Style="top:5px" >
+        <div style="position:relative;z-index: 5;">
+          <div Style="width:100%;position: relative;display:grid;justify-content:center;backdrop-filter: blur(10px );-webkit-backdrop-filter: blur( 15px );">
+           <img class="pic" src="Picture55.png"><br> 
           </div>
+        </div>
+          
+        <div style="position:relative;z-index: 5;">
+          <div class="h1">تاریخچه</div>
+          <div> 
+            <div class="glass">
+              <div class="text" style="position: relative;width:97%;margin:10px;color:white;text-align:justify;font-family: 'Estedad';line-height: 250%;z-index: 5" >
+               <span style="color:yellow">●</span>بیشتر یافته ها در نیم قرن اخیر
+               <span style="color:yellow">●فردریک ولر: </span>سنتز اوره(ماده آلی) از آمونیوم سیانات(ماده غیر آلی)
+               <span style="color:yellow">●ویتالیسم: </span>سنتز ماده آلی فقط در موجود زنده و عدم تبعیت از قوانین شیمی و فیزیک
+               <span style="color:yellow">●هانس بوکنر: </span>تخمیر قند به اتانول توسط عصاره مخمر کشته شده←شروع آزمایشاتvitro  In
+               <span style="color:yellow">●جیمز سومنر: </span>کریستالیزاسیون آنزیم اورئاز  ← ساختار آنزیم ها با قوانین شیمی قابل تحلیل است
+               <span style="color:yellow">●رابرت هوک: </span>مشاهده ی سلول زیر میکروسکوپ
+               <span style="color:yellow">●والتر فلمینگ: </span>کشف کروموزوم
+               <span style="color:yellow">●مندل: </span>معرفی ژن به عنوان واحد اطلاعات ژنتیکی
+               <span style="color:yellow">●فردریک میشر: </span>استخراج ماده اسیدی از هسته سلول(نوکلئیک اسید)
+               <span style="color:yellow">●واتسون و کریک: </span>شناسایی ساختار دابل هلیکس DNA  ← در هم تنیدن علوم بیوشیمی؛زیست سلولی و ژنتیک 
+               <span style="color:yellow">●</span>اختراع ابزارهای دقیق مطالعه سلول:میکروسکوپ الکترونی،دستگاه اشعه X و NMR
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+          
+        <div style="position:relative;z-index: 5;">
+         <div class="h1">بیوشیمی علمی بین رشته‌ای</div>
+          <div> 
+            <div class="glass">
+              <div class="text" style="position: relative;width:97%;margin:10px;color:white;text-align:justify;font-family: 'Estedad';line-height: 250%;" >
+               <span style="color:yellow"> اشتراکات بیوشیمی با علوم دیگر:</span><br>
+               <span style="color:yellow">●شیمی آلی: </span>توضیح ویژگی های بیومولکول ها
+               <span style="color:yellow">●شیمی فیزیک: </span>ترمودینامیک،ویژگی های آب،ویژگی های الکتریکی واکنش های اکسایش-کاهش
+               <span style="color:yellow">●بیوفیزیک: </span>ابزارهای فیزیکی برای مطالعه ساختار و عملکرد بیومولکول ها
+               <span style="color:yellow">●علوم پزشکی: </span>درک مولکولی بیماری ها
+               <span style="color:yellow">●تغذیه: </span>تحلیل متابولیسم با توضیح نیازهای غذایی برای سلامت بدن
+               <span style="color:yellow">●میکروبیولوژی: </span>مطالعه ی ارگانیسم های تک سلولی به عنوان مدل های ساده برای بررسی مسیرهای متابولیک و مکانیسم های تنظیمی
+               <span style="color:yellow">●فیزیولوژی: </span>بررسی فرایندهای حیاتی در سطوح بالاتر مثل بافت ،دستگاه و ارگانیسم
+               <span style="color:yellow">●زیست سلولی: </span>تشریح تقسیم کار متابولیکی و مکانیکی در سلول
+               <span style="color:yellow">●ژنتیک: </span>توضیح مکانیسم هایی که به سلول ها و ارگانیسم های خاص ویژگی های خاص بیوشیمیایی می دهد.<br>
+               <span style="color:yellow"> انحصارات بیوشیمی:</span><br>
+               <span style="color:yellow">●</span>تمرکز بر ساختارها و واکنش های بیومولکول ها به خصوص آنزیم ها
+               <span style="color:yellow">●</span>تشریح مسیرهای متابولیکی و کنترل آن ها
+               <span style="color:yellow">●</span>مطالعه اصول فرایندهای حیاتی قابل درک توسط قوانین شیمی و فیزیک
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="position:relative;z-index: 5;">
+         <div class="h1">نظریه های منشأ حیات</div>
+          <div>
+            <div class="glass">
+              <div class="text" style="position: relative;width:97%;margin:10px;color:white;text-align:justify;font-family: 'Estedad';line-height: 250%;" >
+               کربن،هیدروژن،اکسیژن،نیتروژن،فسفر ،کلسیم وگوگرد تشکیل دهنده حدود 90 % وزن خشک بدن انسان ، %70 اکثر موجودات زنده از آب<br>
+               نظریه آبیوژنز(Abiogenesis) :موجودات زنده می توانند از مواد غیر زنده تشکیل شوند<br>
+               نظریه بیوژنز(Biogenesis) : موجودات زنده  فقط از موجودات زنده به وجود می‌آیند <br>
+               <span style="color:yellow">● شروع دوران پریبیوتیک(پیش حیاتی):</span>6/4 میلیاردسال پیش با پیدایش زمین  <span style="color:yellow">● شواهد فسیلی آغاز حیات: </span>5/3 میلیارد سال پیش ← جو اولیه زمین دارای گازهای  H<sub>2</sub>، NH<sub>3</sub>، CH<sub>4</sub>،CO<sub>2</sub>،H<sub>2</sub>O ←  <span style="color:yellow">● اپارین و هالدان: </span>مدل سوپ بنیادین(تکامل شیمیایی مولکول های کربن دار)← تشکیل مولکول های آلی(کربن دار)ساده مثل آمینواسیدها در اثر ماوراء بنفش خورشید و رعد و برق و پلیمریزاسیون مونومرهای اولیه در اقیانوس های گرم ← <span style="color:yellow">● میلر و اوری:</span>جرقه الکتریکی بر ترکیبی از H<sub>2</sub>، NH<sub>3</sub>، CH<sub>4</sub>،H<sub>2</sub>O    بعد از یک هفته:تشکیل مولکول های آلی ساده مثل برخی آمینواسیدها← <span style="color:yellow">● مدل حباب: </span>تشکیل مونومرها در حباب های تشکیل شده در اثر فوران محلول های داغ سولفیدهای فلزی از شکاف های کف اقیانوس ها ← کاتالیز پلیمریزاسیون مونومرها توسط مواد معدنی و تبدیل سیستم انتخاب رندوم به سیستم مبتنی بر الگو در اثر تشکیل گروه های عامل مکمل(مثل جفت شدن بازهای DNA)
+              </div>
+            </div>
+          </div>
+        </div>
+    
+    
+        <div style="position:relative;z-index: 5;">
+          <div class="h1"> ویژگی های موجودات زنده</div>
+          <div>
+            <div class="glass" >
+              <div class="text" style="position: relative;width:97%;margin:10px;color:white;text-align:justify;font-family: 'Estedad';line-height: 250%;" >
+               <span style="color:yellow">●</span>پیچیدگی و نظم بسیار بالا<span style="color:yellow">●</span>هماهنگی ساختار و عملکرد از سطح مولکولی تا سطح اندام <span style="color:yellow">●</span>دریافت و تبدیل انرژی برای حفظ نظم ساختاری <span style="color:yellow">●</span>حامل های انرژی مثل ATP و NADH<span style="color:yellow">●</span>منبع اصلی انرژی:خورشید(خورشید←فتوسنتزکنندگان←گیاهخواران←گوشتخواران )
+               <span style="color:yellow">●</span>عدم تعادل با محیط با مصرف انرژی برای حفظ نظم و فعالیت درونی (حالت ثابت پویا) <span style="color:yellow">●</span>خودهمانندسازی با دقت بالا اما گاهی دارای خطا (جهش)← <span style="color:yellow">● نکته: </span> جهش پیش نیاز انتخاب طبیعی <span style="color:yellow">●</span>بیوسفر(اکوسفر): مجموع کل اکوسیستم ها ← سیستمی با جریان انرژی 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+    </section>
+    
+<section class=" titr two" id="titrtwo"  style="box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+" dir="rtl">
+<div class="border" style="border-radius: 10px;border: 1px solid rgba( 255, 255, 255, 0.5 );">
+ <div class="maintitr" Style="z-index: 1000;">  مبانی شیمیایی</div>
+  <div class="h1parrent">
+    <div class="h1" >پیوندهای شیمیایی موجود در بیومولکول ها</div>
+     <div class="content" style="  backdrop-filter: blur(30px );-webkit-backdrop-filter: blur( 30px );">
+            <span style="color:yellow"> ۱-کوالانسی:</span> اشتراک الکترون های لایه ظرفیت اتم ها
+            <br><span style="color:yellow">● پیوند یگانه(اشتراک یک جفت الکترون)</span>
+            <br>
         
-        <span style="color:yellow"> ۲-یونی:</span>نیروی جاذبه بین یون های مثبت و منفی.مثال: نیروهای یونی بین آمینواسیدهای مثبت و منفی در ساختار سوم پروتئین ها<br>
-        <div class="wrap">
-          <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/Ionic bond.html" allowfullscreen="true">   
-            </iframe>
-        </div><br>
-       یون:اتم یا مولکولی که مجموع تعداد الکترون ها کمتر یا بیشتر از تعداد پروتون هاست<br>
-       <span style="color:yellow">  ۳-واندروالسی</span><br>
-       برهم کنش های دوقطبی-دوقطبی:نیروی بین مولکول های دارای دو قطب با بار جزئی مثبت و منفی به علت تمایل بیشتر الکترون ها به یک سمت مولکول(یون نیستند!)<br>
-       مثال:نیروهای دوقطبی-دوقطبی بین مولکول های استون <br>
-       <div class="wrap" style="text-align: justify;width:97%">
-        <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/acetone.html" allowfullscreen="true">   
-          </iframe>
-      </div><br>
-       نکته: پیوند هیدروژنی نوع خاصی از نیروهای دوقطبی-دوقطبی بین هیدروژن متصل به یک اتم الکترونگاتیو با پیوند کوالانسی (N،O و Fمثل )و یک اتم الکترونگاتیو دیگر<br>
-       مثال۱:پیوندهای هیدروژنی ساختار بتا-شیت(صفحه بتا) پروتئین ها<br>
+               
+            <span style="color:yellow">● پیوند دوگانه( اشتراک دو جفت الکترون):</span>      کوتاه تر و محکم تر از پیوند یگانه و دارای محدودیت چرخش
 
-       <div class="wrap" style="text-align: justify;width:97%">
-        <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/Hydrogenbond1.html" allowfullscreen="true">   
-          </iframe>
-      </div><br>
-      مثال ۲: پیوند هیدروژنی بین مولکول های آب<br>
-       نیروهای نشری خطی لاندون<br> 
+          
+          
+            <span style="color:yellow"> ۲-یونی:</span>نیروی جاذبه بین یون های مثبت و منفی
+             <br>مثال: نیروهای یونی بین آمینواسیدهای مثبت و منفی در ساختار سوم پروتئین ها<br>
+          <div class="wrap">
+              <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/Ionic bond.html" allowfullscreen="true"></iframe>
+          </div><br>
 
+            <span style="color:yellow">● یون:</span>اتم یا مولکولی که مجموع تعداد الکترون ها کمتر یا بیشتر از تعداد پروتون هاست<br>
+            <span style="color:yellow">● تفاوت دو قطبی و یون:</span>در یون یک الکترون به صورت کامل به اتم یا مولکول اضافه یا کم شده و یون یا بار منفی دارد و یا بار مثبت اما در دو قطبی ابر الکترونی اطراف اتم یا مولکول(مثل آب) به یک طرف جابجا شده و باعث ایجاد دو قطب با بارهای جزئی مثبت و منفی شده است
+            <br>
+            <span style="color:yellow">   ۳-واندروالسی (نیروهای یون-دو قطبی ، دوقطبی-دوقطبی و نیروهای نشری خطی لاندون):</span>نیروی جاذبه ضعیف بین اتم ها یا مولکول های  دو قطبی دائمی یا لحظه ای(در مولکول های غیر قطبی) <br>
+            <span style="color:yellow">● نکته:</span>
+            اگر در یک مولکول بزرگ مثل پروتئین تعداد زیادی برهمکنش واندروالسی وجود داشته باشد باعث ایجاد نیروی قوی می شود که ساختار و عملکرد مولکول را تحت تاثیر قرار می
+            دهد <br>
+           <span style="color:yellow"> ●برهم کنش‌های یون-دو قطبی: </span>نیروی جاذبه بین یک یون و یک دو قطبی<br>
+           <span style="color:yellow"> ●برهم کنش‌های دو قطبی-دو قطبی:</span>
+           نیروی بین دو مولکول دو قطبی<br>
+           مثال:نیروهای دوقطبی-دوقطبی بین مولکول های استون <br>
+
+          <div class="wrap" style="text-align: justify;width:60%">
+             <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/acetone.html"    allowfullscreen="true">   
+             </iframe>
+          </div><br>
+            <span style="color:yellow">● نکته:</span>
+            پیوند هیدروژنی نوع خاصی از نیروهای دوقطبی-دوقطبی بین هیدروژن متصل به یک اتم الکترونگاتیو با پیوند کوالانسی (N،O و Fمثل )و یک اتم الکترونگاتیو دیگر<br>
+            مثال۱:پیوندهای هیدروژنی ساختار بتا-شیت(صفحه بتا) پروتئین ها<br>
+
+          <div class="wrap" style="text-align: justify;width:97%">
+              <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/Hydrogenbond1.html" allowfullscreen="true">   
+              </iframe>
+          </div><br>
+            مثال ۲: پیوند هیدروژنی بین مولکول های آب<br>
+            <span style="color:yellow">● نیروهای لاندون:</span>
+            نیروی جاذبه بین دوقطبی های لحظه ای ایجاد شده در اثر دافعه الکترون های اتم های مجاور یکدیگر<br> 
+          <div class="wrap"> 
+              <iframe class="iframe"  width="640" height="480"  id="iframe" frameborder="0" allowfullscreen mozallowfullscreen="true"       webkitallowfullscreen="true" allow="autoplay; fullscreen;" src="https://sketchfab.com/models/e4cc1963c90941b4b8f8dc71b85d8421/embed"> </iframe> 
+          </div>
+        </div>
+    
+  </div>
+  
+     <div class="h1parrent">
+       <div class="h1" > بیومولکول ها</div>
+        <div class="content" style="  backdrop-filter: blur(30px );-webkit-backdrop-filter: blur( 30px );padding: 5px;;">
+               <span style="color:yellow">● کربن: </span>مهمترین عنصر موجودات زنده شامل بیش از نصف وزن خشک سلول‌ها ، توانایی تشکیل پیوندهای یگانه (با اتم های مختلف مثل هیدروژن و یا کربن دیگر)، دوگانه (با اکسیژن و نیتروژن) و سه گانه (با یک کربن دیگر) ، تشکیل زنجیره‌های خطی ، زنجیره‌های منشعب و ساختارهای حلقوی ، تنوع پیوندی با خود و دیگر عناصر←دلیل اصلی انتخاب  ترکیبات کربن  به عنوان ماشین سلولی (عدم توانایی عناصر دیگر برای تشکیل مولکول‌های متنوع از نظر حجم ، شکل و ترکیب مثل کربن) ،  بیشتر بیومولکول‌ها مشتقات هیدروکربن‌ها (جایگزینی اتم‌های هیدروژن با گروه‌های عاملی دارای خواص شیمیایی: ایجاد خانواده‌های مختلف ترکیبات ارگانیک)  <span style="color:yellow">● مثال: </span> الکل‌ها: دارای یک یا چند گروه هیدروکسیل ، آمین‌ها: دارای گروه های آمینی ، آلدهیدها و کتون‌ها: دارای گروه‌های کربونیل ، کربوکسیلیک اسیدها: دارای گروه‌های کربوکسیل <br> <span style="color:yellow">● نکته: </span>بسیاری بیومولکول‌ها دارای دو یا چند گروه عاملی ← ویژگی های شیمیایی هر ترکیب : ویژگی‌های شیمیایی گروه‌های عاملی و موقعیت فضایی آنها
+        </div>
+    
+          <div class="h2parrent" >
+          <div class="h2" style="z-index: 400;" > گروه های عاملی</div>
+          <div class="content" style="backdrop-filter: blur(30px );-webkit-backdrop-filter: blur( 30px );padding: 5px;">
+
+              <div style="width:98%;position: relative;display:grid;margin:auto;justify-content:  center;text-align: center;padding: 5px;border:1px solid rgb(255,255,255,0.2);  border-radius: 20px;align-items: center;">
+
+                 <img  style="position: relative ;width:200px;height:100px;margin:auto;" class="pic" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/hydroxyl.jpg">
+                 <div class="discription">
+                  هیدروکسیل(گروه الکلی): هیدروژن + اکسیژن
+                </div>
+                </div>
+                <br>
+                <div style="width:98%;position: relative;display:grid;margin:auto;justify-content:  center;text-align: center;padding: 5px;border:1px solid rgb(255,255,255,0.2);  border-radius: 20px;align-items: center;">
+                <img style="width:50% ;width:200px;height:100px;margin:auto;" class="pic" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/sulfidryl.jpg">
+                <div class="discription">سولفیدریل:سولفور(گوگرد)+هیدروژن</div>
+                 </div>
+                <br>
+                <div style="width:98%;position: relative;display:grid;margin:auto;justify-content:  center;text-align: center;padding: 5px;border:1px solid rgb(255,255,255,0.2);  border-radius: 20px;align-items: center;">
+                  <img style="width:300px;height:100px;margin:auto;" class="pic" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/disulfid.jpg">
+                  <div class="discription">
+                دی سولفید:اتصال دو اتم گوگرد از دو مولکول یا از قسمت های مختلف یک مولکول مانند پروتئین ها</div>
+                </div>
+                <br>
+
+                <div  style="width:98%;position: relative;padding: 5px;display: flex;border:1px solid rgb(255,255,255,0.2);border-radius: 20px;align-items: center;">
+                  <div style="width:50%;display: grid;justify-content: center;text-align: center;">
+                    <img style="margin:auto ;height: 50px;float: left;" class="pic" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/ether3.jpg">
+                    <div class="discription" style="font-size: x-small">اتِر</div>
+                  </div>
+                  <div style="width:50%;  height:50%;display: grid;justify-content: center;text-align: center;">
+                    <img style="margin:auto;width:130px ;height: 100px;float: left;" class="pic" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/ether2.jpg">
+                    <div class="discription" style="font-size: x-small;font-family: 'Yekan';">کد گذاری:شبیه یک ظرف <span style="color:yellow">عطر</span>  گرد با دو تا دسته 😊  </div>
+                  </div>
+                </div>
+                <br>
+                <div style="width:98%;position: relative;padding: 5px;display: flex;border:1px solid rgb(255,255,255,0.2);border-radius: 20px;align-items: center;">
+                  <div style="width:50%;display: grid;justify-content: center;text-align: center;">
+                   <img style="height:200px;width:100px;" class="pic" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/Carbonyl.jpg">
+                   کربونیل
+                  </div>
+                  <div style="width:50%;display: grid;justify-content: center;text-align: center;">
+                     <img style="height:400px;width:200px;margin: auto;" class="pic" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/Carbonyl2.jpg">
+                   کد گذاری: کربن رفته کنار رود نیل 
+                  </div>
+                </div>
+                <br>
+
+                <div style="width:98%;position: relative;padding: 5px;display: flex;border:1px solid rgb(255,255,255,0.2);border-radius: 20px;align-items: center;">
+               
+                  <div style="width:50%;display: grid;justify-content: center;text-align: center;">
+                    <img style="height:200px;" class="pic" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/Aldehyde2.jpg">
+                    الدهید
+                  </div>
+                  <div style="width:50%;display: grid;justify-content: center;text-align: center;">
+                   <img style="height:400px;width:200px;margin: auto;" class="pic" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/Aldehyde.jpg">
+                   کدگذاری: کربن میره کنار رود نیل (کربونیل) با ی هیدروژن آشنا میشه و ازش میپرسه شما اهل دهید(الدهید)!؟
+                  </div>
+                </div>
+        
+               <br>
+                <br>
+
+                <div style="width:98%;position: relative;padding: 5px;display: flex;border:1px solid rgb(255,255,255,0.2);border-radius: 20px;align-items: center;">
+                  <div style="width:50%;display: grid;justify-content: center;text-align: center;">
+                   <img style="height:200px;" class="pic" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/ketone2.jpg">
+                   کتون
+                  </div>
+                  <div style="width:50%;display: grid;justify-content: center;text-align: center;">
+                   <img style="height:250px;width:180px;margin: auto;" class="pic" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/Ketone.jpg">
+                    کربن رفته کنار رود نیل(کربونیل) دو تا رفیقش (R) رو که کفش کتونی پوشیدن هم با خودش برده
+                  </div>
+                </div>
+               <br>
+               <div style="width:98%;position: relative;padding: 5px;display: flex;border:1px solid rgb(255,255,255,0.2);border-radius: 20px;align-items: center;">
+                <div style="width:50%;display: grid;justify-content: center;text-align: center;">
+                 <img style="height:200px;" class="pic" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/carboxyl.jpg">
+                 <div class="discription" style="text-align: justify;font-size: x-small;width:100%;height: 100%;padding:10px;position: relative;">
+                 کربوکسیل (کربوکسیلیک اسید):
+                 کربونیل+هیدروکسیل 
+                </div>
+                </div>
+                <div style="width:50%;display: grid;justify-content: center;text-align: center;">
+                 <img style="height:250px;width:180px;margin: auto;" class="pic" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/carboxyl2.jpg">
+                 <div class="discription" style="text-align: justify;font-size: x-small;width:100%;padding:5px;position: relative;">
+                                   کربن رفته کنار رود نیل(کربونیل) که با هیدروژن <span style="color:yellow">بوکس </span>  کار کنه و اکسیژن هم به عنوان داور وایساده وسط!
+                 </div>
+                </div>
+              </div>
+             <br>
+             <div style="width:98%;position: relative;padding: 5px;display: flex;border:1px solid rgb(255,255,255,0.2);border-radius: 20px;align-items: center;">
+              <div style="width:50%;display: grid;justify-content: center;text-align: center;">
+                <img style="height:250px;" class="pic" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/crboxylte2.jpg">
+                 کربوکسیلات
+              </div>
+              <div style="width:50%;justify-content: center;text-align: center;">
+               <img style="height:300px;width:250px;margin: auto;" class="pic" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/crboxylte.jpg"><br>
+               کربن رفته کنار رود نیل(کربونیل) که با هیدروژن بوکس تمرین کنه ،وسط <span style="color:yellow">بوکس لات </span>بازی درمیاره و هیدروژن رو از روی رینگ مسابقه میندازه بیرون و امتیاز منفی میگیره(بار منفی)!     
+              </div> 
+            </div>
+          
+            <div style="width:98%;position: relative;padding: 5px;display: flex;border:1px solid rgb(255,255,255,0.2);border-radius: 20px;align-items: center;">
+              <div style="width:50%;display: grid;justify-content: center;text-align: center;">
+                <img style="height:250px;" class="pic" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/crboxylte2.jpg">
+                کربوکسیلات
+              </div>
+              <div style="width:50%;justify-content: center;text-align: center;">
+                <img style="height:300px;width:250px;margin: auto;" class="pic" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/crboxylte.jpg"><br>
+                کربن رفته کنار رود نیل(کربونیل) که با هیدروژن بوکس تمرین کنه ،وسط <span style="color:yellow">بوکس لات </span> 
+                بازی درمیاره و هیدروژن رو از روی رینگ مسابقه میندازه بیرون و امتیاز منفی میگیره(بار منفی)!
+              </div> 
+            </div>
+          
+
+
+
+
+             
+        
+              </div>
+            </div>
+            <div class="h2parrent" >
+              <div class="h2" style="z-index: 400;" > مولکول‌های کوچک مشترک در سلول‌ها</div>
+              <div class="content" style="backdrop-filter: blur(30px );-webkit-backdrop-filter: blur( 30px );padding: 5px;">
+
+            هزاران مولکول ارگانیک کوچک محلول در محیط آبی همه سلول‌ها با غلظت‌های متفاوت از نانومولار تا بیش از ۱۰ میلی مولار ، متابولیت‌های مرکزی مسیرهای اصلی همه سلول‌ها  شامل آمینو اسیدهای رایج ، نوکلئوتیدها ، قندها و مشتقات فسفوریله آنها  و مونو  ،دی و تری کربوکسیلیک اسیدها های  مولکول های قطبی یا باردار و بیشتر آنها محلول در آب به دام افتاده در سلول به دلیل نفوذ ناپذیر بودن غشا به آنها  ← ترانسپورترهای خاص غشایی :جابجایی برخی مولکول‌ها به داخل و بیرون سلول یا بین بخش‌های مختلف سلول‌های یوکاریوتی  وجود ترکیبات مشترک در سلول‌های زنده ←  حفاظت تکاملی مسیرهای متابولیک از سلول‌های اجدادی تا سلول‌های امروزی ← برخی بیومولکول‌های کوچک مخصوص سلول‌های ارگانیسم‌های خاص ← مثال: متابولیت‌های ثانویه در گیاهان آوندی شامل ترکیبات با رایحه و رنگ خاص و ترکیباتی مثل مورفین ، کینین ، نیکوتین و کافئین (دارای اثرات فیزیولوژیک روی انسان اما با هدف متفاوت در گیاهان)     <span style="color:yellow">● متابولوم: </span> مجموعه تمام )مولکول‌های کوچک در یک سلول تحت شرایط خاص(مثل دوره خاصی از زندگی سلول) ← <span style="color:yellow">●متابولومیکس:</span>مطالعه ویژگی‌های سیستماتیک متابولوم تحت شرایط بسیار خاص (مثل مصرف یک دارو یا  وجود  یک سیگنال بیولوژیک مثل انسولین)
+              </div>
+            </div>
+
+            <div class="h2parrent" >
+              <div class="h2" style="z-index: 400;" >ماکرومولکول های زیستی: پروتئین‌ها ، لیپیدها ، پلی ساکاریدها و نوکلئیک اسیدها</div>
+              <div class="content" style="backdrop-filter: blur(30px );-webkit-backdrop-filter: blur( 30px );padding: 5px;">
+               بسیاری از مولکول‌های زیستی ←  ماکرومول‌: پلیمرهای با وزن مولکولی بالای ۵۰۰۰ ، متشکل از پیش  سازهای نسبتا ساده  ←پلیمرهای کوتاه‌تر ← الیگومرها  پروتئین‌ها ، نوکلئیک اسیدها و پلی ساکاریدها ماکرومول‌های متشکل از مونومرهای با وزن مولکولی ۵۰۰ یا کمتر   سنتز ماکرو مولکول‌ها انرژی  خواه‌ترین فعالیت سلول‌ها تجمع   برخی ماکرو مولکول‌ها تشکیل کمپلکس‌های سوپرا مولکولی ← ایجاد واحدهای عملکردی مثل ریبوزوم  پروتئین‌ها: پلیمرهای بلند آمینو اسیدها  ، تشکیل بخش عمده جرم سلول (به جز آب) ، برخی فعالیت کاتالیتیک (آنزیم‌ها) و دیگر پروتئین‌ها با نقش‌های ساختاری ، گیرنده‌های سیگنال یا ترانسپورترها (انتقال مواد به داخلی و بیرون سلول) ، متنوع‌ترین بیوم مولکول از نظر عملکردی ، <span style="color:yellow">● پروتئوم:</span> مجموع تمام پروتئین‌های موجود در یک سلول <span style="color:yellow">● پروتئومیکس:</span> مطالعه  نظام مند ویژگی های پروتئوم تحت شرایط خاص نوکلئیک اسیدها ، DNA و RNA ← پلیمرهای نوکلئوتیدها ، ذخیره و انتقال اطلاعات ژنتیکی ی مولکول‌های آر‌ان‌ای نقش‌های ساختاری و کاتالیتیک در کمپلکس‌های سوپرامولکولی  <span style="color:yellow">● ژنوم: </span> توالی کامل DNA سلول (یا توالی RNA در RNA ویروس‌ها)<span style="color:yellow">●  ژنومیکس:  </span>مطالعه ویژگی‌های ساختاری ، عملکردی ، تکاملی و نقشه  برداری ژنوم‌ها
+               <span style="color:yellow">● پلی ساکاریدها: </span>پلیمرهای قندهای ساده مثل گلوکز ، سه عملکرد  اصلی: ذخایر سوختی ، اجزای ساختاری محکم دیواره‌های سلولی (در باکتری‌ها و گیاهان) ، و عناصر شناسایی  خارج سلولی (اتصال به پروتئین‌های سطحی سلول‌های دیگر) ← پلمیرهای کوتاه‌تر قندها (الگوساکاریدها): اتصال به پروتئین‌ها یا لیپیدهای سطحی سلول‌ها ، عملکرد به عنوان سیگنال‌های سلولی<span style="color:yellow">● گلیکوم: </span>مجموعه کامل مولکول‌های دارای کربوهیدرات سلول  لیپیدها: مشتقات هیدروکربنی نامحلول در آب ، اجزای ساختاری غشاها ، ذخایر سوختی ، رنگیزه‌ها سیگنال‌های درون سلولی   <span style="color:yellow">● لیپیدوم: </span>مجموعه کامل مولکول های دارای لیپید یک سلول 
+               <span style="color:yellow">● پروتئین‌ها، پلی نوکلئوتیدها و پلی ساکاریدها: </span>تعداد زیاد زیرواحدهای مونومر ← وزن مولکولی بالا ( از ۵۰۰۰ تا بیش از یک میلیون برای پروتئین‌ها ، چند میلیارد برای DNA و  چند میلیون برای پلی ساکارید‌هایی مثل نشاسته) <span style="color:yellow">● مولکول‌های لیپیدی: </span>بسیار کوچکتر ، عدم طبقه‌ بندی به عنوان ماکرومولکول← توانایی اتصال غیر کوالانسی به ساختارهای بسیار بزرگ ← غشاهای سلولی متشکل از توده‌های  عظیم غیر کوالانسی  مولکول‌های لیپیدی و پروتئینی
+               <span style="color:yellow">●ماکرومولکول‌های اطلاعاتی:← </span>  پروتئین ها و نوکلئیک اسید ها به دلیل توالی  های زیر واحدی غنی از  اطلاعات (برخی الیگوساکاریدها دارای عملکرد اطلاعاتی)
+              </div>
+            </div>
      </div>
-   </div>
+
+            <div class="h1parrent">
+            <div class="h1" > استریوشیمی (شیمی فضایی) </div>
+            
+            <div class="h2parrent" >
+              <div class="h2" style="z-index: 400;"> ساختار سه بعدی بیومولکول ها</div>
+              <div class="content" style="backdrop-filter: blur(30px );-webkit-backdrop-filter: blur( 30px );padding: 5px;">
+
+              <span style="color:yellow">● کونفورماسیون: </span>حالت های مختلف یک مولکول با چرخش اتم ها حول پیوند یگانه مثل کونفورماسیون های صندلی و قایق گلوکز ← تبدیل خودبخودی بدون نیاز به شکستن پیوند و غیر قابل جداسازی ← مثال: کونفورماسیون های صندلی و قایق در گلوکز  
+              ← البته در صورت نبود مانع فضایی برای چرخش ← وجود مانع فضایی: ایجاد ایزومر کونفورماسیونی مثل ایزومرهای سین و آنتی 
+              <br>
+         
+                
+                  <video class="iframe" id="iframe" style="margin: auto;display: flex;"  tabindex="0" controls>  <source src="https://github.com/Science2023/3dbiochemistry/raw/main/Chair%20and%20Boat%20Conformations%20of%20Cylcohexane.mp4" type="video/mp4"></video>
+                 
+                 <p style="color: white;text-align: center;">تبدیل خودبخودی کونفورماسیون های صندلی و قایق </p><br>
+  
+              <span style="color:yellow">●کونفیگوراسیون:</span>حالت های ترتیب فضایی اتصال اتم ها در یک ترکیب مثل گلوکز و گالاکتوز ، یا ایزومر های سیس وترانس ← تبدیل توسط آنزیم(غیر خودبخودی) ← نیاز به شکستن پیوند ← واکنش های بیومولکول ها دارای اختصاصیت  فضایی نسبت به یک کونفیگوراسیون خاص <span style="color:yellow">●کونفیگوراسیون نسبی:</span> بیان آرایش اتم ها در دو مولکول ایزومری نسبت به هم مثل سیس و ترانس <span style="color:yellow">● کونفیگوراسیون مطلق:</span> اختصاص یک کونفیگوراسیون خاص به هر اتم بدون مقایسه با موقعیت آن در ایزومر دیگر مثل سیستم های نامگذاری D/L و R/S 
+             <span style="color:yellow">● کایرالیته:</span>اتصال کربن به چهار اتم یا گروه مختلف ← جهت گیری های فضایی متفاوت چهار گروه 
+           <span style="color:yellow">● دو عامل ایجاد کونفیگوراسیون های مختلف: </span>۱-پیوند دوگانه و محدودیت چرخش حول پیوند ۲-مرکز کایرال
+           
+           <div class="wrap">
+            <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/chiral.html" allowfullscreen="true">
+            </iframe>
+           </div> 
+           <p style="color: white;text-align: center;">           کربن کایرال(آبی): متصل به چهار گروه متفاوت و دارای دو ایزومر </p>
+           <br>
+
+           <br><span style="color:yellow">پیوند یگانه در کربن </span>
+            <div style="width: 100%;height:1px;border-bottom: 1px solid yellow;"></div>
+
+            <br> <span style="color:yellow">●</span>ساختار سه بعدی پیوند کربن با چهار اتم دیگر در  هیدروکربن ها(مثل متان): ساختار چهار وجهی یا تتراهدرون با زاویه پیوندی ۱۰۹.۵درجه
+
+            <div class="wrap">
+             <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/methane.html" allowfullscreen="true"></iframe>
+            </div><br>
+           <span style="color:yellow">●</span>ساختار سه بعدی پیوند یگانه کربن-کربن: هر کربن یک ساختار چهار وجهی  (مثل اتان) 
+           <br>
+         
+
+           <div class="wrap">
+              <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/ethane.html" allowfullscreen="true"></iframe><br>
+           </div>
+           <span style="color:yellow">●نکته:</span>در مولکول های آلی مثل گلوکز هر کربن با چهار پیوند یگانه دارای ساختار چهار وجهی است <br>
+
+          <div class="wrap" id="glucose" style="width: 98%;" >
+             <br> <p style="text-align: justify;right:0px;"><span style="color:yellow">●مولکول گلوکز:</span>دقت کنید هر اتم کربن(آبی) دارای ساختار چهار وجهی با چهار اتم متصل به آن است و به همین دلیل کونفورماسیون های قایق و صندلی در گلوکز شکل میگیرد</p><br>
+
+             <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/Glucose.html" allowfullscreen="true">
+             </iframe><br>
+          </div> 
+            <style>@media all and (orientation: portrait){
+            #glucose{height:fit-content}}</style><br>
+            <br><span style="color:yellow">پیوند دوگانه در کربن </span><br>
+            <div style="width: 100%;height:1px;border-bottom: 1px solid yellow;"></div>
+            ساختار پیوند دوگانه در کربن(مثل اتن):ساختار صفحه ای با زوایای پیوندی 120 درجه
+            
+            <div class="wrap">
+              <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/ethene.html" allowfullscreen="true">
+              </iframe>
+           </div>
+           <span style="color:yellow">● نکته:</span>اتم های متصل با پیوند یگانه میتوانند حول پیوند بچرخند اما در پیوند دوگانه اتم ها محدودیت چرخش دارند←استثنا: وجود گروه‌های بسیار بزرگ یا باردار روی دو اتم متصل با پیوند یگانه← محدودیت چرخش <br> 
+          <div class="wrap"> 
+            <iframe class="iframe"  width="640" height="480"  id="iframe" frameborder="0" allowfullscreen mozallowfullscreen="true"       webkitallowfullscreen="true" allow="autoplay; fullscreen;" src="https://sketchfab.com/models/c9c477288c12452d9f479bac7f784a05/embed"> </iframe> 
+        </div>
+              </div>
+            </div>
+            </div>
+       
+        <div class="h1parrent">
+          <div class="h1"> انواع نمایش مولکول‌ها</div>
+                <div class="content" style="  backdrop-filter: blur(30px );-webkit-backdrop-filter: blur( 30px );">
+       
+<span style="color:yellow">● فرمول مولکولی: </span>نوع و تعداد اتم های هر عنصر در یک ترکیب مثال: C<sub>4</sub>H<sub>10</sub>(بوتان)<br>
+<span style="color:yellow">● فرمول فشرده: </span> (اطلاعات فرمول مولکولی) + ترتیب اتصال اتم ها  مثال:CH<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>CH<sub>3</sub> ←فشرده تر: CH<sub>3</sub>(CH<sub>2</sub>)<sub>2</sub>CH<sub>3</sub><br>
+<span style="color:yellow">مدل های ساختاری: </span><br>
+<div style="width: 100%;height:1px;border-bottom: 1px solid yellow;"></div>
+
+<span style="color:yellow">۱-دوبعدی :<br>
+</span>
+
+
+
+
+<span style="color:yellow">● فرمول ساختاری ساده: </span><br>
+
+
+<div style="width:50%;display: grid;justify-content: center;text-align: center;margin:auto;">
+  <img style="height:200px;width:200px;margin: auto;" class="pic" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/glucose1.jpg">
+  <div class="discription" style="text-align:center;font-size: x-small;width:100%;padding:5px;position: relative;margin: auto;">
+                  فرمول ساختاری گلوکز
+  </div>
  </div>
+
+
+
+
+<span style="color:yellow">● فرمول اسکلتی یا خطی یا پیوند-خط: </span>فرمول ساختاری بدون نماد اتم کربن ← شکستگی و انتهای خطوط: نشانه اتم کربن <br>
+
+
+
+<div style="width:90%;display: grid;justify-content: center;text-align: center;margin:auto;">
+  <img style="height:100%;width:100%;margin: auto;" class="pic" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/vita.jpg">
+  <div class="discription" style="text-align:center;font-size: x-small;width:100%;padding:5px;position: relative;margin: auto;">
+ساختار خط-پیوند ویتامین A  </div>
+ </div>
+
+
+
+<span style="color:yellow">●: مدل فیشر(کربوهیدرات های خطی)</span>گروه آلدهیدی یا کتونی در بالا قرار می گیرد<br>
+
+
+
+<div style="width:90%;display: grid;justify-content: center;text-align: center;margin:auto;">
+  <img style="height:280px;width:160px;margin: auto;" class="pic" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/glucose fisher.jpg">
+  <div class="discription" style="text-align:center;font-size: x-small;width:100%;padding:5px;position: relative;margin: auto;">
+ساختار فیشر گلوکز خطی  </div>
+ </div>
+
+
+
+
+
+
+<span style="color:yellow">● مدل هاورث (کربوهیدرات های حلقوی)</span><br>
+
+
+<div style="width:50%;display: grid;justify-content: center;text-align: center;margin:auto;">
+  <img style="height:150px;width:160px;margin: auto;" class="pic" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/glucose haworth.jpg">
+  <div class="discription" style="text-align:center;font-size: x-small;width:100%;padding:5px;position: relative;margin: auto;">
+ساختار هاورث گلوکز حلقوی  </div>
+ </div><br>
+
+
+
+
+<span style="color:yellow">● مدل چشم انداز (پرسپکتیو) یا گُوِه و خط چین: </span>خط چین:وارد شدن پیوند به صفحه(دور شدن از ناظر) /گُوِه : خارج شدن پیوند از صفحه (نزدیک شدن به ناظر) / خط ساده:پیوند روی صفحه<br>
+
+<span style="color:yellow"> نکته:</span>گُوِه وسیله ای فلزی است که برای شکافتن چوب استفاده می شود و در مدل چشم انداز برای نمایش نزدیک شدن پیوند به چشم ناظر از خطی شبیه گُوِه استفاده می شود<br>
+
+<div style="width:50%;display: grid;justify-content: center;text-align: center;margin:auto;">
+  <img style="height:150px;width:250px;margin: auto;" class="pic" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/perspective.jpg">
+  <div class="discription" style="text-align:center;font-size: x-small;width:100%;padding:5px;position: relative;margin: auto;">
+مدل چشم انداز گلوکز:دقت کنید هر کربن در مرکز یک چهاروجهی قرار گرفته به همین دلیل این آرایش پدید آمده است
+ </div>
+ </div>
+
+<span style="color:yellow">۲-مدل های سه بعدی:<br>
+</span>
+
+<span style="color:yellow">● مدل گوی و میله :</span>گوی ها نماد اتم ها و میله ها نماد پیوندها و زوایای بین میله ها نشانگر زوایای پیوندی<br>
+
+
+
+
+<div class="wrap"  style="width: 98%;" >
+  
+  <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/Glucose.html" allowfullscreen="true">
+  </iframe><br>
+  
+</div> 
+  <div class="discription" style="text-align:center;font-size: x-small;width:100%;padding:5px;position: relative;margin: auto;">
+  مدل گوی و میله مولکول گلوکز   </div><br>
+
+
+<span style="color:yellow">● مدل فضا پر کن: </span>نزدیک ترین مدل به شکل واقعی مولکول ها نمایش اتم ها به شکل کره و نمایش پیوندها با فرو رفتگی اتم ها در یکدیگر ، و شعاع اتم ها نسبت به یکدیگر متناسب با شعاع واندروالسی آنها و حجم مدل نشانگر فضای اشغال شده توسط مولکول
+<br>
+<div class="wrap"  style="width: 98%;" >
+  
+  <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/spacefill.html" allowfullscreen="true">
+  </iframe><br>
+</div> <br>
+<div class="discription" style="text-align:center;font-size: x-small;width:100%;padding:5px;position: relative;margin: auto;">
+  مدل فضا پر کن مولکول گلوکز
+  </div><br>
+
+
+
+
+<span style="color:yellow">● مدل ربانی(پروتئین ها): </span>نمایش ساختارهای ثانویه آلفا هلیکس به شکل ربان پیچ خورده و بتا شیت به شکل ربان فلشی( جهت فلش: جهش بتا شیت)
+
+
+
+<div class="wrap"  style="width: 98%;" >
+  
+  <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/ribbon.html" allowfullscreen="true">
+  </iframe><br>
+</div> <br>
+<div class="discription" style="text-align:center;font-size: x-small;width:100%;padding:5px;position: relative;margin: auto;">
+  مدل ربانی دُمین انگشت روی در برخی پروتئین ها  </div><br>
+
+
+</div>
 </div>
 
+<div class="h1parrent">
+  <div class="h1">  ایزومرها </div><br>
+        <div class="content" style="  backdrop-filter: blur(30px );-webkit-backdrop-filter: blur( 30px );">
+<span style="color:yellow">● ایزومر:</span>ترکیبات با فرمول مولکولی(نوع و تعداد اتم های هر عنصر)  یکسان اما با فرمول ساختاری(اتصالات بین اتم ها) متفاوت<br>
+<span style="color:yellow">انواع ایزومر</span><br>
+<div style="width: 100%;height:1px;border-bottom: 1px solid yellow;"></div><br>
 
-<div class="h2" > گروه های عاملی</div>
-<div> 
-  <div Style="width:100%;position: relative;display:grid;justify-content:center;align-items: center;backdrop-filter: blur(30px );-webkit-backdrop-filter: blur( 30px );">
-    <div>  
-        <img class="pic" src="https://github.com/Science2023/3dbiochemistry/blob/main/Picture1.jpg?raw=true"><br>
-    </div>
-<p style="color:yellow;text-align: right;">کد گذاری:</p><br>
-<p style="color:white;text-align: right;">کربونیل:کربن رفته کنار رود نیل که خورشید داره غروب میکنه!</p>
 
- </div>
+<span style="color:yellow;">۱-ساختاری:</span>ایجاد دو ترکیب کاملا متفاوت<br>
+
+
+<span style="color:yellow">۲-فضایی:</span>تفاوت فقط درجهت گیری فضایی اتم ها<br>
+
+<span style="color:yellow">● انانتیومر(ایزومر آینه ای):</span>دارای مرکز کایرال<br>
+<span style="color:yellow">● دیاسترومر</span><br>
+
+کونفورماسیونی:حاصل چرخش حول پیوند یگانه مثال: ایزومرهای سین و آنتی در نوکلئوتیدها
+
+کونفیگوراسیونی:نیازمند شکستن و تغییر پیوندها
+سیس و ترانس (حول پیوند دوگانه)
+اپیمرها(تفاوت در یک مرکز کایرال) 
+آنومرها :چرخش حول کربن آنومری مثال:گلوکز آلفا و بتا(حلقوی) 
+قندهای اپیمر مثال: قندهای گلوکز و گالاکتوز
+ترئو و اریترو(تفاوت دو مرکز کایرال) مثال:قندهای ترئوز و اریتروز
+
+
+
+        </div></div>
 
 </div>
 
-
-<br><br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
+</div>
+  
+  <br><br><br><br><br><br><br><br><br>
 </section>
 
 <div Class="foot"  id ="foot" dir="ltr">
@@ -3874,8 +4266,8 @@ background: rgba(0, 0, 0, 0.4);
       <span id="scrollright" tabindex="0"  onclick="scrollleft()"  cursor="pointer"></span>
     </div>
     
-   <div class="btnframe one"  id="btnone"><a class="light"  id="one"><a class="link one"> سیگنال،کوفاکتور،رنگیزه<button  class="b" onclick="scrollFunction()"></button></a></a></div>
-   <div class="btnframe two" id="btntwo"><a Class="light" id="two"><a Class="link two" href="#sectwo"> برهمکنش مکملی:سیستم ایمنی</a></a></div>
+   <div class="btnframe one"  id="btnone"  ><a class="light"  id="one"><a class="link one" href="#titrone"      > مقدمه ای بر علم بیوشیمی<button  class="b" onclick="scrollFunction()"></button></a></a></div>
+   <div class="btnframe two" id="btntwo"><a Class="light" id="two"><a Class="link two" href="#titrtwo"> مبانی شیمیایی</a></a></div>
    <div class="btnframe"><a Class="light" id="three"><a Class="link three" href="#"> گیرنده های</a></a></div>
    <div class="btnframe"><a Class="light" id="four"><a Class="link four" href="#"> گیرنده های</a></a></div>
    <div class="btnframe"><a Class="light" id="five"><a Class="link five" href="#"> گیرنده های</a></a></div>
@@ -3944,32 +4336,17 @@ function musicscrollleft(){
 
 
 
-var myScrollFunc = function () {
-  myfoot = document.getElementById("foot");
 
-    var y = window.scrollY;
-    var section=document.getElementById("titrone").offsetTop-40;
-    if (y >=section ) {
-        myfoot.className = "foot show"
-    } else {
-        myfoot.className = "foot hide"
-    }
-}
-
-window.addEventListener("scroll", myScrollFunc);
 
 
 
 ////////////******btn menu scroll***//////////////
-function scrollFunction(){
-        let e = document.getElementById("titrone");
-        e.scrollIntoView({
-          block: 'start',
-          behavior: 'smooth',
-          inline: 'start'
-        });
-        document.getElementById('iframe').src = document.getElementById('iframe').src;
-}
+
+
+
+        
+        
+
 
 function reload(){
   document.getElementById('iframe').src = document.getElementById('iframe').src;
@@ -4059,14 +4436,39 @@ $(document).on("scroll", function(){
   if(topw >= toptitrtwo - 60 && topw < toptitrtwo + titrtwoHeight ){
     $(".btnframe").removeClass('active');
     $('.btnframe.two').addClass('active');
-    btnbar.scrollLeft=btntwo.getBoundingClientRect().left-200
+    checkActivation()
      }
   else
   {$(".btnframe.two").removeClass('active')}
 })
+var scrollOffset = btnone.offsetLeft - window.innerWidth /2 + btnone.clientWidth / 2 ;
+var btnbar=document.getElementById("btnbar");
 
+window.addEventListener('scroll', checkActivation2);
+function checkActivation2(){
+  if (btnone.classList.contains('active')){
 
+    if (window.orientation === 0) {
+          btnbar.scrollTo({ left: scrollOffset, behavior: 'smooth' });}
+          else{
+            btnbar.scrollTo({ left: scrollOffset + (window.innerWidth * 0.05), behavior: 'smooth' });
+          }
 
+  }
+}
+
+var scrollOffset1 = btntwo.offsetLeft - window.innerWidth / 2 + btntwo.clientWidth / 2;
+var btnbar=document.getElementById("btnbar");
+window.addEventListener('scroll', checkActivation);
+function checkActivation(){
+  if (btntwo.classList.contains('active')){
+    if (window.orientation === 0) {
+          btnbar.scrollTo({ left: scrollOffset1, behavior: 'smooth' });}
+          else{
+            btnbar.scrollTo({ left: scrollOffset1 + (window.innerWidth * 0.05), behavior: 'smooth' });
+          }
+  }
+}
 
     
 /*timer*/
