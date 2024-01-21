@@ -48,7 +48,7 @@ button:focus {
 }
 @font-face {
     font-family: "Estedad";
-    src:url("Estedad-ExtraLight.woff")  format("woff"),
+    src:url("https://rawcdn.githack.com/Science2023/3dbiochemistry/fa02ea97084691c84105829a54937b6ea3de4608/Estedad-Light.woff2")  format("woff2"),
 
 }
 
@@ -3697,7 +3697,7 @@ background: rgba(0, 0, 0, 0.4);
 </div>
 
 <div class="head" id ="head" dir="rtl" >
-  <div class="logoframe" style="display: grid;"><div class="logo"><img class="shadowfilter"id="logoimage" src="Picture1.png"><span id="logospan">Ali Ghorbani<br>3D Biochemistry</span></div> </div>
+  <div class="logoframe" style="display: grid;"><div class="logo"><img class="shadowfilter"id="logoimage" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/Picture1.png"><span id="logospan">Ali Ghorbani<br>3D Biochemistry</span></div> </div>
   <div class="chapter"><p>فصل ۱ <br> <span style="color:yellow">مبانی بیوشیمی</span></p></div>
   <div class="timerframe">
     <div class="timertitle" style="color:yellow;">تایمر مطالعه</div>
@@ -4331,8 +4331,40 @@ function musicscrollleft(){
 }
 
 
-/*popup foot*/
+/*full screen when rotate*/
+function handleOrientationChange() {
+    if (window.orientation === 0 || window.orientation === 180) {
+        // Portrait orientation
+        var element = document.documentElement;
+  
+          if (elemnet.requestFullscreen) {
+    elemnet.requestFullscreen();
+  } else if (element.webkitRequestFullscreen) { /* Safari */
+    element.webkitRequestFullscreen();
+  } else if (element.msRequestFullscreen) { /* IE11 */
+    element.msRequestFullscreen();
+  }
+    } else if (window.orientation === 90 || window.orientation === -90) {
+        // Landscape orientation
+        var element = document.documentElement;
+  
+  if (elemnet.requestFullscreen) {
+elemnet.requestFullscreen();
+} else if (element.webkitRequestFullscreen) { /* Safari */
+element.webkitRequestFullscreen();
+} else if (element.msRequestFullscreen) { /* IE11 */
+element.msRequestFullscreen();
+}
+    }
 
+    // You can perform additional actions based on the orientation change here
+}
+
+// Add an event listener for the orientationchange event
+window.addEventListener("orientationchange", handleOrientationChange);
+
+// Call the function initially to get the initial orientation
+handleOrientationChange();
 
 
 
@@ -4560,6 +4592,15 @@ document.getElementById('Username').value = '' ;
 document.getElementById('password').value = ''
 }})
 
+if (document.documentElement.requestFullscreen) {
+  document.documentElement.requestFullscreen();
+} else if (document.documentElement.mozRequestFullScreen) { // Firefox
+  document.documentElement.mozRequestFullScreen();
+} else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
+  document.documentElement.webkitRequestFullscreen();
+} else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+  document.documentElement.msRequestFullscreen();
+}
 
 // Get the text field that we're going to track
 
