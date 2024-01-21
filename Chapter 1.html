@@ -49,6 +49,7 @@ button:focus {
 @font-face {
     font-family: "Estedad";
     src:url("https://rawcdn.githack.com/Science2023/3dbiochemistry/fa02ea97084691c84105829a54937b6ea3de4608/Estedad-Light.woff2")  format("woff2"),
+    src:url("https://rawcdn.githack.com/Science2023/3dbiochemistry/fcc681ac4af6325218331d60123c7986df89927b/Estedad-Light.woff")  format("woff"),
 
 }
 
@@ -4336,28 +4337,29 @@ function handleOrientationChange() {
     if (window.orientation === 0 || window.orientation === 180) {
         // Portrait orientation
         var element = document.documentElement;
-  
-          if (elemnet.requestFullscreen) {
-    elemnet.requestFullscreen();
-  } else if (element.webkitRequestFullscreen) { /* Safari */
-    element.webkitRequestFullscreen();
-  } else if (element.msRequestFullscreen) { /* IE11 */
-    element.msRequestFullscreen();
-  }
+
+        if (document.documentElement.requestFullscreen) {
+  document.documentElement.requestFullscreen();
+} else if (document.documentElement.mozRequestFullScreen) { // Firefox
+  document.documentElement.mozRequestFullScreen();
+} else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
+  document.documentElement.webkitRequestFullscreen();
+} else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+  document.documentElement.msRequestFullscreen();
+}
     } else if (window.orientation === 90 || window.orientation === -90) {
         // Landscape orientation
-        var element = document.documentElement;
   
-  if (elemnet.requestFullscreen) {
-elemnet.requestFullscreen();
-} else if (element.webkitRequestFullscreen) { /* Safari */
-element.webkitRequestFullscreen();
-} else if (element.msRequestFullscreen) { /* IE11 */
-element.msRequestFullscreen();
+        if (document.documentElement.requestFullscreen) {
+  document.documentElement.requestFullscreen();
+} else if (document.documentElement.mozRequestFullScreen) { // Firefox
+  document.documentElement.mozRequestFullScreen();
+} else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
+  document.documentElement.webkitRequestFullscreen();
+} else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+  document.documentElement.msRequestFullscreen();
 }
     }
-
-    // You can perform additional actions based on the orientation change here
 }
 
 // Add an event listener for the orientationchange event
