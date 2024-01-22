@@ -1283,13 +1283,23 @@ border: 0px solid rgba( 255, 255, 255, 0.5 );
 }
 .titr{
   position:relative;
-  top:80px;
+  top:10px;
   width:98%;
   font-family: "Yekan";
 padding-top:22vw;
    
 }
+#titrone{
+ top:-200px;
 
+}
+@media all and (orientation: landscape) {
+
+  #titrone{
+  
+  top:-250px
+  }
+}
 
 .listsec{
   position:relative;
@@ -3608,7 +3618,8 @@ border-image:4px rgb(255, 255, 255,0.1);
 .maintitr{
 height:4vh;
 width:100%;
-border-bottom:2px solid rgb(255, 238, 4);
+border:1px solid rgb(255, 238, 4);
+border-radius: 5px;
 
 background: rgba(0, 0, 0, 0.4);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -3846,17 +3857,17 @@ background: rgba(0, 0, 0, 0.4);
 
 <div id="up_down">
 <div id="scrollToTop" onclick="scrollToTop()">
-  <image src="top.png" style="position: relative;width: 75%;height: 40%;margin:auto;" ></image>
+  <image src="https://github.com/Science2023/3dbiochemistry/blob/main/top.png?raw=true" style="position: relative;width: 75%;height: 40%;margin:auto;" ></image>
 </div>
 
 <div id="up" onclick="scrollup()">
-  <image src="up.png" style="position: relative;width: 75%;height: 40%;margin:auto;" ></image>
+  <image src="https://github.com/Science2023/3dbiochemistry/blob/main/Up.png?raw=true" style="position: relative;width: 75%;height: 40%;margin:auto;" ></image>
 </div>
 <div id="down" onclick="scrolldown()">
-  <image src="down.png" style="position: relative;width: 75%;height:40%;margin:auto;"  ></image>
+  <image src="https://github.com/Science2023/3dbiochemistry/blob/main/down.png?raw=true" style="position: relative;width: 75%;height:40%;margin:auto;"  ></image>
 </div>
-<div id="scrollToEnd" onclick="scrollToTop()">
-  <image src="end.png" style="position: relative;width: 75%;height: 40%;margin:auto;" ></image>
+<div id="scrollToEnd" onclick="scrollToEnd()">
+  <image src="https://github.com/Science2023/3dbiochemistry/blob/main/end.png?raw=true" style="position: relative;width: 75%;height: 40%;margin:auto;" ></image>
 </div>
 </div>
 
@@ -3880,7 +3891,7 @@ background: rgba(0, 0, 0, 0.4);
     <button  id="voiceicon2"  id="voice-icon2" onmousedown="mouseDown()" onmouseup="mouseUp()"><img class="voice2" src="voice.png" ><input type="range"   min="0" max="100" value="100" class="slider2" style="display:block" id="volume-slider2"></button> 
 
   
-<section class="titr one" id="titrone" dir="rtl" >
+<section class="titr one" id="titrone" dir="rtl">
   <div class="border" style="border-radius: 10px;border: 1px solid rgba( 255, 255, 255, 0.5 );">
     <div class="maintitr" Style="z-index: 1000;"> مقدمه‌ای بر علم بیوشیمی </div>
      
@@ -4388,8 +4399,8 @@ background: rgba(0, 0, 0, 0.4);
 
 </div>
   
-  <br><br><br><br><br><br><br><br><br>
-</section>
+  <br>
+</section><br><br><br><br><br>
 
 <div Class="foot"  id ="foot" dir="ltr">
   <div class="btnbar" id="btnbar">
@@ -4819,7 +4830,20 @@ function scrollup(){
       });
     }
 
+    function scrollToTop() {
+      window.scrollBy({
+        top: -window.scrollY,
+       
+      });
+    }
 
+    function scrollToEnd() {
+      const pageHeight = document.documentElement.scrollHeight;
+      window.scrollBy({
+        top: pageHeight - window.scrollY,
+                
+      });
+    }
  
 
 
