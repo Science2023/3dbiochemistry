@@ -564,6 +564,9 @@ body{
 margin:0;
 font-family:'Estedad','Yekan',sans-serif;
 display:flex;
+-webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 flex-flow:column wrap;
 justify-content:center;
 align-items:center;
@@ -3440,6 +3443,111 @@ opacity:1}
   height:15%;
 }
 }
+#scrollToTop{
+  position:relative;
+  right:0px;
+  width:100%;
+  height:15px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: rgba(255, 255, 255,0);
+  border:1px solid rgba(255, 255, 255, 0.7);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border-radius:100px 100px 100px 100px;
+z-index: 10;
+overflow: visible;
+padding-top:10px;
+padding-bottom: 4px;
+visibility: visible;
+opacity:1}
+
+#scrollToEnd{
+  position:relative;
+  right:0px;
+  width:100%;
+  height:15px;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: rgba(255, 255, 255,0);
+  border:1px solid rgba(255, 255, 255, 0.7);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border-radius:100px 100px 100px 100px;
+z-index: 10;
+overflow: visible;
+padding-top:10px;
+padding-bottom: 4px;
+visibility: visible;
+opacity:1}
+
+
+#up_down{
+  width: 12px;
+  position: fixed;
+  right:2px;
+  top:40%;
+  z-index: 20;
+  display: grid;
+}
+@media all and (orientation: landscape) {
+  #up_down{
+  right:10.3vw;
+  }
+}
+#up{
+  position:relative;
+  right:0px;
+  width:100%;
+  height:15px;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: rgba(255, 255, 255,0);
+  border:1px solid rgba(255, 255, 255, 0.7);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border-radius:100px 100px 10px 10px;
+z-index: 10;
+overflow: visible;
+padding-top:10px;
+padding-bottom: 4px;
+visibility: visible;
+opacity:1}
+
+#down{
+  position:relative;
+  right:0px;
+  width:100%;
+  height:15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: rgba(255, 255, 255,0);
+  border:1px solid rgba(255, 255, 255, 0.7);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border-radius:10px 10px 100px 100px;
+z-index: 10;
+overflow: visible;
+padding-top:10px;
+padding-bottom: 4px;
+visibility: visible;
+opacity:1}
+.voice2{
+  position: absolute;
+  bottom:5px;
+  left:0%;
+  width:100%;
+  height:15%;
+}
+
+}
 #musicpics{
   position: relative;
   overflow-x: scroll;
@@ -3723,6 +3831,24 @@ background: rgba(0, 0, 0, 0.4);
 <div class="menuicon"onclick="openmenu()">
   <img id="menuicon"  src="969160-200.png" >
 </div>
+
+<div id="up_down">
+<div id="scrollToTop" onclick="scrollToTop()">
+  <image src="up.png" style="position: relative;width: 80%;height: 80%;margin:auto;" ></image>
+</div>
+
+<div id="up" onclick="scrollup()">
+  <image src="up.png" style="position: relative;width: 80%;height: 80%;margin:auto;" ></image>
+</div>
+<div id="down" onclick="scrolldown()">
+  <image src="down.png" style="position: relative;width: 80%;height: 80%;margin:auto;"  ></image>
+</div>
+<div id="scrollToEnd" onclick="scrollToTop()">
+  <image src="down.png" style="position: relative;width: 80%;height: 80%;margin:auto;" ></image>
+</div>
+</div>
+
+
 
 <div class="menubox" >
 
@@ -4373,6 +4499,7 @@ handleOrientationChange();
 var isTouchDevice = 'ontouchstart' in document.documentElement;
 
 // Define the function to handle touch or click events
+
 function handleTouchOrClick() {
   if (document.documentElement.requestFullscreen) {
   document.documentElement.requestFullscreen();
@@ -4383,18 +4510,21 @@ function handleTouchOrClick() {
 } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
   document.documentElement.msRequestFullscreen();
 }
-    // Your code to be executed on touch or click goes here
+
 }
 
 // Add an event listener based on the device type
 if (isTouchDevice) {
     // If it's a touch device, add a touchstart event listener
-    document.addEventListener("touchstart", handleTouchOrClick);
+    document.addEventListener("touchstart", function(){
+    setTimeout(handleTouchOrClick, 1000);}
+);
 } else {
     // If it's not a touch device, add a click event listener
-    document.addEventListener("click", handleTouchOrClick);
+    document.addEventListener("click", function(){
+      setTimeout(handleTouchOrClick, 1000);
+    });
 }
-
 
 // Define the function to handle scroll events
 function handleScroll() {
@@ -4410,11 +4540,13 @@ function handleScroll() {
 }}
 
 // Add an event listener for the scroll event on the window
-window.addEventListener("scroll", handleScroll);
+window.addEventListener("scroll",function(){
+      setTimeout(handleScroll, 1000);})
 const scrollableElement = document.getElementById("btnbar");
 
 // Add an event listener for the scroll event on the specific element
-scrollableElement.addEventListener("scroll", handleScroll);
+scrollableElement.addEventListener("scroll",function(){
+      setTimeout(handleScroll, 1000)})
 ////////////******btn menu scroll***//////////////
 
 
@@ -4666,10 +4798,24 @@ loginform.addEventListener("change", () => {
 });
 
 
+function scrollup(){
+  
+  window.scrollBy({
+        top: -300,
+        behavior: 'smooth'
+      });
+    }
+
+    function scrolldown(){
+  
+  window.scrollBy({
+        top: 300,
+        behavior: 'smooth'
+      });
+    }
 
 
-
-
+ 
 
 
 
