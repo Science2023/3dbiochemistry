@@ -83,8 +83,8 @@ button:focus {
 }
 
 .content{
-  padding-right: 12px;
-  padding-left: 10px;
+  padding-right: 19px;
+  padding-left: 2px;
   backdrop-filter: blur(5px );
   -webkit-backdrop-filter: blur( 5px );
   }
@@ -3482,8 +3482,8 @@ opacity:1}
   width:100%;
   height:30px;
   margin-bottom: 4px;
-  display: flex;
-  align-items: center;
+  display: grid;
+  place-items: center;
   cursor: pointer;
   background: rgba(0, 0, 0,0.4);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -3503,8 +3503,8 @@ opacity:1}
   width:100%;
   height:30px;
   margin-top: 4px;
-  display: flex;
-  align-items: center;
+  display: grid;
+  place-items: center;
   cursor: pointer;
   background: rgba(0, 0, 0,0.4);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -3520,26 +3520,40 @@ opacity:1}
 
 
 #up_down{
-  width:14px;
+  width:12px;
   position: fixed;
-  right:1.5px;
-  top:30%;
+  right:0px;
+  top:40%;
   z-index: 20;
   display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0,0.4);
+  backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+justify-content: center;
+border-radius: 5px;
+border: 1px solid rgba( 255, 255, 255, 0.5 );
+height: fit-content;
+padding: 5px;
+
+
 }
 @media all and (orientation: landscape) {
   #up_down{
-  right:10.3vw;
+  right:9.9vw;
+  width:14px;
+  padding: 5px;
+
+
   }
 }
 #up{
   position:relative;
-  right:0px;
   width:100%;
   height:30px;
   margin-bottom: 2px;
-  display: flex;
-  align-items: center;
+  display: grid;
+  place-items: center;
   cursor: pointer;
   background: rgba(0, 0, 0,0.4);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -3557,8 +3571,8 @@ opacity:1}
   right:0px;
   width:100%;
   height:30px;
-  display: flex;
-  align-items: center;
+  display: grid;
+  place-items: center;
   cursor: pointer;
   background: rgba(0, 0, 0,0.4);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -3814,7 +3828,7 @@ background: rgba(0, 0, 0, 0.4);
                         <input type="password" id="password" placeholder="رمز عبور"style="font-family: Yekan;text-align:center;" />
                     </div>
                     <div  class="input__box" id="login" style="background: transparent;margin:auto;margin-top: 20px;margin-left: 40%;" >
-                        <button      style="font-family: Yekan;text-align: center;color:green" >ورود</button>
+                        <button    tabindex="0"  style="font-family: Yekan;text-align: center;color:green" >ورود</button>
                     </div>
                    
                 
@@ -4004,7 +4018,7 @@ background: rgba(0, 0, 0, 0.4);
           <div class="wrap">
               <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/Ionic bond.html" allowfullscreen="true"></iframe>
               <div style="height:30px;width: 30px;border-radius: 5px;background-color: rgb(0, 0, 0, 0.3);backdrop-filter: blur( 10px );border: 1px solid white;margin: 10px;
-              -webkit-backdrop-filter: blur( 10px );box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );position:absolute;left:0px;cursor:pointer;display: flex ;justify-content: center;align-items: center; " onclick=" reload()"> <image style="width:80%;height: 80%" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image></div>
+              -webkit-backdrop-filter: blur( 10px );box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );position:absolute;left:0px;top:0px;cursor:pointer;display: flex ;justify-content: center;align-items: center; " onclick=" reload()"> <image style="width:80%;height: 80%" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image></div>
           </div><br>
 
             <span style="color:yellow">● یون:</span>اتم یا مولکولی که مجموع تعداد الکترون ها کمتر یا بیشتر از تعداد پروتون هاست<br>
@@ -4796,21 +4810,8 @@ $(document).on('click','.timerbutton',function(){
 document.getElementById("login").addEventListener("click",function(){  
 if( username.value==correctusername && password.value==correctpassword){
     permission();
-          if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) { /* Safari */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE11 */
-    elem.msRequestFullscreen();
 
-  }
-}
-else{
-document.getElementById('Username').value = '' ;
-document.getElementById('password').value = ''
-}})
-
-if (document.documentElement.requestFullscreen) {
+    if (document.documentElement.requestFullscreen) {
   document.documentElement.requestFullscreen();
 } else if (document.documentElement.mozRequestFullScreen) { // Firefox
   document.documentElement.mozRequestFullScreen();
@@ -4819,6 +4820,12 @@ if (document.documentElement.requestFullscreen) {
 } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
   document.documentElement.msRequestFullscreen();
 }
+}
+else{
+document.getElementById('Username').value = '' ;
+document.getElementById('password').value = ''
+}})
+
 
 // Get the text field that we're going to track
 
