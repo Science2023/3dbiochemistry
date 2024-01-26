@@ -10,9 +10,9 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preload" href="https://rawcdn.githack.com/Science2023/3dbiochemistry/fcc681ac4af6325218331d60123c7986df89927b/Estedad-Light.woff" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="https://rawcdn.githack.com/Science2023/scientist.github.io/ea382640dc9303089955465cb3eb1e37af9a301e/Yekan-.woff" as="font" type="font/woff2" crossorigin>  
-<link rel="preload" href="Yekan.woff" as="font" type="woff" crossorigin> 
+<link rel="preload" href="https://rawcdn.githack.com/Science2023/3dbiochemistry/fcc681ac4af6325218331d60123c7986df89927b/Estedad-Light.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="https://rawcdn.githack.com/Science2023/scientist.github.io/ea382640dc9303089955465cb3eb1e37af9a301e/Yekan-.woff" as="font" type="font/woff" crossorigin>  
+<link rel="preload" href="https://rawcdn.githack.com/Science2023/3dbiochemistry/c065b449096ea869cf626633f22ec986ffb81b6d/Iranian-Sans.woff" as="font" type="font/woff" crossorigin>  
 
 <script src="https://kit.fontawesome.com/541b203307.js" crossorigin="anonymous"></script>
 <link href="https://allfont.net/allfont.css?fonts=roboto-thin">
@@ -36,8 +36,8 @@ button:focus {
 
 
   @font-face {
-    font-family: "Iransans";
-    src:url("  https://rawcdn.githack.com/Science2023/3dbiochemistry/c065b449096ea869cf626633f22ec986ffb81b6d/Iranian-Sans.woff")  format("woff"),
+    font-family: "Iranian";
+    src:url("Iransans")  format("woff"),
    
 }
 
@@ -51,7 +51,7 @@ button:focus {
     font-family: "Estedad";
     src:url("https://rawcdn.githack.com/Science2023/3dbiochemistry/fcc681ac4af6325218331d60123c7986df89927b/Estedad-Light.woff")  format("woff"),
     url("https://rawcdn.githack.com/Science2023/3dbiochemistry/fa02ea97084691c84105829a54937b6ea3de4608/Estedad-Light.woff2")  format("woff2"),
-    
+
 
 }
 
@@ -578,7 +578,6 @@ top:10px
 
 body{
 margin:0;
-font-family:'Estedad','Yekan',sans-serif;
 display:flex;
 -webkit-user-select: none;
         -webkit-touch-callout: none;
@@ -594,6 +593,7 @@ background-size:cover;
 background-repeat:no-repeat;
 background-attachment:fixed;
     background-position: center center;}
+    
 body::-webkit-scrollbar {
     display: none;
 }
@@ -1243,7 +1243,7 @@ box-sizing: border-box;
 width:100%;
 border-radius: 10px 10px 10px 10px;
 text-align:justify;
-background: rgba(0, 0, 0, 0.3);
+background: rgba(0, 0, 0, 0.5);
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 text-justify:auto;
 top:5px;
@@ -1384,6 +1384,8 @@ top:5px;
 right:5%;
 padding-top: 0px;
 }
+
+    
 
 .timerframe{
 position: absolute;
@@ -2738,6 +2740,10 @@ top:0px}
 body {
   margin: 15px;
 }
+
+
+ 
+}
 :root {
   --time: .4s;
 }
@@ -3527,7 +3533,7 @@ opacity:1}
   z-index: 20;
   display: grid;
   place-items: center;
-  background: rgba(0, 0, 0,0.4);
+  background: rgba(0, 0, 0,0.2);
   backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
 justify-content: center;
@@ -3540,7 +3546,7 @@ padding: 5px;
 }
 @media all and (orientation: landscape) {
   #up_down{
-  right:9.9vw;
+  right:9.85vw;
   width:14px;
   padding: 5px;
 
@@ -3673,7 +3679,8 @@ background: rgba(0, 0, 0, 0.4);
 
 </head>
  
-<body onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off>
+<body onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off >
+
 
 <br><br>
 <br>
@@ -3885,6 +3892,7 @@ background: rgba(0, 0, 0, 0.4);
 </div>
 
 <div id="up_down">
+
 <div id="scrollToTop" onclick="scrollToTop()">
   <image src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/top.png" style="position: relative;width: 75%;height: 40%;margin:auto;" ></image>
 </div>
