@@ -4053,10 +4053,11 @@ background: rgba(0, 0, 0, 0.4);
            نیروی بین دو مولکول دو قطبی<br>
            مثال:نیروهای دوقطبی-دوقطبی بین مولکول های استون <br>
 
-          <div class="wrap" style="text-align: justify;width:60%">
-             <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/acetone.html"    allowfullscreen="true">   
+          <div class="wrap" id="wrap" style="text-align: justify;width:60%;position: relative;">
+             <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/acetone.html"   >   
              </iframe>
-             
+             <div class="reload"  onclick= reload()> <image style="width:80%;height: 80%" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image></div>
+      <div class="full" onclick= full()> <image class="fullpng" style="width:80%;height: 80%" src="fullscreen.png"></image></div>  
           </div><br>
             <span style="color:yellow">● نکته:</span>
             پیوند هیدروژنی نوع خاصی از نیروهای دوقطبی-دوقطبی بین هیدروژن متصل به یک اتم الکترونگاتیو با پیوند کوالانسی (N،O و Fمثل )و یک اتم الکترونگاتیو دیگر<br>
@@ -4630,13 +4631,21 @@ scrollableElement.addEventListener("scroll",function(){
 
         
         
+  const reloads= document.querySelectorAll('.reload');
+
+  reloads.forEach(function(reload){
+    reload.addEventListener('click',function(){
+      const iframe=this.previousElementSibling;
+  
+  iframe.src=iframe.src;
+    })
 
 
-function reload(){
+  })
 
-  document.getElementById('iframe').src = document.getElementById('iframe').src;
 
-}
+
+
 
 
   const fulls = document.querySelectorAll('.full');
@@ -4688,8 +4697,8 @@ for (var i = 0; i < ele.length; i++ ) {
     ele[i].style.backdropFilter="blur(5px)";
 }
 fullpng.src='fullscreen.png';
-
     wrap.style.position="relative";
+    wrap.style.zIndex="5";
     wrap.style.width="70%";
     wrap.style.height="60vh";
     wrap.style.top='';
