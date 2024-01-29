@@ -85,8 +85,7 @@ button:focus {
 .content{
   padding-right: 19px;
   padding-left: 2px;
-  backdrop-filter: blur(5px );
-  -webkit-backdrop-filter: blur( 5px );
+
   }
   @media all and (orientation: landscape) {
     .content{
@@ -587,7 +586,6 @@ display:flex;
 flex-flow:column wrap;
 justify-content:center;
 align-items:center;
-overflow:scroll;
 background-image: url('https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/cell - Copy.jpg');
 background-size:cover;
 background-repeat:no-repeat;
@@ -1188,7 +1186,15 @@ margin:auto;
 overflow:hidden;
 z-index: 2;
 }
-
+#child-div {
+    position: fixed;
+    top: 50px; /* Adjust as needed */
+    left: 0; /* Adjust as needed to center horizontally */
+    background-color: lightblue;
+    padding: 10px;
+    border: 1px solid black;
+    z-index: 999; /* Ensure the child div is above other content */
+  }
 
 .iframe{
   position: relative;
@@ -1206,8 +1212,39 @@ z-index: 2;
         -webkit-transform-origin: 0 0;
 
       }
+      .reload{
+        height:30px;
+        width: 30px;
+        border-radius: 5px;
+        background-color: rgb(0, 0, 0, 0.3);
+        backdrop-filter: blur( 10px );
+        margin: 10px;
+            -webkit-backdrop-filter: blur( 10px );
+            position:absolute;
+            left:0px;
+            top:0px;
+            cursor:pointer;
+            display: flex ;
+            justify-content: center;
+            align-items: center; 
+      }
 
-      
+      .full{
+        height:30px;
+        width: 30px;
+        border-radius: 5px;
+        background-color: rgb(0, 0, 0, 0.3);
+        backdrop-filter: blur( 10px );
+        margin: 10px;
+      -webkit-backdrop-filter: blur( 10px );
+      position:absolute;
+      right:0px;
+      top:0px;
+      cursor:pointer;
+      display: flex ;
+      justify-content: center;
+      align-items: center; 
+      }
     
 
 p{
@@ -1219,21 +1256,7 @@ p{
   font-size:4vw ;
 }}
 
-.blur{
-position:relative;
-top:100px;
-padding: 0px;
-height:fit-content;
-box-sizing: border-box;
-width:100%;
-border-radius: 10px 10px 10px 10px;
-text-align:justify;
-background: rgba(0, 0, 0, 0.1);
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.5 );
-text-justify:auto;
-}
+
 .h1parrent{
   position:relative;
 top:100px;
@@ -1243,7 +1266,7 @@ box-sizing: border-box;
 width:100%;
 border-radius: 10px 10px 10px 10px;
 text-align:justify;
-background: rgba(0, 0, 0, 0.5);
+background: rgba(0, 0, 0, 0.4);
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 text-justify:auto;
 top:5px;
@@ -1255,6 +1278,7 @@ width:100%;
   font-family: 'Estedad';
   line-height: 250%;
   font-size: 1.5vh;
+
 }
 @media all and (orientation: landscape) {
   .h1parrent{
@@ -1476,17 +1500,7 @@ align-items: center;
   margin-bottom:10px;
 
 }
-.blur{
-  text-align:justify ;
-  background: rgba( 0, 0, 0, 0.1);
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 
-border-radius: 10px;
-border:1px solid rgba( 255, 255, 255, 0.5 );
-text-justify:auto;
-justify-content: center;
-
-}
 
     .wrap{
   position: relative;
@@ -1523,14 +1537,7 @@ z-index: 2;
   height: fit-content;
   border-right: 1px solid rgba( 255, 255, 255, 0.2 );}
   .frame{
-    position:fixed;
-    right:0px;
-    bottom:0px;
-    width:10%;
-    height:20vh;
-    border-radius: 0px;
-    background-color: rgba(255, 255, 255, 0.05);
-
+    display: none;
   }
   .pic{
 
@@ -3930,7 +3937,7 @@ background: rgba(0, 0, 0, 0.4);
   
 <section class="titr one" id="titrone" dir="rtl">
   <div class="border" style="border-radius: 10px;border: 1px solid rgba( 255, 255, 255, 0.5 );">
-    <div class="maintitr" Style="z-index: 1000;"> مقدمه‌ای بر علم بیوشیمی </div>
+    <div class="maintitr"  Style="z-index: 1000;"> مقدمه‌ای بر علم بیوشیمی </div>
      
      
         <div style="position:relative;z-index: 5;">
@@ -3941,7 +3948,7 @@ background: rgba(0, 0, 0, 0.4);
           
         <div class="h1parrent">
           <div class="h1"> تاریخچه</div>
-           <div class="content"">
+           <div class="content"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);" >
    
                <span style="color:yellow">●</span>بیشتر یافته ها در نیم قرن اخیر
                <span style="color:yellow">●فردریک ولر: </span>سنتز اوره(ماده آلی) از آمونیوم سیانات(ماده غیر آلی)
@@ -3962,7 +3969,7 @@ background: rgba(0, 0, 0, 0.4);
         
         <div class="h1parrent">
           <div class="h1"> بیوشیمی علمی بین رشته‌ای</div>
-           <div class="content" >
+           <div class="content" style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);">
           
                <span style="color:yellow"> اشتراکات بیوشیمی با علوم دیگر:</span><br>
                <span style="color:yellow">●شیمی آلی: </span>توضیح ویژگی های بیومولکول ها
@@ -3982,7 +3989,7 @@ background: rgba(0, 0, 0, 0.4);
             </div>
             <div class="h1parrent">
               <div class="h1"> نظریه های منشأ حیات</div>
-               <div class="content" >
+               <div class="content" style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);">
         
                کربن،هیدروژن،اکسیژن،نیتروژن،فسفر ،کلسیم وگوگرد تشکیل دهنده حدود 90 % وزن خشک بدن انسان ، %70 اکثر موجودات زنده از آب<br>
                نظریه آبیوژنز(Abiogenesis) :موجودات زنده می توانند از مواد غیر زنده تشکیل شوند<br>
@@ -3993,7 +4000,7 @@ background: rgba(0, 0, 0, 0.4);
   
             <div class="h1parrent">
               <div class="h1"> ویژگی های موجودات زنده</div>
-               <div class="content" >
+               <div class="content" style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);" >
     
    
                <span style="color:yellow">●</span>پیچیدگی و نظم بسیار بالا<span style="color:yellow">●</span>هماهنگی ساختار و عملکرد از سطح مولکولی تا سطح اندام <span style="color:yellow">●</span>دریافت و تبدیل انرژی برای حفظ نظم ساختاری <span style="color:yellow">●</span>حامل های انرژی مثل ATP و NADH<span style="color:yellow">●</span>منبع اصلی انرژی:خورشید(خورشید←فتوسنتزکنندگان←گیاهخواران←گوشتخواران )
@@ -4008,26 +4015,31 @@ background: rgba(0, 0, 0, 0.4);
     
 <section class=" titr two" id="titrtwo"  style="box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );" dir="rtl">
 <div class="border" style="border-radius: 10px;border: 1px solid rgba( 255, 255, 255, 0.5 );">
- <div class="maintitr" Style="z-index: 1000;">  مبانی شیمیایی</div>
+ <div class="maintitr" id="maintitr" >  مبانی شیمیایی</div>
   <div class="h1parrent">
-    <div class="h1" >پیوندهای شیمیایی موجود در بیومولکول ها</div>
-     <div class="content" >
+    <div class="h1"  id="h1">پیوندهای شیمیایی موجود در بیومولکول ها</div>
+
+     <div class="content" id="content" style="  backdrop-filter: blur(5px);">
+   
             <span style="color:yellow"> ۱-کوالانسی:</span> اشتراک الکترون های لایه ظرفیت اتم ها
             <br><span style="color:yellow">● پیوند یگانه(اشتراک یک جفت الکترون)</span>
             <br>
-        
-               
+                       
             <span style="color:yellow">● پیوند دوگانه( اشتراک دو جفت الکترون):</span>      کوتاه تر و محکم تر از پیوند یگانه و دارای محدودیت چرخش<br>
-
-          
-          
-            <span style="color:yellow"> ۲-یونی:</span>نیروی جاذبه بین یون های مثبت و منفی
+         
+          <span style="color:yellow"> ۲-یونی:</span>نیروی جاذبه بین یون های مثبت و منفی
              <br>مثال: نیروهای یونی بین آمینواسیدهای مثبت و منفی در ساختار سوم پروتئین ها<br>
-          <div class="wrap">
-              <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/Ionic bond.html" allowfullscreen="true"></iframe>
-              <div style="height:30px;width: 30px;border-radius: 5px;background-color: rgb(0, 0, 0, 0.3);backdrop-filter: blur( 10px );border: 1px solid white;margin: 10px;
-              -webkit-backdrop-filter: blur( 10px );box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );position:absolute;left:0px;top:0px;cursor:pointer;display: flex ;justify-content: center;align-items: center; " onclick=" reload()"> <image style="width:80%;height: 80%" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image></div>
-          </div><br>
+              
+          <br>
+          <div class="wrap" id="wrap" style="position: relative;">
+            <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/Ionic bond.html" ></iframe>
+            <div class="reload"  onclick= reload()> <image style="width:80%;height: 80%" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image></div>
+      <div class="full" onclick= full()> <image class="fullpng" style="width:80%;height: 80%" src="fullscreen.png"></image></div>  
+      </div>
+  
+      
+      <br>
+    
 
             <span style="color:yellow">● یون:</span>اتم یا مولکولی که مجموع تعداد الکترون ها کمتر یا بیشتر از تعداد پروتون هاست<br>
             <span style="color:yellow">● تفاوت دو قطبی و یون:</span>در یون یک الکترون به صورت کامل به اتم یا مولکول اضافه یا کم شده و یون یا بار منفی دارد و یا بار مثبت اما در دو قطبی ابر الکترونی اطراف اتم یا مولکول(مثل آب) به یک طرف جابجا شده و باعث ایجاد دو قطب با بارهای جزئی مثبت و منفی شده است
@@ -4044,14 +4056,17 @@ background: rgba(0, 0, 0, 0.4);
           <div class="wrap" style="text-align: justify;width:60%">
              <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/acetone.html"    allowfullscreen="true">   
              </iframe>
+             
           </div><br>
             <span style="color:yellow">● نکته:</span>
             پیوند هیدروژنی نوع خاصی از نیروهای دوقطبی-دوقطبی بین هیدروژن متصل به یک اتم الکترونگاتیو با پیوند کوالانسی (N،O و Fمثل )و یک اتم الکترونگاتیو دیگر<br>
             مثال۱:پیوندهای هیدروژنی ساختار بتا-شیت(صفحه بتا) پروتئین ها<br>
 
-          <div class="wrap" style="text-align: justify;width:97%">
-              <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/Hydrogenbond1.html" allowfullscreen="true">   
+          <div class="wrap" id="wrap" style="text-align: justify;width:97%;position: relative;">
+              <iframe class="iframe" id="iframe" loading="lazy"  tabindex="0"  src="https://raw.githack.com/Science2023/3dbiochemistry/main/Hydrogenbond1.html" >   
               </iframe>
+              <div class="reload"  onclick= reload()> <image style="width:80%;height: 80%" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image></div>
+              <div class="full" onclick= full()> <image  class="fullpng" style="width:80%;height: 80%" src="fullscreen.png"></image></div>  
           </div><br>
             مثال ۲: پیوند هیدروژنی بین مولکول های آب<br>
             <span style="color:yellow">● نیروهای لاندون:</span>
@@ -4065,13 +4080,13 @@ background: rgba(0, 0, 0, 0.4);
   
      <div class="h1parrent">
        <div class="h1" > بیومولکول ها</div>
-        <div class="content" >
+        <div class="content" style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);">
                <span style="color:yellow">● کربن: </span>مهمترین عنصر موجودات زنده شامل بیش از نصف وزن خشک سلول‌ها ، توانایی تشکیل پیوندهای یگانه (با اتم های مختلف مثل هیدروژن و یا کربن دیگر)، دوگانه (با اکسیژن و نیتروژن) و سه گانه (با یک کربن دیگر) ، تشکیل زنجیره‌های خطی ، زنجیره‌های منشعب و ساختارهای حلقوی ، تنوع پیوندی با خود و دیگر عناصر←دلیل اصلی انتخاب  ترکیبات کربن  به عنوان ماشین سلولی (عدم توانایی عناصر دیگر برای تشکیل مولکول‌های متنوع از نظر حجم ، شکل و ترکیب مثل کربن) ،  بیشتر بیومولکول‌ها مشتقات هیدروکربن‌ها (جایگزینی اتم‌های هیدروژن با گروه‌های عاملی دارای خواص شیمیایی: ایجاد خانواده‌های مختلف ترکیبات ارگانیک)  <span style="color:yellow">● مثال: </span> الکل‌ها: دارای یک یا چند گروه هیدروکسیل ، آمین‌ها: دارای گروه های آمینی ، آلدهیدها و کتون‌ها: دارای گروه‌های کربونیل ، کربوکسیلیک اسیدها: دارای گروه‌های کربوکسیل <br> <span style="color:yellow">● نکته: </span>بسیاری بیومولکول‌ها دارای دو یا چند گروه عاملی ← ویژگی های شیمیایی هر ترکیب : ویژگی‌های شیمیایی گروه‌های عاملی و موقعیت فضایی آنها
         </div>
     
           <div class="h2parrent" >
           <div class="h2" style="z-index: 400;" > گروه های عاملی</div>
-          <div class="content" >
+          <div class="content" style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);">
 
               <div style="width:98%;position: relative;display:grid;margin:auto;justify-content:  center;text-align: center;padding: 5px;border:1px solid rgb(255,255,255,0.2);  border-radius: 20px;align-items: center;">
 
@@ -4202,7 +4217,7 @@ background: rgba(0, 0, 0, 0.4);
             </div>
             <div class="h2parrent" >
               <div class="h2" style="z-index: 400;" > مولکول‌های کوچک مشترک در سلول‌ها</div>
-              <div class="content" >
+              <div class="content" style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);">
 
             هزاران مولکول ارگانیک کوچک محلول در محیط آبی همه سلول‌ها با غلظت‌های متفاوت از نانومولار تا بیش از ۱۰ میلی مولار ، متابولیت‌های مرکزی مسیرهای اصلی همه سلول‌ها  شامل آمینو اسیدهای رایج ، نوکلئوتیدها ، قندها و مشتقات فسفوریله آنها  و مونو  ،دی و تری کربوکسیلیک اسیدها های  مولکول های قطبی یا باردار و بیشتر آنها محلول در آب به دام افتاده در سلول به دلیل نفوذ ناپذیر بودن غشا به آنها  ← ترانسپورترهای خاص غشایی :جابجایی برخی مولکول‌ها به داخل و بیرون سلول یا بین بخش‌های مختلف سلول‌های یوکاریوتی  وجود ترکیبات مشترک در سلول‌های زنده ←  حفاظت تکاملی مسیرهای متابولیک از سلول‌های اجدادی تا سلول‌های امروزی ← برخی بیومولکول‌های کوچک مخصوص سلول‌های ارگانیسم‌های خاص ← مثال: متابولیت‌های ثانویه در گیاهان آوندی شامل ترکیبات با رایحه و رنگ خاص و ترکیباتی مثل مورفین ، کینین ، نیکوتین و کافئین (دارای اثرات فیزیولوژیک روی انسان اما با هدف متفاوت در گیاهان)     <span style="color:yellow">● متابولوم: </span> مجموعه تمام )مولکول‌های کوچک در یک سلول تحت شرایط خاص(مثل دوره خاصی از زندگی سلول) ← <span style="color:yellow">●متابولومیکس:</span>مطالعه ویژگی‌های سیستماتیک متابولوم تحت شرایط بسیار خاص (مثل مصرف یک دارو یا  وجود  یک سیگنال بیولوژیک مثل انسولین)
               </div>
@@ -4210,7 +4225,7 @@ background: rgba(0, 0, 0, 0.4);
 
             <div class="h2parrent" >
               <div class="h2" style="z-index: 400;" >ماکرومولکول های زیستی: پروتئین‌ها ، لیپیدها ، پلی ساکاریدها و نوکلئیک اسیدها</div>
-              <div class="content">
+              <div class="content" style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);">
                بسیاری از مولکول‌های زیستی ←  ماکرومول‌: پلیمرهای با وزن مولکولی بالای ۵۰۰۰ ، متشکل از پیش  سازهای نسبتا ساده  ←پلیمرهای کوتاه‌تر ← الیگومرها  پروتئین‌ها ، نوکلئیک اسیدها و پلی ساکاریدها ماکرومول‌های متشکل از مونومرهای با وزن مولکولی ۵۰۰ یا کمتر   سنتز ماکرو مولکول‌ها انرژی  خواه‌ترین فعالیت سلول‌ها تجمع   برخی ماکرو مولکول‌ها تشکیل کمپلکس‌های سوپرا مولکولی ← ایجاد واحدهای عملکردی مثل ریبوزوم  پروتئین‌ها: پلیمرهای بلند آمینو اسیدها  ، تشکیل بخش عمده جرم سلول (به جز آب) ، برخی فعالیت کاتالیتیک (آنزیم‌ها) و دیگر پروتئین‌ها با نقش‌های ساختاری ، گیرنده‌های سیگنال یا ترانسپورترها (انتقال مواد به داخلی و بیرون سلول) ، متنوع‌ترین بیوم مولکول از نظر عملکردی ، <span style="color:yellow">● پروتئوم:</span> مجموع تمام پروتئین‌های موجود در یک سلول <span style="color:yellow">● پروتئومیکس:</span> مطالعه  نظام مند ویژگی های پروتئوم تحت شرایط خاص نوکلئیک اسیدها ، DNA و RNA ← پلیمرهای نوکلئوتیدها ، ذخیره و انتقال اطلاعات ژنتیکی ی مولکول‌های آر‌ان‌ای نقش‌های ساختاری و کاتالیتیک در کمپلکس‌های سوپرامولکولی  <span style="color:yellow">● ژنوم: </span> توالی کامل DNA سلول (یا توالی RNA در RNA ویروس‌ها)<span style="color:yellow">●  ژنومیکس:  </span>مطالعه ویژگی‌های ساختاری ، عملکردی ، تکاملی و نقشه  برداری ژنوم‌ها
                <span style="color:yellow">● پلی ساکاریدها: </span>پلیمرهای قندهای ساده مثل گلوکز ، سه عملکرد  اصلی: ذخایر سوختی ، اجزای ساختاری محکم دیواره‌های سلولی (در باکتری‌ها و گیاهان) ، و عناصر شناسایی  خارج سلولی (اتصال به پروتئین‌های سطحی سلول‌های دیگر) ← پلمیرهای کوتاه‌تر قندها (الگوساکاریدها): اتصال به پروتئین‌ها یا لیپیدهای سطحی سلول‌ها ، عملکرد به عنوان سیگنال‌های سلولی<span style="color:yellow">● گلیکوم: </span>مجموعه کامل مولکول‌های دارای کربوهیدرات سلول  لیپیدها: مشتقات هیدروکربنی نامحلول در آب ، اجزای ساختاری غشاها ، ذخایر سوختی ، رنگیزه‌ها سیگنال‌های درون سلولی   <span style="color:yellow">● لیپیدوم: </span>مجموعه کامل مولکول های دارای لیپید یک سلول 
                <span style="color:yellow">● پروتئین‌ها، پلی نوکلئوتیدها و پلی ساکاریدها: </span>تعداد زیاد زیرواحدهای مونومر ← وزن مولکولی بالا ( از ۵۰۰۰ تا بیش از یک میلیون برای پروتئین‌ها ، چند میلیارد برای DNA و  چند میلیون برای پلی ساکارید‌هایی مثل نشاسته) <span style="color:yellow">● مولکول‌های لیپیدی: </span>بسیار کوچکتر ، عدم طبقه‌ بندی به عنوان ماکرومولکول← توانایی اتصال غیر کوالانسی به ساختارهای بسیار بزرگ ← غشاهای سلولی متشکل از توده‌های  عظیم غیر کوالانسی  مولکول‌های لیپیدی و پروتئینی
@@ -4224,7 +4239,7 @@ background: rgba(0, 0, 0, 0.4);
             
             <div class="h2parrent" >
               <div class="h2" style="z-index: 400;"> ساختار سه بعدی بیومولکول ها</div>
-              <div class="content" >
+              <div class="content" style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);">
 
               <span style="color:yellow">● کونفورماسیون: </span>حالت های مختلف یک مولکول با چرخش اتم ها حول پیوند یگانه مثل کونفورماسیون های صندلی و قایق گلوکز ← تبدیل خودبخودی بدون نیاز به شکستن پیوند و غیر قابل جداسازی ← مثال: کونفورماسیون های صندلی و قایق در گلوکز  
               ← البته در صورت نبود مانع فضایی برای چرخش ← وجود مانع فضایی: ایجاد ایزومر کونفورماسیونی مثل ایزومرهای سین و آنتی 
@@ -4289,7 +4304,7 @@ background: rgba(0, 0, 0, 0.4);
        
         <div class="h1parrent">
           <div class="h1"> انواع نمایش مولکول‌ها</div>
-                <div class="content" >
+                <div class="content" style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);">
        
 <span style="color:yellow">● فرمول مولکولی: </span>نوع و تعداد اتم های هر عنصر در یک ترکیب مثال: C<sub>4</sub>H<sub>10</sub>(بوتان)<br>
 <span style="color:yellow">● فرمول فشرده: </span> (اطلاعات فرمول مولکولی) + ترتیب اتصال اتم ها  مثال:CH<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>CH<sub>3</sub> ←فشرده تر: CH<sub>3</sub>(CH<sub>2</sub>)<sub>2</sub>CH<sub>3</sub><br>
@@ -4415,7 +4430,7 @@ background: rgba(0, 0, 0, 0.4);
 
 <div class="h1parrent">
   <div class="h1">  ایزومرها </div><br>
-        <div class="content" >
+        <div class="content" style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);">
 <span style="color:yellow">● ایزومر:</span>ترکیبات با فرمول مولکولی(نوع و تعداد اتم های هر عنصر)  یکسان اما با فرمول ساختاری(اتصالات بین اتم ها) متفاوت<br>
 <span style="color:yellow">انواع ایزومر</span><br>
 <div style="width: 100%;height:1px;border-bottom: 1px solid yellow;"></div><br>
@@ -4477,7 +4492,7 @@ background: rgba(0, 0, 0, 0.4);
       
   </div>
 </div>
-<div class="frame" dir="ltr">
+<div class="frame"  id="frame" dir="ltr">
   <span class="percent" style="color:yellow">0%</span>
   <div class="progressbar"></div>
 </div>
@@ -4528,7 +4543,6 @@ function handleOrientationChange() {
     if (window.orientation === 0 || window.orientation === 180) {
         // Portrait orientation
         var element = document.documentElement;
-
         if (document.documentElement.requestFullscreen) {
   document.documentElement.requestFullscreen();
 } else if (document.documentElement.mozRequestFullScreen) { // Firefox
@@ -4538,6 +4552,7 @@ function handleOrientationChange() {
 } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
   document.documentElement.msRequestFullscreen();
 }
+
     } else if (window.orientation === 90 || window.orientation === -90) {
         // Landscape orientation
   
@@ -4559,30 +4574,27 @@ window.addEventListener("orientationchange", handleOrientationChange);
 // Call the function initially to get the initial orientation
 handleOrientationChange();
 
+
+
+
+
 var isTouchDevice = 'ontouchstart' in document.documentElement;
 
 // Define the function to handle touch or click events
 
 function handleTouchOrClick() {
-  if (document.documentElement.requestFullscreen) {
-  document.documentElement.requestFullscreen();
-} else if (document.documentElement.mozRequestFullScreen) { // Firefox
-  document.documentElement.mozRequestFullScreen();
-} else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
+
   document.documentElement.webkitRequestFullscreen();
-} else if (document.documentElement.msRequestFullscreen) { // IE/Edge
-  document.documentElement.msRequestFullscreen();
-}
 
 }
+
 
 // Add an event listener based on the device type
 if (isTouchDevice) {
     // If it's a touch device, add a touchstart event listener
     document.addEventListener("touchstart", function(){
     setTimeout(handleTouchOrClick, 1000);}
-);
-} else {
+)} else {
     // If it's not a touch device, add a click event listener
     document.addEventListener("click", function(){
       setTimeout(handleTouchOrClick, 1000);
@@ -4621,8 +4633,93 @@ scrollableElement.addEventListener("scroll",function(){
 
 
 function reload(){
+
   document.getElementById('iframe').src = document.getElementById('iframe').src;
+
 }
+
+
+  const fulls = document.querySelectorAll('.full');
+
+  // Loop through each child element
+ fulls.forEach(function(full) {
+    // Add click event listener to each child element
+    full.addEventListener('click', function() {
+      // Select the parent element of the clicked child
+      const wrap = this.closest('#wrap');
+      const content = wrap.closest('#content');
+      const fullpng=wrap.querySelector('.fullpng');
+
+        // Do something with the parent element (e.g., add a class)
+ 
+  if(wrap.style.position==='relative'){ 
+    fullpng.src='fullscreen1.png';
+    document.body.style.overflow="hidden";
+   content.style.backdropFilter='';
+   wrap.style.position="fixed";
+   wrap.style.zIndex="1000";
+    wrap.style.width="100vw";
+    wrap.style.height="100vh";
+    wrap.style.top="0";
+    wrap.style.left="0";
+    wrap.style.background="white";
+    wrap.style.border="0";
+    wrap.style.padding="0";
+    document.getElementById('up_down').style.zIndex="0";
+ document.getElementById('head').style.zIndex="0";
+  document.getElementById('foot').style.zIndex="0";
+  document.getElementById('frame').style.zIndex="0";
+  var ele = document.getElementsByClassName('maintitr');
+for (var i = 0; i < ele.length; i++ ) {
+    ele[i].style.zIndex="0";
+}
+var ele = document.getElementsByClassName('h1');
+for (var i = 0; i < ele.length; i++ ) {
+    ele[i].style.zIndex="0";
+}
+var ele = document.getElementsByClassName('h2');
+for (var i = 0; i < ele.length; i++ ) {
+    ele[i].style.zIndex="0";
+}
+      // Add any other style changes you want to apply to all elements with the same class
+    }else{
+      var ele = document.getElementsByClassName('content');
+for (var i = 0; i < ele.length; i++ ) {
+    ele[i].style.backdropFilter="blur(5px)";
+}
+fullpng.src='fullscreen.png';
+
+    wrap.style.position="relative";
+    wrap.style.width="70%";
+    wrap.style.height="60vh";
+    wrap.style.top='';
+    wrap.style.left='';
+    wrap.style.background="transparent";
+    wrap.style.border="0";
+    wrap.style.padding="0";
+    document.getElementById('up_down').style.zIndex="5";
+ document.getElementById('head').style.zIndex="3";
+  document.getElementById('foot').style.zIndex="3";
+  document.getElementById('frame').style.zIndex="5";
+  var ele = document.getElementsByClassName('maintitr');
+for (var i = 0; i < ele.length; i++ ) {
+    ele[i].style.zIndex="1000";
+}
+var ele = document.getElementsByClassName('h1');
+for (var i = 0; i < ele.length; i++ ) {
+    ele[i].style.zIndex="500";
+}
+var ele = document.getElementsByClassName('h2');
+for (var i = 0; i < ele.length; i++ ) {
+    ele[i].style.zIndex="300";
+}
+    }
+  }
+    )
+}
+   ) 
+
+  
 
 const observerOptions = {
   root: null,
