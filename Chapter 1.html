@@ -1200,7 +1200,7 @@ z-index: 2;
   position: relative;
   box-sizing: border-box;
   border: none;
-  width:95%;
+  width:100%;
   height:100%; 
   margin:auto;
   zoom:1;
@@ -4072,9 +4072,12 @@ background: rgba(0, 0, 0, 0.4);
             مثال ۲: پیوند هیدروژنی بین مولکول های آب<br>
             <span style="color:yellow">● نیروهای لاندون:</span>
             نیروی جاذبه بین دوقطبی های لحظه ای ایجاد شده در اثر دافعه الکترون های اتم های مجاور یکدیگر<br> 
-          <div class="wrap"> 
+          <div class="wrap" id="wrap"  style="text-align: justify;position: relative;"> 
               <iframe class="iframe"  width="640" height="480"  id="iframe" frameborder="0" allowfullscreen mozallowfullscreen="true"       webkitallowfullscreen="true" allow="autoplay; fullscreen;" src="https://sketchfab.com/models/e4cc1963c90941b4b8f8dc71b85d8421/embed"> </iframe> 
-          </div>
+              <div class="reload"  onclick= reload()> <image style="width:80%;height: 80%" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image></div>
+              <div class="full" onclick= full()> <image  class="fullpng" style="width:80%;height: 80%" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png"></image></div>
+
+            </div>
         </div>
     
   </div>
@@ -4819,11 +4822,35 @@ $(document).on("scroll", function(){
   else
   {$(".btnframe.two").removeClass('active')}
 })
+
+let scrollEndTimeout;
+
+window.addEventListener("scroll", onScroll);
+
+const checkActivations = [];
+
+function onScroll() {
+
+
+// Clear the timeout if it's already set to avoid multiple calls
+clearTimeout(scrollEndTimeout);
+
+
+// Set a timeout to call the function after scrolling stops
+
+
+scrollEndTimeout= setTimeout(callCheckActivations, 500); // Adjust the timeout as needed
+}
+function callCheckActivations() {
+  checkActivations.forEach(func => func());
+}
+
+
+
 var scrollOffset = btnone.offsetLeft - window.innerWidth /2 + btnone.clientWidth / 2 ;
 var btnbar=document.getElementById("btnbar");
 
-window.addEventListener('scroll', checkActivation2);
-function checkActivation2(){
+function checkActivation(){
   if (btnone.classList.contains('active')){
 
     if (window.orientation === 0) {
@@ -4837,8 +4864,7 @@ function checkActivation2(){
 
 var scrollOffset1 = btntwo.offsetLeft - window.innerWidth / 2 + btntwo.clientWidth / 2;
 var btnbar=document.getElementById("btnbar");
-window.addEventListener('scroll', checkActivation);
-function checkActivation(){
+function checkActivation2(){
   if (btntwo.classList.contains('active')){
     if (window.orientation === 0) {
           btnbar.scrollTo({ left: scrollOffset1, behavior: 'smooth' });}
@@ -4847,6 +4873,9 @@ function checkActivation(){
           }
   }
 }
+checkActivations.push(checkActivation2);
+checkActivations.push(checkActivation);
+
 
     
 /*timer*/
