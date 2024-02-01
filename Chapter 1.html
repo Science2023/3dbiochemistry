@@ -3889,7 +3889,15 @@ background: rgba(0, 0, 0, 0.4);
   <img id="menuicon"  src="969160-200.png" >
 </div>
 
+<div id="up_down" style="top:25%;cursor: pointer;"  onclick="refresh()">
+  <image src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png" style="position: relative;width: 100%;height: 100%;margin:auto;" ></image>
+</div>
+
+<div id="up_down" style="top:32%;cursor: pointer;"  onclick="exit()">
+  <image src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/exit.png" style="position: relative;width: 100%;height: 100%;margin:auto;" ></image>
+</div>
 <div id="up_down">
+
 
 <div id="scrollToTop" onclick="scrollToTop()">
   <image src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/top.png" style="position: relative;width: 75%;height: 40%;margin:auto;" ></image>
@@ -4224,8 +4232,7 @@ background: rgba(0, 0, 0, 0.4);
               </div>
               <div style="width:70%;justify-content: center;text-align: center;">
                 <img style="height:200px;width:180px;margin: auto;" class="pic" src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/imidazol2.jpg"><br>
-                کربن رفته کنار رود نیل(کربونیل) که با هیدروژن بوکس تمرین کنه ،وسط <span style="color:yellow">بوکس لات </span> 
-                بازی درمیاره و هیدروژن رو از روی رینگ مسابقه میندازه بیرون و امتیاز منفی میگیره(بار منفی)!
+                به این امامزاده زل بزن(ایمیدازول) تا حاجتتو بگیری!
               </div> 
             </div>
 
@@ -5673,6 +5680,14 @@ $("#newCard").on("click", function() {
 MathJax.Hub.Queue(["Rerender",MathJax.Hub,this]);
 
 
+function exit(){
+  window.close()
+
+}
+
+function refresh(){
+  location.reload()
+}
   
 
 </script>
