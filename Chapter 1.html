@@ -577,7 +577,6 @@ top:10px
 
 body{
 margin:0;
-display:flex;
 -webkit-user-select: none;
         -webkit-touch-callout: none;
         -moz-user-select: none;
@@ -1039,6 +1038,7 @@ border-top: 0.5px solid rgba( 255, 255, 255, 0.5 );
 .frame{
 position:fixed;
 bottom: 15px;
+left: 7.5%;
 width: 85vw;
 height:6px;
 background-color: rgba(255, 255, 255, 0.05);
@@ -1047,7 +1047,7 @@ border: 0.5px solid rgba(255, 255, 255, 0.5);
 z-index: 2;
 }
 .frame.hidden{
-  opacity= 0;
+  opacity: 0;
   z-index: -2;
 }
 
@@ -1320,10 +1320,11 @@ border: 0px solid rgba( 255, 255, 255, 0.5 );
   width:98%;
   font-family: "Yekan";
 padding-top:22vw;
+left:0.5%;
    
 }
 #titrone{
- top:-200px;
+ top:-160px;
 
 }
 @media all and (orientation: landscape) {
@@ -1403,10 +1404,12 @@ right:5%;
 }
 .titr{
 position: relative;
-width: 89%;
+width: calc(100% - 13%);
+right:12%;
 top:5px;
-right:5%;
+left:0.1%;
 padding-top: 0px;
+
 }
 
     
@@ -1416,7 +1419,7 @@ position: absolute;
   width:95%;
   height:30vh;
   font-size: 1.5vw;
-  bottom: 28%;
+  bottom: 30%;
   padding: 3px;
  right:2%;
   box-sizing: border-box;
@@ -1578,7 +1581,7 @@ z-index: 2;
   height: 30%;
   width:100%;
   flex-flow: row;
- bottom: -5px;
+ bottom: -1px;
   justify-content: center;
 align-items: center;
 display:grid
@@ -2494,59 +2497,8 @@ overflow: hidden;
 }
 
 
-#voice-icon2.active{
-  border: 1px solid rgb(255, 255, 0);
-  box-shadow: 0 0 3px rgb(255, 255, 0), 0 0 2px rgb(255, 255, 0), 0 0 4px rgb(255, 255, 0),
-		0 0 8px rgb(255, 255, 0);   
-}
-#voice-icon2.muted {
-color:rgba(255, 255, 255, 0.5)}
-.slider2{
-    -webkit-appearance: none;
-    height: 2px;
-    width: 60px;
-    margin:10px;
-  top: -4px;
-  position:absolute;
-  left:20px;
-  z-index: 3;
-  background: #fff;
-  outline: none;
-  opacity: 1;
 
-}
-@media all and (orientation:landscape){
-  .slider2 {
-    -webkit-appearance: none;
-    height: 2px;
-    width: 60px;
-    margin:10px;
-  top: -25px;
-  position:absolute;
-  top:30%;
-  left:-33px;
-  z-index: 3;
-  background: #fff;
-  outline: none;
-  opacity: 1;
-  transform: rotate(270deg);
-  left:-33px
-
-}}
-.slider2::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    background-color: #ffff00;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-
-}
-.slider2::-moz-range-thumb {
-    background-color: #ffff00;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-}
+@
 
 #chaptertitrs{
   position:fixed;
@@ -2735,9 +2687,6 @@ opacity:1;
 z-index:3;
 top:0px}
 /********************flashcard************************/
-body {
-  margin: 15px;
-}
 
 
  
@@ -2862,7 +2811,7 @@ div p {
  border-bottom: 1px solid yellow;
  padding: 5px;
 }
-}
+
 
 #musicmenu{
   position:fixed;
@@ -2917,6 +2866,7 @@ section.hidden{
  font-size:20px;
  border-bottom: 1px solid yellow;
  padding: 5px;
+ visibility: inherit;
 }
 
 @media all and (orientation: landscape) {
@@ -2970,12 +2920,11 @@ bottom:7px;
     -webkit-appearance: none;
     background: #ddd;
     height: 2px;
-    width: 60px;
+    width: 50px;
     margin:10px;
     position: absolute;
-  top: -25px;
-  transform: rotate(270deg);
-  display:none
+  top: -3px;
+  margin-left: 20px;
 }
 @media all and (orientation:landscape){
   .slider {
@@ -2988,7 +2937,7 @@ bottom:7px;
     position: absolute;
   top: -3px;
   transform:translateX(25px);
-  display:none
+
 }
 }
 .slider::-webkit-slider-thumb {
@@ -3036,7 +2985,7 @@ color:rgba(255, 255, 255, 0.5)}
 position: relative;
 top:50px;
 margin:auto;
-width:85%;
+width:98%;
 height:75%;
 background: rgb(255, 255, 255,0.1);
 backdrop-filter: blur(20px);
@@ -3526,8 +3475,8 @@ opacity:1}
 #up_down{
   width:12px;
   position: fixed;
-  right:0px;
   top:20%;
+  right:0px;
   z-index: 20;
   display: grid;
   place-items: center;
@@ -3544,9 +3493,11 @@ padding: 5px;
 }
 @media all and (orientation: landscape) {
   #up_down{
-  right:9.85vw;
-  width:14px;
+  right:10.1vw;
+  width:2%;
   padding: 5px;
+  top:10%;
+
 
 
   }
@@ -3558,6 +3509,11 @@ padding: 5px;
 backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
 border-radius:5px;margin-bottom: 10px;cursor: pointer
+}
+#showmusic.active{
+  border: 1px solid rgb(0, 255, 72);
+  box-shadow: 0 0 3px #00ff08, 0 0 2px #00ff08, 0 0 4px #00ff08,
+		0 0 8px #00ff08;
 }
 #up{
   position:relative;
@@ -3807,7 +3763,7 @@ background: rgba(0, 0, 0, 0.4);
 
                 <button id="nextbtn" onclick="next()" style="display:block;background:transparent;border:none;"><img src="next.png" alt="next" style="position:relative;right:0;top:0;width:30px;height:30px;"></button>
 
-                <div class="fa fa-volume-up"  onclick="toggleMute()"  id="voice-icon" style="display:block;position:relative;top:-1px"><input type="range" min="0" max="100" value="100" class="slider" id="volume-slider" style="display:none" ></div>
+                <div class="fa fa-volume-up"  onclick="toggleMute()"  id="voice-icon" style="display:block;position:relative;top:-1px"><input type="range" min="0" max="100" value="100" class="slider" id="volume-slider"  ></div>
                </div>
 
               </div>
@@ -3860,7 +3816,7 @@ background: rgba(0, 0, 0, 0.4);
   2-حرکت کششی انجام دهید و نفس های عمیق بکشید<br>
   3-کمی در فضای باز قدم بزنید</h3>
   <br>
-  <button onclick="exit()" class="OK">OK</button>
+  <button onclick="exitrest()" class="OK">OK</button>
 </div>
 </div>
 
@@ -3887,7 +3843,7 @@ background: rgba(0, 0, 0, 0.4);
  
     </div>
     <span style="position:absolute;
-    bottom: 5%;
+    bottom: 0%;
     text-align: center;
    width: 100%;
    font-size: 1vw;font-family: 'Yekan';">درصد پیشرفت </span>
@@ -3899,6 +3855,7 @@ background: rgba(0, 0, 0, 0.4);
 
 
 <div id="up_down">
+
   <div class="pagehandling" onclick="exit()">
     <image src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/exit.png" style="position: relative;width: 100%;height: 100%;margin:auto;" ></image>
 
@@ -3908,6 +3865,10 @@ background: rgba(0, 0, 0, 0.4);
   </div>
   <div class="pagehandling" style="padding-top: 5px;padding-bottom: 5px;" onclick="">
     <image src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/list.png" style="position: relative;width: 100%;height: 100%;margin:auto;" ></image>
+  </div>
+  <div  id="showmusic"  class="pagehandling" onclick="showmusic()">
+    <image src="22407.png" style="position: relative;width: 100%;height: 100%;margin:auto;" ></image>
+
   </div>
 
 <div id="scrollToTop" onclick="scrollToTop()">
@@ -3930,9 +3891,7 @@ background: rgba(0, 0, 0, 0.4);
 <div class="menubox" >
 
 </div>
-<button id="chaptertitrs" onclick="chaptertitrs()" ><img src="5261621.png"style="position: absolute;top:2px;left:35%;width:30%;height:60%">     
-  <span style="position:relative;top:18px;font-size:9px;color:white;font-family:Yekan;margin:auto">تیترهای اصلی </span>
-</button>
+
 
    <button id="note" onclick="shownote()"   ><span style="position:relative;top:18px;font-size:9px;color:rgb(255, 255, 255);font-family:Yekan;margin:auto">دفترچه یادداشت</span><img src="221407.png" style="position: absolute;top:2px;left:35%;width:30%;height:65%;">  
   </button>
@@ -3942,7 +3901,6 @@ background: rgba(0, 0, 0, 0.4);
     <span style="position:relative;top:2px;font-size:9px;color:white;font-family:Yekan;margin:auto">موسیقی سه بعدی</span>
      <img src="22407.png" style="position: absolute;top:2px;left:30%;width:35%;height:70%">
   </button>
-    <button  id="voiceicon2"  id="voice-icon2" onmousedown="mouseDown()" onmouseup="mouseUp()"><img class="voice2" src="voice.png" ><input type="range"   min="0" max="100" value="100" class="slider2" style="display:block" id="volume-slider2"></button> 
 
   
 <section class="titr one" id="titrone" dir="rtl">
@@ -4663,6 +4621,30 @@ function handleScroll() {
 
 // Add an event listener for the scroll event on the window
 window.addEventListener("scroll",function(){
+  if (isTouchDevice) {
+    // If it's a touch device, add a touchstart event listener
+    if (document.documentElement.requestFullscreen) {
+  document.documentElement.requestFullscreen();
+} else if (document.documentElement.mozRequestFullScreen) { // Firefox
+  document.documentElement.mozRequestFullScreen();
+} else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
+  document.documentElement.webkitRequestFullscreen();
+} else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+  document.documentElement.msRequestFullscreen();
+}}
+
+ else {
+    // If it's not a touch device, add a click event listener
+    if (document.documentElement.requestFullscreen) {
+  document.documentElement.requestFullscreen();
+} else if (document.documentElement.mozRequestFullScreen) { // Firefox
+  document.documentElement.mozRequestFullScreen();
+} else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
+  document.documentElement.webkitRequestFullscreen();
+} else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+  document.documentElement.msRequestFullscreen();
+}
+}
       setTimeout(handleScroll, 1000);})
 const scrollableElement = document.getElementById("btnbar");
 
@@ -4673,7 +4655,22 @@ scrollableElement.addEventListener("scroll",function(){
 
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    openFullscreen();
+});
 
+function openFullscreen() {
+    const elem = document.documentElement;
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) { /* Firefox */
+        elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE/Edge */
+        elem.msRequestFullscreen();
+    }
+}
 
         
         
@@ -4968,7 +4965,7 @@ function set_timer() {
      }}
 
     
-function exit(){
+function exitrest(){
 before.style.visibility="hidden";
 set_timer() ;
 }
@@ -5145,6 +5142,8 @@ var musicmenu = document.getElementById("musicmenu");
 var musicstyle= window.getComputedStyle(musicmenu, null).visibility;
 
 if(musicstyle === "hidden") {
+  $("#showmusic").addClass('active');
+
   $("#musicmenu").addClass('show');
   $(document).on('click','#music',function(){
     $(this).addClass('active');
@@ -5160,6 +5159,8 @@ if(musicstyle === "hidden") {
 
 })
 } else {
+  $("#showmusic").removeClass('active');
+
   $("#musicmenu").removeClass('show');
   $(document).on('click','#music',function(){
     $(this).removeClass('active');
@@ -5586,24 +5587,12 @@ var voiceIcon = document.getElementById("voice-icon");
         voiceIcon.classList.remove("muted");
     }
 });
-var volumeslider2 = document.getElementById("volume-slider2");
-var voiceIcon2 = document.getElementById("voice-icon2");
-
-volumeslider2.addEventListener("input" , function (){
-  document.body.style.overflow="hidden";
-
-})
 
 
 
-      volumeslider2.addEventListener("input", function() {
-        audio.volume = volumeslider2.value / 100;
-    if ( audio.volume == 0) {
-        voiceIcon2.classList.add("muted");
-    } else {
-        voiceIcon2.classList.remove("muted");
-    }
-});
+
+
+    
 document.body.addEventListener('touchstart', handleMouseDown);
 document.body.addEventListener('mousedown', handleMouseDown);
 
@@ -5617,16 +5606,7 @@ function handleMouseDown(event) {
 
 }
 
-var volumeslider=  document.getElementById("volume-slider");
 
-function toggleMute(){
-  if(volumeslider.style.display==="none"){
-      volumeslider.style.display="block"
-  }
-  else{
-    volumeslider.style.display="none"
-  }
-}
 
 
 ////////////////////////////////////////////////***flashcard///////////////////////////////////////////////////
@@ -5696,10 +5676,13 @@ function exit(){
 
 }
 
-function refresh(){
-  location.reload()
+
+  function refresh() {
+    window.open("https://raw.githack.com/Science2023/3dbiochemistry/main/Chapter%201.html", "_self");
 }
-  
+
+
+
 
 </script>
 
