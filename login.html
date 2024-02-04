@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<head>
+    
+    <script src="https://kit.fontawesome.com/541b203307.js" crossorigin="anonymous"></script>
+    <link href="https://allfont.net/allfont.css?fonts=roboto-thin">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&display=swap" rel="stylesheet">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+
+@font-face {
+  font-family: "Iranian";
+  src:url("Iransans")  format("woff"),
+ 
+}
+
+@font-face {
+  font-family: "Yekan";
+  src:url("https://rawcdn.githack.com/Science2023/scientist.github.io/ea382640dc9303089955465cb3eb1e37af9a301e/Yekan-.woff")  format("woff"),
+  url("https://download1594.mediafire.com/6y1g8w2ko6zgKb9iGPrgxqoPncbq4aw7Q0m4wD1-ErxYZ3u3H0SPlT0ArRmEjTxflhuq9sUNhSvhEcWpTaY71-_ZttsJ/8zorgdg84b1avso/Yekan+%281%29+%283%29.otf") format("opentype")
+
+}
+@font-face {
+  font-family: "Estedad";
+  src:url("https://rawcdn.githack.com/Science2023/3dbiochemistry/fcc681ac4af6325218331d60123c7986df89927b/Estedad-Light.woff")  format("woff"),
+  url("https://rawcdn.githack.com/Science2023/3dbiochemistry/fa02ea97084691c84105829a54937b6ea3de4608/Estedad-Light.woff2")  format("woff2"),
+
+
+}
+.loginform {
+  position: fixed;
+  top:0px;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #f7f7fe, #dff1ff);
+    z-index: 100000;
+    display:flex;
+    width: 100vw;
+}
+
+
+.loginform .colour {
+    position: absolute;
+    filter: blur(150px);
+}
+
+.loginform .colour:nth-child(1) {
+    top: -350px;
+    width: 600px;
+    height: 600px;
+    background: #bf4ad4;
+}
+
+.loginform .colour:nth-child(2) {
+    left: 100px;
+    width: 500px;
+    height: 500px;
+    bottom: -150px;
+    background: #ffa500;
+}
+
+.loginform .colour:nth-child(3) {
+    right: 100px;
+    bottom: 50px;
+    width: 300px;
+    height: 300px;
+    background: #2b67f3;
+}
+
+.loginbox {
+    position: relative;
+}
+
+.loginbox .square {
+    position: absolute;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.0);
+    animation-delay: calc(-1s * var(--i));
+    animation: animate 10s linear infinite;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        transform: translateY(-40px);
+    }
+
+    50% {
+        transform: translateY(40px);
+    }
+}
+
+.loginbox .square:nth-child(1) {
+    top: -120px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.box .square:nth-child(2) {
+    z-index: 2;
+    top: 150px;
+    left: -100px;
+    width: 80px;
+    height: 80px;
+}
+
+.loginbox .square:nth-child(3) {
+    z-index: 2;
+    width: 120px;
+    height: 120px;
+    right: 8px;
+    bottom: -120px;
+}
+
+.loginbox .square:nth-child(4) {
+    left: 100px;
+    width:100px;
+    height: 100px;
+    bottom: -120px;
+    z-index: 1;
+}
+
+.loginbox .square:nth-child(5) {
+    top: -120px;
+    left: 200px;
+    width: 120px;
+    height: 120px;
+}
+
+
+@media all and (orientation: landscape) {
+  .loginbox .square:nth-child(1) {
+    top: 40px;
+    left: -90px;
+    width: 100px;
+    height: 100px;
+}
+
+.box .square:nth-child(2) {
+    z-index: 2;
+    top: 100px;
+    right:10px;
+    width: 80px;
+    height: 80px;
+}
+
+.loginbox .square:nth-child(3) {
+    z-index: 2;
+    width: 120px;
+    height: 120px;
+    right: -50px;
+    bottom: 30px;
+}
+
+.loginbox .square:nth-child(4) {
+    left: -30px;
+    width:100px;
+    height: 100px;
+    bottom: 10px;
+    z-index: 1;
+}
+
+.loginbox .square:nth-child(5) {
+    top: 10px;
+    left: 390px;
+    width: 120px;
+    height: 120px;
+}
+
+}
+.logincontainer {
+    width: 400px;
+    display: flex;
+    min-height: 400px;
+    position: relative;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form {
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    position: relative;
+}
+
+.form h2 {
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    color:blue;
+  font-size: 16px;
+  width: 100%;
+}
+
+.form h2::before {
+    left: 0;
+    width: 100%;
+    height: 4px;
+    content: "";
+    bottom: -10px;
+    background: #fff;
+    position: absolute;
+}
+
+.form .input__box {
+    width: 100%;
+    margin-top: 20px;
+    width:100%
+}
+
+.form .input__box input {
+    width: 100%;
+    color: blue;
+    outline: none;
+    font-size: 16px;
+    padding: 5px 20px;
+    letter-spacing: 1px;
+    border-radius: 35px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.form .input__box button {
+  cursor: pointer;
+    width: 150px;
+    height: 50px;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 5px 20px;
+    letter-spacing: 1px;
+    border-radius: 35px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.form::placeholder {
+    color: #fff;
+}
+
+#login {
+    color: #666;
+    cursor: pointer;
+    background: #fff;
+    max-width: 100px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.forget {
+    color: #fff;
+    margin-top: 5px;
+}
+
+.forget a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+    <section class="loginform" id="loginform">
+        <div class="colour"></div>
+        <div class="colour"></div>
+        <div class="colour"></div>
+        <div class="loginbox">
+            <div class="square" style="--i: 0"><img style="width:100%"src="molecule-structure-6625223-5522658.png"></div>
+            <div class="square" style="--i: 1"></div>
+            <div class="square" style="--i: 2"><img style="width:100%"src="cell-dish-flipcard.png"></div>
+            <div class="square" style="--i: 3;overflow: hidden;"><img style="width:180%"src="pngtree-3d-modeling-dna-horizontal-map-three-dimensional-pink-and-white-png-image_8649321 (1).png"></div>
+            <div class="square" style="--i: 4"><img style="width:100%"src="171-1713827_human-insulin-hexamer-3d-ribbons-human-insulin-protein.png"></div>
+            <div class="logincontainer">
+                <div class="form">
+                    <h2 dir="rtl" style="font-family: Yekan; color: black;text-align:center"> لطفا نام کاربری و رمز عبور خود را وارد کنید </h2>
+                    <form   dir="rtl" ;>
+                        <div class="input__box" style="display: flex;align-items: center;">
+                            <input type="text" id="username" placeholder="نام کاربری"style="font-family: Yekan; text-align:center" />
+                        </div>
+                        <div class="input__box" style="display: flex;align-items: center;">
+                            <input type="password" id="password" placeholder="رمز عبور"style="font-family: Yekan;text-align:center;" />
+                        </div>
+                        <div  class="input__box" id="login" onclick="openNewPage()" style="background: transparent;margin:auto;margin-top: 20px;margin-left: 40%;" >
+                            <button    tabindex="0"  style="font-family: Yekan;text-align: center;color:green" >ورود</button>
+                        </div>
+                       
+                    
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+<script>
+ 
+function openNewPage() {
+  let  username=document.getElementById("username").value;
+  let password=document.getElementById("password").value;
+  let user1="ali";
+  let pass1="12345";
+  let user2="zahra";
+  let pass2="54321";
+  if (username===user1 && password===pass1||username===user2 && password===pass2 ) {
+    window.open("https://raw.githack.com/Science2023/3dbiochemistry/main/Chapter%201.html"); // Open new page in same tab
+  }else{
+        document.getElementById('Username').value = '' ;
+document.getElementById('password').value = ''
+  }
+}
+
+
+
+
+
+
+
+// Get the text field that we're going to track
+
+var loginform= document.getElementById("loginform");
+
+// See if we have an autosave value
+// (this will only happen if the page is accidentally refreshed)
+if (sessionStorage.getItem("display")) {
+  // Restore the contents of the text field
+  loginform.style.display= sessionStorage.getItem("display");
+}
+
+// Listen for changes in the text field
+loginform.addEventListener("change", () => {
+  // And save the results into the session storage object
+  sessionStorage.setItem("display", "none");
+  
+});
+
+</script>
+</body>
