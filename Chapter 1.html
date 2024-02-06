@@ -3432,7 +3432,6 @@ opacity:1}
 #scrollToTop{
   position:relative;
   right:0px;
-  width:100%;
   height:30px;
   margin-bottom: 4px;
   display: grid;
@@ -3453,7 +3452,6 @@ opacity:1}
 #scrollToEnd{
   position:relative;
   right:0px;
-  width:100%;
   height:30px;
   margin-top: 4px;
   display: grid;
@@ -3467,7 +3465,7 @@ backdrop-filter: blur(10px);
 border-radius:100px 100px 100px 100px;
 z-index: 10;
 overflow: visible;
-
+margin-bottom: 0;
 visibility: visible;
 opacity:1}
 
@@ -3504,9 +3502,9 @@ padding: 4px;
 }
 .pagehandling{
   background: rgba(0, 0, 0,0.4);
-  width:100%;
+  width:80%;
   display: grid;
-  padding: 1px;
+  padding: 3px;
   align-items: center;
   position: relative;
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -3522,15 +3520,15 @@ border-radius:5px;margin-bottom: 10px;cursor: pointer
 }
 #up{
   position:relative;
-  width:100%;
   height:30px;
-  margin-bottom: 5px;
+  margin-bottom: -1px;
   display: grid;
   place-items: center;
   cursor: pointer;
   background: rgba(0, 0, 0,0.4);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   border:1px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 0px;
 backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
 border-radius:100px 100px 10px 10px;
@@ -3542,7 +3540,6 @@ opacity:1}
 #down{
   position:relative;
   right:0px;
-  width:100%;
   height:30px;
   display: grid;
   place-items: center;
@@ -3550,6 +3547,7 @@ opacity:1}
   background: rgba(0, 0, 0,0.4);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   border:1px solid rgba(255, 255, 255, 0.7);
+  border-top: 0px;
 backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
 border-radius:10px 10px 100px 100px;
@@ -3868,25 +3866,25 @@ background: rgba(0, 0, 0, 0.4);
   <div class="pagehandling"  onclick="refresh()">
     <image src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png" style="position: relative;width: 100%;height: 100%;margin:auto;" ></image>
   </div>
-  <div class="pagehandling" style="padding-top: 5px;padding-bottom: 5px;" >
-    <image src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/list.png" style="position: relative;width: 100%;height: 100%;margin:auto;" ></image>
+  <div class="pagehandling" >
+    <image src="list.png" style="position: relative;width: 100%;height: 100%;margin:auto;" ></image>
   </div>
   <div  id="showmusic"  class="pagehandling" onclick="showmusic()">
     <image src="22407.png" style="position: relative;width: 100%;height: 100%;margin:auto;" ></image>
 
   </div>
 
-<div id="scrollToTop" onclick="scrollToTop()">
+<div id="scrollToTop" class="pagehandling" onclick="scrollToTop()">
   <image src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/top.png" style="position: relative;width: 75%;height: 40%;margin:auto;" ></image>
 </div>
 
-<div id="up" onclick="scrollup()">
+<div id="up"  class="pagehandling" onclick="scrollup()">
   <image src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/Up.png" style="position: relative;width: 75%;height: 40%;margin:auto;" ></image>
 </div>
-<div id="down" onclick="scrolldown()">
+<div id="down" class="pagehandling" onclick="scrolldown()">
   <image src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/down.png" style="position: relative;width: 75%;height:40%;margin:auto;"  ></image>
 </div>
-<div id="scrollToEnd" onclick="scrollToEnd()">
+<div id="scrollToEnd" class="pagehandling" onclick="scrollToEnd()">
   <image src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/end.png" style="position: relative;width: 75%;height: 40%;margin:auto;" ></image>
 </div>
 </div>
