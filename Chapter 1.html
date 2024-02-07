@@ -1039,8 +1039,8 @@ border-top: 0.5px solid rgba( 255, 255, 255, 0.5 );
 .frame{
 position:fixed;
 bottom: 5px;
-left: 7.5%;
-width: 85vw;
+left: 4.5%;
+width: 79vw;
 height:15px;
 background-color: rgba(255, 255, 255, 0.05);
 border-radius:0px;
@@ -1099,14 +1099,14 @@ filter:blur(10px)
   display: block;
   padding: 0px;
   bottom:22px;
-  font-size:15px;
-  transform: translateX(-21px);
+  font-size:10px;
+  transform: translateX(-16px);
   background: rgba(255, 255, 255, 0);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 60px );
   -webkit-backdrop-filter: blur( 60px );
   border: 1px solid rgb(255, 238, 2);
-  width:40px;
+  width:30px;
   height:20px;
   text-align: center;
   line-height:20px;
@@ -1115,7 +1115,7 @@ filter:blur(10px)
 .frame span::before{
   position: absolute;
   content:"";
-  right:15px;
+  right:10px;
   top:20px;
   height:0px;
   width:0px;
@@ -2169,8 +2169,9 @@ top: 19.1vh;
   gap: 2rem; 
   justify-content: center 
 }
+@media all and (orientation:landscape){
 
-#tube {
+  #tube {
     --width: calc(1.42vw + 0.6rem);
     --skew: calc(0.2vw + 0.1rem);
     --tube-color: #fff;
@@ -2187,9 +2188,13 @@ top: 19.1vh;
     grid-template-rows: max-content auto max-content;
     position: relative;
   bottom:8px;
+  }
+
+  }
+
+ 
 
 
-}
 #tube::before{
     --blur: 4px;
     content: '';
@@ -3869,7 +3874,7 @@ background: rgba(0, 0, 0, 0.4);
     bottom: 0%;
     text-align: center;
    width: 100%;
-   font-size: 1vw;font-family: 'Yekan';">درصد پیشرفت </span>
+   font-size:1.1vw;font-family: 'Yekan';">درصد پیشرفت </span>
   </div>
 </div>
 <div class="menuicon"onclick="openmenu()">
@@ -4545,6 +4550,12 @@ background: rgba(0, 0, 0, 0.4);
 <div class="frame"  id="frame" dir="ltr">
   <span class="percent" style="color:yellow">0%</span>
   <div class="progressbar"></div>
+  <div style="position:absolute;
+    bottom: -2px;
+    text-align: center;
+   width: 20%;color:white;
+   right:-20%;
+   font-size: 9px;font-family: 'Yekan';margin-left: 5px;">درصد پیشرفت </div>
 </div>
 
 
