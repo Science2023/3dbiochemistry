@@ -3448,7 +3448,18 @@ overflow: visible;
 
 visibility: visible;
 opacity:1}
+#scrollimg{
+  position: relative;
+  width: 75%;
+  margin:auto;
+  height:30%
 
+}
+@media all and (orientation: landscape){
+  #scrollimg{
+    height:60%;
+  }
+}
 #scrollToEnd{
   position:relative;
   right:0px;
@@ -3881,7 +3892,7 @@ background: rgba(0, 0, 0, 0.4);
   </div>
 
 <div id="scrollToTop" class="pagehandling" onclick="scrollToTop()">
-  <img src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/top.png" style="position: relative;width: 75%;height: 60%;margin:auto;" >
+  <img src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/top.png" id="scrollimg"  >
 </div>
 
 <div id="up"  class="pagehandling" onclick="scrollup()">
@@ -3891,7 +3902,7 @@ background: rgba(0, 0, 0, 0.4);
   <img src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/down.png" style="position: relative;width: 75%;height:40%;margin:auto;"  >
 </div>
 <div id="scrollToEnd" class="pagehandling" onclick="scrollToEnd()">
-  <img src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/end.png" style="position: relative;width: 75%;height: 60%;margin:auto;" >
+  <img src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/end.png"id="scrollimg" >
 </div>
 </div>
 
