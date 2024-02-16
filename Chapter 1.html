@@ -5082,6 +5082,11 @@ function openFullscreen() {
 
   })
 
+  const reloadiframeswhenerror=querySelectorAll('iframe');
+  reloadiframeswhenerror.forEach(iframe=> 
+  iframe.onerror = function() {
+    iframe.src = iframe.src;})
+
 
 
 
