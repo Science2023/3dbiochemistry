@@ -135,7 +135,7 @@ margin-bottom:20px;
 
 .h1{
 position: sticky;
-top:16.3vh;
+top:16.1vh;
 left:30px;
 font-size:1.8vh;
 font-family: 'yekan';
@@ -642,7 +642,6 @@ width: 40px;
 color: rgb(255, 255, 255); 
 font-family:'Yekan';
 font-size: 10px;
-font-weight: bold;
 cursor: pointer; 
 border: none; 
 overflow: hidden;
@@ -1426,7 +1425,7 @@ align-items: center;
 .timerbutton{
   position: relative;
   width: 5vw;
-  font-size: 1.3vw;
+  font-size: 1.4vw;
   height:2.5vw;
   padding:3px;
   text-align: center;
@@ -2099,22 +2098,18 @@ width: 30%;
     position: sticky;
     color: white;
     font-size: 1.8vh;
-    backdrop-filter: blur(10px );
-    -webkit-backdrop-filter: blur( 10px );
+    backdrop-filter: blur(5px );
+    -webkit-backdrop-filter: blur( 5px );
     z-index: 19;
-    top: 19.1vh;
+    top: 20vh;
     justify-content: center;
     display: flex;
     align-items: center;
       position: sticky;
-  backdrop-filter: blur(10px );
--webkit-backdrop-filter: blur( 10px );
+ 
 
 }
-#h2two{
-  background:rgb(214 33 250 / 10%) ;
-  z-index: 400;
-}
+
 @media all and (orientation:landscape){
 
 .h2{
@@ -3626,19 +3621,18 @@ border-image:4px rgb(255, 255, 255,0.1);
 
     }
 .maintitr{
-  border: 1px solid white;
-height:5vh;
+  height:5vh;
 width:100%;
-border-radius: 6px;
+border-radius: 5px;
 box-sizing: border-box;
-background: rgba(0, 0, 0, 0.4);
+background: rgba(0, 0, 0, 0.6);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   font-family: 'yekan';
   font-size:3vh;
   color:rgb(255, 255, 255);
   text-align: center;
-  backdrop-filter: blur(10px );
-  -webkit-backdrop-filter: blur( 10px );
+  backdrop-filter: blur(3px );
+  -webkit-backdrop-filter: blur( 3px );
   display:flex;
   align-items:center;
   justify-content:center;
@@ -3924,8 +3918,10 @@ background: rgba(0, 0, 0, 0.4);
 
   
 <section class="titr one" id="titrone" dir="rtl">
-  <div class="border">
-    <div class="maintitr"  Style="z-index: 1000;background: #00902480;"> مقدمه‌ای بر علم بیوشیمی </div>
+      <div class="maintitr"  Style="z-index: 1000;color: #00ff26;  border: 1px solid #00ff26;
+    "> مقدمه‌ای بر علم بیوشیمی </div>
+  <div class="border" style= "border: 1px solid #00ff26;border-radius: 5px;">
+
      
     <div class="h1parrent">
 
@@ -4008,14 +4004,15 @@ background: rgba(0, 0, 0, 0.4);
      
     </section>
     
-<section class=" titr two" id="titrtwo"  style="box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );" dir="rtl">
-<div class="border" >
- <div class="maintitr" id="maintitr" style="z-index: 1000;background: #88009080;" >  مبانی شیمیایی</div>
+<section class=" titr two" id="titrtwo"  style="box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );" dir="rtl"> 
+  <div class="maintitr" id="maintitr" style="z-index: 1000;color:#ff00f7; border: 1px solid #ff00f7" >  مبانی شیمیایی</div>
+<div class="border" style="border: 1px solid #ff00f7;border-radius: 5px;" >
+
   <div class="h1parrent">
-    <div class="h1" id="h1 two" style="background: #88009040;border-bottom: 0.5px solid rgb(255,255,255,0.4);">پیوندهای شیمیایی موجود در بیومولکول ها</div>
+    <div class="h1" id="h1" style="border-bottom: 0.5px solid  #ff00f7;color:#ff00f7">پیوندهای شیمیایی موجود در بیومولکول ها</div>
 
       <div class="h2parrent" >
-        <div class="h2"  id ="h2two"  >   کوالانسی</div>
+        <div class="h2"  id ="h2" style="color:#ff00f7" >   کوالانسی</div>
         <div class="content" id="content"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);">
             اشتراک الکترون های لایه ظرفیت اتم ها
             <br><span style="color:#e100ff">● پیوند یگانه(اشتراک یک جفت الکترون):اتم های متصل با پیوند یگانه در صورت نداشتن محدودیت فضایی مثل گروه های بزرگ حول پیوند بچرخند</span>
@@ -4027,7 +4024,7 @@ background: rgba(0, 0, 0, 0.4);
 
             <div class="h2parrent" >
 
-            <div class="h2"  id ="h2two"  >یونی</div>
+            <div class="h2"   style="color:#ff00f7" >یونی</div>
             <div class="content" id="content"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);" >
 
 نیروی جاذبه بین یون های مثبت و منفی 
@@ -4059,7 +4056,7 @@ background: rgba(0, 0, 0, 0.4);
           </div>
             </div>
             <div class="h2parrent" >
-              <div class="h2"  id ="h2two"  >واندروالسی</div>
+              <div class="h2"   style="color:#ff00f7" >واندروالسی</div>
               <div class="content" id="content"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);">
           نیروی جاذبه ضعیف بین اتم ها یا مولکول های  دو قطبی دائمی یا لحظه ای(در مولکول های غیر قطبی) <br>
             انواع :نیروهای یون-دو قطبی ، دوقطبی-دوقطبی و نیروهای نشری خطی لاندون<br>
@@ -4113,13 +4110,13 @@ background: rgba(0, 0, 0, 0.4);
   </div>
   
      <div class="h1parrent">
-       <div class="h1"  id="h1_two" style="background: #88009040;border-bottom: 0.5px solid rgb(255,255,255,0.4);"> بیومولکول ها</div>
+       <div class="h1"  id="h1" style="border-bottom: 0.5px solid  #ff00f7;color:#ff00f7"> بیومولکول ها</div>
         <div class="content" id="content"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);" >
               <span style="color:#e100ff">● کربن: </span>مهمترین عنصر موجودات زنده شامل بیش از نصف وزن خشک سلول‌ها ، توانایی تشکیل پیوندهای یگانه (با اتم های مختلف مثل هیدروژن و یا کربن دیگر)، دوگانه (با اکسیژن و نیتروژن) و سه گانه (با یک کربن دیگر) ، تشکیل زنجیره‌های خطی ، زنجیره‌های منشعب و ساختارهای حلقوی ، تنوع پیوندی با خود و دیگر عناصر←دلیل اصلی انتخاب  ترکیبات کربن  به عنوان ماشین سلولی (عدم توانایی عناصر دیگر برای تشکیل مولکول‌های متنوع از نظر حجم ، شکل و ترکیب مثل کربن) ،  بیشتر بیومولکول‌ها مشتقات هیدروکربن‌ها (جایگزینی اتم‌های هیدروژن با گروه‌های عاملی دارای خواص شیمیایی: ایجاد خانواده‌های مختلف ترکیبات ارگانیک) <span style="color:#e100ff">● مثال: </span> الکل‌ها: دارای یک یا چند گروه هیدروکسیل ، آمین‌ها: دارای گروه های آمینی ، آلدهیدها و کتون‌ها: دارای گروه‌های کربونیل ، کربوکسیلیک اسیدها: دارای گروه‌های کربوکسیل <br><span style="color:#e100ff">● نکته: </span>بسیاری بیومولکول‌ها دارای دو یا چند گروه عاملی ← ویژگی های شیمیایی هر ترکیب : ویژگی‌های شیمیایی گروه‌های عاملی و موقعیت فضایی آنها
         </div>
     
           <div class="h2parrent" >
-          <div class="h2" style="z-index: 400;" > گروه های عاملی</div>
+          <div class="h2" style="z-index: 400;color:#ff00f7" > گروه های عاملی</div>
           <div class="content" id="content"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);" >
 
               <div style="width:98%;position: relative;display:grid;margin:auto;justify-content:  center;text-align: center;padding: 5px;border:1px solid rgb(255,255,255,0.2);  border-radius: 20px;align-items: center;">
@@ -4369,7 +4366,7 @@ background: rgba(0, 0, 0, 0.4);
               </div>
             </div>
             <div class="h2parrent" >
-              <div class="h2" style="z-index: 400;" > مولکول‌های کوچک مشترک در سلول‌ها</div>
+              <div class="h2" style="z-index: 400;color:#ff00f7" > مولکول‌های کوچک مشترک در سلول‌ها</div>
               <div class="content" id="content"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);" >
 
             هزاران مولکول ارگانیک کوچک محلول در محیط آبی همه سلول‌ها با غلظت‌های متفاوت از نانومولار تا بیش از ۱۰ میلی مولار ، متابولیت‌های مرکزی مسیرهای اصلی همه سلول‌ها  شامل آمینو اسیدهای رایج ، نوکلئوتیدها ، قندها و مشتقات فسفوریله آنها  و مونو  ،دی و تری کربوکسیلیک اسیدها های  مولکول های قطبی یا باردار و بیشتر آنها محلول در آب به دام افتاده در سلول به دلیل نفوذ ناپذیر بودن غشا به آنها  ← ترانسپورترهای خاص غشایی :جابجایی برخی مولکول‌ها به داخل و بیرون سلول یا بین بخش‌های مختلف سلول‌های یوکاریوتی  وجود ترکیبات مشترک در سلول‌های زنده ←  حفاظت تکاملی مسیرهای متابولیک از سلول‌های اجدادی تا سلول‌های امروزی ← برخی بیومولکول‌های کوچک مخصوص سلول‌های ارگانیسم‌های خاص ← مثال: متابولیت‌های ثانویه در گیاهان آوندی شامل ترکیبات با رایحه و رنگ خاص و ترکیباتی مثل مورفین ، کینین ، نیکوتین و کافئین (دارای اثرات فیزیولوژیک روی انسان اما با هدف متفاوت در گیاهان)    <span style="color:#e100ff">● متابولوم: </span> مجموعه تمام )مولکول‌های کوچک در یک سلول تحت شرایط خاص(مثل دوره خاصی از زندگی سلول) ←<span style="color:#e100ff">●متابولومیکس:</span>مطالعه ویژگی‌های سیستماتیک متابولوم تحت شرایط بسیار خاص (مثل مصرف یک دارو یا  وجود  یک سیگنال بیولوژیک مثل انسولین)
@@ -4377,7 +4374,7 @@ background: rgba(0, 0, 0, 0.4);
             </div>
 
             <div class="h2parrent" >
-              <div class="h2" style="z-index: 400;" >ماکرومولکول های زیستی</div>
+              <div class="h2" style="z-index: 400;color:#ff00f7" >ماکرومولکول های زیستی</div>
               <div class="content" id="content"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);" >
                بسیاری از مولکول‌های زیستی ←  ماکرومول‌: پلیمرهای با وزن مولکولی بالای ۵۰۰۰ ، متشکل از پیش  سازهای نسبتا ساده  ←پلیمرهای کوتاه‌تر ← الیگومرها  پروتئین‌ها ، نوکلئیک اسیدها و پلی ساکاریدها ماکرومول‌کول های متشکل از مونومرهای با وزن مولکولی ۵۰۰ یا کمتر   سنتز ماکرو مولکول‌ها انرژی  خواه‌ترین فعالیت سلول‌ها تجمع   برخی ماکرو مولکول‌ها تشکیل کمپلکس‌های سوپرا مولکولی ← ایجاد واحدهای عملکردی مثل ریبوزوم  پروتئین‌ها: پلیمرهای بلند آمینو اسیدها  ، تشکیل بخش عمده جرم سلول (به جز آب) ، برخی فعالیت کاتالیتیک (آنزیم‌ها) و دیگر پروتئین‌ها با نقش‌های ساختاری ، گیرنده‌های سیگنال یا ترانسپورترها (انتقال مواد به داخلی و بیرون سلول) ، متنوع‌ترین بیومولکول از نظر عملکردی ،<span style="color:#e100ff">● پروتئوم:</span> مجموع تمام پروتئین‌های موجود در یک سلول<span style="color:#e100ff">● پروتئومیکس:</span> مطالعه  نظام مند ویژگی های پروتئوم تحت شرایط خاص نوکلئیک اسیدها ، DNA و RNA ← پلیمرهای نوکلئوتیدها ، ذخیره و انتقال اطلاعات ژنتیکی ی مولکول‌های RNA نقش‌های ساختاری و کاتالیتیک در کمپلکس‌های سوپرامولکولی <span style="color:#e100ff">● ژنوم: </span> توالی کامل DNA سلول (یا توالی RNA در RNA ویروس‌ها)<span style="color:yellow">●  ژنومیکس:  </span>مطالعه ویژگی‌های ساختاری ، عملکردی ، تکاملی و نقشه  برداری ژنوم‌ها
               <span style="color:#e100ff">● پلی ساکاریدها: </span>پلیمرهای قندهای ساده مثل گلوکز ، سه عملکرد  اصلی: ذخایر سوختی ، اجزای ساختاری محکم دیواره‌های سلولی (در باکتری‌ها و گیاهان) ، و عناصر شناسایی  خارج سلولی (اتصال به پروتئین‌های سطحی سلول‌های دیگر) ← پلمیرهای کوتاه‌تر قندها (الگوساکاریدها): اتصال به پروتئین‌ها یا لیپیدهای سطحی سلول‌ها ، عملکرد به عنوان سیگنال‌های سلولی<span style="color:yellow">● گلیکوم: </span>مجموعه کامل مولکول‌های دارای کربوهیدرات سلول  لیپیدها: مشتقات هیدروکربنی نامحلول در آب ، اجزای ساختاری غشاها ، ذخایر سوختی ، رنگیزه‌ها سیگنال‌های درون سلولی  <span style="color:#e100ff">● لیپیدوم: </span>مجموعه کامل مولکول های دارای لیپید یک سلول 
@@ -4388,10 +4385,10 @@ background: rgba(0, 0, 0, 0.4);
      </div>
 
             <div class="h1parrent">
-            <div class="h1"  style="background: #88009040;border-bottom: 0.5px solid rgb(255,255,255,0.4);"> استریوشیمی (شیمی فضایی) </div>
+            <div class="h1"  style="border-bottom: 0.5px solid  #ff00f7;color:#ff00f7"> استریوشیمی (شیمی فضایی) </div>
             <br>
             <div class="h2parrent" >
-              <div class="h2" style="z-index: 400;"> ساختار سه بعدی بیومولکول ها</div>
+              <div class="h2" style="z-index: 400;color:#ff00f7"> ساختار سه بعدی بیومولکول ها</div>
               <div class="content"  id="content"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);" >
 
              <span style="color:#e100ff">● کونفورماسیون: </span>حالت های مختلف یک مولکول با چرخش اتم ها حول پیوند یگانه مثل کونفورماسیون های صندلی و قایق گلوکز ← تبدیل خودبخودی بدون نیاز به شکستن پیوند و غیر قابل جداسازی ← مثال: کونفورماسیون های صندلی و قایق در گلوکز  
@@ -4493,8 +4490,8 @@ background: rgba(0, 0, 0, 0.4);
             </div>
             </div>
        
-        <div class="h1parrent">
-          <div class="h1"  id="h1" style="background: #88009040;border-bottom: 0.5px solid rgb(255,255,255,0.4);"> انواع نمایش مولکول‌ها</div>
+        <div class="h1parrent"></div>
+          <div class="h1"  id="h1" style="border-bottom: 0.5px solid  #ff00f7;color:#ff00f7"> انواع نمایش مولکول‌ها</div>
                 <div class="content" id="content"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);" >
        
 <span style="color:yellow">● فرمول مولکولی: </span>نوع و تعداد اتم های هر عنصر در یک ترکیب مثال: C<sub>4</sub>H<sub>10</sub>(بوتان)<br>
@@ -4638,14 +4635,14 @@ background: rgba(0, 0, 0, 0.4);
 </div>
 
 <div class="h1parrent">
-  <div class="h1" style="background: #88009040;border-bottom: 0.5px solid rgb(255,255,255,0.4);">  ایزومرها </div>
+  <div class="h1" style="border-bottom: 0.5px solid  #ff00f7;color:#ff00f7;color:#ff00f7">  ایزومرها </div>
   <div class="content" id="content"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);" >
 
 <span style="color:yellow">● ایزومر:</span>ترکیبات با فرمول مولکولی(نوع و تعداد اتم های هر عنصر)  یکسان اما با فرمول ساختاری(اتصالات بین اتم ها) متفاوت<br>
   </div>
 <div class="h2parrent" >
 
-<div class="h2" style="z-index: 400;" > انواع ایزومرها</div>
+<div class="h2" style="z-index: 400;color:#ff00f7" > انواع ایزومرها</div>
 <div class="content" id="content"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);" >
 
 <br>
