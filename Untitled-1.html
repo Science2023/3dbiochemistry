@@ -1,22 +1,60 @@
-<html>
-<body>
-
-<h1>JavaScript Strings</h1>
-<h2>The indexOf() Method</h2>
-
-<p>indexOf() returns the position of the first occurrence of a value in a string.</p>
-
-<p>Find "welcome":</p>
-
-<p id="demo"></p>
-
-<script>
-let text = "Hello world, welcome to the universe.";
-let result = document.referrer  ;
-if (!document.referrer || document.referrer === "") {
-    window.location.href('https://www.google.com')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Underline to Chosen Text</title>
+<style>
+  /**-webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;***/
+    #textToUnderline :after{
+       
+  content: " ";
+  display: block;
+  height: .2em;
+  background-color: #f0860c;
+  border-radius: 10px;
 }
-</script>
 
+    
+</style>
+</head>
+<body>
+    <p style="font-size: xx-large;">This is some text. <div id="textToUnderline" style="font-size: xx-large;width: fit-content;display:contents;">Select this text and click the button to underline it.</div></p>
+    <button onclick="addUnderline()">Underline Selected Text</button>
+    <button onclick="retrieveChanges()">re</button>
+
+
+    <script >
+        function addUnderline() {
+    var selection = window.getSelection();
+    if (selection.rangeCount > 0) {
+        var range = selection.getRangeAt(0);
+        var newNode = document.createElement("div");
+        newNode.style.width="fit-content";
+        newNode.style.display="inline-block";
+        range.surroundContents(newNode);
+        saveChanges();
+       
+       // Change underline color
+         // Change underline style
+    }
+}
+function saveChanges() {
+    var modifiedContent = document.getElementById("textToUnderline").innerHTML;
+    localStorage.setItem("modifiedContent", modifiedContent);
+}
+
+function retrieveChanges() {
+    var modifiedContent = localStorage.getItem("modifiedContent");
+    if (modifiedContent) {
+        document.getElementById("textToUnderline").innerHTML = modifiedContent;
+    }
+}
+
+    </script>
 </body>
 </html>
