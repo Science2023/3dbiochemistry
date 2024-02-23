@@ -558,11 +558,7 @@ top:10px
 
 body{
 margin:0;
--webkit-user-select: none;
-        -webkit-touch-callout: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+
 flex-flow:column wrap;
 justify-content:center;
 align-items:center;
@@ -924,7 +920,6 @@ border-top: 0.5px solid rgba( 255, 255, 255, 0.5 );
 
 #scrollindicator span {
   position: fixed;
-  top: 30%;
   right: 20px;
   width: 24px;
   height: 24px;
@@ -966,7 +961,6 @@ border-top: 0.5px solid rgba( 255, 255, 255, 0.5 );
 }
 #scrollindicator2 span {
   position: fixed;
-  top: 30%;
   left: 30px;
   width: 24px;
   height: 24px;
@@ -1590,7 +1584,7 @@ display:grid
   }
   #scrollindicator  span {
   position: fixed;
-  top:30%;
+ top:30%;
   right:20px;
   width: 24px;
   height: 24px;
@@ -1778,6 +1772,8 @@ display: inline-block;
 .scrollindicator2{
   width: 50px;
   height: 70px;
+  display: flex;
+  align-items: center;
   position: fixed;
   left:0px;
   cursor: pointer;
@@ -1786,15 +1782,17 @@ display: inline-block;
 }
 #scrollindicator{
   position: fixed;
+  display: flex;
+  align-items: center;
   width:30px;
-  height: 70px;
+  height: 50px;
   right:0px;
   cursor: pointer;
   z-index:2
 }
 #scrollindicator2{
   width: 30px;
-  height: 70px;
+  height: 50px;
   position: fixed;
   left:0px;
   cursor: pointer;
@@ -2112,6 +2110,7 @@ width: 30%;
     display: flex;
     align-items: center;
       position: sticky;
+          background: rgb(255, 255, 255, 0.1);
  
 
 }
@@ -3645,6 +3644,7 @@ background: rgba(0, 0, 0, 0.6);
   position:sticky;
   top:11.2vh;
   z-index:1000}
+
     @media all and (orientation: landscape) {
 
     .maintitr{
@@ -3660,7 +3660,7 @@ background: rgba(0, 0, 0, 0.6);
 
 </head>
  
-<body onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off >
+<body onpaste="return false" onCopy="return false" onCut="return false"  onDrop="return false" autocomplete=off >
 
 
 <br><br>
@@ -3926,8 +3926,9 @@ background: rgba(0, 0, 0, 0.6);
 <section class="titr one" id="titrone" dir="rtl">
       <div class="maintitr"  Style="z-index: 1000;color: #00ff26;  border: 1px solid #00ff26;
     "> مقدمه‌ای بر علم بیوشیمی </div>
-  <div class="border" style= "border: 1px solid #00ff26;border-radius: 5px;box-shadow: inset 2px 0px 5px  #00ff26,inset -2px 0px 5px  #00ff26;">
-
+  <div class="border" style= "border-radius: 5px;box-shadow: inset 2px 0px 1vh  #00ff26,inset -2px 0px 1vh  #00ff26;">
+    <style>@media all and (orientation: landscape){
+      .border{box-shadow: inset 2px 0px 1vw  #00ff26,inset -2px 0px 1vw  #00ff26;}}</style>
      
     <div class="h1parrent">
 
@@ -4012,7 +4013,7 @@ background: rgba(0, 0, 0, 0.6);
     
 <section class=" titr two" id="titrtwo"  style="box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );" dir="rtl"> 
   <div class="maintitr" id="maintitr" style="z-index: 1000;color:#ff00f7; border: 1px solid #ff00f7" >  مبانی شیمیایی</div>
-<div class="border" style="border: 1px solid #ff00f7;border-radius: 5px;box-shadow: inset 2px 0px 5px #ff00f7,inset -2px 0px 5px #ff00f7;" >
+<div class="border" style="border-radius: 5px;box-shadow: inset 2px 0px 5px #ff00f7,inset -2px 0px 5px #ff00f7;" >
 
   <div class="h1parrent">
     <div class="h1" id="h1" style="color:#ff00f7">پیوندهای شیمیایی موجود در بیومولکول ها</div>
@@ -4894,7 +4895,13 @@ background: rgba(0, 0, 0, 0.6);
 	
 
 
+<script>
+ if (!sessionStorage.getItem("isLoggedIn")) {
+            // If not logged in, redirect to login page
+            window.location.href = "login.html";
+        }
 
+</script>
 <script
   src="https://code.jquery.com/jquery-3.6.3.slim.js"
   integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc="
@@ -5233,7 +5240,6 @@ function clickactivation2(){
 
 
 
-
 $(document).on("scroll", function(){
   var topw = $(document).scrollTop() ; 
   var tops=$("#titrone").offset().top ;
@@ -5254,10 +5260,11 @@ $(document).on("scroll", function(){
   var topw = $(document).scrollTop() ; 
   var toptitrtwo=$("#titrtwo").offset().top ;
   var titrtwoHeight =$("#titrtwo").height();
-  var btnbar = document.getElementById("btnbar");
-  var btntwo = document.getElementById("btntwo");
 
-  if(topw >= toptitrtwo - 500 && topw < toptitrtwo + titrtwoHeight ){
+  var viewportHeight = $(window).height();
+
+
+  if(topw + viewportHeight >= toptitrtwo + 0.2* viewportHeight ){
     $(".btnframe").removeClass('active');
     $('.btnframe.two').addClass('active');
     $('#up_down').css('box-shadow', 'inset 0px -2px 6px #f600ff');
@@ -5268,7 +5275,6 @@ $(document).on("scroll", function(){
   else
   {$(".btnframe.two").removeClass('active')}
 })
-
 let scrollEndTimeout;
 
 window.addEventListener("scroll", onScroll);
@@ -6074,6 +6080,7 @@ function exit(){
 }
 
 
+  
 
 </script>
 
