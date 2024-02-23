@@ -329,7 +329,9 @@ function openNewPage() {
   let user2="zahra";
   let pass2="54321";
   if (username===user1 && password===pass1||username===user2 && password===pass2 ) {
-    window.open("https://raw.githack.com/Science2023/3dbiochemistry/main/Chapter%201.html"); // Open new page in same tab
+    sessionStorage.setItem("isLoggedIn", "true");
+                // Redirect to another page
+                window.open("https://raw.githack.com/Science2023/3dbiochemistry/main/Chapter%201.html");
   }else{
         document.getElementById('Username').value = '' ;
 document.getElementById('password').value = ''
