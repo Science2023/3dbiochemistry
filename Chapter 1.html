@@ -3461,7 +3461,7 @@ opacity:1}
   position: fixed;
   bottom:15.3%;
   justify-content: space-between;
-  z-index: 20;
+  z-index: 1000;
   display: flex;
   flex-direction: row-reverse;
   place-items: center;
@@ -3525,6 +3525,11 @@ margin-right: unset;
   box-shadow: 0 0 3px #00ff08, 0 0 2px #00ff08, 0 0 4px #00ff08,
 		0 0 8px #00ff08;
 }
+#showmap.active{
+  border: 1px solid rgb(0, 255, 72);
+  box-shadow: 0 0 3px #00ff08, 0 0 2px #00ff08, 0 0 4px #00ff08,
+		0 0 8px #00ff08;
+}
 #up{
   position:relative;
   margin-bottom: -1px;
@@ -3570,6 +3575,130 @@ opacity:1}
   #down{
     margin-bottom: 10px;
   }}
+  #chaptermap{
+overflow: scroll;
+  position:fixed;
+margin:auto;
+  top:11.3%;
+  width:99.5%;
+  height:88vh;
+  background: rgba(0, 0, 0, 0);
+  border:1px solid rgb(246, 255, 0);
+border-radius:10px ;
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur(5px );
+-webkit-backdrop-filter: blur( 5px );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+border-radius:10px;
+transition: all 0.5s ease-in-out  ;
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+visibility:hidden;
+z-index:3;
+opacity:1
+}
+@media all and (orientation: landscape) {
+  #chaptermap{
+
+    top:0%;
+  width:89.5%;
+  height:99.5vh;
+
+  }}
+  #chaptermap.show{
+    visibility:visible;
+
+  }
+  #chaptermap::-webkit-scrollbar {
+    display: none;
+}
+  .pulsing{
+  position:absolute;
+  top: 45%;
+    left: 10%;
+    align-items: center;
+    width: 8px;
+    height: 8px;
+    display: flex;
+    justify-content: center;
+}
+.central-circle {
+    width: 1vh;
+    height:1vh;
+    
+    background-color: #00ff24;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.propagating-circle1 {
+    
+    background: rgb(0, 0, 0, 0);
+    border: 2px solid #0fff28;
+    border-radius: 50%;
+    position: absolute;
+    animation: propagate 2s linear infinite;
+}
+
+.propagating-circle3 {
+   
+    background: rgb(0, 0, 0, 0);
+    border: 2px solid #0fff28;
+    border-radius: 50%;
+    position: absolute;
+    animation: propagate 2s linear infinite;
+    animation-delay: 1s;
+
+    
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes propagate {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width:3vh;
+    height:3vh;
+    opacity: 0;
+  }
+}
+@media all and (orientation: landscape) {
+  .pulsing{
+    width: 2vw;
+    height:2vw;
+  }
+  .central-circle {
+    width: 0.5vw;
+    height:0.5vw;}
+  @keyframes propagate {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 3vw;
+    height: 3vw;
+    opacity: 0;
+  }
+}
+}
 
 .voice2{
   position: absolute;
@@ -3889,6 +4018,10 @@ background: rgba(0, 0, 0, 0.6);
     <img src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/music.png" style="position: relative;width: 100%;height: 100%;margin:auto;" >
 
   </div>
+  <div  id="showmap"  class="pagehandling" onclick="showmap()">
+    <img src="Untitled.png" style="position: relative;width: 100%;height: 100%;margin:auto;" >
+
+  </div>
 
 <div id="scrollToTop" class="pagehandling" onclick="scrollToTop()">
   <img src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/top.png" id="scrollimg"  >
@@ -3905,7 +4038,22 @@ background: rgba(0, 0, 0, 0.6);
 </div>
 </div>
 
-
+<div id="chaptermap" dir="rtl">
+  <h1 class="musich1" style="display: flex;justify-content: center;top:0px;width: 100%;margin: auto;">فصل در یک نگاه</h1><br>
+  <div style="width: 100%;
+  height: 9vh;
+  position: relative;
+  display: flex;">
+  
+    <img class="pic"  style="border:1px solid rgb(39, 255, 0, 0.5);idth: 98%;height: 100%;" src="Picture55.png" loading="lazy"><br> 
+    <div class="pulsing"> 
+      <div class="central-circle"></div>
+      <div class="propagating-circle1" ></div>
+      <div class="propagating-circle3" ></div>
+      </div>
+</div>
+  
+  </div>
 
 <div class="menubox" >
 
@@ -4898,7 +5046,7 @@ background: rgba(0, 0, 0, 0.6);
 <script>
  if (!sessionStorage.getItem("isLoggedIn")) {
             // If not logged in, redirect to login page
-            window.location.href = "https://raw.githack.com/Science2023/3dbiochemistry/main/login.html";
+            window.location.href = "login.html";
         }
 
 </script>
@@ -5238,9 +5386,16 @@ function clickactivation2(){
 
 }
 
+window.onload = function() {
 
+  light_up();
+  light_up2()}
 
 $(document).on("scroll", function(){
+  light_up();
+   light_up2()});
+
+function light_up(){
   var topw = $(document).scrollTop() ; 
   var tops=$("#titrone").offset().top ;
   var pageHeight =$("#titrone").height();
@@ -5251,12 +5406,13 @@ $(document).on("scroll", function(){
     $(".btnframe").removeClass('active');
     $('.btnframe.one').addClass('active');
     $('#up_down').css('box-shadow', 'inset 0px -2px 6px rgb(0 255 36)');
+    callCheckActivations()
      }
   else
   {$(".btnframe.one").removeClass('active')}
-})
+}
 
-$(document).on("scroll", function(){
+ function  light_up2(){
   var topw = $(document).scrollTop() ; 
   var toptitrtwo=$("#titrtwo").offset().top ;
   var titrtwoHeight =$("#titrtwo").height();
@@ -5270,11 +5426,11 @@ $(document).on("scroll", function(){
     $('#up_down').css('box-shadow', 'inset 0px -2px 6px #f600ff');
 
 
-    checkActivation()
+    callCheckActivations()
      }
   else
   {$(".btnframe.two").removeClass('active')}
-})
+}
 let scrollEndTimeout;
 
 window.addEventListener("scroll", onScroll);
@@ -5543,38 +5699,44 @@ if(musicstyle === "hidden") {
   $("#showmusic").addClass('active');
 
   $("#musicmenu").addClass('show');
-  $(document).on('click','#music',function(){
-    $(this).addClass('active');
+  $('body').css("overflow", "hidden");
     $('#notemenu').removeClass('show');
     $("#note").removeClass('active');
-    document.body.style.overflow="hidden";
-    $("#notemenu").css('z-index','-2');
-    $("#musicmenu").css('z-index','2');
-    $("section").addClass("hidden");
-    $(".foot").addClass("hidden");
-    $(".frame").addClass("hidden");
+    $("#musicmenu").css('z-index','1000');
 
 
-})
-} else {
+}
+ else {
   $("#showmusic").removeClass('active');
+  $('body').css("overflow", "scroll");
 
   $("#musicmenu").removeClass('show');
-  $(document).on('click','#music',function(){
-    $(this).removeClass('active');
-    document.body.style.overflow="scroll";
-    $("section").removeClass("hidden");
-    $(".foot").removeClass("hidden");
-    $(".frame").removeClass("hidden");
 
-
-
-
-
-})
-} 
 }
+}
+
   
+function showmap(){
+  var map = document.getElementById("chaptermap");
+  var mapstyle= window.getComputedStyle(map, null).visibility;
+
+  if(mapstyle === "hidden") {
+  $("#showmap").addClass('active');
+  $("#chaptermap").addClass('show');
+    $('body').css("overflow", "hidden");
+    $('#chaptermap').css("opacity", "1");
+
+
+} else {
+    $("#chaptermap").removeClass('show');
+    $('#chaptermap').css("opacity", "0");
+
+  $("#showmap").removeClass('active');
+  $('body').css("overflow", "scroll");
+
+}
+} 
+
 
 
 
@@ -5991,18 +6153,7 @@ var voiceIcon = document.getElementById("voice-icon");
 
 
     
-document.body.addEventListener('touchstart', handleMouseDown);
-document.body.addEventListener('mousedown', handleMouseDown);
 
-function handleMouseDown(event) {
-  if (event.type === 'touchstart') {
-    document.body.style.overflow="scroll";
-  } else if (event.type === 'mousedown') {
-    document.body.style.overflow="scroll";
-  }
-  document.body.style.overflow="scroll";
-
-}
 
 
 
