@@ -665,9 +665,9 @@ transform: skewX(45deg) translate(200px);
 }
 
 .timerbutton.active {
-  border: 1px solid rgb(75, 244, 103);
-  box-shadow: 0 0 1px #1eff45, 0 0 2px #1eff45, 0 0 4px #1eff45,
-		0 0 8px #1eff45;
+  border: 1px solid  #f6ff00;
+  box-shadow: 0 0 1px  #f6ff00, 0 0 2px #f6ff00, 0 0 4px #f6ff00,
+		0 0 8px #f6ff00;
 }
 #minutes, #seconds {
 font-size: 15px; 
@@ -1389,7 +1389,7 @@ right:5%;
 }
 .titr{
 position: relative;
-width: 96.5%;
+width: 96.1%;
 right:12%;
 top:5px;
 left:0.2%;
@@ -2805,7 +2805,7 @@ div p {
 margin:auto;
   top:48vh;
   width:99%;
-  height:73.5vh;
+  height:83.5vh;
   background: rgba(0, 0, 0, 0);
   border:1px solid rgb(246, 255, 0);
 border-radius:10px ;
@@ -2858,9 +2858,8 @@ section.hidden{
 @media all and (orientation: landscape) {
   #musicmenu{
     position:fixed;
-  right:10.3%;
   top:11vh;
-  width:89.5%;
+  width:86.5%;
   height:99.5vh;
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 
@@ -3416,7 +3415,6 @@ opacity:1}
   display: grid;
   place-items: center;
   cursor: pointer;
-  background:rgba(255,255,255,0.1);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
@@ -3445,7 +3443,6 @@ opacity:1}
   display: grid;
   place-items: center;
   cursor: pointer;
-  background:rgba(255,255,255,0.1);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
@@ -3460,19 +3457,21 @@ opacity:1}
   }
 }
 #up_down{
+  width: 100%;
   position: fixed;
   bottom:0;
-  justify-content: space-between;
+  justify-content: space-around;
   z-index: 1000;
   display: flex;
   flex-direction: row-reverse;
   place-items: center;
-  background: rgba(0, 0, 0,0);
+  background: rgba(0, 0, 0,0.3);
   backdrop-filter: blur(10px);
   margin:auto;
 -webkit-backdrop-filter: blur(10px);
 height: 4%;
 padding: 2px;
+
 
 
 }
@@ -3488,14 +3487,14 @@ padding: 4px;
 }
 
 .pagehandling{
-  background:rgba(255,255,255,0.1);
-  width:5%;
+  background:rgba(255,255,255,0);
+  height:75%;
   aspect-ratio:1;
   display: grid;
-  padding: 4px;
+  padding:2px;
   align-items: center;
   position: relative;
-  border: 1px solid rgb(255, 255, 255, 0.1);
+  border: 1px solid rgb(255, 255, 255, 0.5);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
@@ -3505,7 +3504,7 @@ cursor: pointer;
 @media all and (orientation: landscape) {
   .pagehandling{
     aspect-ratio:1;
-  
+  height: unset;
   width:90%;
   display: grid;
   padding: 2px;
@@ -3521,15 +3520,16 @@ margin-right: unset;
 
 }
 #showmusic.active{
-  border: 1px solid rgb(0, 255, 72);
-  box-shadow: 0 0 3px #00ff08, 0 0 2px #00ff08, 0 0 4px #00ff08,
-		0 0 8px #00ff08;
+  border: 1px solid #f6ff00;
+  box-shadow: 0 0 3px #f6ff00, 0 0 2px #f6ff00, 0 0 4px #f6ff00,
+		0 0 8px #f6ff00;
 }
 #showmap.active{
-  border: 1px solid rgb(0, 255, 72);
-  box-shadow: 0 0 3px #00ff08, 0 0 2px #00ff08, 0 0 4px #00ff08,
-		0 0 8px #00ff08;
+  border: 1px solid #f6ff00;
+  box-shadow: 0 0 3px #f6ff00, 0 0 2px #f6ff00, 0 0 4px #f6ff00,
+		0 0 8px #f6ff00;
 }
+
 #up{
   position:relative;
   margin-bottom: -1px;
@@ -3537,9 +3537,7 @@ margin-right: unset;
   display: grid;
   place-items: center;
   cursor: pointer;
-  background:rgba(255,255,255,0.1);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  border-bottom: 0px;
 backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
 border-radius:100px;
@@ -3560,10 +3558,8 @@ opacity:1}
   display: grid;
   place-items: center;
   cursor: pointer;
-  background:rgba(255,255,255,0.1);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   margin-bottom: 0;
-  border-top: 0px;
 backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
 border-radius:100px;
@@ -3586,8 +3582,8 @@ margin:auto;
   border:1px solid rgb(246, 255, 0);
 border-radius:10px ;
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur(5px );
--webkit-backdrop-filter: blur( 5px );
+backdrop-filter: blur(10px );
+-webkit-backdrop-filter: blur( 10px );
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 border-radius:10px;
 transition: all 0.5s ease-in-out  ;
@@ -3977,7 +3973,7 @@ background: rgba(0, 0, 0, 0.6);
      
       <button onclick='set_timer()' id="timerbutton1" class='timerbutton'>شروع</button>
        <div class="timernumber"  dir="ltr"style="padding-top: 3px;"><label id="minutes">00</label><span class='bigger'>:</span><label id="seconds">00</label></div>
-       <button onclick='stop_timer()' class='timerbutton'>توقف</button>
+       <button onclick='stop_timer()' id="timerbutton2" class='timerbutton'>توقف</button>
     </div>
   </div>
 
@@ -4071,7 +4067,7 @@ background: rgba(0, 0, 0, 0.6);
 
 
   <div class="titrcontainer" >
-<section class="titr one" id="titrone" dir="rtl">
+<section class="titr one" id="titrone" style="visibility: hidden;" dir="rtl">
       <div class="maintitr"  Style="z-index: 1000;color: #00ff26;  border: 1px solid #00ff26;
     "> مقدمه‌ای بر علم بیوشیمی </div>
   <div class="border" style= "border-radius: 5px;box-shadow: inset 2px 0px 1vh  #00ff26,inset -2px 0px 1vh  #00ff26;">
@@ -4159,7 +4155,7 @@ background: rgba(0, 0, 0, 0.6);
      
     </section>
     
-<section class=" titr two" id="titrtwo"  style="box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );" dir="rtl"> 
+<section class=" titr two" id="titrtwo"  style="box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );visibility: hidden;" dir="rtl"> 
   <div class="maintitr" id="maintitr" style="z-index: 1000;color:#ff00f7; border: 1px solid #ff00f7" >  مبانی شیمیایی</div>
 <div class="border" style="border-radius: 5px;box-shadow: inset 2px 0px 5px #ff00f7,inset -2px 0px 5px #ff00f7;" >
 
@@ -5376,7 +5372,7 @@ $(document).on("scroll", function(){
 function clickactivation(){
   $(".btnframe").removeClass('active');
     $('.btnframe.one').addClass('active');
-    checkActivation()
+    checkActivation();
 }
 
 function clickactivation2(){
@@ -5406,10 +5402,14 @@ function light_up(){
     $(".btnframe").removeClass('active');
     $('.btnframe.one').addClass('active');
     $('#up_down').css('box-shadow', 'inset 0px -2px 6px rgb(0 255 36)');
-    callCheckActivations()
+    onScroll();
+    $('#titrone').css('visibility','visible')
+
      }
   else
-  {$(".btnframe.one").removeClass('active')}
+  {$(".btnframe.one").removeClass('active');
+  $('#titrone').css('visibility','hidden')
+}
 }
 
  function  light_up2(){
@@ -5424,12 +5424,15 @@ function light_up(){
     $(".btnframe").removeClass('active');
     $('.btnframe.two').addClass('active');
     $('#up_down').css('box-shadow', 'inset 0px -2px 6px #f600ff');
+    onScroll();
+    $('#titrtwo').css('visibility','visible')
 
 
-    callCheckActivations()
      }
   else
-  {$(".btnframe.two").removeClass('active')}
+  {$(".btnframe.two").removeClass('active');
+  $('#titrtwo').css('visibility','hidden')
+}
 }
 let scrollEndTimeout;
 
@@ -5508,7 +5511,8 @@ function setTime(minutesLabel, secondsLabel) {
     const timerbutton1 =document.getElementById("timerbutton1")
 function set_timer() {
   if (!timerbutton1.classList.contains('active')){
-
+  $("#timerbutton1").addClass('active');
+  $('#timerbutton2').removeClass('active');
     minutesLabel = document.getElementById("minutes");
     secondsLabel = document.getElementById("seconds");
     my_int = setInterval(function() { setTime(minutesLabel, secondsLabel)}, 1000);
@@ -5529,12 +5533,14 @@ set_timer() ;
 
 
 function stop_timer() {
-  clearInterval(my_int);
+  if(timerbutton1.classList.contains('active')){
+    $('#timerbutton1').removeClass('active');
+  $("#timerbutton2").addClass('active')
+  clearInterval(my_int);}
 }
 
 $(document).on('click','.timerbutton',function(){
-  $('.timerbutton').removeClass('active');
-  $(this).addClass('active')
+
 })
 
             
