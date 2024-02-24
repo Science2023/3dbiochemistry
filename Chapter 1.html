@@ -881,12 +881,12 @@ font-size:30px;
  
 .foot{
 position:fixed;
-bottom:00px;
+bottom:4%;
 left:0px;
 right:0px;
 display:flex;
 border-radius:00px;
-height:15%;
+height:14%;
 width: 100vw;
 text-align:center;
 z-index:2;
@@ -1011,7 +1011,7 @@ border-top: 0.5px solid rgba( 255, 255, 255, 0.5 );
 
 .frame{
 position:fixed;
-bottom: 15px;
+bottom: 5%;
 left: 4.5%;
 width: 79vw;
 height:15px;
@@ -1523,6 +1523,8 @@ z-index: 2;
 }
 .foot{
   width: 90%;
+  bottom:0;
+
   height: fit-content;
   border-right: 1px solid rgba( 255, 255, 255, 0.2 );}
   .frame{
@@ -3414,7 +3416,7 @@ opacity:1}
   display: grid;
   place-items: center;
   cursor: pointer;
-  background: rgba(0, 0, 0,0.4);
+  background:rgba(255,255,255,0.1);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
@@ -3443,7 +3445,7 @@ opacity:1}
   display: grid;
   place-items: center;
   cursor: pointer;
-  background: rgba(0, 0, 0,0.4);
+  background:rgba(255,255,255,0.1);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
@@ -3459,7 +3461,7 @@ opacity:1}
 }
 #up_down{
   position: fixed;
-  bottom:15.3%;
+  bottom:0;
   justify-content: space-between;
   z-index: 1000;
   display: flex;
@@ -3469,7 +3471,6 @@ opacity:1}
   backdrop-filter: blur(4px);
   margin:auto;
 -webkit-backdrop-filter: blur(4px);
-border-radius: 100px;
 height: 4%;
 padding: 2px;
 
@@ -3479,17 +3480,19 @@ padding: 2px;
   #up_down{
   right:10.3vw;
   width:2%;
-  top:8%;
+  top:-5%;
   display: grid;
   height: fit-content;
 padding: 4px;
+border-radius: 100px;
+
 
 
   }
 }
 
 .pagehandling{
-  background: rgba(0, 0, 0,0.4);
+  background:rgba(255,255,255,0.1);
   width:5%;
   aspect-ratio:1;
   display: grid;
@@ -3505,7 +3508,7 @@ cursor: pointer;
 @media all and (orientation: landscape) {
   .pagehandling{
     aspect-ratio:unset;
-  background: rgba(0, 0, 0,0.4);
+  
   width:85%;
   display: grid;
   padding: 4px;
@@ -3537,7 +3540,7 @@ margin-right: unset;
   display: grid;
   place-items: center;
   cursor: pointer;
-  background: rgba(0, 0, 0,0.4);
+  background:rgba(255,255,255,0.1);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   border-bottom: 0px;
 backdrop-filter: blur(10px);
@@ -3560,7 +3563,7 @@ opacity:1}
   display: grid;
   place-items: center;
   cursor: pointer;
-  background: rgba(0, 0, 0,0.4);
+  background:rgba(255,255,255,0.1);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   margin-bottom: 0;
   border-top: 0px;
@@ -4019,7 +4022,7 @@ background: rgba(0, 0, 0, 0.6);
 
   </div>
   <div  id="showmap"  class="pagehandling" onclick="showmap()">
-    <img src="Untitled.png" style="position: relative;width: 100%;height: 100%;margin:auto;" >
+    <img src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/map.png" style="position: relative;width: 100%;height: 100%;margin:auto;" >
 
   </div>
 
