@@ -871,13 +871,25 @@ font-size:30px;
   width: 100%;
   scroll-behavior:smooth ;
 }
-.btnbar::-webkit-scrollbar{
-  display: none;
-}
-.btnbar::-webkit-scrollbar.hover{
-  display:block;
+
+
+.btnbar::-webkit-scrollbar {
+  background: rgb(255,255,255,0.1);
+    height: 8px; /* Set the width of the scrollbar */
 }
 
+/* Scrollbar Handle (thumb) */
+.btnbar::-webkit-scrollbar-thumb {
+  cursor: pointer;
+    background-color: rgba(255, 225, 255, 0.3); /* Set the color of the scrollbar handle */
+    border-radius: 100px;
+    /* Set the border radius to make it rounded */
+}
+
+/* Optional: Scrollbar Track when the handle is being dragged */
+.btnbar::-webkit-scrollbar-track-piece:vertical:start {
+    background-color: #cccccc;
+}
  
 .foot{
 position:fixed;
@@ -1541,7 +1553,7 @@ z-index: 2;
   .btnframe{
     position: relative;
     align-items: center;
-    top:5px;
+    top:1px;
     height: 40px;
   
   }
@@ -4063,7 +4075,7 @@ background: rgba(0, 0, 0, 0.6);
   </button>
 
 
-<section class="titr one" id="titrone" style="visibility: hidden;" dir="rtl">
+<section class="titr one" id="titrone"  dir="rtl">
       <div class="maintitr"  Style="z-index: 1000;color: #00ff26;  border: 1px solid #00ff26;
     "> مقدمه‌ای بر علم بیوشیمی </div>
   <div class="border" style= "border-radius: 5px;box-shadow: inset 2px 0px 1vh  #00ff26,inset -2px 0px 1vh  #00ff26;">
@@ -4151,7 +4163,7 @@ background: rgba(0, 0, 0, 0.6);
      
     </section>
     
-<section class=" titr two" id="titrtwo"  style="box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );visibility: hidden;" dir="rtl"> 
+<section class=" titr two" id="titrtwo"  style="box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );" dir="rtl"> 
   <div class="maintitr" id="maintitr" style="z-index: 1000;color:#ff00f7; border: 1px solid #ff00f7" >  مبانی شیمیایی</div>
 <div class="border" style="border-radius: 5px;box-shadow: inset 2px 0px 5px #ff00f7,inset -2px 0px 5px #ff00f7;" >
 
