@@ -5459,7 +5459,7 @@ function callCheckActivations() {
 
 var btnbar=document.getElementById("btnbar");
 var scrollOffset1 = btnone.offsetLeft - window.innerWidth /2 + btnone.clientWidth / 2 ;
-var scrollOffset11= btnone.offsetLeft - (0.87 * window.innerWidth) / 2 + btnone.clientWidth / 2;
+var scrollOffset11= btnone.offsetLeft - (87/200 * window.innerWidth) + btnone.clientWidth / 2;
 
 function checkActivation(){
   if (btnone.classList.contains('active')){
@@ -5475,7 +5475,7 @@ function checkActivation(){
 
 var btnbar=document.getElementById("btnbar");
 var scrollOffset2 = btntwo.offsetLeft - window.innerWidth / 2 + btntwo.clientWidth / 2;
-var scrollOffset22= btntwo.offsetLeft - (0.87 * window.innerWidth) / 2 + btntwo.clientWidth / 2;
+var scrollOffset22= btntwo.offsetLeft - (87/200* window.innerWidth) + btntwo.clientWidth / 2;
 
 function checkActivation2(){
   if (btntwo.classList.contains('active')){
@@ -6244,9 +6244,13 @@ function rotatescreen() {
     if (window.orientation === 0 || window.orientation === 180) {
         // Change to landscape orientation
         screen.orientation.lock('landscape');
+        light_up();
+        light_up2()
     } else {
         // Change to portrait orientation
         screen.orientation.lock('portrait');
+        light_up();
+        light_up2()
     }
 }
 </script>
