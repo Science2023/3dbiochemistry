@@ -4016,7 +4016,7 @@ background: rgba(0, 0, 0, 0.6);
   <div class="pagehandling"  onclick="refresh()">
     <img src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png" style="position: relative;width: 100%;height: 100%;margin:auto;" >
   </div>
-  <div class="pagehandling" >
+  <div class="pagehandling" onclick="rot()">
     <img src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/list.png" style="position: relative;width: 100%;height: 100%;margin:auto;" >
   </div>
   <div  id="showmusic"  class="pagehandling" onclick="showmusic()">
@@ -6246,7 +6246,15 @@ function exit(){
 
 
   
-
+function rot() {
+    if (window.orientation === 0 || window.orientation === 180) {
+        // Change to landscape orientation
+        screen.orientation.lock('landscape');
+    } else {
+        // Change to portrait orientation
+        screen.orientation.lock('portrait');
+    }
+}
 </script>
 
 </body>
