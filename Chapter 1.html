@@ -95,7 +95,6 @@ button:focus {
   @media all and (orientation: landscape) {
     .content{
 padding: 10px;
-padding-right: 3.5vw;
     }}
 #content span{
   color:#00ff08
@@ -873,22 +872,9 @@ font-size:30px;
 }
 
 
-.btnbar::-webkit-scrollbar {
-  background: rgb(255,255,255,0.1);
-    height: 8px; /* Set the width of the scrollbar */
-}
 
-/* Scrollbar Handle (thumb) */
-.btnbar::-webkit-scrollbar-thumb {
-  cursor: pointer;
-    background-color: rgba(255, 225, 255, 0.3); /* Set the color of the scrollbar handle */
-    border-radius: 100px;
-    /* Set the border radius to make it rounded */
-}
-
-/* Optional: Scrollbar Track when the handle is being dragged */
-.btnbar::-webkit-scrollbar-track-piece:vertical:start {
-    background-color: #cccccc;
+.btnbar::-webkit-scrollbar{
+  display: none;
 }
  
 .foot{
@@ -1530,7 +1516,7 @@ z-index: 2;
 
 }
 .foot{
-  width: 88%;
+  width: 87%;
   bottom:0;
 
   height: fit-content;
@@ -3794,7 +3780,7 @@ background: rgba(0, 0, 0, 0.6);
 
 </head>
  
-<body onpaste="return false" onCopy="return false" onCut="return false"  onDrop="return false" autocomplete=off >
+<body onselectstart="return false" ondragstart="return false" onpaste="return false" onCopy="return false" onCut="return false"  onDrop="return false" autocomplete=off >
 
 
 <br><br>
@@ -4016,8 +4002,11 @@ background: rgba(0, 0, 0, 0.6);
   <div class="pagehandling"  onclick="refresh()">
     <img src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png" style="position: relative;width: 100%;height: 100%;margin:auto;" >
   </div>
-  <div class="pagehandling" onclick="rot()">
+  <div class="pagehandling" onclick="chapterslist()">
     <img src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/list.png" style="position: relative;width: 100%;height: 100%;margin:auto;" >
+  </div>
+  <div class="pagehandling" onclick="rotatescreen()">
+    <img src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/rotate2.png" style="position: relative;width: 100%;height: 100%;margin:auto;" >
   </div>
   <div  id="showmusic"  class="pagehandling" onclick="showmusic()">
     <img src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/music.png" style="position: relative;width: 100%;height: 100%;margin:auto;" >
@@ -5061,16 +5050,18 @@ background: rgba(0, 0, 0, 0.6);
 
 <script type="text/javascript">
 
+
+
 function scrollright(){
   document.getElementById("btnbar").scrollTop += 0;
-  document.getElementById("btnbar").scrollLeft += 200;
+  document.getElementById("btnbar").scrollLeft += 400;
 
- 
+
 }
 
 function scrollleft(){
   document.getElementById("btnbar").scrollTop += 0;
-  document.getElementById("btnbar").scrollLeft -= 200;
+  document.getElementById("btnbar").scrollLeft -= 400;
 
 
 }
@@ -5466,29 +5457,32 @@ function callCheckActivations() {
 
 
 
-var scrollOffset = btnone.offsetLeft - window.innerWidth /2 + btnone.clientWidth / 2 ;
 var btnbar=document.getElementById("btnbar");
+var scrollOffset1 = btnone.offsetLeft - window.innerWidth /2 + btnone.clientWidth / 2 ;
+var scrollOffset11= btnone.offsetLeft - (0.87 * window.innerWidth) / 2 + btnone.clientWidth / 2;
 
 function checkActivation(){
   if (btnone.classList.contains('active')){
 
     if (window.orientation === 0) {
-          btnbar.scrollTo({ left: scrollOffset, behavior: 'smooth' });}
+          btnbar.scrollTo({ left: scrollOffset1, behavior: 'smooth' });}
           else{
-            btnbar.scrollTo({ left: scrollOffset + (window.innerWidth * 0.05), behavior: 'smooth' });
+            btnbar.scrollTo({ left: scrollOffset11  , behavior: 'smooth' });
           }
 
   }
 }
 
-var scrollOffset1 = btntwo.offsetLeft - window.innerWidth / 2 + btntwo.clientWidth / 2;
 var btnbar=document.getElementById("btnbar");
+var scrollOffset2 = btntwo.offsetLeft - window.innerWidth / 2 + btntwo.clientWidth / 2;
+var scrollOffset22= btntwo.offsetLeft - (0.87 * window.innerWidth) / 2 + btntwo.clientWidth / 2;
+
 function checkActivation2(){
   if (btntwo.classList.contains('active')){
     if (window.orientation === 0) {
-          btnbar.scrollTo({ left: scrollOffset1, behavior: 'smooth' });}
+          btnbar.scrollTo({ left: scrollOffset2, behavior: 'smooth' });}
           else{
-            btnbar.scrollTo({ left: scrollOffset1 + (window.innerWidth * 0.05), behavior: 'smooth' });
+            btnbar.scrollTo({ left: scrollOffset22 , behavior: 'smooth' });
           }
   }
 }
@@ -6246,7 +6240,7 @@ function exit(){
 
 
   
-function rot() {
+function rotatescreen() {
     if (window.orientation === 0 || window.orientation === 180) {
         // Change to landscape orientation
         screen.orientation.lock('landscape');
