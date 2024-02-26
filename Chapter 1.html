@@ -5079,49 +5079,6 @@ function musicscrollleft(){
 
 
 
-/*full screen when rotate*/
-function handleOrientationChange() {
-
-    if (window.orientation === 0 || window.orientation === 180) {
-        // Portrait orientation
-        document.getElementById('foot').style.width="100%";
-
-
-        var element = document.documentElement;
-        if (document.documentElement.requestFullscreen) {
-  document.documentElement.requestFullscreen();
-} else if (document.documentElement.mozRequestFullScreen) { // Firefox
-  document.documentElement.mozRequestFullScreen();
-} else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
-  document.documentElement.webkitRequestFullscreen();
-} else if (document.documentElement.msRequestFullscreen) { // IE/Edge
-  document.documentElement.msRequestFullscreen();
-}
-
-    } else if (window.orientation === 90 || window.orientation === -90) {
-        // Landscape orientation
-        document.getElementById('foot').style.width="87%";
-
-        if (document.documentElement.requestFullscreen) {
-  document.documentElement.requestFullscreen();
-} else if (document.documentElement.mozRequestFullScreen) { // Firefox
-  document.documentElement.mozRequestFullScreen();
-} else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
-  document.documentElement.webkitRequestFullscreen();
-} else if (document.documentElement.msRequestFullscreen) { // IE/Edge
-  document.documentElement.msRequestFullscreen();
-}
-    }
-}
-
-// Add an event listener for the orientationchange event
-window.addEventListener("orientationchange", handleOrientationChange);
-
-// Call the function initially to get the initial orientation
-handleOrientationChange();
-
-
-
 
 
 var isTouchDevice = 'ontouchstart' in document.documentElement;
@@ -5459,36 +5416,29 @@ function callCheckActivations() {
 }
 
 
-
 var btnbar=document.getElementById("btnbar");
-var footWidth=document.getElementById('foot').clientWidth;
-var scrollOffset1 = btnone.offsetLeft - footWidth / 2 + btnone.clientWidth / 2 ;
-var scrollOffset11= btnone.offsetLeft - (87/200* window.innerWidth) + btnone.clientWidth / 2;
-
 
 function checkActivation(){
   if (btnone.classList.contains('active')){
-  
-    if (window.orientation === 0) {
 
+    if (window.orientation === 0) {
+      var scrollOffset1 = btnone.offsetLeft - window.innerWidth / 2 + btnone.clientWidth / 2 ;
+     
           btnbar.scrollTo({ left: scrollOffset1, behavior: 'smooth' });}
           else{
-
-          btnbar.scrollTo({ left: scrollOffset1, behavior: 'smooth' });
+            var scrollOffset11 = btnone.offsetLeft -(87/200* window.innerWidth) + btnone.clientWidth / 2 ;
+          btnbar.scrollTo({ left: scrollOffset11, behavior: 'smooth' });
           }
-
   }
 }
-
-var btnbar=document.getElementById("btnbar");
-var scrollOffset2 = btntwo.offsetLeft - window.innerWidth / 2 + btntwo.clientWidth / 2;
-var scrollOffset22= btntwo.offsetLeft - (87/200* window.innerWidth) + btntwo.clientWidth / 2;
 
 function checkActivation2(){
   if (btntwo.classList.contains('active')){
     if (window.orientation === 0) {
+      var scrollOffset2 = btntwo.offsetLeft - window.innerWidth / 2 + btntwo.clientWidth / 2;
           btnbar.scrollTo({ left: scrollOffset2, behavior: 'smooth' });}
           else{
+            var scrollOffset22= btntwo.offsetLeft - (87/200* window.innerWidth) + btntwo.clientWidth / 2;
             btnbar.scrollTo({ left: scrollOffset22 , behavior: 'smooth' });
           }
   }
@@ -5496,6 +5446,28 @@ function checkActivation2(){
 checkActivations.push(checkActivation2);
 checkActivations.push(checkActivation);
 
+function handleOrientationChange() {
+  light_up();
+  light_up2();
+if (window.orientation === 0 || window.orientation === 180) {
+    // Portrait orientation
+    clearTimeout(scrollEndTimeout);
+
+   scrollEndTimeout= setTimeout(callCheckActivations, 1000);
+} else if (window.orientation === 90 || window.orientation === -90) {
+      // Landscape orientation
+
+  clearTimeout(scrollEndTimeout);
+
+   scrollEndTimeout= setTimeout(callCheckActivations, 1000);
+    callCheckActivations()
+  }
+}
+// Add an event listener for the orientationchange event
+window.addEventListener("orientationchange", handleOrientationChange);
+
+// Call the function initially to get the initial orientation
+handleOrientationChange();
 
     
 /*timer*/
