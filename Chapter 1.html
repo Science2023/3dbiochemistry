@@ -1295,15 +1295,13 @@ border: 0px solid rgba( 255, 255, 255, 0.5 );
 
 .titr{
   position:relative;
-  top:10px;
   width:98%;
   font-family: "Yekan";
-padding-top:22vw;
 margin:auto;
 }
 #titrone{
  top:-160px;
-
+padding-top: 22vw;
 }
 @media all and (orientation: landscape) {
 
@@ -5713,7 +5711,6 @@ function showmap(){
     $('body').css("overflow", "hidden");
     $('#chaptermap').css("opacity", "1");
 
-
 } else {
     $("#chaptermap").removeClass('show');
     $('#chaptermap').css("opacity", "0");
@@ -6221,15 +6218,18 @@ function exit(){
   
 function rotatescreen() {
     if (window.orientation === 0 || window.orientation === 180) {
+document.getElementById('titrtwo').style.visibility="visible";
+
         // Change to landscape orientation
             screen.orientation.lock('landscape');
        } else {
         // Change to portrait orientation
+        document.getElementById('titrtwo').style.visibility="visible";
 
         screen.orientation.lock('portrait');
 
     }
-  }
+}
 
 </script>
 
