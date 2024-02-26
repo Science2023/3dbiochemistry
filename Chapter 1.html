@@ -5084,6 +5084,8 @@ function handleOrientationChange() {
 
     if (window.orientation === 0 || window.orientation === 180) {
         // Portrait orientation
+        document.getElementById('foot').style.width="100%";
+
 
         var element = document.documentElement;
         if (document.documentElement.requestFullscreen) {
@@ -5098,6 +5100,7 @@ function handleOrientationChange() {
 
     } else if (window.orientation === 90 || window.orientation === -90) {
         // Landscape orientation
+        document.getElementById('foot').style.width="87%";
 
         if (document.documentElement.requestFullscreen) {
   document.documentElement.requestFullscreen();
@@ -5458,16 +5461,20 @@ function callCheckActivations() {
 
 
 var btnbar=document.getElementById("btnbar");
-var scrollOffset1 = btnone.offsetLeft - window.innerWidth / 2 + btnone.clientWidth / 2 ;
+var footWidth=document.getElementById('foot').clientWidth;
+var scrollOffset1 = btnone.offsetLeft - footWidth / 2 + btnone.clientWidth / 2 ;
 var scrollOffset11= btnone.offsetLeft - (87/200* window.innerWidth) + btnone.clientWidth / 2;
+
 
 function checkActivation(){
   if (btnone.classList.contains('active')){
-
+  
     if (window.orientation === 0) {
+
           btnbar.scrollTo({ left: scrollOffset1, behavior: 'smooth' });}
           else{
-            btnbar.scrollTo({ left: scrollOffset11  , behavior: 'smooth' });
+
+          btnbar.scrollTo({ left: scrollOffset1, behavior: 'smooth' });
           }
 
   }
@@ -6243,16 +6250,15 @@ function exit(){
 function rotatescreen() {
     if (window.orientation === 0 || window.orientation === 180) {
         // Change to landscape orientation
-        screen.orientation.lock('landscape');
-        callCheckActivations()
-        
-    } else {
+            screen.orientation.lock('landscape');
+       } else {
         // Change to portrait orientation
+
         screen.orientation.lock('portrait');
 
-        callCheckActivations()
     }
-}
+  }
+
 </script>
 
 </body>
