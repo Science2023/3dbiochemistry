@@ -1294,6 +1294,7 @@ border: 0px solid rgba( 255, 255, 255, 0.5 );
 }
 
 .titr{
+  padding-top: 22vw;
   position:relative;
   width:98%;
   font-family: "Yekan";
@@ -1381,7 +1382,6 @@ right:5%;
 }
 .titr{
 position: relative;
-width: 86.5%;
 right:12%;
 top:5px;
 left:0.2%;
@@ -1514,7 +1514,6 @@ z-index: 2;
 
 }
 .foot{
-  width: 87%;
   bottom:0;
 
   height: fit-content;
@@ -3465,17 +3464,74 @@ height: 4%;
 padding: 2px;
 
 
-
 }
 @media all and (orientation: landscape) {
   #up_down{
-  right:10vw;
-  width:3%;
+     right:10vw;
+
   display: grid;
   height: 100%;
 padding: 1px;
 box-sizing: border-box;
 
+  }
+}
+@media  (max-width:2000px) and (orientation: landscape){
+  #up_down{
+     width:2%;
+  }
+  .titr{
+    width: 87.5%;
+  }
+  .foot{
+    width: 88%;
+  }
+
+}
+@media  (max-width:1500px) and (orientation: landscape){
+  #up_down{
+     width:2.5%;
+  }
+  .titr{
+    width:87%;
+  }
+  .foot{
+    width: 87.5%;
+  }
+}
+@media  (max-width:1200px) and (orientation: landscape){
+  #up_down{
+     width:3%;
+  }
+  .titr{
+    width:86.5%;
+  }
+  .foot{
+    width: 87%;
+  }
+}
+
+@media  (max-width:1100px) and (orientation: landscape){
+  #up_down{
+     width:3.5%;
+  }
+  .titr{
+    width:86%;
+  }
+  .foot{
+    width: 87%;
+  }
+}
+
+@media  (max-width:800px) and (orientation: landscape){
+  #up_down{
+     width:4%;
+  }
+  .titr{
+    width: 85.5%;
+  }
+  .foot{
+    width: 86%;
   }
 }
 
@@ -3571,7 +3627,7 @@ margin:auto;
   top:11.3%;
   width:99.5%;
   height:83.5vh;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
   border:1px solid rgb(246, 255, 0);
 border-radius:10px ;
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -3592,7 +3648,7 @@ opacity:1
   #chaptermap{
 
     top:0%;
-  width:89.5%;
+  width:87%;
   height:99.5vh;
 
   }}
@@ -3673,8 +3729,8 @@ opacity:1
     height:2vw;
   }
   .central-circle {
-    width: 0.5vw;
-    height:0.5vw;}
+    width: 1vw;
+    height:1vw;}
   @keyframes propagate {
   0% {
     width: 0;
@@ -4011,7 +4067,7 @@ background: rgba(0, 0, 0, 0.6);
 
   </div>
   <div  id="showmap"  class="pagehandling" onclick="showmap()">
-    <img src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/map.png" style="position: relative;width: 100%;height: 100%;margin:auto;" >
+    <img src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/map.png" style="position: relative;width: 100%;height: 95%;margin:auto;bottom: 1pxz;" >
 
   </div>
 
@@ -4033,11 +4089,29 @@ background: rgba(0, 0, 0, 0.6);
 <div id="chaptermap" dir="rtl">
   <h1 class="musich1" style="display: flex;justify-content: center;top:0px;width: 100%;margin: auto;">فصل در یک نگاه</h1><br>
   <div style="width: 100%;
-  height: 9vh;
-  position: relative;
-  display: flex;">
   
-    <img class="pic"  style="border:1px solid rgb(39, 255, 0, 0.5);idth: 98%;height: 100%;" src="Picture55.png" loading="lazy"><br> 
+  position: relative;
+  display: grid;">
+  <div style="position: absolute;
+  color: white;
+  background: #00a600;
+  font-family: 'Shabnam';
+  text-align: center;
+  top: 0px;
+  left: 21.5vw;
+  border-radius: 50px;
+  width: 50%;
+  border: 1px solid green;
+  height: auto;
+  z-index: 10;
+">مبانی </div><div style="position: absolute;
+    top: 12px;
+    left: 1%;
+    width: 98%;
+    border-radius: 5px;
+    border: 1px solid lime;
+    height: 59vh;
+"></div>
     <div class="pulsing"> 
       <div class="central-circle"></div>
       <div class="propagating-circle1" ></div>
@@ -6248,6 +6322,11 @@ document.getElementById('titrtwo').style.visibility="visible";
     }
 }
 
+
+var updownwidth=document.getElementById('up_down').offsetWidth;
+  var chaptermapwidth=90 - updownwidth;
+
+document.getElementById('chaptermap').style.width=chaptermapwidth +"%" 
 </script>
 
 </body>
