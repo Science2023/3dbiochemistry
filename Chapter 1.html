@@ -3459,6 +3459,35 @@ padding: 2px;
 
 
 }
+#chaptermap{
+overflow: scroll;
+  position:fixed;
+margin:auto;
+  top:11.3%;
+  width:99.5%;
+  height:83.5vh;
+  background: rgba(0, 0, 0, 0.5);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur(10px );
+-webkit-backdrop-filter: blur( 10px );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+transition: all 0.5s ease-in-out  ;
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+visibility:hidden;
+z-index:3;
+opacity:1
+}
+
+  #chaptermap.show{
+    visibility:visible;
+
+  }
+  #chaptermap::-webkit-scrollbar {
+    display: none;
+}
 @media all and (orientation: landscape) {
   #up_down{
      right:10vw;
@@ -3470,6 +3499,13 @@ box-sizing: border-box;
 
   }
 }
+
+@media all and (orientation: landscape) {
+  #chaptermap{
+    top:0%;
+  height:99.5vh;
+
+  }}
 @media  (max-width:2000px) and (orientation: landscape){
   #up_down{
      width:2%;
@@ -3480,7 +3516,12 @@ box-sizing: border-box;
   .foot{
     width: 88%;
   }
-
+  #chaptermap{
+    width: 88%;
+  }
+  #musicmenu{
+    width: 88%;
+  }
 }
 @media  (max-width:1500px) and (orientation: landscape){
   #up_down{
@@ -3490,6 +3531,12 @@ box-sizing: border-box;
     width:87%;
   }
   .foot{
+    width: 87.5%;
+  }
+  #chaptermap{
+    width: 87.5%;
+  }
+  #muscimenu{
     width: 87.5%;
   }
 }
@@ -3503,6 +3550,12 @@ box-sizing: border-box;
   .foot{
     width: 87%;
   }
+  #chaptermap{
+    width: 87%;
+  }
+  #musicmenu{
+    width: 88%;
+  }
 }
 
 @media  (max-width:1100px) and (orientation: landscape){
@@ -3513,8 +3566,15 @@ box-sizing: border-box;
     width:86%;
   }
   .foot{
-    width: 87%;
+    width: 86.5%;
   }
+  #chaptermap{
+    width: 86.5%;
+  }
+  #musicmenu{
+    width: 86.5%;
+  }
+  
 }
 
 @media  (max-width:800px) and (orientation: landscape){
@@ -3525,6 +3585,12 @@ box-sizing: border-box;
     width: 85.5%;
   }
   .foot{
+    width: 86%;
+  }
+  #chaptermap{
+    width: 86%;
+  }
+  #musicmenu{
     width: 86%;
   }
 }
@@ -3614,42 +3680,7 @@ opacity:1}
   #down{
     margin-bottom: 10px;
   }}
-  #chaptermap{
-overflow: scroll;
-  position:fixed;
-margin:auto;
-  top:11.3%;
-  width:99.5%;
-  height:83.5vh;
-  background: rgba(0, 0, 0, 0.5);
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur(10px );
--webkit-backdrop-filter: blur( 10px );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-transition: all 0.5s ease-in-out  ;
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-background-attachment:fixed;
-visibility:hidden;
-z-index:3;
-opacity:1
-}
-@media all and (orientation: landscape) {
-  #chaptermap{
-
-    top:0%;
-  width:87%;
-  height:99.5vh;
-
-  }}
-  #chaptermap.show{
-    visibility:visible;
-
-  }
-  #chaptermap::-webkit-scrollbar {
-    display: none;
-}
+  
   .pulsing{
   position:absolute;
   top: 45%;
@@ -6314,10 +6345,7 @@ document.getElementById('titrtwo').style.visibility="visible";
 }
 
 
-var updownwidth=document.getElementById('up_down').offsetWidth;
-  var chaptermapwidth= 90- updownwidth;
 
-document.getElementById('chaptermap').style.width=chaptermapwidth +'%';
 </script>
 
 </body>
