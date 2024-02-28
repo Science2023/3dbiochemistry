@@ -2841,6 +2841,20 @@ section.hidden{
  visibility: inherit;
 
 }
+.chaptermaph1{
+  position:relative;
+ text-align: center;
+ color:yellow;
+ font-size:15px;
+ border-bottom: 1px solid yellow;
+ padding: 5px;
+ font-family: 'Yekan';
+ visibility: inherit;
+ display: flex;
+ justify-content: center;
+ top:0px;width:95%;
+ margin: auto;
+}
 
 @media all and (orientation: landscape) {
   #musicmenu{
@@ -3441,7 +3455,7 @@ opacity:1}
   }
 }
 #up_down{
-  width: 99%;
+  width: 99.5%;
     position: fixed;
     bottom: 0%;
     justify-content: space-around;
@@ -3489,6 +3503,7 @@ opacity:1
 @media all and (orientation: landscape) {
   #up_down{
      right:10vw;
+     padding-top: 5px;
 
   display: grid;
   height: 100%;
@@ -4108,7 +4123,7 @@ background: rgba(0, 0, 0, 0.6);
 </div>
 
 <div id="chaptermap" dir="rtl">
-  <h1 class="musich1" style="display: flex;justify-content: center;top:0px;width: 100%;margin: auto;">فصل در یک نگاه</h1><br>
+  <h1 class="chaptermaph1" >فصل در یک نگاه</h1><br>
   <div style="width: 100%;
   
   position: relative;
@@ -5249,8 +5264,7 @@ function handleScroll() {
         if (!iframe.getAttribute('src') && iframe.getAttribute('data-src')) {
           iframe.src = iframe.getAttribute('data-src');
         }
-             }else{
-              iframe.removeAttribute('src')
+             
              }
             });
  
@@ -5486,7 +5500,7 @@ function light_up(){
   if(tops >= tops - 60 && topw < tops + pageHeight ){
     $(".btnframe").removeClass('active');
     $('.btnframe.one').addClass('active');
-    $('#up_down').css('box-shadow', 'inset 0px -2px 6px rgb(0 255 36)');
+    $('#up_down').css('box-shadow', 'inset 0px -4px 12px rgb(0 255 36)');
     onScroll();
     $('#titrone').css('visibility','visible')
 
@@ -5508,7 +5522,7 @@ function light_up(){
   if(topw + viewportHeight >= toptitrtwo + 0.2* viewportHeight ){
     $(".btnframe").removeClass('active');
     $('.btnframe.two').addClass('active');
-    $('#up_down').css('box-shadow', 'inset 0px -2px 6px #f600ff');
+    $('#up_down').css('box-shadow', 'inset 0px -4px 12px #f600ff');
     onScroll();
     $('#titrtwo').css('visibility','visible')
 
