@@ -75,6 +75,7 @@
 
 .loginbox {
     position: relative;
+    width: 60vw;
 }
 
 .loginbox .square {
@@ -103,10 +104,10 @@
 }
 
 .loginbox .square:nth-child(1) {
-    top: -120px;
-    left: 10px;
-    width: 100px;
-    height: 100px;
+    top: -30vw;
+    left: -15vw;
+    width: 40vw;
+    height: 40vw;
 }
 
 .box .square:nth-child(2) {
@@ -119,70 +120,74 @@
 
 .loginbox .square:nth-child(3) {
     z-index: 2;
-    width: 120px;
-    height: 120px;
-    right: 8px;
-    bottom: -120px;
+    width: 40vw;
+    height: 40vw;
+    right:-20vw;
+    bottom: -25vw;
 }
 
 .loginbox .square:nth-child(4) {
-    left: 100px;
-    width:100px;
-    height: 100px;
-    bottom: -120px;
+    left: -15vw;
+    width: 40vw;
+    height: 40vw;
+
+    bottom: -50vw;
     z-index: 1;
 }
 
 .loginbox .square:nth-child(5) {
-    top: -120px;
-    left: 200px;
-    width: 120px;
-    height: 120px;
+    top: -50vw;
+    right: -15vw;
+    width: 40vw;
+    height: 40vw;
 }
 
 
 @media all and (orientation: landscape) {
   .loginbox .square:nth-child(1) {
-    top: 40px;
-    left: -90px;
-    width: 100px;
-    height: 100px;
+    top:-8vh;
+    left: -30vh;
+    width: 30vh;
+    height: 30vh;
+    z-index: 100;
 }
 
 .box .square:nth-child(2) {
     z-index: 2;
     top: 100px;
     right:10px;
-    width: 80px;
-    height: 80px;
+    width: 30vh;
+    height: 30vh;
 }
 
 .loginbox .square:nth-child(3) {
     z-index: 2;
-    width: 120px;
-    height: 120px;
-    right: -50px;
-    bottom: 30px;
+    width: 30vh;
+    height: 30vh;
+    right: -15vh;
+    bottom: -5vw;
 }
 
 .loginbox .square:nth-child(4) {
-    left: -30px;
-    width:100px;
-    height: 100px;
-    bottom: 10px;
+    left: -25vh;
+    width: 30vh;
+    height: 30vh;
+    bottom: -10vh;
     z-index: 1;
 }
 
 .loginbox .square:nth-child(5) {
-    top: 10px;
-    left: 390px;
-    width: 120px;
-    height: 120px;
+    top: -5vh;
+    right: -15vw;
+    width: 30vh;
+    height: 30vh;
 }
+
 
 }
 .logincontainer {
-    width: 400px;
+    width: 95%;
+    margin:auto;
     display: flex;
     min-height: 400px;
     position: relative;
@@ -211,8 +216,15 @@
     letter-spacing: 1px;
     margin-bottom: 40px;
     color:blue;
-  font-size: 16px;
+  font-size:2vh;
   width: 100%;
+}
+@media all and (orientation:landscape){
+    .form h2 {
+
+font-size:2vw;
+}
+
 }
 
 .form h2::before {
@@ -235,7 +247,7 @@
     width: 100%;
     color: blue;
     outline: none;
-    font-size: 16px;
+    font-size: 2vh;
     padding: 5px 20px;
     letter-spacing: 1px;
     border-radius: 35px;
@@ -244,24 +256,37 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+@media all and (orientation:landscape){
+    .form .input__box input {
+    font-size:2vw;
+
+}
+
 }
 .form .input__box button {
   cursor: pointer;
-    width: 150px;
-    height: 50px;
+  display: flex;
+    justify-content: center;
+    width: 20vw;
     color: #fff;
     border: none;
     outline: none;
-    font-size: 16px;
-    padding: 5px 20px;
+    font-size: 2vh;
+    padding: 0px 80px;
     letter-spacing: 1px;
-    border-radius: 35px;
-    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.6);
     border: 1px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+@media all and (orientation:landscape){
+    .form .input__box button {
+    font-size:2vw;
+
+}}
 .form::placeholder {
     color: #fff;
 }
@@ -273,6 +298,8 @@
     max-width: 100px;
     font-weight: 600;
     margin-bottom: 20px;
+    justify-content: center;
+    display: flex;
 }
 
 .forget {
@@ -293,11 +320,11 @@
         <div class="colour"></div>
         <div class="colour"></div>
         <div class="loginbox">
-            <div class="square" style="--i: 0"><img style="width:100%"src="molecule-structure-6625223-5522658.png"></div>
+            <div class="square" style="--i: 0"><img style="width:100%"src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/molecule-structure.png"></div>
             <div class="square" style="--i: 1"></div>
-            <div class="square" style="--i: 2"><img style="width:100%"src="cell-dish-flipcard.png"></div>
-            <div class="square" style="--i: 3;overflow: hidden;"><img style="width:180%"src="pngtree-3d-modeling-dna-horizontal-map-three-dimensional-pink-and-white-png-image_8649321 (1).png"></div>
-            <div class="square" style="--i: 4"><img style="width:100%"src="171-1713827_human-insulin-hexamer-3d-ribbons-human-insulin-protein.png"></div>
+            <div class="square" style="--i: 2"><img style="width:100%"src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/cell-model.png"></div>
+            <div class="square" style="--i: 3;overflow: hidden;"><img style="width:180%;height:80%;top: 10%;position: absolute;"src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/dnamodel.png"></div>
+            <div class="square" style="--i: 4"><img style="width:100%"src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/human-insulin.png"></div>
             <div class="logincontainer">
                 <div class="form">
                     <h2 dir="rtl" style="font-family: Yekan; color: black;text-align:center"> لطفا نام کاربری و رمز عبور خود را وارد کنید </h2>
@@ -308,7 +335,7 @@
                         <div class="input__box" style="display: flex;align-items: center;">
                             <input type="password" id="password" placeholder="رمز عبور"style="font-family: Yekan;text-align:center;" />
                         </div>
-                        <div  class="input__box" id="login" onclick="openNewPage()" style="background: transparent;margin:auto;margin-top: 20px;margin-left: 40%;" >
+                        <div  class="input__box" id="login" onclick="openNewPage()" style="background: transparent;margin:auto;margin-top: 20px" >
                             <button    tabindex="0"  style="font-family: Yekan;text-align: center;color:green" >ورود</button>
                         </div>
                        
@@ -344,23 +371,7 @@ document.getElementById('password').value = ''
 
 
 
-// Get the text field that we're going to track
 
-var loginform= document.getElementById("loginform");
-
-// See if we have an autosave value
-// (this will only happen if the page is accidentally refreshed)
-if (sessionStorage.getItem("display")) {
-  // Restore the contents of the text field
-  loginform.style.display= sessionStorage.getItem("display");
-}
-
-// Listen for changes in the text field
-loginform.addEventListener("change", () => {
-  // And save the results into the session storage object
-  sessionStorage.setItem("display", "none");
-  
-});
 
 </script>
 </body>
