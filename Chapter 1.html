@@ -884,7 +884,7 @@ left:0px;
 right:0px;
 display:flex;
 border-radius:00px;
-height:14%;
+height:16%;
 width: 100%;
 text-align:center;
 z-index:2;
@@ -1009,7 +1009,7 @@ border-top: 0.5px solid rgba( 255, 255, 255, 0.5 );
 
 .frame{
 position:fixed;
-bottom: 5%;
+bottom: 7%;
 left: 4.5%;
 width: 79vw;
 height:15px;
@@ -1873,39 +1873,38 @@ display: inline-block;
 .loginbox .square:nth-child(1) {
     top: -120px;
     left: 10px;
-    width: 100px;
-    height: 100px;
-}
+    width: 20vw;
+    height: 20vw;}
 
 .box .square:nth-child(2) {
     z-index: 2;
     top: 150px;
     left: -100px;
-    width: 80px;
-    height: 80px;
+    width: 20vw;
+    height: 20vw;
 }
 
 .loginbox .square:nth-child(3) {
     z-index: 2;
-    width: 120px;
-    height: 120px;
+    width: 20vw;
+    height: 20vw;
     right: 8px;
     bottom: -120px;
 }
 
 .loginbox .square:nth-child(4) {
     left: 100px;
-    width:100px;
-    height: 100px;
+    width: 20vw;
+    height: 20vw;
     bottom: -120px;
     z-index: 1;
 }
 
 .loginbox .square:nth-child(5) {
     top: -120px;
-    left: 200px;
-    width: 120px;
-    height: 120px;
+    right:2vw;
+    width: 20vw;
+    height: 20vw;
 }
 
 
@@ -1979,7 +1978,7 @@ display: inline-block;
     letter-spacing: 1px;
     margin-bottom: 40px;
     color:blue;
-  font-size: 16px;
+  font-size: 2vh;
   width: 100%;
 }
 
@@ -2003,7 +2002,7 @@ display: inline-block;
     width: 100%;
     color: blue;
     outline: none;
-    font-size: 16px;
+    font-size: 2vh;
     padding: 5px 20px;
     letter-spacing: 1px;
     border-radius: 35px;
@@ -2020,7 +2019,7 @@ display: inline-block;
     color: #fff;
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 2vh;
     padding: 5px 20px;
     letter-spacing: 1px;
     border-radius: 35px;
@@ -2795,8 +2794,8 @@ div p {
   position:fixed;
 margin:auto;
   top:48vh;
-  width:99%;
-  height:83.5vh;
+  width:100%;
+  height:86vh;
   background: rgba(0, 0, 0, 0);
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur(5px );
@@ -2953,7 +2952,7 @@ color:rgba(255, 255, 255, 0.5)}
 position: relative;
 top:50px;
 margin:auto;
-width:98%;
+width:100%;
 height:75%;
 
         display:grid;
@@ -3442,21 +3441,20 @@ opacity:1}
   }
 }
 #up_down{
-  width: 100%;
-  position: fixed;
-  bottom:0;
-  justify-content: space-around;
-  z-index: 1000;
-  display: flex;
-  flex-direction: row-reverse;
-  place-items: center;
-  background: rgba(0, 0, 0,0.3);
-  backdrop-filter: blur(10px);
-  margin:auto;
--webkit-backdrop-filter: blur(10px);
-height: 4%;
-padding: 2px;
-
+  width: 99%;
+    position: fixed;
+    bottom: 0%;
+    justify-content: space-around;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row-reverse;
+    place-items: center;
+    background: rgba(0, 0, 0,0.3);
+    backdrop-filter: blur(10px);
+    margin: auto;
+    -webkit-backdrop-filter: blur(10px);
+    height: 6%;
+    padding: 2px;
 
 }
 #chaptermap{
@@ -3464,7 +3462,7 @@ overflow: scroll;
   position:fixed;
 margin:auto;
   top:11.3%;
-  width:99.5%;
+  width:100%;
   height:83.5vh;
   background: rgba(0, 0, 0, 0.5);
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -3596,19 +3594,20 @@ box-sizing: border-box;
 }
 
 .pagehandling{
-  background:rgba(255,255,255,0);
-  height:75%;
-  aspect-ratio:1;
-  display: grid;
-  padding:2px;
-  align-items: center;
-  position: relative;
-  border: 1px solid rgb(255, 255, 255, 0.5);
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-border-radius:100px;
-cursor: pointer;
+  background: rgba(255,255,255,0);
+    height: 50%;
+    aspect-ratio: 1;
+    display: grid;
+    padding: 2px;
+    align-items: center;
+    position: relative;
+    border: 1px solid rgb(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 100px;
+    cursor: pointer;
+    bottom: 10%;
 }
 @media all and (orientation: landscape) {
   .pagehandling{
@@ -4253,16 +4252,30 @@ background: rgba(0, 0, 0, 0.6);
   <div class="h1parrent">
     <div class="h1" id="h1" style="color:#ff00f7">پیوندهای شیمیایی موجود در بیومولکول ها</div>
 
-      <div class="h2parrent" >
+    <div class="content" id="content"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);">
+
+الکترونگاتیویتی:تمایل هر اتم درگیر در پیوند به  کشیدن الکترون های پیوندی به سمت خود<br>
+نکته:هر چقد اختلاف الکترونگاتیویتی بین دو اتم درگیر در پیوند کمتر باشد پیوند کوالانسی تر(غیر قطبی تر) و هرچه اختلاف الکترونگاتیویتی بیشتر باشد پیوند یونی تر (قطبی تر)خواهد شد
+    </div>     
+<div class="h2parrent" >
         <div class="h2"  id ="h2" style="color:#ff00f7" >   کوالانسی</div>
         <div class="content" id="content"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);"  style="backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);">
             اشتراک الکترون های لایه ظرفیت اتم ها
-            <br><span style="color:#e100ff">● پیوند یگانه(اشتراک یک جفت الکترون):اتم های متصل با پیوند یگانه در صورت نداشتن محدودیت فضایی مثل گروه های بزرگ حول پیوند بچرخند</span>
+            <br><span style="color:#e100ff">● پیوند یگانه(اشتراک یک جفت الکترون):</span>اتم های متصل با پیوند یگانه در صورت نداشتن محدودیت فضایی مثل گروه های بزرگ حول پیوند بچرخند
             <br>
        
   
-           <span style="color:#e100ff">● پیوند دوگانه( اشتراک دو جفت الکترون):</span>      کوتاه تر و محکم تر از پیوند یگانه و دارای محدودیت چرخش<br>
-          </div></div>
+           <span style="color:#e100ff">● پیوند دوگانه( اشتراک دو جفت الکترون):</span>      کوتاه تر و قوی تر از پیوند یگانه و دارای محدودیت چرخش<br>
+
+           <span style="color:#e100ff">● پیوند سه گانه( اشتراک سه جفت الکترون):</span> کوتاه ترین و  قوی ترین پیوند  <br>
+
+           نکته:پیوند کوالانسی می تواند قطبی(جذب بیشتر الکترون اشتراکی توسط یک اتم) و غیر قطبی(تمایل برابر دو اتم در جذب الکترون) باشد که باعث ایجاد مولکول های غیر قطبی و قطبی میشوند
+           <div style="width:90%;display: grid;justify-content: center;text-align: center;margin:auto;">
+            <img loading="lazy" style="height:250px;width:100%;margin: auto;" class="pic" src="covalentbonds.jpg">
+           </div>
+          </div>
+        
+        </div>
 
             <div class="h2parrent" >
 
@@ -4272,7 +4285,9 @@ background: rgba(0, 0, 0, 0.6);
 نیروی جاذبه بین یون های مثبت و منفی 
 
              <br>مثال: پیوند یونی بین آمینواسیدهای مثبت و منفی در ساختار سوم پروتئین ها<br>
-              
+             <div style="width:90%;display: grid;justify-content: center;text-align: center;margin:auto;">
+              <img loading="lazy" style="height:150px;width:100%;margin: auto;" class="pic" src="noncovalentbonds.jpg">
+             </div>
           <br>
           <div class="wrap" id="wrap" style="position: relative;">
             <iframe class="iframe" id="iframe" loading="lazy"tabindex="0"   data-src="https://raw.githack.com/Science2023/3dbiochemistry/main/ionic bond.html" ></iframe>
@@ -4290,10 +4305,10 @@ background: rgba(0, 0, 0, 0.6);
 
            <span style="color:#e100ff">● یون:</span>اتم یا مولکولی که مجموع تعداد الکترون ها کمتر یا بیشتر از تعداد پروتون هاست یعنی یک الکترون به صورت کامل به اتم یا مولکول اضافه یا کم شده(به اتم یا مولکول دیگر منتقل شده) و یون یا بار منفی دارد 
             یا بار مثبت <br>
-           <span style="color:#e100ff">●  دو قطبی :</span>مولکولی که ابر الکترونی اطراف مولکول به یک طرف جابجا شده
-             و باعث ایجاد دو قطب با بارهای جزئی مثبت و منفی شده است اما الکترون به اتم یا مولکول دیگر منتقل نشده است ← مثال: مولکول آب<br>
+           <span style="color:#e100ff">●  دو قطبی :</span>مولکولی که ابر الکترونی اطراف مولکول به علت اختلاف الکترونگاتیویتی بین اتم های متصل با پیوند کوالانسی به یک طرف جابجا شده
+             و باعث ایجاد دو قطب با بارهای جزئی مثبت و منفی شده است اما اختلاف الکترونگاتیویتی در حدی نیست که الکترون به صورت کامل منتقل شده باشد .مثال: مولکول آب<br>
            <span style="color:#e100ff">●زویتریون (Zwitterion):</span>  نوع خاصی از یون های چند اتمی که دارای حداقل دو گروه عاملی باردار(مثل کربوکسیلات و آمین مثبت) هستند
-            . و یک قسمت از مولکول دارای بار مثبت و یک قسمت دارای بار منفی است ← مثال:آمینواسیدها
+            . و یک قسمت از مولکول دارای بار مثبت و یک قسمت دارای بار منفی است ← مثال:آمینواسیدها در pH ایزوالکتریک 
             <br>
           </div>
             </div>
