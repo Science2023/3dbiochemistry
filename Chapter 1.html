@@ -2841,19 +2841,30 @@ section.hidden{
 
 }
 .chaptermaph1{
-  position:relative;
  text-align: center;
  color:yellow;
  font-size:15px;
- border-bottom: 1px solid yellow;
- padding: 5px;
  font-family: 'Yekan';
  visibility: inherit;
  display: flex;
  justify-content: center;
- top:0px;width:95%;
+ top:0px;
  margin: auto;
+    position: sticky;
+    z-index: 1001;
+    width: 100%;
+    height: 5vh;
+    backdrop-filter:blur(5px);
 }
+@media all and (orientation:landscape){
+  .chaptermaph1{
+    height: 9vh;
+    font-size: 2.5vw;
+
+  }
+
+}
+  
 
 @media all and (orientation: landscape) {
   #musicmenu{
@@ -3477,10 +3488,9 @@ margin:auto;
   top:11.3%;
   width:100%;
   height:83.5vh;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur(10px );
--webkit-backdrop-filter: blur( 10px );
+
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 transition: all 0.5s ease-in-out  ;
 background-size:cover;
@@ -4123,38 +4133,30 @@ background: rgba(0, 0, 0, 0.6);
 </div>
 
 <div id="chaptermap" dir="rtl">
-  <h1 class="chaptermaph1" >فصل در یک نگاه</h1><br>
-  <div style="width: 100%;
-  
-  position: relative;
-  display: grid;">
-  <div style="position: absolute;
-  color: white;
-  background: #00a600;
-  font-family: 'Shabnam';
-  text-align: center;
-  top: 0px;
-  left: 21.5vw;
-  border-radius: 50px;
-  width: 50%;
-  border: 1px solid green;
-  height: auto;
-  z-index: 10;
-">مبانی </div><div style="position: absolute;
-    top: 12px;
-    left: 1%;
-    width: 98%;
-    border-radius: 5px;
-    border: 1px solid lime;
-    height: 59vh;
-"></div>
+  <h1 class="chaptermaph1" >فصل در یک نگاه</h1>
+  <div style="width: 100%; position: relative; display: grid;">
+    <div class="maintitr"  Style="z-index: 1000;color: #00ff26;  border: 1px solid #00ff26;top:9vh
+    "> مقدمه‌ای بر علم بیوشیمی </div>
+  <div class="border" style= "border-radius: 5px;box-shadow: inset 2px 0px 1vh  #00ff26,inset -2px 0px 1vh  #00ff26;">
+    <style>@media all and (orientation: landscape){
+      .border{box-shadow: inset 2px 0px 1vw  #00ff26,inset -2px 0px 1vw  #00ff26;}}</style>
+     <div style="position: relative;
+    width: 100%;
+    height: 100vh;
+    border-radius: 5px;backdrop-filter: blur(5px);padding-top: 30px;">
+<img src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/map1.png" style="position: relative;width: auto;height: auto;top:20px;width: 380px;"><br>
+<img src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/map1.png" style="position: relative;width: auto;height: auto;top:20px;width: 380px;">
+
+</div>
     <div class="pulsing"> 
       <div class="central-circle"></div>
       <div class="propagating-circle1" ></div>
       <div class="propagating-circle3" ></div>
       </div>
-</div>
-  
+  </div></div>
+  <div class="maintitr" id="maintitr" style="z-index: 1000;color:#ff00f7; border: 1px solid #ff00f7" >  مبانی شیمیایی</div>
+<div class="border" style="border-radius: 5px;box-shadow: inset 2px 0px 5px #ff00f7,inset -2px 0px 5px #ff00f7;" ></div></div>
+
   </div>
 
 <div class="menubox" >
