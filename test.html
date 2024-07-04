@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Choice Quiz</title>
+    <style>
+  
+       #reload-button, #score-button {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            padding: 10px;
+            color: white;
+            border-radius: 5px;
+            font-family: 'Shabnam';
+            border-radius: 5px;
+            background-color: transparent;
+            box-shadow: 0 0 0px #ffffff, 0 0 6px #ffffff, 0 0 3px #ffffff, 0 0 2px #ffffff;
+            border:1px solid #ffffff;
+            cursor: pointer;
+            min-width: 100px;
+        }
+      
+        #score-display {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Shabnam';
+            right: 125px;
+    position: absolute;
+    top: -5px;
+        }
+ 
+        .question button{
+            border-radius: 100px;
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 5px;
+    min-width: 50px;
+    cursor: pointer;
+        }
+
+        .question button.correct {
+            box-shadow:  0 0 3px #09ff00, 0 0 2px #09ff00, 0 0 4px #09ff00, 0 0 8px #09ff00;
+            border:1px solid #09ff00        }
+            .question button.incorrect {
+            box-shadow:  0 0 3px #ff0000, 0 0 2px #ff0000, 0 0 4px #ff0000, 0 0 8px #ff0000;
+            border:1px solid #ff0000          }
+
+            
+     
+    </style>
+</head>
+<body style="color:white">
+
+    <button id="score-button"  onclick="showScore()">محاسبه درصد  </button>
+    <div id="score-display"></div>
+    <button id="reload-button"  style="top:55px" onclick=reload()>شروع دوباره </button>
+     
+    
+    <div class="question">
+        <p>What is the capital of France?</p>
+        <button onclick="checkAnswer(this, true)">Paris</button>
+        <button onclick="checkAnswer(this, false)">London</button>
+        <button onclick="checkAnswer(this, false)">Berlin</button>
+        <button onclick="checkAnswer(this, false)">Madrid</button>
+    </div>
+
+    <div class="question">
+        <p>What is 2 + 2?</p>
+        <button onclick="checkAnswer(this, false)">3</button>
+        <button onclick="checkAnswer(this, true)">4</button>
+        <button onclick="checkAnswer(this, false)">5</button>
+        <button onclick="checkAnswer(this, false)">6</button>
+    </div>
+    <div class="question">
+        <p>What is 2 + 2?</p>
+        <button onclick="checkAnswer(this, false)">3</button>
+        <button onclick="checkAnswer(this, true)">4</button>
+        <button onclick="checkAnswer(this, false)">5</button>
+        <button onclick="checkAnswer(this, false)">6</button>
+    </div>
+    <div class="question">
+        <p>What is 2 + 2?</p>
+        <button onclick="checkAnswer(this, false)">3</button>
+        <button onclick="checkAnswer(this, true)">4</button>
+        <button onclick="checkAnswer(this, false)">5</button>
+        <button onclick="checkAnswer(this, false)">6</button>
+    </div>
+
+    <div class="question">
+        <p>What is 2 + 2?</p>
+        <button onclick="checkAnswer(this, false)">3</button>
+        <button onclick="checkAnswer(this, true)">4</button>
+        <button onclick="checkAnswer(this, false)">5</button>
+        <button onclick="checkAnswer(this, false)">6</button>
+    </div>
+    <div class="question">
+        <p>What is 2 + 2?</p>
+        <button onclick="checkAnswer(this, false)">3</button>
+        <button onclick="checkAnswer(this, true)">4</button>
+        <button onclick="checkAnswer(this, false)">5</button>
+        <button onclick="checkAnswer(this, false)">6</button>
+    </div>
+    <div class="question">
+        <p>What is 2 + 2?</p>
+        <button onclick="checkAnswer(this, false)">3</button>
+        <button onclick="checkAnswer(this, true)">4</button>
+        <button onclick="checkAnswer(this, false)">5</button>
+        <button onclick="checkAnswer(this, false)">6</button>
+    </div>
+    <div class="question">
+        <p>What is 2 + 2?</p>
+        <button onclick="checkAnswer(this, false)">3</button>
+        <button onclick="checkAnswer(this, true)">4</button>
+        <button onclick="checkAnswer(this, false)">5</button>
+        <button onclick="checkAnswer(this, false)">6</button>
+    </div>
+
+
+    <script>
+        let totalQuestions = document.querySelectorAll('.question').length;
+        let correctAnswers = 0;
+        let incorrectAnswers = 0;
+
+        function checkAnswer(selectedButton, isCorrect) {
+            const buttons = selectedButton.parentElement.querySelectorAll('button');
+
+            buttons.forEach(button => {
+                button.disabled = true; // Disable all buttons
+
+                if (button === selectedButton) {
+                    if (isCorrect) {
+                        correctAnswers++;
+                        button.classList.add('correct');
+                    } else {
+                        incorrectAnswers++;
+                        button.classList.add('incorrect');
+                    }
+                } else if (button.getAttribute('onclick').includes('true')) {
+                    // Highlight the correct answer
+                    button.classList.add('correct');
+                }
+            });
+        }
+
+        function showScore() {
+            // Calculate the number of unanswered questions
+            let answeredQuestions = document.querySelectorAll('.question button[disabled]').length / 4;
+            let unansweredQuestions = totalQuestions - answeredQuestions;
+
+            // Each wrong answer deducts one-third of a correct answer
+            let penalty = incorrectAnswers / 3;
+            let finalCorrectAnswers = correctAnswers - penalty;
+
+            // Calculate the percentage, considering unanswered questions as incorrect
+            let finalScore = (finalCorrectAnswers / totalQuestions) * 100;
+            finalScore = finalScore < 0 ? 0 : finalScore.toFixed(1);
+
+            // Update the score display
+           
+            document.getElementById('score-button').classList.add('active');
+            document.getElementById('score-button').textContent = ` ${finalScore}% `;
+        }
+         function reload(){
+            location.reload()
+         }
+    </script>
+</body>
+</html>
+
