@@ -4118,7 +4118,79 @@ top:13%;
       }
     }
     
+    #examlist {
+  overflow-x: scroll;
+  z-index: 100000;
+    position: fixed;
+    border-radius: 5px;
+    width: 100%;
+    top: 0px;
+    justify-content: space-evenly;
+    display: flex;
+    color: white;
+    height: 60px;
+    backdrop-filter: blur(5px);
+    margin-top: 5px;
+    left: 0px;
+}
+#examlist::-webkit-scrollbar {
+  width: 10px;
+}
 
+/* Track */
+#examlist::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.2); 
+}
+ 
+/* Handle */
+#examlist::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.4); 
+}
+
+/* Handle on hover */
+#examlist::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.2); 
+}
+
+/* Style the buttons inside the tab */
+#examlist button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 13px;
+  border-radius: 100px;
+  color: white;
+  font-family: 'Shabnam';
+  white-space: nowrap;
+  height: 40px;
+  margin-right: 20px;}
+
+/* Change background color of buttons on hover */
+
+
+/* Create an active/current tablink class */
+#examlist button.active {
+  background: rgba(255, 255, 255, 0.4)
+}
+
+/* Style the tab content */
+.exam {
+  display: none;
+  backdrop-filter: blur(10px);
+    color: white;
+    width: 100%;
+    height: 80%;
+    position: fixed;
+    z-index: 100000;
+    top: 20%;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    font-family: 'Shabnam';
+
+}
+    
     .pulsing {
       position: absolute;
       top: 45%;
@@ -4650,27 +4722,49 @@ top:13%;
   </div>
 
   <div id="examtab">
-    <button class="tablinks" onclick="exams(event, 'London')">سوالات تالیفی</button>
-    <button class="tablinks" onclick="exams(event, 'Paris')">آزمون های داخلی</button>
-    <button class="tablinks" onclick="exams(event, 'Tokyo')">آزمون های خارجی</button>
+    <button class="tablinks" onclick="examslist(event, 'Compiled')">سوالات تالیفی</button>
+    <button class="tablinks" onclick="examslist(event, 'Nationalexams')">آزمون های داخلی</button>
+    <button class="tablinks" onclick="examslist(event, 'Internationalexams')">آزمون های خارجی</button>
   </div>
   
   <div id="tabcontentbackground"class="tabcontent" ></div>
 
-  <div id="London" class="tabcontent">
-    
-      <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" src="https://raw.githack.com/Science2023/3dbiochemistry/main/exams.html" style="width: 100%;"></iframe>
-    
-  </div>
+  <div id="Compiled" class="tabcontent">
+    <div id="examlist">
+      <button class="subtablinks" onclick="exam(event, 'Exam1')">آزمون شماره 1 </button>
+      <button class="subtablinks" onclick="exam(event, 'Exam2')">آزمون شماره 2</button>
+      <button class="subtablinks" onclick="exam(event, 'Exam3')">آزمون شماره 3 </button>
   
-  <div id="Paris" class="tabcontent">
-    <p>Paris is the capital of France.</p> 
-  </div>
+  </div></div>
+    
   
-  <div id="Tokyo" class="tabcontent">
+    <div id="Exam1" class="exam">
+      
+        <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" src="https://raw.githack.com/Science2023/3dbiochemistry/main/test.html" style="width: 100%;height: 100%;
+      border: none;"></iframe>
+    </div>
+       
+    
+    <div id="Exam2" class="exam">
+      <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" src="https://raw.githack.com/Science2023/3dbiochemistry/main/test.html" style="width: 100%;height: 100%;
+      border: none;"></iframe>
+  </div>
+    
+    <div id="Exam3" class="exam">
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+</div>
+     
+  
+  <div id="Nationalexams" class="tabcontent">
+   
+</div>
+  
+  <div id="internationalexams" class="tabcontent">
     <p>Tokyo is the capital of Japan.</p>
   </div>
 
+ 
 
 
 <div id="list" >
@@ -8186,7 +8280,7 @@ top:13%;
 
   </script>
   <script>
-function exams(evt, cityName) {
+function examslist(evt, cityName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -8201,6 +8295,67 @@ function exams(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 
+function exam(evt, cityName) {
+  var i, exam, subtablinks;
+  exam = document.getElementsByClassName("exam");
+  for (i = 0; i < exam.length; i++) {
+    exam[i].style.display = "none";
+
+  }
+  subtablinks = document.getElementsByClassName("subtablinks");
+  for (i = 0; i < subtablinks.length; i++) {
+    subtablinks[i].className = subtablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+
+
+let totalQuestions = document.querySelectorAll('.question').length;
+        let correctAnswers = 0;
+        let incorrectAnswers = 0;
+
+        function checkAnswer(selectedButton, isCorrect) {
+            const buttons = selectedButton.parentElement.querySelectorAll('button');
+
+            buttons.forEach(button => {
+                button.disabled = true; // Disable all buttons
+
+                if (button === selectedButton) {
+                    if (isCorrect) {
+                        correctAnswers++;
+                        button.classList.add('correct');
+                    } else {
+                        incorrectAnswers++;
+                        button.classList.add('incorrect');
+                    }
+                } else if (button.getAttribute('onclick').includes('true')) {
+                    // Highlight the correct answer
+                    button.classList.add('correct');
+                }
+            });
+        }
+
+        function showScore() {
+            // Calculate the number of unanswered questions
+            let answeredQuestions = document.querySelectorAll('.question button[disabled]').length / 4;
+            let unansweredQuestions = totalQuestions - answeredQuestions;
+
+            // Each wrong answer deducts one-third of a correct answer
+            let penalty = incorrectAnswers / 3;
+            let finalCorrectAnswers = correctAnswers - penalty;
+
+            // Calculate the percentage, considering unanswered questions as incorrect
+            let finalScore = (finalCorrectAnswers / totalQuestions) * 100;
+            finalScore = finalScore < 0 ? 0 : finalScore.toFixed(1);
+
+            // Update the score display
+           
+            document.getElementById('score-button').classList.add('active');
+            document.getElementById('score-button').textContent = ` ${finalScore}% `;
+        }
+        
 /***lessonsounds***/
 document.addEventListener("DOMContentLoaded", function() {
   document.querySelectorAll(".soundplayer").forEach(player => {
