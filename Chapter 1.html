@@ -2423,7 +2423,8 @@
         display: grid;
         grid-template-rows: max-content auto max-content;
         position: relative;
-        bottom: 8px;
+        bottom: 5px;
+        height: 65%;
       }
 
     }
@@ -4168,7 +4169,7 @@
       display: none;
       backdrop-filter: blur(10px);
       color: white;
-      height: 80%;
+      height: 77%;
       position: fixed;
       z-index: 101;
       top: 17%;
@@ -4559,7 +4560,8 @@
       background-color: rgba(255, 255, 255, 0.1);
       padding: 5px;
       border-radius: 5px;
-      box-shadow: rgb(234 0 255) 0px 0px 5px;
+      border: 1px solid #ff02d7;
+      box-shadow: rgb(234 0 255) 0px 0px 10px;
     }
 
     .play-pause-btn {
@@ -4642,6 +4644,20 @@
       }
 
     }
+
+    .speed-btn {
+
+      border: 1px solid #ffffff75;
+      border-radius: 5px;
+      margin: 2px;
+      margin-right: 10px;
+      padding-right: 3px;
+      padding-left: 3px;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      font-size: x-small;
+    }
   </style>
 
   <title>3D Biochemistry</title>
@@ -4678,14 +4694,17 @@
           <span id="scrollright" tabindex="0" onclick="musicscrollleft()" cursor="pointer"></span>
         </div>
 
-        <div class="musicpic" onclick="musicpicclick1()"><img
-            src="https://thumbs.dreamstime.com/b/heavy-rain-tropical-rainforest-55108490.jpg"
-            style="position:absolute;width:100%;height:100%;top:0px;left:0px;"></div>
-        <div class="musicpic" id="pic1" onclick="musicpicclick2()"><img
-            src="https://oceanvodka.com/uploads/2019/04/HP-Hero-Header@2x.jpg"
-            style="position:absolute;width:100%;height:100%;top:0px;left:0px;"></div>
-        <div class="musicpic"><img src="https://oceanvodka.com/uploads/2019/04/HP-Hero-Header@2x.jpg"
-            style="position:absolute;width:100%;height:100%;top:0px;left:0px;"></div>
+        <div class="musicpic" onclick="musicpicclick1()">
+          <img src="https://thumbs.dreamstime.com/b/heavy-rain-tropical-rainforest-55108490.jpg"
+            style="position:absolute;width:100%;height:100%;top:0px;left:0px;">
+        </div>
+        <div class="musicpic" onclick="musicpicclick2()"><img
+            src="difference-between-spring-water-and-mineral-water-featured.webp" style="position:absolute;width:100%;height:100%;top:0px;left:0px;"></div>
+
+        <div class="musicpic" onclick="musicpicclick3()"><img src="water.jpg" style="position:absolute;width:100%;height:100%;top:0px;left:0px;"></div>
+
+        <div class="musicpic" onclick="musicpicclick4()"><img src="the-colors-of-spring-bird-fountain-in-flower-garden-crista-forest.jpg"
+              style="position:absolute;width:100%;height:100%;top:0px;left:0px;"></div>
 
       </div>
       <div class="controlplayer">
@@ -4701,13 +4720,10 @@
           <source src="3D-Sounds-Thunder-and-Rain-Sounds-of-Nature-SoftGozar.com.mp3" type="audio/mpeg">
         </audio>
         <div id="tracklist">
-          <audio class="audio " data-src="3D-Sounds-Thunder-and-Rain-Sounds-of-Nature-SoftGozar.com.mp3"></audio>
-          <audio class="audio "
-            data-src="https://github.com/Mybook2021/scientist.github.io/raw/main/3d_Mountain_Stream_Radion.ir.mp3"></audio>
-          <audio class="audio " data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"> </audio>
-          <audio class="audio " data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"> </audio>
-          <audio class="audio " data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"></audio>
-          <audio class="audio " data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"></audio>
+          <audio class=" natureaudio " data-src="3D-Sounds-Thunder-and-Rain-Sounds-of-Nature-SoftGozar.com.mp3"></audio>
+          <audio class="natureaudio " data-src="https://github.com/Mybook2021/scientist.github.io/raw/main/3d_Mountain_Stream_Radion.ir.mp3"></audio>
+          <audio class="natureaudio " data-src="3d AAB-JOB.mp3"> </audio>
+          <audio class="natureaudio " data-src="bird&spring.mp3"> </audio>
         </div>
 
         <div class="player-controls">
@@ -4737,9 +4753,7 @@
 
     </div>
   </div>
-  </div>
-  </div>
-  </div>
+
 
 
   <section class="loginform" id="loginform">
@@ -5144,11 +5158,11 @@
             <a style="cursor: pointer;color:#00ff15;font-family: 'Shabnam';text-decoration: none;text-align: center;display: block;font-size: medium;"
               href="#titrtwo">مقدمه ای بر علم بیوشیمی </a>
             <a style="cursor: pointer;color:#00ff15;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-              href="#organic-inorganic"> ●تاریخچه </a><br>
+              href="#history"> ●تاریخچه </a><br>
             <a style="cursor: pointer;color:#00ff15;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-              href="#organic-inorganic">●بیوشیمی علمی بین رشته ای</a><br>
+              href="#interdisciplinary">●بیوشیمی علمی بین رشته ای</a><br>
             <a style="cursor: pointer;color:#00ff15;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-              href="#organic-inorganic">●ویژگی های موجودات زنده</a>
+              href="#livethings">●ویژگی های موجودات زنده</a>
           </div>
 
 
@@ -5159,9 +5173,9 @@
             <a style="cursor: pointer;color:#ff00f7;font-family: 'Shabnam';text-decoration: none;font-size: small;"
               href="#organic-inorganic"> ●مواد آلی و معدنی و بیومولکول ها </a><br>
             <a style="cursor: pointer;color:#ff00f7;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-              href="#organic-inorganic"> ●عناصر سازنده موجودات زنده</a><br>
+              href="#elements"> ●عناصر سازنده موجودات زنده</a><br>
             <a style="cursor: pointer;color:#ff00f7;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-              href="#organic-inorganic"> ●ساختار الکترونی عناصر و اوربیتال ها</a>
+              href="#orbitals"> ●ساختار الکترونی عناصر و اوربیتال ها</a>
 
           </div>
 
@@ -5357,29 +5371,29 @@
               style="position: relative;width: 95%;border: 1px solid rgba(255,255,255,0.3);border-radius: 5px;height:fit-content;margin: auto;top: 10px;text-align: right;padding: 5px;">
 
               <a style="cursor: pointer;color:#ff00f7;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-                href="#history">● مواد آلی و معدنی و بیومولکول ها </a><br>
+                href="#organic-inorganic">● مواد آلی و معدنی و بیومولکول ها </a><br>
               <a style="cursor: pointer;color:#ff00f7;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-                href="#interdisciplinary">● عناصر موجود در بیومولکول ها و موجودات زنده</a><br>
+                href="#elements">● عناصر موجود در بیومولکول ها و موجودات زنده</a><br>
 
               <a style="cursor: pointer;color:#ff00f7;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-                href="#livethings">● ساختار الکترونی عناصر و اوربیتال ها</a><br>
+                href="#orbitals">● ساختار الکترونی عناصر و اوربیتال ها</a><br>
 
               <a style="cursor: pointer;color:#ff00f7;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-                href="#livethings">● بیومولکول ها</a><br>
+                href="#biomolecules">● بیومولکول ها</a><br>
               <a style="cursor: pointer;color:#ff00f7;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-                href="#livethings">● ایزومرها </a><br>
+                href="#isomers">● ایزومرها </a><br>
               <a style="cursor: pointer;color:#ff00f7;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-                href="#livethings">● انواع نمایش مولکول ها </a><br>
+                href="#representations">● انواع نمایش مولکول ها </a><br>
               <a style="cursor: pointer;color:#ff00f7;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-                href="#livethings">● نامگذاری ترکیبات آلی </a><br>
+                href="#organic">● نامگذاری ترکیبات آلی </a><br>
               <a style="cursor: pointer;color:#ff00f7;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-                href="#livethings">● وزن مولکولی، جرم مولکولی و واحدهای آنها </a><br>
+                href="#molecularweight">● وزن مولکولی، جرم مولکولی و واحدهای آنها </a><br>
               <a style="cursor: pointer;color:#ff00f7;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-                href="#livethings">● مول ،غلظت و مولاریته </a><br>
+                href="#molarity">● مول ،غلظت و مولاریته </a><br>
               <a style="cursor: pointer;color:#ff00f7;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-                href="#livethings">● تعادل و اصل لوشاتلیه </a><br>
+                href="#equation">● تعادل و اصل لوشاتلیه </a><br>
               <a style="cursor: pointer;color:#ff00f7;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-                href="#livethings">● پیشوندها و پسوندهای مهم </a><br>
+                href="#suffixes&prefixes">● پیشوندها و پسوندهای مهم </a><br>
             </div><br>
           </div>
         </div>
@@ -5423,142 +5437,280 @@
         </div>
       </div>
 
-      <div class="border" style="border-radius: 5px;">
-        <div class="h1parrent" id="#elements">
-          <div class="h1" id="h1" style="color:#ff00f7"> عناصر موجود در بیومولکول ها و موجودات زنده
-            <a style="width: 100%;position: absolute;height:100% ;" href="#elements"></a>
-          </div>
-          <div class="content" id="content">
-
-            هیدروکربن ها: کربن + هیدروژن<br>
-            کربوهیدرات ها: کربن+ هیدروژن + اکسیژن<br>
-            لیپیدها: کربن+هیدروژن + اکسیژن + در برخی فسفر(مثل فسفولیپیدها) + در برخی نیتروژن <br>
-            نوکلئیک اسیدها: کربن + هیدروژن + اکسیژن + نیتروژن(در بازهای آلی) + فسفر (در گروه فسفات)<br>
-            پروتئین ها: کربن + هیدروژن + اکسیژن + در برخی سولفور یا همان گوگرد(در آمینواسیدهای متیونین و سیستئین ) + در
-            برخی سلنیم (در آمینواسید سلنوسیستئین)<br>
-            نکته بسیار مهم: عناصر فلزی دیگری در برخی پروتئین ها یافت می شوند که جزء ساختار اصلی پروتئین نیستند اما برای
-            عملکرد پروتئین ضروری هستند و بعد از سنتز پروتئین با فرایندهای مختلفی به آن ها افزوده می شوند.مثل آهن، مس،
-            روی،منیزیم،منگنز،کبالت،
-            نیکل، مولیبدن و وانادیم
-            <br>
-            نکته: فلزات دیگری نیز در برخی قسمت های خاص به صورت یون آزاد یافت می شوند. مثل کلسیم در استخوان،سدیم و پتاسیم
-            در سلول و مایع بین سلولی و...
-            <br>
-            نکته: نیازی به حفظ کردن این لیست نیست.این لیستو صرفا برای جهت آشنایی با عناصر موجود در موجودات زنده آوردم که
-            بدونید خدا با چند تا عنصر محدود چه موجودات پیچیده ای ساخته. دمش گرم
-          </div>
+      <div class="h1parrent" id="elements">
+        <div class="h1" id="h1" style="color:#ff00f7"> عناصر موجود در بیومولکول ها و موجودات زنده
+          <a style="width: 100%;position: absolute;height:100% ;" href="#elements"></a>
         </div>
+        <div class="content" id="content">
 
-        <div class="h1parrent" id="orbitals">
-          <div class="h1" id="h1" style="color:#ff00f7">ساختار الکترونی عناصر و اوربیتال ها
-            <a style="width: 100%;position: absolute;height:100% ;" href="#orbitals"></a>
-
-          </div>
-          <div class="content" id="content">
-
-            الکترون های لایه ظرفیت(یا والانس): بیرونی ترین لایه الکترونی عناصر که در پیوندهای شیمیایی مشارکت میکنند . به
-            همین دلیل اشتراک این الکترون ها پیوند کووالانسی نام دارد(کو:پیشوند به معنای مشترک)<br>
-            <div style="display: flex;width: 100%;flex-wrap:wrap">
-              <img loading="lazy" style="width:355px;margin: auto; " src="Carbon.png"><br>
-
-              <img loading="lazy" style=";width:355px;margin: auto; " src="nitrogen.png"><br>
-
-              <img loading="lazy" style=";width:355px;margin: auto;" src="Oxygen.png"><br>
-            </div>
-            اوربیتال: به معنای مدار است که از مدل های قدیمی اتمی مثل مدل بور گرفته شده و تصور میکردند الکترون در
-            مسیر مشخصی دور هسته میچرخه اما زهی خیال باطل...مدل جدید مکانیک کوانتومی طبق معادله موجی داداشمون شرودینگر
-            میگه ما فقط میتونیم احتمال حضور
-            الکترون در یک نقطه رو مشخص کنیم و بخشی از فضای اطراف هسته اتم که احتمال حضور
-            الکترون توش خیلی بالاست میگن اوربیتال یا همون ابر الکترونی.این کلمه ابر یعنی الکترون میتونه هرجایی از این
-            ابر باشه در هر لحظه و در واقع احتمال حضور الکترون توی کل نقاط تشکیل دهنده ابر توزیع شده مثل اینکه ی نفر به
-            صورت رندوم هر روز یا میره رستوران یا پارک یا باشگاه پس احتمال حضورش تو هر کدوم هست چون رندومه و نمیتونیم با
-            قطعیت بگیم هر روز کجاست اما میدونیم احتمال داره تو هر کدوم از این سه تا باشه پس مکان و مسیر دقیق الکترون
-            مشخص نیست ولی میدونیم
-            احتمال حضورش تو قسمتی از فضای اطراف هسته خیلی بالاست. پس شرودینگر اومد ی معادله ای از رفتار کل ذرات
-            کوانتومی
-            بدست آورد که برای الکترون احتمال
-            وجود الکترون در مکان های مختلف اطراف هسته رو اندازه میگیره . با حل این معادله عددهایی بدست میاد که مختصات
-            مکان هایی
-            رو نشون
-            میده که بیشترین احتمال حضور الکترون رو دارند و مجموع این نقاط رو بهشون میگن اوربیتال. مثل نمودار سهمی که با
-            عدد
-
-
-            گذاری داخل معادله سهمی بدست میاد حالا سهمی فقط ی خطه که هر نقطه ش با یک مختصات شامل x و y بدست میاد
-            اما نمودار تابع موج ی نوع نمودار سه بعدیه که با سه تا مختصات مثل x , y ,z بدست میاد اما اسمشون n , l , ml
-            هست و هر کدوم
-
-            با توجه به زیرلایه ای که توش هستن شکل فضایی خاص دارن.یعنی اوربیتال ها با هم یک زیر لایه رو میسازن و
-            هر زیر لایه شامل یک یا چند اوربیتاله.
-            <br>
-            زیر لایه S: یک اوربیتال کروی یعنی احتمال حضور الکترون با فاصله های یکسان از هسته در این اوربیتال ها با هم
-            برابره<br>
-            زیر لایه p: سه اوربیتال دمبلی انگار سه تا دمبل بر هم عمود هستن و به نقاط وسط دمبل ها که احتمال حضور الکترون
-            در اونجا صفره میگن گره احتمال حضور الکترون در سر دمبل ها بالاتر است<br>
-            نکته:هرچقد فاصله از هسته بیشتر میشه انرژی الکترون ها بیشتر و اوربیتال ها یعنی فضاهای احتمالی حضور الکترون
-            بزرگتر میشه<br>
-            نکته: دقت کنید ما اطراف هسته کره و یا شکل دمبلی نداریم و این اشکال فقط نمودار تابع موجی هستن و از نقاطی
-            تشکیل شدن که احتمال حضور الکترون در اونها بالاست<br>
-
-
-            اوربیتال هیبریدی یا مولکولی: حالا وقتی یک اتم میخواد با یک اتم دیگه پیوند بده اوربیتال ها ی جوری تغییر
-            میکنه که محکم ترین پیوند تشکیل بشه.یعنی الکترون اول فقط دور یک هسته حضور داشته حالا دور دو تا هسته همزمان
-            حضور داره که باعث میشه مثل طناب که دور دو تا چیز میپیچی الکترون هم هسته دو اتم رو کنار هم نگه داره و پیوند
-            تشکیل بشه .حالا
-            به این مکان های جدید حضور الکترون یا اوربیتال های جدید میگن اوربیتال هیبریدی چون حاصل مخلوط شدن یا هیبرید
-            شدن چند تا اوربیتاله.انگار شما داری نگهبانی میدی دور خونه خودتون حرکت میکنی .همسایه تون
-            میگه از خونه
-            ما هم نگهبانی بده و شما فضای اطراف خونه همسایه رو هم به مکان های حضورت اضافه میکنی .افتاد؟؟؟
-            <div class="wrap" id="wrap" style="position: relative;">
-              <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="hybrid types.html"></iframe>
-            </div><br>
-            <div class="soundplayer" data-src="1.m4a" dir="ltr">
-              <div class="play-pause-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
-                  <path class="play-pause-icon" d="M18 12L0 24V0" />
-                </svg>
-              </div>
-              <div class="controls">
-                <span class="current-time time">0:00</span>
-                <div class="lessonslider">
-                  <div class="progress"></div>
-                </div>
-                <span class="total-time time">0:00</span>
-              </div>
-              <audio></audio>
-            </div>
-
-            <br>
-            <div class="soundplayer" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" dir="ltr">
-              <div class="play-pause-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
-                  <path class="play-pause-icon" d="M18 12L0 24V0" />
-                </svg>
-              </div>
-              <div class="controls">
-                <span class="current-time time">0:00</span>
-                <div class="lessonslider">
-                  <div class="progress"></div>
-                </div>
-                <span class="total-time time">0:00</span>
-              </div>
-              <audio></audio>
-            </div><br>
-            <div class="wrap" id="wrap" style="position: relative;">
-              <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="sp3.html"></iframe>
-            </div><br>
-            <div class="wrap" id="wrap" style="position: relative;">
-              <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="sp2.html"></iframe>
-            </div><br>
-            <div class="wrap" id="wrap" style="position: relative;">
-              <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="sp.html"></iframe>
-            </div>
-
-          </div>
-
+          هیدروکربن ها: کربن + هیدروژن<br>
+          کربوهیدرات ها: کربن+ هیدروژن + اکسیژن<br>
+          لیپیدها: کربن+هیدروژن + اکسیژن + در برخی فسفر(مثل فسفولیپیدها) + در برخی نیتروژن <br>
+          نوکلئیک اسیدها: کربن + هیدروژن + اکسیژن + نیتروژن(در بازهای آلی) + فسفر (در گروه فسفات)<br>
+          پروتئین ها: کربن + هیدروژن + اکسیژن + در برخی سولفور یا همان گوگرد(در آمینواسیدهای متیونین و سیستئین ) + در
+          برخی سلنیم (در آمینواسید سلنوسیستئین)<br>
+          نکته بسیار مهم: عناصر فلزی دیگری در برخی پروتئین ها یافت می شوند که جزء ساختار اصلی پروتئین نیستند اما برای
+          عملکرد پروتئین ضروری هستند و بعد از سنتز پروتئین با فرایندهای مختلفی به آن ها افزوده می شوند.مثل آهن، مس،
+          روی،منیزیم،منگنز،کبالت،
+          نیکل، مولیبدن و وانادیم
+          <br>
+          نکته: فلزات دیگری نیز در برخی قسمت های خاص به صورت یون آزاد یافت می شوند. مثل کلسیم در استخوان،سدیم و پتاسیم
+          در سلول و مایع بین سلولی و...
+          <br>
+          نکته: نیازی به حفظ کردن این لیست نیست.این لیستو صرفا برای جهت آشنایی با عناصر موجود در موجودات زنده آوردم که
+          بدونید خدا با چند تا عنصر محدود چه موجودات پیچیده ای ساخته. دمش گرم
         </div>
       </div>
-    </div>
+
+      <div class="h1parrent" id="orbitals">
+        <div class="h1" id="h1" style="color:#ff00f7">ساختار الکترونی عناصر و اوربیتال ها
+          <a style="width: 100%;position: absolute;height:100% ;" href="#orbitals"></a>
+
+        </div>
+        <div class="content" id="content">
+
+          الکترون های لایه ظرفیت(یا والانس): بیرونی ترین لایه الکترونی عناصر که در پیوندهای شیمیایی مشارکت میکنند . به
+          همین دلیل اشتراک این الکترون ها پیوند کووالانسی نام دارد(کو:پیشوند به معنای مشترک)<br>
+
+          <div class="soundplayer" data-src="valence.m4a" dir="ltr" style="display: grid;">
+            <div
+              style=" text-align: center; top: -10px;position: relative;align-items: center; height: 15px;font-size: x-small;">
+              لایه الکترونی ظرفیت </div>
+            <div style="display: flex;">
+              <div class="play-pause-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
+                  <path class="play-pause-icon" d="M18 12L0 24V0" />
+                </svg>
+              </div>
+              <div class="speed-btn">1X</div>
+              <div class="controls">
+                <span class="current-time time">0:00</span>
+                <div class="lessonslider">
+                  <div class="progress"></div>
+                </div>
+                <span class="total-time time">0:00</span>
+              </div>
+              <audio></audio>
+            </div>
+          </div>
+
+          <div class="soundplayer" data-src="octet rule.m4a" dir="ltr" style="display: grid;">
+            <div
+              style="text-align: center; top: -10px; position: relative; align-items: center; height: 15px; font-size: x-small;">
+              قانون اوکتت(هشت تایی شدن)
+            </div>
+            <div class="soundcontrol" style="display: flex;">
+              <div class="play-pause-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
+                  <path class="play-pause-icon" d="M18 12L0 24V0" />
+                </svg>
+              </div>
+
+              <div class="speed-btn">1X</div>
+
+              <div class="controls">
+                <span class="current-time time">0:00</span>
+                <div class="lessonslider">
+                  <div class="progress"></div>
+                </div>
+                <span class="total-time time">0:00</span>
+              </div>
+              <audio src="octet rule.m4a"></audio>
+            </div>
+          </div>
+
+          <div style="display: flex;width: 100%;flex-wrap:wrap;justify-content: center;">
+
+            <div class="content" id="content" style="margin-top: 15px;">
+
+              <div class="image-container" id="imagecontainer">
+                <img src="Carbon.png" alt="Image to magnify" class="main-image" id="mainImage">
+              </div>
+              <div class="magnifier-view" id="magnifierView">
+                <img src="Carbon.png" alt="Magnified Image" class="magnified-image" id="magnifiedImage">
+              </div>
+              <img class="zoomin" id="zoomin"
+                style="border-raius:10px;backdrop-filter: blur(5px);width: 15px;height: 15px;position: absolute;top:5px;right:12px;display: flex;z-index: 100;cursor: pointer;padding: 5px;background: rgba(0, 0, 0, 0.4);border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.4);"
+                src="zoomin.png">
+              <img class="zoomout" id="zoomout"
+                style="border-raius:10px;backdrop-filter: blur(5px);width: 15px;height: 15px;position: absolute;top:5px;right:12px;display: none;z-index: 100;cursor: pointer;padding: 5px;background: rgba(0, 0, 0, 0.4);border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.4);"
+                onclick="zoomo()" src="zoomout.png">
+
+            </div>
+            <div class="content" id="content">
+              <div class="soundplayer" data-src="carbon octete.m4a" dir="ltr" style="display: grid;">
+                <div
+                  style=" text-align: center; top: -10px;position: relative;align-items: center; height: 15px;font-size: x-small;">
+                  توضیح جدول کربن</div>
+                <div style="display: flex;">
+                  <div class="play-pause-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
+                      <path class="play-pause-icon" d="M18 12L0 24V0" />
+                    </svg>
+                  </div>
+                  <div class="controls">
+                    <span class="current-time time">0:00</span>
+                    <div class="lessonslider">
+                      <div class="progress"></div>
+                    </div>
+                    <span class="total-time time">0:00</span>
+                  </div>
+                  <audio></audio>
+                </div>
+              </div>
+              <div class="content" id="content" style="margin-top: 15px;">
+
+                <div class="image-container" id="imagecontainer">
+                  <img src="nitrogen.png" alt="Image to magnify" class="main-image" id="mainImage">
+                </div>
+                <div class="magnifier-view" id="magnifierView">
+                  <img src="nitrogen.png" alt="Magnified Image" class="magnified-image" id="magnifiedImage">
+                </div>
+                <img class="zoomin" id="zoomin"
+                  style="border-raius:10px;backdrop-filter: blur(5px);width: 15px;height: 15px;position: absolute;top:5px;right:12px;display: flex;z-index: 100;cursor: pointer;padding: 5px;background: rgba(0, 0, 0, 0.4);border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.4);"
+                  src="zoomin.png">
+                <img class="zoomout" id="zoomout"
+                  style="border-raius:10px;backdrop-filter: blur(5px);width: 15px;height: 15px;position: absolute;top:5px;right:12px;display: none;z-index: 100;cursor: pointer;padding: 5px;background: rgba(0, 0, 0, 0.4);border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.4);"
+                  onclick="zoomo()" src="zoomout.png">
+
+              </div>
+              <div class="content" id="content">
+                <div class="soundplayer" data-src="nitrogen octete.m4a" dir="ltr" style="display: grid;">
+                  <div
+                    style=" text-align: center; top: -10px;position: relative;align-items: center; height: 15px;font-size: x-small;">
+                    توضیح جدول نیتروژن</div>
+                  <div style="display: flex;">
+                    <div class="play-pause-btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
+                        <path class="play-pause-icon" d="M18 12L0 24V0" />
+                      </svg>
+                    </div>
+                    <div class="controls">
+                      <span class="current-time time">0:00</span>
+                      <div class="lessonslider">
+                        <div class="progress"></div>
+                      </div>
+                      <span class="total-time time">0:00</span>
+                    </div>
+                    <audio></audio>
+                  </div>
+                </div>
+
+                <div class="content" id="content" style="margin-top: 15px;">
+
+                  <div class="image-container" id="imagecontainer">
+                    <img src="Oxygen.png" alt="Image to magnify" class="main-image" id="mainImage">
+                  </div>
+                  <div class="magnifier-view" id="magnifierView">
+                    <img src="Oxygen.png" alt="Magnified Image" class="magnified-image" id="magnifiedImage">
+                  </div>
+                  <img class="zoomin" id="zoomin"
+                    style="border-raius:10px;backdrop-filter: blur(5px);width: 15px;height: 15px;position: absolute;top:5px;right:12px;display: flex;z-index: 100;cursor: pointer;padding: 5px;background: rgba(0, 0, 0, 0.4);border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.4);"
+                    src="zoomin.png">
+                  <img class="zoomout" id="zoomout"
+                    style="border-raius:10px;backdrop-filter: blur(5px);width: 15px;height: 15px;position: absolute;top:5px;right:12px;display: none;z-index: 100;cursor: pointer;padding: 5px;background: rgba(0, 0, 0, 0.4);border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.4);"
+                    onclick="zoomo()" src="zoomout.png">
+
+                </div>
+              </div>
+              اوربیتال: به معنای مدار است که از مدل های قدیمی اتمی مثل مدل بور گرفته شده و تصور میکردند الکترون در
+              مسیر مشخصی دور هسته میچرخه اما زهی خیال باطل...مدل جدید مکانیک کوانتومی طبق معادله موجی داداشمون شرودینگر
+              میگه ما فقط میتونیم احتمال حضور
+              الکترون در یک نقطه رو مشخص کنیم و بخشی از فضای اطراف هسته اتم که احتمال حضور
+              الکترون توش خیلی بالاست میگن اوربیتال یا همون ابر الکترونی.این کلمه ابر یعنی الکترون میتونه هرجایی از این
+              ابر باشه در هر لحظه و در واقع احتمال حضور الکترون توی کل نقاط تشکیل دهنده ابر توزیع شده مثل اینکه ی نفر به
+              صورت رندوم هر روز یا میره رستوران یا پارک یا باشگاه پس احتمال حضورش تو هر کدوم هست چون رندومه و نمیتونیم
+              با
+              قطعیت بگیم هر روز کجاست اما میدونیم احتمال داره تو هر کدوم از این سه تا باشه پس مکان و مسیر دقیق الکترون
+              مشخص نیست ولی میدونیم
+              احتمال حضورش تو قسمتی از فضای اطراف هسته خیلی بالاست. پس شرودینگر اومد ی معادله ای از رفتار کل ذرات
+              کوانتومی
+              بدست آورد که برای الکترون احتمال
+              وجود الکترون در مکان های مختلف اطراف هسته رو اندازه میگیره . با حل این معادله عددهایی بدست میاد که مختصات
+              مکان هایی
+              رو نشون
+              میده که بیشترین احتمال حضور الکترون رو دارند و مجموع این نقاط رو بهشون میگن اوربیتال. مثل نمودار سهمی که
+              با
+              عدد
+
+
+              گذاری داخل معادله سهمی بدست میاد حالا سهمی فقط ی خطه که هر نقطه ش با یک مختصات شامل x و y بدست میاد
+              اما نمودار تابع موج ی نوع نمودار سه بعدیه که با سه تا مختصات مثل x , y ,z بدست میاد اما اسمشون n , l , ml
+              هست و هر کدوم
+
+              با توجه به زیرلایه ای که توش هستن شکل فضایی خاص دارن.یعنی اوربیتال ها با هم یک زیر لایه رو میسازن و
+              هر زیر لایه شامل یک یا چند اوربیتاله.
+              <br>
+              زیر لایه S: یک اوربیتال کروی یعنی احتمال حضور الکترون با فاصله های یکسان از هسته در این اوربیتال ها با هم
+              برابره<br>
+              زیر لایه p: سه اوربیتال دمبلی انگار سه تا دمبل بر هم عمود هستن و به نقاط وسط دمبل ها که احتمال حضور
+              الکترون
+              در اونجا صفره میگن گره احتمال حضور الکترون در سر دمبل ها بالاتر است<br>
+              نکته:هرچقد فاصله از هسته بیشتر میشه انرژی الکترون ها بیشتر و اوربیتال ها یعنی فضاهای احتمالی حضور الکترون
+              بزرگتر میشه<br>
+              نکته: دقت کنید ما اطراف هسته کره و یا شکل دمبلی نداریم و این اشکال فقط نمودار تابع موجی هستن و از نقاطی
+              تشکیل شدن که احتمال حضور الکترون در اونها بالاست<br>
+
+
+              اوربیتال هیبریدی یا مولکولی: حالا وقتی یک اتم میخواد با یک اتم دیگه پیوند بده اوربیتال ها ی جوری تغییر
+              میکنه که محکم ترین پیوند تشکیل بشه.یعنی الکترون اول فقط دور یک هسته حضور داشته حالا دور دو تا هسته همزمان
+              حضور داره که باعث میشه مثل طناب که دور دو تا چیز میپیچی الکترون هم هسته دو اتم رو کنار هم نگه داره و پیوند
+              تشکیل بشه .حالا
+              به این مکان های جدید حضور الکترون یا اوربیتال های جدید میگن اوربیتال هیبریدی چون حاصل مخلوط شدن یا هیبرید
+              شدن چند تا اوربیتاله.انگار شما داری نگهبانی میدی دور خونه خودتون حرکت میکنی .همسایه تون
+              میگه از خونه
+              ما هم نگهبانی بده و شما فضای اطراف خونه همسایه رو هم به مکان های حضورت اضافه میکنی .افتاد؟؟؟
+              <div class="wrap" id="wrap" style="position: relative;">
+                <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="hybrid types.html"></iframe>
+              </div><br>
+              <div class="soundplayer" data-src="1.m4a" dir="ltr">
+                <div class="play-pause-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
+                    <path class="play-pause-icon" d="M18 12L0 24V0" />
+                  </svg>
+                </div>
+                <div class="controls">
+                  <span class="current-time time">0:00</span>
+                  <div class="lessonslider">
+                    <div class="progress"></div>
+                  </div>
+                  <span class="total-time time">0:00</span>
+                </div>
+                <audio></audio>
+              </div>
+
+              <br>
+              <div class="soundplayer" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+                dir="ltr">
+                <div class="play-pause-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
+                    <path class="play-pause-icon" d="M18 12L0 24V0" />
+                  </svg>
+                </div>
+                <div class="controls">
+                  <span class="current-time time">0:00</span>
+                  <div class="lessonslider">
+                    <div class="progress"></div>
+                  </div>
+                  <span class="total-time time">0:00</span>
+                </div>
+                <audio></audio>
+              </div><br>
+              <div class="wrap" id="wrap" style="position: relative;">
+                <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="sp3.html"></iframe>
+              </div><br>
+              <div class="wrap" id="wrap" style="position: relative;">
+                <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="sp2.html"></iframe>
+              </div><br>
+              <div class="wrap" id="wrap" style="position: relative;">
+                <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="sp.html"></iframe>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
     </div>
 
@@ -7442,28 +7594,28 @@
               style="position: relative;width: 95%;border: 1px solid rgba(255,255,255,0.3);border-radius: 5px;height:fit-content;margin: auto;top: 10px;text-align: right;padding: 5px;">
 
               <a style="cursor: pointer;color:#00fff6;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-                href="#history">● موجودات زنده: در حالت ثابت پویا(نه در تعادل با محیط)</a><br>
+                href="#dynamic">● موجودات زنده: در حالت ثابت پویا(نه در تعادل با محیط)</a><br>
               <a style="cursor: pointer;color:#00fff6;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-                href="#interdisciplinary">● موجودات زنده: تغییر شکل ماده و انرژی دریافتی از محیط</a><br>
+                href="#matter&energy">● موجودات زنده: تغییر شکل ماده و انرژی دریافتی از محیط</a><br>
 
               <a style="cursor: pointer;color:#00fff6;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-                href="#livethings">● قانون اول ترمودینامیک(بقای انرژی در طی تغییرات شیمیایی و فیزیکی)</a><br>
+                href="#firstrule">● قانون اول ترمودینامیک(بقای انرژی در طی تغییرات شیمیایی و فیزیکی)</a><br>
 
               <a style="cursor: pointer;color:#00fff6;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-                href="#livethings">● قانون دوم ترمودینامیک(افزایش مداوم بی نظمی و تصادفی بودن (انتروپی)در جهان)</a><br>
+                href="#secoundrule">● قانون دوم ترمودینامیک(افزایش مداوم بی نظمی و تصادفی بودن (انتروپی)در جهان)</a><br>
               <a style="cursor: pointer;color:#00fff6;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-                href="#livethings">● ایجاد و حفظ نظم (کاهش انتروپی) نیازمند کار و انرژی </a><br>
+                href="#order">● ایجاد و حفظ نظم (کاهش انتروپی) نیازمند کار و انرژی </a><br>
               <a style="cursor: pointer;color:#00fff6;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-                href="#livethings">● ارتباط واکنش ها در بیولوژی با جفت شدن انرژی واکنش ها</a><br>
+                href="#energycoupling">● ارتباط واکنش ها در بیولوژی با جفت شدن انرژی واکنش ها</a><br>
               <a style="cursor: pointer;color:#00fff6;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-                href="#livethings">● ثابت تعادل، خارج قسمت و انرژی آزاد گیبس: اندازه گیری تمایل انجام خودبخودی و تعیین
+                href="#spontaneity">● ثابت تعادل، خارج قسمت و انرژی آزاد گیبس: اندازه گیری تمایل انجام خودبخودی و تعیین
                 جهت پیشرفت واکنش </a><br>
               <a style="cursor: pointer;color:#00fff6;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-                href="#livethings">● هر واکنش تابع </a><br>
+                href="#gibbs">● ΔG هر واکنش تابع °ΔG (ΔG استاندارد) آن واکنش است</a><br>
               <a style="cursor: pointer;color:#00fff6;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-                href="#livethings">● آنزیم ها(کاتالیزورهای زیستی): تسریع انجام واکنش های بیوشیمیایی</a><br>
+                href="#enzymes">● آنزیم ها(کاتالیزورهای زیستی): تسریع انجام واکنش های بیوشیمیایی</a><br>
               <a style="cursor: pointer;color:#00fff6;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-                href="#livethings">● تنظیم متابولیسم:رسیدن به تعادل و صرفه جویی</a><br>
+                href="#metabolism_regulation">● تنظیم متابولیسم:رسیدن به تعادل و صرفه جویی</a><br>
 
             </div><br>
           </div>
@@ -7505,9 +7657,9 @@
 
         </div>
       </div>
-      <div class="h1parrent" id="matter&energy">
+      <div class="h1parrent" id="firstrule">
         <div class="h1" id="h1" style="color:#00fff6">قانون اول ترمودینامیک(بقای انرژی در طی تغییرات شیمیایی و فیزیکی)
-          <a style="width: 100%;position: absolute;height:100% ;" href="#matterenergy"></a>
+          <a style="width: 100%;position: absolute;height:100% ;" href="#firstrule"></a>
 
         </div>
 
@@ -7531,11 +7683,11 @@
           الکترون) و احیای واکنشگر دیگر(دریافت الکترون)
         </div>
       </div>
-      <div class="h1parrent" id="entropy">
+      <div class="h1parrent" id="secoundrule">
         <div class="h1" id="h1" style="color:#00fff6">
-          قانون دوم ترمودینامیک(افزایش مداوم بی نظمی و تصادفی بودن در جهان )
+          قانون دوم ترمودینامیک(افزایش مداوم بی نظمی و تصادفی بودن(انتروپی) در جهان )
 
-          <a style="width: 100%;position: absolute;height:100% ;" href="#entropy"></a>
+          <a style="width: 100%;position: absolute;height:100% ;" href="#secoundrule"></a>
 
         </div>
 
@@ -7572,7 +7724,7 @@
         </div>
       </div>
       <div class="h1parrent" id="order">
-        <div class="h1" id="h1" style="color:#00fff6">ایجاد و حفظ نظم نیازمند کار و انرژی
+        <div class="h1" id="h1" style="color:#00fff6">ایجاد و حفظ نظم(کاهش انتروپی) نیازمند کار و انرژی
           <a style="width: 100%;position: absolute;height:100% ;" href="#order"></a>
 
         </div>
@@ -7638,10 +7790,10 @@
 
         </div>
       </div>
-      <div class="h1parrent" id="spontaneity">
+      <div class="h1parrent" id="gibsfreeenergy">
         <div class="h1" id="h1" style="color:#00fff6"> ثابت تعادل(Keq) ،خارج قسمت (Q)و انرژی آزاد گیبس (ΔG) :
           اندازه‌گیری میزان تمایل انجام خود به خودی واکنش
-          <a style="width: 100%;position: absolute;height:100% ;" href="#spontaneity"></a>
+          <a style="width: 100%;position: absolute;height:100% ;" href="#gibsfreeenergy"></a>
 
         </div>
 
@@ -7872,9 +8024,9 @@
               style="position: relative;width: 95%;border: 1px solid rgba(255,255,255,0.3);border-radius: 5px;height:fit-content;margin: auto;top: 10px;text-align: right;padding: 5px;">
 
               <a style="cursor: pointer;color: #ff0000;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-                href="#history">● تداوم ژنتیک:وظیفه مولکول های DNA</a><br>
+                href="#geneticscontinuity">● تداوم ژنتیک:وظیفه مولکول های DNA</a><br>
               <a style="cursor: pointer;color: #ff0000;font-family: 'Shabnam';text-decoration: none;font-size: small;"
-                href="#interdisciplinary">● jتوالی خطی DNA: کد کننده پروتئین ها</a><br>
+                href="#dnasequence">● توالی خطی DNA: کد کننده پروتئین ها</a><br>
 
 
             </div><br>
@@ -7884,6 +8036,7 @@
 
       <div class="content" id="content" style=" color:white;text-align: justify; line-height: 250%;
       font-size: 13px;background: rgb(0,0,0,0.5);">
+
         خاص‌ترین ویژگی موجودات زنده: توانایی تولید مثل برای نسل‌های نامحدود با شباهت بسیار بالا ← تداوم صفات ارثی ←
         نشانگر ثبات ساختار مولکول‌های حاوی اطلاعات ژنتیکی در طول میلیون‌ها سال ← مثال: بسیاری از باکتری‌ها دارای اندازه
         ، شکل و ساختار داخلی مشابه باکتری‌های حدود ۴ میلیارد سال پیش ← نتیجه: تداوم ساختار و ترکیب نتیجه تداوم ساختار
@@ -7900,8 +8053,23 @@
         </div>
 
         <div class="content" id="content">
-          DNA: پلیمر نازک بلند ارگانیک ← در سطح اتمی دارای عرض و در مقیاس انسانی دارای طول(تا چندین سانتی متر)
-          ویژگی‌های یک گونه شیمیایی برابر است با رفتار میانگین تعداد زیادی از مولکول‌های مشابه ← DNA یک استثنا است زیرا
+          <div class="wrap" id="wrap" style="position: relative;">
+            <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="dna.html"></iframe>
+            <div class="reload" onclick=reload()>
+              <image style="width:80%;height: 80%"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
+            </div>
+            <div class="full">
+              <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png"></image>
+              <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png"></image>
+
+            </div>
+          </div>
+          DNA: پلیمر نازک بلند ارگانیک ← در سطح اتمی دارای عرض و در مقیاس انسانی دارای طول(تا چندین سانتی متر)<br>
+          ویژگی‌های یک گونه شیمیایی برابر است با رفتار میانگین تعداد زیادی از مولکول‌های مشابه
+          ← DNA یک استثنا است زیرا
           مولکول بسیار بزرگی است ← مثال: باکتری E.coli دارای یک مولکول DNA با ۴.۶۴ میلیون جفت نوکلئوتید ← انتقال یک کپی
           کامل به سلول‌های جدید در هر بار تقسیم سلولی ← پس رفتار میانگین در DNA معنا ندارد<br>
 
@@ -7927,12 +8095,13 @@
           پروتئین‌ها با دیگر ماکرو مولکول‌ها (دیگر پروتئین‌ها ، نوکلئیک اسیدها یا لیپیدها) ← ایجاد کمپلکس‌های سوپروم
           مولکولی مثل کروموزوم‌ها ، ریبوزوم‌ها و غشاها ← اجزای مولکولی این کمپلکس‌ها: جایگاه‌های اتصال با اختصاصیت و
           آفینیته بالا برای یکدیگر ← مونتاژ خود به خودی در سلول
+          <br> <br> <br> <br> <br>
         </div>
       </div>
     </div>
-
+    <br><br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
   </section>
-  <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+
   <section class=" titr five" id="titrfive" style="box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );" dir="rtl">
     <div class="maintitr" id="maintitr" style="z-index: 1000;color:#ff6831;"> مبانی سلولی
       <a style="width: 100%;position: absolute;height:100% ;" href="#titrfive"></a>
@@ -8562,7 +8731,7 @@
           مثال ها:<br>
           0.000000537 = 5.37 × 10-7<br>
           0.2 × 10-5 = 0.000002<br>
-          اعداد پایین رو به شکل نماد علمی با ضربدر 10-3 بنویسید<br>
+          اعداد پایین رو به شکل نماد علمی با ضربدر 3 <sup>-10</sup>بنویسید<br>
           0.008 = <br>
           80 = <br>
           5.2 = <br>
@@ -8589,7 +8758,7 @@
 
           مثال:<br>
 
-          <img style="height:34px;display: block;margin:auto;" src="exponential notation in fraction.png"><br>
+          <img style="height:33px;display: block;margin:auto;" src="exponential notation in fraction.png"><br>
 
 
 
@@ -8951,6 +9120,7 @@
     }
 
     /***lessonsounds***/
+
     document.addEventListener("DOMContentLoaded", function () {
       document.querySelectorAll(".soundplayer").forEach(player => {
         const audio = player.querySelector("audio");
@@ -8962,19 +9132,23 @@
         const lessonslider = player.querySelector(".lessonslider");
         let isPlaying = false;
 
+
+        // Load the audio source from the data-src attribute
         audio.src = player.getAttribute("data-src");
 
+        // Play/Pause button functionality
         playPauseBtn.addEventListener("click", () => {
           if (isPlaying) {
             audio.pause();
-            playPauseIcon.setAttribute('d', 'M18 12L0 24V0');
+            playPauseIcon.setAttribute('d', 'M18 12L0 24V0'); // Set the play icon when paused
           } else {
             audio.play();
-            playPauseIcon.setAttribute('d', 'M0 0h6v24H0zm12 0h6v24h-6z');
+            playPauseIcon.setAttribute('d', 'M0 0h6v24H0zm12 0h6v24h-6z'); // Set the pause icon when playing
           }
           isPlaying = !isPlaying;
         });
 
+        // Update the progress bar and current time display as the audio plays
         audio.addEventListener("timeupdate", () => {
           const currentTime = audio.currentTime;
           const duration = audio.duration;
@@ -8983,15 +9157,18 @@
           currentTimeElem.textContent = formatTime(currentTime);
         });
 
+        // Update the total time when metadata (duration) is loaded
         audio.addEventListener("loadedmetadata", () => {
           totalTimeElem.textContent = formatTime(audio.duration);
         });
 
+        // Reset play button icon when the audio ends
         audio.addEventListener("ended", () => {
-          playPauseIcon.setAttribute('d', 'M18 12L0 24V0');
+          playPauseIcon.setAttribute('d', 'M18 12L0 24V0'); // Set the play icon when audio ends
           isPlaying = false;
         });
 
+        // Jump to a different position in the audio when clicking on the progress bar
         lessonslider.addEventListener("click", (event) => {
           const rect = lessonslider.getBoundingClientRect();
           const offsetX = event.clientX - rect.left;
@@ -9000,17 +9177,63 @@
           audio.currentTime = (offsetX / width) * duration;
         });
 
+        // Format the time in mm:ss format
         function formatTime(seconds) {
           const minutes = Math.floor(seconds / 60);
           const secs = Math.floor(seconds % 60);
           return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
-        }
+        };
+
       });
+    });
+
+    // Speed button functionality
+    let currentSpeed = 1;
+    const speedBtns = document.querySelectorAll('.speed-btn');
+    const audios = document.querySelectorAll("audio");
+
+    // Function to cycle through speeds
+    function changeSpeed() {
+      if (currentSpeed === 1) {
+        currentSpeed = 1.2;
+      } else if (currentSpeed === 1.2) {
+        currentSpeed = 1.6;
+      } else if (currentSpeed === 1.6) {
+        currentSpeed = 1.8;
+      } else if (currentSpeed === 1.8) {
+        currentSpeed = 2;
+      } else if (currentSpeed === 2) {
+        currentSpeed = 0.9;
+      } else {
+        currentSpeed = 1;
+      };
+
+      // Update all buttons' text and all audios' playback speed
+      speedBtns.forEach(btn => {
+        btn.textContent = currentSpeed + 'X';
+      });
+
+      audios.forEach(audio => {
+        audio.playbackRate = currentSpeed;
+      });
+    }
+
+    // Attach event listeners to each speed button
+    speedBtns.forEach(btn => {
+      btn.addEventListener("click", changeSpeed);
     });
 
 
 
+
+
+
+
+
+
+
   </script>
+
 
   <script src="https://code.jquery.com/jquery-3.6.3.slim.js"
     integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
@@ -9991,267 +10214,6 @@
       }
     }
 
-
-
-
-
-    function openmenu() {
-      var note = document.getElementById("note");
-      var notestyle = window.getComputedStyle(note, null).visibility;
-      var music = document.getElementById("music");
-      var musicstyle = window.getComputedStyle(music, null).visibility;
-      var chaptertitrs = document.getElementById("chaptertitrs");
-      var chaptertitrsstyle = window.getComputedStyle(chaptertitrs, null).visibility;
-      var menuicon = document.getElementsByClassName("menuicon");
-      var menubox = document.getElementsByClassName("menubox");
-
-      if (musicstyle == "hidden" && notestyle == "hidden" && chaptertitrsstyle == "hidden") {
-        $(note).addClass('show');
-        $(music).addClass('show');
-        $(flashcard).addClass('show');
-        $(chaptertitrs).addClass('show');
-        $(menuicon).addClass('active');
-        $(menubox).addClass('show');
-
-        music.disabled = false;
-        note.disabled = false;
-        flashcard.disabled = false;
-        chaptertitrs.disabled = false;
-        $(document).on('click', '#menuicon', function () {
-          $(this).addClass('active');
-          document.getElementById("menuicon").src = "969160-201.png"
-        })
-      }
-      else {
-        $(note).removeClass('show');
-        $(music).removeClass('show');
-        $(flashcard).removeClass('show');
-        $(chaptertitrs).removeClass('show');
-        $(menuicon).removeClass('active');
-        $(menubox).removeClass('show');
-
-        music.disabled = true;
-        note.disabled = true;
-        flashcard.disabled = true;
-        chaptertitrs.disabled = true;
-
-        $(document).on('click', '#menuicon', function () {
-
-          $(this).removeClass('active');
-          document.getElementById("menuicon").src = "969160-200.png"
-        })
-        $("#musicmenu").removeClass('show');
-        $("#notemenu").removeClass('show');
-        $("#flashcardmenu").removeClass('show');
-        $(note).removeClass('active');
-        $(music).removeClass('active');
-        $(flashcard).removeClass('active');
-        document.body.style.overflow = "scroll";
-        $("section").removeClass("hidden");
-        $(".foot").removeClass("hidden");
-        $(".frame").removeClass("hidden");
-      }
-    }
-
-
-
-
-
-
-
-
-
-
-
-    /*************note**********///////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-    showNotes()
-
-
-
-
-    let addBtn = document.getElementById('addBtn');
-    addBtn.addEventListener('click', function () {
-
-      //! this function will fire 🔥 when some on will click on it 🖱️
-
-      let addTxt = document.getElementById('notetext'); //*  Grabbing the text area
-      let notes = localStorage.getItem('notes');      //*Grabbing notes form local storage
-
-      if (notes === null) notesObj = []; //* if the local storage  is empty than print a blank array
-
-      else notesObj = JSON.parse(notes) // * Otherwise print the note of the user to the console and convert it from string to array
-      notesObj.push(addTxt.value);   // *pushing text of user to our local storage
-
-      // here in LocalStorgae we will add a key and value respectivley notes and notesObj.the data type of notesObj  will be string
-
-      localStorage.setItem("notes", JSON.stringify(notesObj));//? now we are settting the key to 'notes'  and  the value to  note of the user
-
-      // !Removing the written note of the user when submite/save the note
-      addTxt.value = '';
-      // ! Displaying notes to our DOM
-
-      /*
-      * In order to display your notes to you Dom. you have to create a function
-      * and name whatever you want but here i will name Shownote and
-      */
-
-      // * run the fucntion named showNotes()
-      showNotes() // TODO: you can also remove this beacuse we have the same function claiing it above
-
-    });
-
-
-
-    function showNotes() {
-      // here we will use the same code which we have previously used whern we are cheaking the notes
-
-      let notes = localStorage.getItem("notes");
-      if (notes == null) notesObj = [];
-      else notesObj = JSON.parse(notes);
-      // ? Now we will add our Html and CSS to each and every box which is popped out when the user add a new note
-
-
-
-
-      // TODO: Note
-      // *  in my   case there is no css beacuse i are use bootstrap but
-      // *  you can always add a style tag inside the html.if you are
-      //  * using your own style
-
-
-
-      // ! Now we will use for each loop because user can add as many notes as he/she want
-
-
-
-      // ?here we will crete a blank variable name html
-      let html = ""; // undefine
-
-      // ? first we will grabe the note of the user
-      // ? than we will fire 🔥 for each loop
-      // ? than give it two parameter  (element and index)
-      // ? and then we will finally run our function
-      notesObj.forEach(function (element, index) {
-        html += ` <div class="noteCard my-2 mx-2 card" style="position:relative;width: 95%;height:fit-content;background-color:white;border-radius:4px;padding:5px;margin:auto;margin-bottom:10px">
-        <div class="card-body">
-            <h5 class="card-title" > ${index + 1}</h5>
-            <p id="demo" class="card-text"> ${element}</p>
-             <button style="position:relative;top:0px;" id="${index}"onclick="deleteNote(this.id)" class="notebtn">حذف یادداشت</button>
-        </div>
-    </div>`;
-      });
-
-
-      // !if there is no notes than display the following message otherwise sidplay nothing
-      let notesElm = document.getElementById("notes");
-
-      if (notesObj.length == 0) notesElm.innerHTML = `یادداشتی ذخیره نشده است!</strong>`;
-      else notesElm.innerHTML = html;
-    }
-
-    // !when some body click on 'Clear All' than clear the whole local storgae.
-
-    let ClearAll = document.getElementById('ClearAll');
-    ClearAll.addEventListener('click', ClearAllFunction);
-
-    function ClearAllFunction() {
-      let confirming = confirm('Are you sure')
-      if (confirming === true) {
-        localStorage.clear();
-        location.reload();
-      }
-    }
-
-
-    // ! function to delete a sepcific note
-
-    function deleteNote(index) {
-
-      let notes = localStorage.getItem('notes');
-
-      if (notes === null) DeletingSpecificNotesArray = [];
-      else DeletingSpecificNotesArray = JSON.parse(notes)
-
-      // and finally we will ask the user he/She is sure or note
-      let confirmingForSpecificNotes = confirm('Are you sure')
-      if (confirmingForSpecificNotes === true) {
-        // ? here index is the specife note of the user and 1 specifies that we wnat ot delete only one note
-        DeletingSpecificNotesArray.splice(index, 1)
-
-        // ?Now i will finallly set the notes to the localstorgae
-        localStorage.setItem("notes", JSON.stringify(DeletingSpecificNotesArray))
-
-        // ? show notes will show the remaining notes
-        showNotes();
-
-
-
-
-      }
-    }
-
-
-
-
-
-    // ! Totol number of notes by the user
-    /*
-    let TotalNotes = document.getElementById('TotalNotes');
-    TotalNotes.innerText = `Total Number of Notes = ${notesObj.length}🙂`;
-    if (notesObj.length === 0)
-        TotalNotes.innerText = `No notes Yet 😔 `;
- 
-    */
-    // ! filter Search
-
-    // so to so we will use input event listiner
-
-
-
-    function init() {
-      window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-      if (('SpeechRecognition' in window || 'webkitSpeechRecognition' in window)) {
-        let speech = {
-          enabled: true,
-          listening: false,
-          recognition: new window.webkitSpeechRecognition(),
-          text: ''
-        }
-        speech.recognition.continuous = true;
-        speech.recognition.interimResults = true;
-        speech.recognition.lang = 'fa-IR';
-        speech.recognition.addEventListener('result', (event) => {
-          const audio = event.results[event.results.length - 1];
-          speech.text = audio[0].transcript;
-          const tag = document.activeElement.nodeName;
-          if (tag === 'INPUT' || tag === 'TEXTAREA') {
-            if (audio.isFinal) {
-              document.activeElement.value += speech.text;
-            }
-          }
-
-        });
-
-        toggle.addEventListener('click', () => {
-          speech.listening = !speech.listening;
-          if (speech.listening) {
-            toggle.classList.add('listening');
-            speech.recognition.start();
-          }
-          else {
-            toggle.classList.remove('listening');
-            speech.recognition.stop();
-          }
-        })
-      }
-    }
-    init();
-
-
-
     //////////////////////////////music///////////////////
     let audio = document.getElementById("audiotrack");
     let previousBtn = document.querySelector('#previous-btn');
@@ -10264,8 +10226,12 @@
     let musicpic = document.querySelectorAll('musicpic');
     let currentAudio = 0;
     let list = [
+      
       "https://raw.githack.com/Mybook2021/scientist.github.io/main/3D-Sounds-Thunder-and-Rain-Sounds-of-Nature-SoftGozar.com.mp3",
-      "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+      "https://github.com/Mybook2021/scientist.github.io/raw/main/3d_Mountain_Stream_Radion.ir.mp3",
+      "3d AAB-JOB.mp3",
+      "bird&spring.mp3",
+
     ];
     audio.src = track[currentAudio].getAttribute('data-src');
 
@@ -10306,7 +10272,7 @@
 
       pauseAudio();
       currentAudio++;
-      if (currentAudio > list.length) {
+      if (currentAudio >= list.length) {
         currentAudio = 0;
 
       }
@@ -10330,6 +10296,22 @@
     function musicpicclick2() {
       audio.src = track[1].getAttribute('data-src');
       currentAudio = 1;
+      playAudio();
+      $(playbtn).css('display', 'none');
+      $(pausebtn).css('display', 'block');
+
+    }
+    function musicpicclick3() {
+      audio.src = track[2].getAttribute('data-src');
+      currentAudio = 2;
+      playAudio();
+      $(playbtn).css('display', 'none');
+      $(pausebtn).css('display', 'block');
+
+    }
+    function musicpicclick4() {
+      audio.src = track[3].getAttribute('data-src');
+      currentAudio = 3;
       playAudio();
       $(playbtn).css('display', 'none');
       $(pausebtn).css('display', 'block');
@@ -10407,76 +10389,6 @@
 
 
 
-
-
-
-
-
-
-
-
-    ////////////////////////////////////////////////***flashcard///////////////////////////////////////////////////
-
-    var storedQuestions = JSON.parse(localStorage.getItem("storedQuestions"));
-    var question;
-    var answer;
-    var ranQuestion;
-    var ranNum;
-    var ranAnswer;
-
-    if (storedQuestions == null) {
-      var questions = [];
-    } else {
-      var questions = storedQuestions;
-    }
-
-    $("form").on("submit", function (event) {
-      event.preventDefault();
-      $("#warning").remove();
-      question = $(this).find('[name=addquestion]').val();
-      answer = $(this).find('[name=addanswer]').val();
-      questions.push([question, answer]);
-      localStorage.setItem("storedQuestions", JSON.stringify(questions));
-    });
-
-    $("#deleteQuestions").on("click", function () {
-      localStorage.removeItem("storedQuestions");
-      questions = [];
-      $(".card-front").html("");
-      $(".card-back").html("");
-    });
-
-    $("#viewAnswer").on("click", function () {
-      $(".card-container").addClass("flip");
-      if (!questions[0] || questions[0][0] === undefined) {
-
-      } else {
-        $(".card-back").html("<p>" + ranAnswer + "</p>");
-      }
-    });
-
-    $("#newCard").on("click", function () {
-      $(".card-container").removeClass("flip");
-      ranNum = Math.floor(Math.random() * questions.length);
-      if (!questions[0] || questions[0][0] === undefined) {
-        if ($("#warning").length === 0) {
-          $(".card-container").append("<small class='text-danger' id ='warning'>*Please add a card below</small>");
-        } else {
-          $("#warning").addClass("red-shadow");
-          setTimeout(function () {
-            $("#warning").removeClass("red-shadow");
-          }, 1000);
-        }
-      } else {
-        console.log(questions);
-        ranQuestion = questions[ranNum][0];
-        ranAnswer = questions[ranNum][1];
-        $(".card-front").html("<p>" + ranQuestion + "</p>");
-      }
-    });
-    MathJax.Hub.Queue(["Rerender", MathJax.Hub, this]);
-
-
     function exit() {
       window.close()
 
@@ -10519,7 +10431,7 @@
         const magnifiedImage = piccontent.querySelector('#magnifiedImage');
         const zoomout = piccontent.querySelector('#zoomout');
         imagecontainer = piccontent.querySelector('#imagecontainer');
-        let zoomLevel = 2;
+        let zoomLevel = 1.5;
         showMagnifier(e, mainImage, magnifierView, magnifiedImage, zoomin, zoomout, zoomLevel);
       });
     });
