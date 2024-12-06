@@ -35,10 +35,11 @@
 .loginform {
   position: fixed;
   top:0px;
+  left:0px;
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom, #f7f7fe, #dff1ff);
+    background-image: url('cold-adapted-enzymes.jpg');
     z-index: 100000;
     display:flex;
     width: 100vw;
@@ -287,7 +288,7 @@ font-size:2vw;
     font-size:2vw;
 
 }}
-.form::placeholder {
+input::placeholder {
     color: #fff;
 }
 
@@ -316,9 +317,7 @@ font-size:2vw;
 </head>
 <body>
     <section class="loginform" id="loginform">
-        <div class="colour"></div>
-        <div class="colour"></div>
-        <div class="colour"></div>
+       
         <div class="loginbox">
             <div class="square" style="--i: 0"><img style="width:100%"src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/molecule-structure.png"></div>
             <div class="square" style="--i: 1"></div>
@@ -327,10 +326,10 @@ font-size:2vw;
             <div class="square" style="--i: 4"><img style="width:100%"src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/human-insulin.png"></div>
             <div class="logincontainer">
                 <div class="form">
-                    <h2 dir="rtl" style="font-family: Yekan; color: black;text-align:center"> لطفا نام کاربری و رمز عبور خود را وارد کنید </h2>
-                    <form   dir="rtl" ;>
+                    <div dir="rtl" style="font-family: Yekan;font-size:xx-large; color: rgb(255, 255, 255);text-align:center"> لطفا نام کاربری و رمز عبور خود را وارد کنید </div>
+                    <form   dir="rtl" >
                         <div class="input__box" style="display: flex;align-items: center;">
-                            <input type="text" id="username" placeholder="نام کاربری"style="font-family: Yekan; text-align:center" />
+                            <input type="text" id="username" placeholder="نام کاربری" style="font-family: Yekan; text-align:center;" />
                         </div>
                         <div class="input__box" style="display: flex;align-items: center;">
                             <input type="password" id="password" placeholder="رمز عبور"style="font-family: Yekan;text-align:center;" />
@@ -358,13 +357,12 @@ function openNewPage() {
   if (username===user1 && password===pass1||username===user2 && password===pass2 ) {
     sessionStorage.setItem("isLoggedIn", "true");
                 // Redirect to another page
-                window.open("https://raw.githack.com/Science2023/3dbiochemistry/main/Chapter%201.html");
+                window.open("Chapter%201.html");
   }else{
         document.getElementById('Username').value = '' ;
 document.getElementById('password').value = ''
   }
 }
-
 
 
 
