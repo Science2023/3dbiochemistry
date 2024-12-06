@@ -37,7 +37,7 @@
     }
 
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
-
+ 
 
     @font-face {
       font-family: "Iranian";
@@ -59,7 +59,7 @@
 
         url(" https://rawcdn.githack.com/Science2023/3dbiochemistry/86615c504ec8bb5e5ec8da70ba178061990e72c8/Shabnam.eot") format("eot"),
 
-        url("https://rawcdn.githack.com/Science2023/3dbiochemistry/86615c504ec8bb5e5ec8da70ba178061990e72c8/Shabnam.ttf") format("ttf")
+        url("https://rawcdn.githack.com/Science2023/3dbiochemistry/86615c504ec8bb5e5ec8da70ba178061990e72c8/Shabnam.ttf") format("truetype")
     }
 
 
@@ -172,143 +172,6 @@
     }
 
 
-    h1 span:nth-child(1) {
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, #17f403, #17f403);
-    }
-
-    .animation {
-      animation: animate1 3s linear;
-      -webkit-animation-fill-mode: forwards;
-      /* Chrome 16+, Safari 4+ */
-      -moz-animation-fill-mode: forwards;
-      /* FF 5+ */
-      -o-animation-fill-mode: forwards;
-      /* Not implemented yet */
-      -ms-animation-fill-mode: forwards;
-      /* IE 10+ */
-      animation-fill-mode: forwards;
-      /* When the spec is finished */
-    }
-
-    @keyframes animate1 {
-      0% {
-        left: -100%;
-      }
-
-      50%,
-      100% {
-        left: 50%;
-      }
-    }
-
-    h1 span:nth-child(2) {
-      top: -100%;
-      right: 0;
-      width: 2px;
-      height: 100%;
-      background: linear-gradient(180deg, #17f403, #17f403, transparent);
-    }
-
-    .animation2 {
-
-      animation: animate2 0.7s linear;
-
-      -webkit-animation-fill-mode: forwards;
-      /* Chrome 16+, Safari 4+ */
-      -moz-animation-fill-mode: forwards;
-      /* FF 5+ */
-      -o-animation-fill-mode: forwards;
-      /* Not implemented yet */
-      -ms-animation-fill-mode: forwards;
-      /* IE 10+ */
-      animation-fill-mode: forwards;
-      /* When the spec is finished */
-
-      animation-delay: 0.9s;
-    }
-
-    @keyframes animate2 {
-      0% {
-        top: -100%;
-      }
-
-      50%,
-      100% {
-        top: -30%;
-      }
-    }
-
-    h1 span:nth-child(3) {
-      bottom: 0;
-      right: -100%;
-      width: 100%;
-      height: 2px;
-      background: linear-gradient(270deg, transparent, #17f403, #17f403);
-    }
-
-    .animation3 {
-      animation: animate3 3s linear;
-      -webkit-animation-fill-mode: forwards;
-      /* Chrome 16+, Safari 4+ */
-      -moz-animation-fill-mode: forwards;
-      /* FF 5+ */
-      -o-animation-fill-mode: forwards;
-      /* Not implemented yet */
-      -ms-animation-fill-mode: forwards;
-      /* IE 10+ */
-      animation-fill-mode: forwards;
-      /* When the spec is finished */
-    }
-
-    @keyframes animate3 {
-      0% {
-        right: -100%;
-      }
-
-      50%,
-      100% {
-        right: 50%;
-      }
-    }
-
-
-    h1 span:nth-child(4) {
-      bottom: -100%;
-      left: 0;
-      width: 2px;
-      height: 100%;
-      background: linear-gradient(360deg, #17f403, #17f403, transparent);
-    }
-
-    .animation4 {
-      animation: animate4 0.7s linear;
-      -webkit-animation-fill-mode: forwards;
-      /* Chrome 16+, Safari 4+ */
-      -moz-animation-fill-mode: forwards;
-      /* FF 5+ */
-      -o-animation-fill-mode: forwards;
-      /* Not implemented yet */
-      -ms-animation-fill-mode: forwards;
-      /* IE 10+ */
-      animation-fill-mode: forwards;
-      /* When the spec is finished */
-      animation-delay: 0.9s;
-    }
-
-    @keyframes animate4 {
-      0% {
-        bottom: -100%;
-      }
-
-      50%,
-      100% {
-        bottom: -30%;
-      }
-    }
 
     @media all and (orientation: landscape) {
       .h1 {
@@ -319,7 +182,7 @@
         font-size: 1.8vw;
         align-items: center;
         height: 6vh;
-        top: 7.3vh;
+        top: 10vh;
         width: 100%;
 
 
@@ -1501,9 +1364,7 @@
     }
 
     .tableofcontents {
-      backdrop-filter: blur(10px);
       width: 100%;
-      ;
       box-sizing: border-box;
       background: rgba(0, 0, 0, 0.5);
       height: 100vh;
@@ -1537,13 +1398,16 @@
       position: relative;
       border-radius: 5px;
       margin: 2px;
-      top: 10px;
+      margin-bottom: 20px;
+           top: 10px;
       padding: 5px;
+      padding-bottom: 20px;
       background: rgba(0, 0, 0, 0.5);
       width: 100%;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      box-sizing: border-box;
 
     }
 
@@ -1555,11 +1419,12 @@
       display: block;
       font-size: medium;
       border: 2px solid;
-      border-radius: 5px;
+      border-radius: 50px;
       padding: 5px;
       width: 180px;
-      margin: 10px;
+      margin: 20px;
     }
+
 
     .tableitems {
       cursor: pointer;
@@ -1567,12 +1432,40 @@
       text-decoration: none;
       display: inline-block;
       border-radius: 5px;
-      background: rgba(255, 255, 255, 0.1);
-      margin-top: 5px;
+      margin-top: 15px;
       padding: 10px;
       width: 98%;
       box-sizing: border-box;
     }
+
+    .tableitems.one {
+      box-shadow: 2px 2px 5px rgb(51, 255, 0);
+    }
+
+    .tableitems.two {
+      box-shadow: 2px 2px 5px rgb(255, 0, 251);
+    }
+
+    .tableitems.three {
+      box-shadow: 2px 2px 5px rgb(0, 217, 255);
+    }
+
+    .tableitems.four {
+      box-shadow: 2px 2px 5px rgb(255, 0, 0);
+    }
+
+    .tableitems.five {
+      box-shadow: 2px 2px 5px rgb(255, 145, 0);
+    }
+
+    .tableitems.six {
+      box-shadow: 2px 2px 5px rgb(128, 255, 0);
+    }
+
+    .tableitems.seven {
+      box-shadow: 2px 2px 5px rgb(255, 60, 0);
+    }
+
 
     @media all and (orientation: landscape) {
 
@@ -2429,7 +2322,7 @@
 
       .h2 {
         font-size: 1.5vw;
-        top: 13.2vh;
+        top: 15.2vh;
         width: 100%;
         height: 6vh;
         display: flex;
@@ -3921,6 +3814,7 @@
       border: 1px solid rgba(255, 255, 255, 0.3);
       border-radius: 5px;
       top: 11%;
+      backdrop-filter: blur(5px);
       z-index: 999;
       visibility: hidden;
       font-family: 'Shabnam'
@@ -3955,7 +3849,9 @@
       #list {
         top: -1px;
         z-index: 999;
-        height: 100%
+        height: 100%;
+        width: 300px;
+        
       }
     }
 
@@ -3986,7 +3882,6 @@
       }
 
       #list {
-        width: 88%;
         right: 12%;
       }
 
@@ -4013,7 +3908,6 @@
       }
 
       #list {
-        width: 87.5%;
         right: 12.5%;
 
 
@@ -4042,7 +3936,6 @@
       }
 
       #list {
-        width: 87%;
         right: 13%;
 
 
@@ -4071,7 +3964,6 @@
       }
 
       #list {
-        width: 86.5%;
         right: 13.5%;
 
 
@@ -4101,7 +3993,6 @@
       }
 
       #list {
-        width: 86%;
         right: 14%;
 
 
@@ -4394,6 +4285,7 @@
         font-size: 15px;
 
       }
+
     }
 
     @media (max-width:1500px) and (orientation: landscape) {
@@ -4416,6 +4308,7 @@
         font-size: 14px;
 
       }
+
     }
 
     @media (max-width:1200px) and (orientation: landscape) {
@@ -4437,6 +4330,7 @@
         font-size: 13px;
 
       }
+
     }
 
     @media (max-width:1100px) and (orientation: landscape) {
@@ -4445,6 +4339,7 @@
       .exam {
         width: 86.5%;
       }
+
     }
 
     @media (max-width:800px) and (orientation: landscape) {
@@ -4471,7 +4366,7 @@
       left: 0px;
     }
 
-    
+
 
     .central-circle {
       width: 1vh;
@@ -4613,18 +4508,40 @@
       top: 11.2vh;
       z-index: 1000;
       border-radius: 5px;
+      border: 2px solid
     }
 
     @media all and (orientation: landscape) {
 
       .maintitr {
         width: 100%;
-        height: 8vh;
         top: 0px;
         font-size: 2vw;
 
       }
     }
+
+    @media (min-width:1200px) and (orientation:landscape) {
+      .maintitr {
+        height: 8vh;
+      }
+
+      .h1 {
+        top: 8vh
+      }
+    }
+
+    @media (max-width:1200px) and (orientation:landscape) {
+      .maintitr {
+        height: 10vh;
+      }
+
+      .h1 {
+        top: 10vh
+      }
+    }
+
+
 
     .soundplayer {
       margin: 20px;
@@ -5132,134 +5049,153 @@
 
   <div id="list" dir="rtl">
     <p
-      style="text-align: center;position: sticky;top:0px;color:yellow;backdrop-filter: blur(5px);z-index: 5;margin:0px;padding-top: 10px;padding-bottom: 10px;">
+      style="text-align: center;position: sticky;top:0px;color:yellow;backdrop-filter: blur(5px);z-index: 5;margin:10px;padding-top: 10px;padding-bottom: 10px;border:2px solid;border-radius: 5px;">
       فهرست مطالب فصل </p>
 
     <div class="tableofcontents">
-      <div class="table" style="color:#00ff15">
-        <a class="maintitrintable" style="color:#00ff15;;width: 100%" href="#titrone">مقدمه ای بر علم بیوشیمی </a>
+      <div class="table">
+        <a class="maintitrintable"
+          style="padding: 10px; color:#00ff15;width: 100%;box-shadow: 0 0 5px #00ff15, 0 0 5px #00ff15, 0 0 5px #00ff15, 0 0 10px #00ff15, 0 0 50px #00ff15;"
+          href="#titrone">مقدمه ای بر علم بیوشیمی </a>
 
-        <a class="tableitems" style=";color:#00ff15;" href="#history">■ تاریخچه </a><br>
-        <a class="tableitems" style=";color:#00ff15;" href="#interdisciplinary">■ بیوشیمی علمی بین رشته ای</a><br>
-        <a class="tableitems" style=";color:#00ff15" href="#livethings">■ ویژگی های موجودات زنده</a>
+        <a class="tableitems one" style=";color:#00ff15;" href="#history">■ تاریخچه </a><br>
+        <a class="tableitems one" style=";color:#00ff15;" href="#interdisciplinary">■ بیوشیمی علمی بین رشته ای</a><br>
+        <a class="tableitems one" style=";color:#00ff15" href="#livethings">■ ویژگی های موجودات زنده</a>
 
       </div>
       <div class="table">
 
-        <a class="maintitrintable" style="color:#ff00f7;width: 100%;" href="#titrtwo">مبانی شیمیایی</a>
+        <a class="maintitrintable"
+          style="padding: 10px;color:#ff00f7;width: 100%;box-shadow: 0 0 5px #ff00f7, 0 0 5px #ff00f7, 0 0 5px #ff00f7, 0 0 10px #ff00f7, 0 0 50px #ff00f7; "
+          href="#titrtwo">مبانی شیمیایی</a>
 
-        <a class="tableitems" style=";color:#ff00f7;font-weight: bold;" href="#organic-inorganic">■ انواع مواد (آلی
+        <a class="tableitems two" style=";color:#ff00f7;font-weight: bold;" href="#organic-inorganic">■ انواع مواد (آلی
           و معدنی) </a><br>
 
 
-        <a class="tableitems" style=";color:#ff00f7;font-weight: bold;" href="#orbitals">■ ساختار الکترونی ،
+        <a class="tableitems two" style=";color:#ff00f7;font-weight: bold;" href="#orbitals">■ ساختار الکترونی ،
           اوربیتال ها و زوایای پیوندی عناصر مهم بیولوژیک</a><br>
 
-        <a class="tableitems" style=";color:#ff00f7;font-weight: bold;" href="#biomolecules">■ بیومولکول ها</a><br>
-        <a class="tableitems" style=";color:#ff00f7;font-weight: bold;" href="#isomers">■ ایزومرها </a><br>
-        <a class="tableitems" style=";color:#ff00f7;font-weight: bold;" href="#representations">■ انواع نمایش مولکول
+        <a class="tableitems two" style=";color:#ff00f7;font-weight: bold;" href="#biomolecules">■ بیومولکول ها</a><br>
+        <a class="tableitems two" style=";color:#ff00f7;font-weight: bold;" href="#isomers">■ ایزومرها </a><br>
+        <a class="tableitems two" style=";color:#ff00f7;font-weight: bold;" href="#representations">■ انواع نمایش مولکول
           ها </a><br>
-        <a class="tableitems" style=";color:#ff00f7;font-weight: bold;" href="#organic">■ نامگذاری ترکیبات آلی
+        <a class="tableitems two" style=";color:#ff00f7;font-weight: bold;" href="#organic">■ نامگذاری ترکیبات آلی
         </a><br>
-        <a class="tableitems" style=";color:#ff00f7;font-weight: bold;" href="#molecularweight">■ وزن مولکولی، جرم
+        <a class="tableitems two" style=";color:#ff00f7;font-weight: bold;" href="#molecularweight">■ وزن مولکولی، جرم
           مولکولی و واحدهای آنها </a><br>
-        <a class="tableitems" style=";color:#ff00f7;font-weight: bold;" href="#molarity">■ مول ،غلظت و مولاریته
+        <a class="tableitems two" style=";color:#ff00f7;font-weight: bold;" href="#molarity">■ مول ،غلظت و مولاریته
         </a><br>
-        <a class="tableitems" style=";color:#ff00f7;font-weight: bold;" href="#solutions">■ محلول ها و رقیق سازی
+        <a class="tableitems two" style=";color:#ff00f7;font-weight: bold;" href="#solutions">■ محلول ها و رقیق سازی
         </a><br>
-        <a class="tableitems" style=";color:#ff00f7;font-weight: bold;" href="#redox">■ واکنش های
+        <a class="tableitems two" style=";color:#ff00f7;font-weight: bold;" href="#redox">■ واکنش های
           اکسایش-کاهش</a><br>
-        <a class="tableitems" style=";color:#ff00f7;font-weight: bold;" href="#equation">■ تعادل و اصل لوشاتلیه
+        <a class="tableitems two" style=";color:#ff00f7;font-weight: bold;" href="#equation">■ تعادل و اصل لوشاتلیه
         </a><br>
-        <a class="tableitems" style=";color:#ff00f7;font-weight: bold;" href="#acidbase">■ اسیدها و بازها</a><br>
-        <a class="tableitems" style=";color:#ff00f7;font-weight: bold;" href="#suffixes&prefixes">■ پیشوندها و
+        <a class="tableitems two" style=";color:#ff00f7;font-weight: bold;" href="#acidbase">■ اسیدها و بازها</a><br>
+        <a class="tableitems two" style=";color:#ff00f7;font-weight: bold;" href="#suffixes&prefixes">■ پیشوندها و
           پسوندهای مهم </a><br>
 
       </div>
       <div class="table">
-        <a class="maintitrintable" style="color:#00d5ff;width: 100%" href="#titrthree">مبانی فیزیکی</a>
-        <a class="tableitems" style=";color:#00d5ff;" href="#dynamic">■ موجودات زنده: در حالت ثابت پویا (نه در تعادل
+        <a class="maintitrintable"
+          style="padding: 10px;color:#00d5ff;width: 100%;box-shadow: 0 0 5px #00d5ff, 0 0 5px #00d5ff, 0 0 5px #00d5ff, 0 0 10px #00d5ff, 0 0 50px #00d5ff;"
+          href="#titrthree">مبانی فیزیکی</a>
+        <a class="tableitems three" style=";color:#00d5ff;" href="#dynamic">■ موجودات زنده: در حالت ثابت پویا (نه در
+          تعادل
           با محیط) </a><br>
-        <a class="tableitems" style=";color:#00d5ff;" href="#matter&energy"> ■ موجودات زنده: تغییر شکل ماده و انرژی
+        <a class="tableitems three" style=";color:#00d5ff;" href="#matter&energy"> ■ موجودات زنده: تغییر شکل ماده و
+          انرژی
           دریافتی از محیط
         </a><br>
-        <a class="tableitems" style=";color:#00d5ff;" href=" #firstrule">■ قانون اول ترمودینامیک(بقای انرژی در طی
+        <a class="tableitems three" style=";color:#00d5ff;" href=" #firstrule">■ قانون اول ترمودینامیک(بقای انرژی در طی
           تغییرات شیمیایی و فیزیکی)
         </a><br>
-        <a class="tableitems" style=";color:#00fff6;" href="#secoundrule">■ قانون دوم ترمودینامیک(تمایل فرایندهای
+        <a class="tableitems three" style=";color:#00fff6;" href="#secoundrule">■ قانون دوم ترمودینامیک(تمایل فرایندهای
           طبیعی به افزایش انتروپی )</a><br>
-        <a class="tableitems" style=";color:#00fff6;" href="#order">■ ایجاد و حفظ نظم (کاهش انتروپی) نیازمند کار و
+        <a class="tableitems three" style=";color:#00fff6;" href="#order">■ ایجاد و حفظ نظم (کاهش انتروپی) نیازمند کار و
           انرژی </a><br>
-        <a class="tableitems" style=";color:#00fff6;" href="#energycoupling">■ ارتباط واکنش ها در بیولوژی با جفت شدن
+        <a class="tableitems three" style=";color:#00fff6;" href="#energycoupling">■ ارتباط واکنش ها در بیولوژی با جفت
+          شدن
           انرژی واکنش ها</a><br>
-        <a class="tableitems" style=";color:#00fff6;" href="#gibsfreeenergy">■ ثابت تعادل (Keq) وانرژی آزاد
+        <a class="tableitems three" style=";color:#00fff6;" href="#gibsfreeenergy">■ ثابت تعادل (Keq) وانرژی آزاد
           استاندارد (°ΔG) :
           دو روش سنجش میزان خودبخودی بودن واکنش
           تعیین
           جهت پیشرفت واکنش </a><br>
-        <a class="tableitems" style=";color:#00fff6;" href="#gibbs">■ ΔG هر واکنش تابع °ΔG (ΔG استاندارد) آن واکنش
+        <a class="tableitems three" style=";color:#00fff6;" href="#gibbs">■ ΔG هر واکنش تابع °ΔG (ΔG استاندارد) آن واکنش
           است</a><br>
-        <a class="tableitems" style=";color:#00fff6;" href="#enzymes">■ آنزیم ها(کاتالیزورهای زیستی): تسریع انجام
+        <a class="tableitems three" style=";color:#00fff6;" href="#enzymes">■ آنزیم ها(کاتالیزورهای زیستی): تسریع انجام
           واکنش های بیوشیمیایی</a><br>
-        <a class="tableitems" style=";color:#00fff6;" href="#metabolism_regulation">■ تنظیم متابولیسم:رسیدن به تعادل
+        <a class="tableitems three" style=";color:#00fff6;" href="#metabolism_regulation">■ تنظیم متابولیسم:رسیدن به
+          تعادل
           و صرفه جویی</a><br>
       </div>
       <div class="table">
-        <a class="maintitrintable" style="color:#ff0000;width: 100%" href="#titrfour">مبانی ژنتیکی</a>
-        <a class="tableitems" style=";color: #ff0000;" href="#geneticscontinuity">■ تداوم ژنتیک:وظیفه مولکول های
+        <a class="maintitrintable"
+          style="padding: 10px;color:#ff0000;width: 100%;box-shadow: 0 0 5px #ff0000, 0 0 5px #ff0000, 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 50px #ff0000;"
+          href="#titrfour">مبانی ژنتیکی</a>
+        <a class="tableitems four" style=";color: #ff0000;" href="#geneticscontinuity">■ تداوم ژنتیک:وظیفه مولکول های
           DNA</a><br>
-        <a class="tableitems" style=";color: #ff0000;" href="#dnasequence">■ توالی خطی DNA: کد کننده پروتئین
+        <a class="tableitems four" style=";color: #ff0000;" href="#dnasequence">■ توالی خطی DNA: کد کننده پروتئین
           ها</a><br>
 
       </div>
 
       <div class="table">
-        <a class="maintitrintable" style="color:#ff6831;;width: 100%" href="#titrfive">مبانی سلولی</a>
-        <a class="tableitems" style=";color:#ff6831;" href="#cell">■ سلول: واحد ساختاری و عملکردی همه موجودات
+        <a class="maintitrintable"
+          style="padding: 10px;color:#ff6831;;width: 100%;box-shadow: 0 0 5px #ff6831, 0 0 5px #ff6831, 0 0 5px #ff6831, 0 0 10px #ff6831, 0 0 50px #ff6831;"
+          href="#titrfive">مبانی سلولی</a>
+        <a class="tableitems five" style=";color:#ff6831;" href="#cell">■ سلول: واحد ساختاری و عملکردی همه موجودات
           زنده</a><br>
-        <a class="tableitems" style=";color:#ff6831;" href="#celltypes">■ انواع سلول ها از نظر ساختار:باکتری ها،
+        <a class="tableitems five" style=";color:#ff6831;" href="#celltypes">■ انواع سلول ها از نظر ساختار:باکتری ها،
           آرکی ها و یوکاریوت ها</a><br>
 
-        <a class="tableitems" style=";color:#ff6831;" href="#energyresource">■ انواع سلول ها از نظر منبع انرژی و
+        <a class="tableitems five" style=";color:#ff6831;" href="#energyresource">■ انواع سلول ها از نظر منبع انرژی و
           منبع کربن</a><br>
 
-        <a class="tableitems" style=";color:#ff6831;" href="#bactervsarchi">■ شباهت ها و تفاوت های باکتری ها و آرکی
+        <a class="tableitems five" style=";color:#ff6831;" href="#bactervsarchi">■ شباهت ها و تفاوت های باکتری ها و آرکی
           ها</a><br>
-        <a class="tableitems" style=";color:#ff6831;" href="#eucaryotes">■ سلول های یوکاریوتی:دارای اندامک های
+        <a class="tableitems five" style=";color:#ff6831;" href="#eucaryotes">■ سلول های یوکاریوتی:دارای اندامک های
           غشایی(امکان جداسازی برای مطالعه)</a><br>
-        <a class="tableitems" style=";color:#ff6831;" href="#cytoplasm">■ سیتوپلاسم:سازماندهی توسط سیتواسکلتون و
+        <a class="tableitems five" style=";color:#ff6831;" href="#cytoplasm">■ سیتوپلاسم:سازماندهی توسط سیتواسکلتون و
           بسیار پویا</a><br>
-        <a class="tableitems" style=";color:#ff6831;" href="#invitro">■مطالعات In vitro(آزمایشگاهی): احتمال چشم پوشی
+        <a class="tableitems five" style=";color:#ff6831;" href="#invitro">■مطالعات In vitro(آزمایشگاهی): احتمال چشم
+          پوشی
           از برهمکنش های مهم بین مولکولی</a><br>
       </div>
       <div class="table">
-        <a class="maintitrintable" style="color:#6bff00;width: 100%" href="#titrsix"> مبانی تکاملی و منشأ حیات</a>
-        <a class="tableitems" style=";color:#6bff00;" href="#evolutiontheories">■ نظریه های تکاملی</a><br>
+        <a class="maintitrintable"
+          style="padding: 10px;color:#6bff00;width: 100%;box-shadow: 0 0 5px #6bff00, 0 0 5px #6bff00, 0 0 5px #6bff00, 0 0 10px #6bff00, 0 0 50px #6bff00;"
+          href="#titrsix"> مبانی تکاملی و منشأ حیات</a>
+        <a class="tableitems six" style=";color:#6bff00;" href="#evolutiontheories">■ نظریه های تکاملی</a><br>
 
-        <a class="tableitems" style=";color:#6bff00;" href="#firstbiomolecules">■ تکامل شیمیایی:ظهور بیومولکول های
+        <a class="tableitems six" style=";color:#6bff00;" href="#firstbiomolecules">■ تکامل شیمیایی:ظهور بیومولکول های
           اولیه</a><br>
-        <a class="tableitems" style=";color:#6bff00;" href="#firstgenes">■ ژن ها و آنزیم های اولیه: احتمالا از جنس
+        <a class="tableitems six" style=";color:#6bff00;" href="#firstgenes">■ ژن ها و آنزیم های اولیه: احتمالا از جنس
           RNA </a><br>
 
-        <a class="tableitems" style=";color:#6bff00;" href="#eucaryticcells">■ ظهور سلول های یوکاریوتی</a><br>
+        <a class="tableitems six" style=";color:#6bff00;" href="#eucaryticcells">■ ظهور سلول های یوکاریوتی</a><br>
 
-        <a class="tableitems" style=";color:#6bff00;" href="#genomics">■ مطالعه ژنوم(ژنومیکس): اختصاص هر ژن به یک
+        <a class="tableitems six" style=";color:#6bff00;" href="#genomics">■ مطالعه ژنوم(ژنومیکس): اختصاص هر ژن به یک
           فرایند خاص سلولی</a><br>
-        <a class="tableitems" style=";color:#6bff00;" href="#genomicsinmed">■ اهمیت مقایسه ژنومیک در پزشکی</a><br>
+        <a class="tableitems six" style=";color:#6bff00;" href="#genomicsinmed">■ اهمیت مقایسه ژنومیک در پزشکی</a><br>
       </div>
-    
+
       <div class="table">
-        <a class="maintitrintable" style="color:#ff1f71;;width: 100%" href="#titrseven">مباحث مهم ریاضی</a>
-        <a class="tableitems" style=";color:#ff1f71;" href="#equation&graph">■ معادله و نمودار</a><br>
+        <a class="maintitrintable"
+          style="padding: 10px;color:#ff1f71;;width: 100%;box-shadow: 0 0 5px #ff1f71, 0 0 5px #ff1f71, 0 0 5px #ff1f71, 0 0 10px #ff1f71, 0 0 50px #ff1f71;"
+          href="#titrseven">مباحث مهم ریاضی</a>
+        <a class="tableitems seven" style=";color:#ff1f71;" href="#equation&graph">■ معادله و نمودار</a><br>
 
-        <a class="tableitems" style="color:#ff1f71" href="#fracture">■ کسر و قوانین آن</a><br>
+        <a class="tableitems seven" style="color:#ff1f71" href="#fracture">■ کسر و قوانین آن</a><br>
 
-        <a class="tableitems" style="color:#ff1f71" href="#exponent">■ توان و قوانین آن </a><br>
+        <a class="tableitems seven" style="color:#ff1f71" href="#exponent">■ توان و قوانین آن </a><br>
 
-        <a class="tableitems" style="color:#ff1f71" href="#exponentialnotation">■ نماد علمی</a><br>
-        <a class="tableitems" style="color:#ff1f71;" href="#logarithm">■ لگاریتم و قوانین آن</a><br>
+        <a class="tableitems seven" style="color:#ff1f71" href="#exponentialnotation">■ نماد علمی</a><br>
+        <a class="tableitems seven" style="color:#ff1f71;" href="#logarithm">■ لگاریتم و قوانین آن</a><br>
 
-        <a class="tableitems" style="color:#ff1f71;" href="#prefix">■ پیشوندهای مهم ریاضی</a><br>
+        <a class="tableitems seven" style="color:#ff1f71;" href="#prefix">■ پیشوندهای مهم ریاضی</a><br>
       </div><br><br>
 
 
@@ -5271,8 +5207,7 @@
   <div id="chaptermap" dir="rtl">
     <h1 class="chaptermaph1">خلاصه فصل</h1>
     <div style="width: 100%; position: relative; display: grid;">
-      <div class="maintitr" Style="z-index: 1000;color: #00ff26; top:5vh"> مقدمه‌ای بر علم
-        بیوشیمی </div>
+
 
 
       <div style="position: relative;
@@ -5281,13 +5216,31 @@
     backdrop-filter: blur(10px);
    ;display: flex;flex-wrap: wrap;padding-bottom: 20px;justify-content: right;">
 
+        <a class="maintitrintable"
+          style="padding: 10px; color:#00ff15;width: 100%;box-shadow: 0 0 5px #00ff15, 0 0 5px #00ff15, 0 0 5px #00ff15, 0 0 10px #00ff15, 0 0 50px #00ff15;"
+          href="#titrone">مقدمه ای بر علم بیوشیمی </a>
+          <div style="width:98% ;justify-content: center;display: flex;flex-wrap: wrap;">
+        <div style="display: grid;width: 300px;margin: 5px">
+          <a class="tableitems one" style=";color:#00ff15;" href="#history">■ تاریخچه </a><br>
+          <div style="border:1px solid green;border-radius: 5px;height: 100px;width: 98%;"></div>
 
-        <img src="map1.png"
-          style="position: relative;height: fit-content;top:20px;width: 280px;background: rgb(0,0,0,0.5);margin: auto;margin-top: 10px;"><br>
-        <img src="map2.png"
-          style="position: relative;height: fit-content;top:20px;width: 280px;background: rgb(0,0,0,0.5);margin: auto;margin-top: 10px;"><br><br><br><br>
+        </div>
+        <div style="display: grid;width: 300px;margin: 5px">
 
+          <a class="tableitems one" style=";color:#00ff15;" href="#interdisciplinary">■ بیوشیمی علمی بین رشته ای</a><br>
+          <div style="border:1px solid green;border-radius: 5px;height: 100px;width: 98%">
 
+            <img src="abstract.png"
+            style="position: relative;height: fit-content;top:20px;width: 280px;background: rgb(0,0,0,0.5);margin: auto;margin-top: 10px;"><br>
+          </div>
+        </div>
+        <div style="display: grid;width: 300px;margin: 5px">
+
+          <a class="tableitems one" style=";color:#00ff15" href="#livethings">■ ویژگی های موجودات زنده</a><br>
+          <div style="border:1px solid green;border-radius: 5px;height: 100px;width: 98%"></div>
+
+        </div>
+</div>
       </div>
 
     </div>
@@ -5300,13 +5253,13 @@
    ;display: flex;flex-wrap: wrap;padding-bottom: 20px;justify-content: right;">
 
 
-        <img src="map1.png"
-          style="position: relative;height: fit-content;top:20px;width: 280px;background: rgb(0,0,0,0.5);margin: auto;margin-top: 10px;"><br>
-        <img src="map2.png"
-          style="position: relative;height: fit-content;top:20px;width: 280px;background: rgb(0,0,0,0.5);margin: auto;margin-top: 10px;"><br><br><br><br>
+      <img src="map1.png"
+        style="position: relative;height: fit-content;top:20px;width: 280px;background: rgb(0,0,0,0.5);margin: auto;margin-top: 10px;"><br>
+      <img src="map2.png"
+        style="position: relative;height: fit-content;top:20px;width: 280px;background: rgb(0,0,0,0.5);margin: auto;margin-top: 10px;"><br><br><br><br>
 
 
-      </div>
+    </div>
   </div>
 
 
@@ -5325,13 +5278,27 @@
           style="padding-bottom: 25px;display: flex;flex-wrap: wrap;justify-content: center; ">
 
           <div class="table" style="color:#00ff15">
-            <a class="maintitrintable" style="color:#00ff15;" href="#titrone">مقدمه ای بر علم بیوشیمی </a><br>
-            <a class="maintitrintable" style="color:#ff00f7" href="#titrtwo">مبانی شیمیایی</a><br>
-            <a class="maintitrintable" style="color:#00d5ff" href="#titrthree">مبانی فیزیکی</a><br>
-            <a class="maintitrintable" style="color:#ff0000;" href="#titrfour">مبانی ژنتیکی</a><br>
-            <a class="maintitrintable" style="color:#ff6831" href="#titrfive">مبانی سلولی</a><br>
-            <a class="maintitrintable" style="color:#6bff00" href="#titrsix"> مبانی تکاملی و منشأ حیات</a><br>
-            <a class="maintitrintable" style="color:#ff1f71" href="#titrseven">مباحث مهم ریاضی</a><br>
+            <a class="maintitrintable"
+              style="color:#00ff15; box-shadow: 0 0 5px #00ff15, 0 0 5px #00ff15, 0 0 5px #00ff15, 0 0 10px #00ff15, 0 0 50px #00ff15;"
+              href="#titrone">مقدمه ای بر علم بیوشیمی </a><br>
+            <a class="maintitrintable"
+              style="color:#ff00f7;box-shadow: 0 0 5px #ff00f7, 0 0 5px #ff00f7, 0 0 5px #ff00f7, 0 0 10px #ff00f7, 0 0 50px #ff00f7;"
+              href="#titrtwo">مبانی شیمیایی</a><br>
+            <a class="maintitrintable"
+              style="color:#00d5ff;box-shadow: 0 0 5px #00d5ff, 0 0 5px #00d5ff, 0 0 5px #00d5ff, 0 0 10px #00d5ff, 0 0 50px #00d5ff;"
+              href="#titrthree">مبانی فیزیکی</a><br>
+            <a class="maintitrintable"
+              style="color:#ff0000;box-shadow: 0 0 5px #ff0000, 0 0 5px #ff0000, 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 50px #ff0000;"
+              href="#titrfour">مبانی ژنتیکی</a><br>
+            <a class="maintitrintable"
+              style="color:#ff6831;box-shadow: 0 0 5px #ff6831, 0 0 5px #ff6831, 0 0 5px #ff6831, 0 0 10px #ff6831, 0 0 50px #ff6831;"
+              href="#titrfive">مبانی سلولی</a><br>
+            <a class="maintitrintable"
+              style="color:#6bff00;box-shadow: 0 0 5px #6bff00, 0 0 5px #6bff00, 0 0 5px #6bff00, 0 0 10px #6bff00, 0 0 50px #6bff00;"
+              href="#titrsix"> مبانی تکاملی و منشأ حیات</a><br>
+            <a class="maintitrintable"
+              style="color:#ff1f71;box-shadow: 0 0 5px #ff1f71, 0 0 5px #ff1f71, 0 0 5px #ff1f71, 0 0 10px #ff1f71, 0 0 50px #ff1f71;"
+              href="#titrseven">مباحث مهم ریاضی</a><br>
 
           </div>
         </div>
@@ -5354,10 +5321,11 @@
             <div id="titr1"
               style="position: relative;width: 95%;height:fit-content;margin: auto;top: 10px;text-align: right;padding: 5px;">
 
-              <a class="tableitems" style="color:#3aff00;" href="#history">■ تاریخچه </a><br>
-              <a class="tableitems" style="color:#3aff00;" href="#interdisciplinary">■ بیوشیمی علمی بین رشته ای </a><br>
+              <a class="tableitems one" style="color:#3aff00;" href="#history">■ تاریخچه </a><br>
+              <a class="tableitems one" style="color:#3aff00;" href="#interdisciplinary">■ بیوشیمی علمی بین رشته ای
+              </a><br>
 
-              <a class="tableitems" style="color:#3aff00" href="#livethings">■ ویژگی های موجودات زنده </a><br>
+              <a class="tableitems one" style="color:#3aff00" href="#livethings">■ ویژگی های موجودات زنده </a><br>
             </div><br>
           </div>
         </div>
@@ -5532,30 +5500,35 @@
             <div id="titr2"
               style="font-weight: bold;position: relative;width: 95%;height:fit-content;margin: auto;top: 10px;text-align: right;padding: 5px;">
 
-              <a class="tableitems" style="color:#ff00f7;font-weight: bold;" href="#organic-inorganic">■ انواع مواد (آلی
+              <a class="tableitems two" style="color:#ff00f7;font-weight: bold;" href="#organic-inorganic">■ انواع مواد
+                (آلی
                 و معدنی) </a><br>
 
-              <a class="tableitems" style="color:#ff00f7;font-weight: bold;" href="#orbitals">■ ساختار الکترونی ،
+              <a class="tableitems two" style="color:#ff00f7;font-weight: bold;" href="#orbitals">■ ساختار الکترونی ،
                 اوربیتال ها و زوایای پیوندی عناصر مهم بیولوژیک</a><br>
 
-              <a class="tableitems" style="color:#ff00f7;font-weight: bold;" href="#biomolecules">■ بیومولکول ها</a><br>
-              <a class="tableitems" style="color:#ff00f7;font-weight: bold;" href="#isomers">■ ایزومرها </a><br>
-              <a class="tableitems" style="color:#ff00f7;font-weight: bold;" href="#representations">■ انواع نمایش
+              <a class="tableitems two" style="color:#ff00f7;font-weight: bold;" href="#biomolecules">■ بیومولکول
+                ها</a><br>
+              <a class="tableitems two" style="color:#ff00f7;font-weight: bold;" href="#isomers">■ ایزومرها </a><br>
+              <a class="tableitems two" style="color:#ff00f7;font-weight: bold;" href="#representations">■ انواع نمایش
                 مولکول ها </a><br>
-              <a class="tableitems" style="color:#ff00f7;font-weight: bold;" href="#organic">■ نامگذاری ترکیبات آلی
+              <a class="tableitems two" style="color:#ff00f7;font-weight: bold;" href="#organic">■ نامگذاری ترکیبات آلی
               </a><br>
-              <a class="tableitems" style="color:#ff00f7;font-weight: bold;" href="#molecularweight">■ وزن مولکولی، جرم
+              <a class="tableitems two" style="color:#ff00f7;font-weight: bold;" href="#molecularweight">■ وزن مولکولی،
+                جرم
                 مولکولی و واحدهای آنها </a><br>
-              <a class="tableitems" style="color:#ff00f7;font-weight: bold;" href="#molarity">■ مول ،غلظت و مولاریته
+              <a class="tableitems two" style="color:#ff00f7;font-weight: bold;" href="#molarity">■ مول ،غلظت و مولاریته
               </a><br>
-              <a class="tableitems" style="color:#ff00f7;font-weight: bold;" href="#solutions">■ محلول ها و رقیق سازی
+              <a class="tableitems two" style="color:#ff00f7;font-weight: bold;" href="#solutions">■ محلول ها و رقیق
+                سازی
               </a><br>
-              <a class="tableitems" style="color:#ff00f7;font-weight: bold;" href="#redox">■ واکنش های اکسایش-کاهش
+              <a class="tableitems two" style="color:#ff00f7;font-weight: bold;" href="#redox">■ واکنش های اکسایش-کاهش
               </a><br>
-              <a class="tableitems" style="color:#ff00f7;font-weight: bold;" href="#equation">■ تعادل و اصل لوشاتلیه
+              <a class="tableitems two" style="color:#ff00f7;font-weight: bold;" href="#equation">■ تعادل و اصل لوشاتلیه
               </a><br>
-              <a class="tableitems" style="color:#ff00f7;font-weight: bold;" href="#acidbase">■ اسیدها و بازها</a><br>
-              <a class="tableitems" style="color:#ff00f7;font-weight: bold;" href="#suffixes&prefixes">■ پیشوندها و
+              <a class="tableitems two" style="color:#ff00f7;font-weight: bold;" href="#acidbase">■ اسیدها و
+                بازها</a><br>
+              <a class="tableitems two" style="color:#ff00f7;font-weight: bold;" href="#suffixes&prefixes">■ پیشوندها و
                 پسوندهای مهم </a><br>
             </div><br>
           </div>
@@ -5682,7 +5655,549 @@
 
 
 
+      <div class="h1parrent" id="orbitals">
+        <div class="h1" style="color:#ff00f7"> ساختار الکترونی ، اوربیتال ها و زوایای پیوندی عناصر مهم بیولوژیک
+          <a style="width: 100%;position: absolute;height:100% ;" href="#orbitals"></a>
+        </div>
 
+
+        <div class="content" id="content">
+          <span style="display:inline-block; color:#e100ff;font-weight: bold;">● الکترون های لایه ظرفیت(یا
+            والانس):</span>
+          بیرونی ترین لایه الکترونی عناصر که در پیوندهای شیمیایی مشارکت میکنند . به
+          همین دلیل اشتراک این الکترون ها پیوند کووالانسی نام دارد(کو:پیشوند به معنای مشترک)<br>
+
+          <div class="soundplayer" data-src="valence.m4a" dir="ltr" style="display: grid;">
+            <div
+              style=" text-align: center; top: -10px;position: relative;align-items: center; height: 15px;font-size: x-small;">
+              لایه الکترونی ظرفیت </div>
+            <div style="display: flex;">
+              <div class="play-pause-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
+                  <path class="play-pause-icon" d="M18 12L0 24V0" />
+                </svg>
+              </div>
+              <div class="speed-btn">1X</div>
+              <div class="controls">
+                <span class="current-time time">0:00</span>
+                <div class="lessonslider">
+                  <div class="progress"></div>
+                </div>
+                <span class="total-time time">0:00</span>
+              </div>
+              <audio></audio>
+            </div>
+          </div>
+
+          <div class="soundplayer" data-src="octet rule.m4a" dir="ltr" style="display: grid;">
+            <div
+              style="text-align: center; top: -10px; position: relative; align-items: center; height: 15px; font-size: x-small;">
+              قانون اوکتت(هشت تایی شدن)
+            </div>
+            <div class="soundcontrol" style="display: flex;">
+              <div class="play-pause-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
+                  <path class="play-pause-icon" d="M18 12L0 24V0" />
+                </svg>
+              </div>
+
+              <div class="speed-btn">1X</div>
+
+              <div class="controls">
+                <span class="current-time time">0:00</span>
+                <div class="lessonslider">
+                  <div class="progress"></div>
+                </div>
+                <span class="total-time time">0:00</span>
+              </div>
+              <audio src="octet rule.m4a"></audio>
+            </div>
+          </div>
+
+
+          <div class="content" id="content" style="margin-top: 15px;">
+
+            <div class="image-container" id="imagecontainer">
+              <img src="Carbon.png" alt="Image to magnify" class="main-image" id="mainImage">
+            </div>
+            <div class="magnifier-view" id="magnifierView">
+              <img src="Carbon.png" alt="Magnified Image" class="magnified-image" id="magnifiedImage">
+            </div>
+            <img class="zoomin" id="zoomin"
+              style="border-raius:10px;backdrop-filter: blur(5px);width: 15px;height: 15px;position: absolute;top:5px;right:12px;display: flex;z-index: 100;cursor: pointer;padding: 5px;background: rgba(0, 0, 0, 0.4);border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.4);"
+              src="zoomin.png">
+            <img class="zoomout" id="zoomout"
+              style="border-raius:10px;backdrop-filter: blur(5px);width: 15px;height: 15px;position: absolute;top:5px;right:12px;display: none;z-index: 100;cursor: pointer;padding: 5px;background: rgba(0, 0, 0, 0.4);border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.4);"
+              onclick="zoomo()" src="zoomout.png">
+
+          </div>
+
+          <div class="soundplayer" data-src="carbon octete.m4a" dir="ltr" style="display: grid;">
+            <div
+              style=" text-align: center; top: -10px;position: relative;align-items: center; height: 15px;font-size: x-small;">
+              توضیح جدول کربن</div>
+            <div style="display: flex;">
+              <div class="play-pause-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
+                  <path class="play-pause-icon" d="M18 12L0 24V0" />
+                </svg>
+              </div>
+              <div class="controls">
+                <span class="current-time time">0:00</span>
+                <div class="lessonslider">
+                  <div class="progress"></div>
+                </div>
+                <span class="total-time time">0:00</span>
+              </div>
+              <audio></audio>
+            </div>
+          </div>
+          <div class="content" id="content" style="margin-top: 15px;">
+
+            <div class="image-container" id="imagecontainer">
+              <img src="nitrogen.png" alt="Image to magnify" class="main-image" id="mainImage">
+            </div>
+            <div class="magnifier-view" id="magnifierView">
+              <img src="nitrogen.png" alt="Magnified Image" class="magnified-image" id="magnifiedImage">
+            </div>
+            <img class="zoomin" id="zoomin"
+              style="border-raius:10px;backdrop-filter: blur(5px);width: 15px;height: 15px;position: absolute;top:5px;right:12px;display: flex;z-index: 100;cursor: pointer;padding: 5px;background: rgba(0, 0, 0, 0.4);border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.4);"
+              src="zoomin.png">
+            <img class="zoomout" id="zoomout"
+              style="border-raius:10px;backdrop-filter: blur(5px);width: 15px;height: 15px;position: absolute;top:5px;right:12px;display: none;z-index: 100;cursor: pointer;padding: 5px;background: rgba(0, 0, 0, 0.4);border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.4);"
+              onclick="zoomo()" src="zoomout.png">
+
+          </div>
+          <div class="soundplayer" data-src="nitrogen octete.m4a" dir="ltr" style="display: grid;">
+            <div
+              style=" text-align: center; top: -10px;position: relative;align-items: center; height: 15px;font-size: x-small;">
+              توضیح جدول نیتروژن</div>
+            <div style="display: flex;">
+              <div class="play-pause-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
+                  <path class="play-pause-icon" d="M18 12L0 24V0" />
+                </svg>
+              </div>
+              <div class="controls">
+                <span class="current-time time">0:00</span>
+                <div class="lessonslider">
+                  <div class="progress"></div>
+                </div>
+                <span class="total-time time">0:00</span>
+              </div>
+              <audio></audio>
+            </div>
+          </div>
+
+          <div class="content" id="content" style="margin-top: 15px;">
+
+            <div class="image-container" id="imagecontainer">
+              <img src="Oxygen.png" alt="Image to magnify" class="main-image" id="mainImage">
+            </div>
+            <div class="magnifier-view" id="magnifierView">
+              <img src="Oxygen.png" alt="Magnified Image" class="magnified-image" id="magnifiedImage">
+            </div>
+            <img class="zoomin" id="zoomin"
+              style="border-raius:10px;backdrop-filter: blur(5px);width: 15px;height: 15px;position: absolute;top:5px;right:12px;display: flex;z-index: 100;cursor: pointer;padding: 5px;background: rgba(0, 0, 0, 0.4);border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.4);"
+              src="zoomin.png">
+            <img class="zoomout" id="zoomout"
+              style="border-raius:10px;backdrop-filter: blur(5px);width: 15px;height: 15px;position: absolute;top:5px;right:12px;display: none;z-index: 100;cursor: pointer;padding: 5px;background: rgba(0, 0, 0, 0.4);border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.4);"
+              onclick="zoomo()" src="zoomout.png">
+
+
+          </div>
+
+          <div class="soundplayer" data-src="Oxygen.m4a" dir="ltr" style="display: grid;">
+            <div
+              style=" text-align: center; top: -10px;position: relative;align-items: center; height: 15px;font-size: x-small;">
+              توضیح جدول نیتروژن</div>
+            <div style="display: flex;">
+              <div class="play-pause-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
+                  <path class="play-pause-icon" d="M18 12L0 24V0" />
+                </svg>
+              </div>
+              <div class="controls">
+                <span class="current-time time">0:00</span>
+                <div class="lessonslider">
+                  <div class="progress"></div>
+                </div>
+                <span class="total-time time">0:00</span>
+              </div>
+              <audio></audio>
+            </div>
+          </div>
+          <span style="display:inline-block; color:#e100ff;font-weight: bold;">● اوربیتال:</span>
+
+          به معنای مدار است که از مدل های قدیمی اتمی مثل مدل بور گرفته شده و تصور میکردند الکترون در
+          مسیر مشخصی دور هسته میچرخه اما زهی خیال باطل...مدل جدید مکانیک کوانتومی طبق معادله موجی داداشمون شرودینگر
+          میگه ما فقط میتونیم احتمال حضور
+          الکترون در یک نقطه رو مشخص کنیم و بخشی از فضای اطراف هسته اتم که احتمال حضور
+          الکترون توش خیلی بالاست میگن اوربیتال که به مجموع اوربیتال های یک اتم ابر الکترونی گفته میشه.این کلمه ابر
+          یعنی
+          الکترون میتونه هرجایی از این
+          ابر باشه در هر لحظه و در واقع احتمال حضور الکترون توی کل نقاط تشکیل دهنده ابر توزیع شده مثل اینکه ی نفر به
+          صورت رندوم هر روز یا میره رستوران یا پارک یا باشگاه پس احتمال حضورش تو هر کدوم هست چون رندومه و نمیتونیم
+          با
+          قطعیت بگیم هر روز کجاست اما میدونیم احتمال داره تو هر کدوم از این سه تا باشه پس مکان و مسیر دقیق الکترون
+          مشخص نیست ولی میدونیم
+          احتمال حضورش تو قسمتی از فضای اطراف هسته خیلی بالاست که بهش میگن اوربیتال . با حل معادله شرودینگر عددهایی
+          بدست
+          میاد که سطح انرژی و اندازه اوربیتال، شکل اوربیتال و جهت گیری فضایی اوربیتال هارو مشخص میکنه .
+          <br>
+          <div class="wrap" id="wrap" style="position: relative;">
+            <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="orbitalsp.html"></iframe>
+            <div class="reload" onclick=reload()>
+              <image style="width:80%;height: 80%"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
+            </div>
+            <div class="full">
+              <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png"></image>
+              <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png"></image>
+
+            </div>
+          </div>
+          <span style="display:inline-block; color:#e100ff;font-weight: bold;">● زیر لایه S:</span>
+
+          یک اوربیتال کروی<br>
+          <span style="display:inline-block; color:#e100ff;font-weight: bold;">● زیر لایه p:</span>
+
+          سه اوربیتال دمبلی انگار سه تا دمبل بر هم عمود هستن و به نقاط وسط دمبل ها که احتمال حضور
+          الکترون
+          در اونجا صفره میگن گره و احتمال حضور الکترون در سر دمبل ها بالاتر است<br>
+          نکته:هرچقد فاصله از هسته بیشتر میشه انرژی الکترون ها بیشتر و اوربیتال ها بزرگتر میشه(شکل زیر)<br>
+          <div class="wrap" id="wrap" style="position: relative;">
+            <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="orbitalsize.html"></iframe>
+            <div class="reload" onclick=reload()>
+              <image style="width:80%;height: 80%"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
+            </div>
+            <div class="full">
+              <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png"></image>
+              <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png"></image>
+
+            </div>
+          </div>
+          <span style="display:inline-block; color:#e100ff;font-weight: bold;">● نکته:</span>
+          دقت کنید اطراف هسته شکل کروی و یا دمبلی وجود ندارد و این اشکال فقط نشان دهنده
+          مکان هایی هستن که احتمال حضور الکترون در اونها بالاست و مجموعه این نقاط این شکل هارو پدید میارن.به شکل های
+          زیر
+          دقت کنید<br>
+
+          <div class="wrap" id="wrap" style="position: relative;">
+            <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="sorbitaldot.html"></iframe>
+            <div class="reload" onclick=reload()>
+              <image style="width:80%;height: 80%"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
+            </div>
+            <div class="full">
+              <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png"></image>
+              <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png"></image>
+
+            </div>
+          </div>
+          <span style="display:inline-block; color:#e100ff;font-weight: bold;">● نکته:</span>
+
+          دقت کنید این نقطه ها الکترون نیستند بلکه نقاطی هستند که احتمال حضور الکترون در آنجا بالا است یعنی
+          هرچقد تراکم نقاط در مکانی بیشتر باشد احتمال حضور الکترون بیشتر است و مجموع این نقاط شکل های اوربیتال
+          ها(کروی، دمبلی و...)را پدید می آورد
+          <br>
+          <span style="display:inline-block;color:#e100ff;font-weight: bold;">● اوربیتال های هیبریدی یا مولکولی
+            :</span>
+          حالا وقتی یک اتم میخواد با یک اتم دیگه پیوند بده اوربیتال های لایه آخر جوری تغییر
+          میکنه که محکم ترین پیوند تشکیل بشه و الکترون ها همدیگرو دفع نکنن. یعنی الکترون های هر اتم اول فقط دور یک
+          هسته
+          حضور داشتن حالا دور دو تا هسته همزمان
+          حضور دارن که باعث میشه مثل یک طناب که دور دو تا چیز میپیچی الکترون هم هسته دو اتم رو کنار هم نگه داره و
+          پیوند
+          تشکیل بشه .حالا
+          به این اوربیتال های جدید که حاصل مخلوط شدن یا هیبرید
+          شدن چند تا اوربیتاله میگن اوربیتال هیبریدی
+          <div class="wrap" id="wrap" style="position: relative;">
+            <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="hybrid types.html"></iframe>
+            <div class="reload" onclick=reload()>
+              <image style="width:80%;height: 80%"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
+            </div>
+            <div class="full">
+              <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png"></image>
+              <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png"></image>
+
+            </div>
+          </div>
+
+          <br>
+          <div class="soundplayer" data-src="1.m4a" dir="ltr">
+            <div class="play-pause-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
+                <path class="play-pause-icon" d="M18 12L0 24V0" />
+              </svg>
+            </div>
+            <div class="controls">
+              <span class="current-time time">0:00</span>
+              <div class="lessonslider">
+                <div class="progress"></div>
+              </div>
+              <span class="total-time time">0:00</span>
+            </div>
+            <audio></audio>
+          </div>
+
+          <span
+            style="color:#e100ff;font-weight: bold;display: flex; border-bottom: 1px solid; text-align: center;justify-content: center;">
+            انواع هم پوشانی اوربیتال ها در پیوندها</span>
+
+          <div class="wrap" id="wrap" style="position: relative;">
+            <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="sigmapibond.html"></iframe>
+            <div class="reload" onclick=reload()>
+              <image style="width:80%;height: 80%"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
+            </div>
+            <div class="full">
+              <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png"></image>
+              <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png"></image>
+
+            </div>
+
+          </div><br>
+          <span
+            style="color:#e100ff;font-weight: bold;display: flex; border-bottom: 1px solid; text-align: center;justify-content: center;">
+            انواع هندسه های مولکولی و زوایای پیوندی عناصر کربن، نیتروژن و اکسیژن
+          </span>
+          <span style="display:inline-block;color:#e100ff;font-weight: bold;">● نکته:</span>
+          در اشکال سه بعدی زیر فقط اتم مورد نظر به صورت رنگی نشان داده شده و بقیه اتم ها به صورت سفید نمایش داده
+          شده
+          <br><br><br>
+          <span style="display:inline-block;color:#e100ff;font-weight: bold;">●هیبریداسیون sp<sup>3</sup>:</span> همه
+          پیوندها یگانه
+          <div class="wrap" id="wrap" style="position: relative;">
+            <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="sp3.html"></iframe>
+            <div class="reload" onclick=reload()>
+              <image style="width:80%;height: 80%"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
+            </div>
+            <div class="full">
+              <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png"></image>
+              <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png"></image>
+
+            </div>
+          </div> <br>
+          <span style="display:inline-block;color:#e100ff;font-weight: bold;">● هیبریداسیون sp<sup>2</sup>: </span>
+          یک پیوند دوگانه و بقیه پیوندها یگانه
+
+          <div class="wrap" id="wrap" style="position: relative;">
+            <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="sp2.html"></iframe>
+            <div class="reload" onclick=reload()>
+              <image style="width:80%;height: 80%"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
+            </div>
+            <div class="full">
+              <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png"></image>
+              <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png"></image>
+
+            </div>
+          </div> <br>
+          <span style="display:inline-block;color:#e100ff;font-weight: bold;">● هیبریداسیون sp<sup></sup>: </span>
+          دو پیوند دوگانه(فقط در کربن وجود دارد)
+
+          <div class="wrap" id="wrap" style="position: relative;">
+            <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="sp.html"></iframe>
+            <div class="reload" onclick=reload()>
+              <image style="width:80%;height: 80%"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
+            </div>
+            <div class="full">
+              <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png"></image>
+              <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png"></image>
+
+            </div>
+          </div>
+          <span
+            style="color:#e100ff;font-weight: bold;display: flex; border-bottom: 1px solid; text-align: center;justify-content: center;">
+            مهم ترین اوربیتال های هیبریدی در بیوشیمی</span>
+
+
+
+          <span style="display:inline-block;color:#e100ff;font-weight: bold;"> ۱-اوربیتال های هیبریدی sp<sup>3</sup>
+          </span>
+          در کربن با آرایش چهاروجهی که مشخص کننده شکل سه بعدی بیومولکول هایی مثل
+          قندهاست
+
+          <div class="wrap" id="wrap" style="position: relative;">
+            <iframe class="iframe" id="iframe" loading="lazy" tabindex="0"
+              data-src="https://raw.githack.com/Science2023/3dbiochemistry/main/methane.html"></iframe>
+            <div class="reload" onclick=reload()>
+              <image style="width:80%;height: 80%"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
+            </div>
+            <div class="full">
+              <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png">
+              </image>
+              <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png">
+              </image>
+
+            </div>
+          </div>
+          <span style="display:inline-block;color:#e100ff;font-weight: bold;">●</span>
+
+          در پیوند یگانه کربن-کربن: هر کربن یک ساختار چهار
+          وجهی (مثل اتان)
+          <br>
+
+
+          <div class="wrap" id="wrap" style="position: relative;">
+            <iframe class="iframe" id="iframe" loading="lazy" tabindex="0"
+              data-src="https://raw.githack.com/Science2023/3dbiochemistry/main/ethane.html"></iframe>
+            <div class="reload" onclick=reload()>
+              <image style="width:80%;height: 80%"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
+            </div>
+            <div class="full">
+              <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png">
+              </image>
+              <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png">
+              </image>
+
+            </div> <br>
+          </div>
+          <span style="display:inline-block;color:#e100ff;font-weight: bold">● نکته:</span>در مولکول های آلی مثل گلوکز
+          هر کربن با چهار
+          پیوند
+          یگانه
+          دارای ساختار چهار وجهی است <br>
+          <br>
+          <span style="display:inline-block;color:#e100ff;font-weight: bold;">● مولکول
+            گلوکز:</span>دقت کنید
+          .هر اتم کربن(آبی) دارای ساختار چهار وجهی با چهار اتم متصل به آن است و به همین دلیل کونفورماسیون های قایق و
+          صندلی در گلوکز شکل میگیرد</p><br>
+
+          <div class="wrap" id="wrap" style="position: relative;">
+
+            <iframe class="iframe" id="iframe" loading="lazy" tabindex="0"
+              data-src="https://raw.githack.com/Science2023/3dbiochemistry/main/Glucose-chair.html">
+            </iframe>
+            <div class="reload" onclick=reload()>
+              <image style="width:80%;height: 80%"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
+            </div>
+            <div class="full">
+              <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png">
+              </image>
+              <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png">
+              </image>
+
+            </div>
+          </div>
+          <style>
+            @media all and (orientation: portrait) {
+              #glucose {
+                height: fit-content
+              }
+            }
+          </style><br>
+          <span style="display:inline-block;color:#e100ff;font-weight: bold;"> ۲-اوربیتال های sp<sup>2</sup> </span>
+          با آرایش سه ضلعی مسطح که اگر دو اتم با این ارایش به هم متصل شوند(با پیوند
+          دوگانه مثل اتان و یا با پیوند رزونانسی مثل پیوند پپتیدی) انگار دو مثلث از روبرو به هم میچسبند و تشکیل ساختار
+          صفحه ای می دهند یعنی اتم ها در یک سطح قرار می گیرند<br>
+          <span style="display:inline-block;color:#e100ff;font-weight: bold">● دو نوع مهم هیبریداسیون sp<sup>2</sup>
+            در بیوشیمی:</span>
+          <br>
+          <span style="display:inline-block;color:#e100ff;font-weight: bold"> الف )</span>
+
+          پیوند پپتیدی کربن-نیتروژن به علت خاصیت رزونانسی تشکیل صفحات پپتیدی می دهد که باعث محدودیت چرخش پیوند
+          پپتیدی و پایداری آن می شود که در تعیین ساختار سه بعدی پروتئین ها نقش دارد <br>
+          نکته:در هنگام برقراری پیوند پپتیدی ساختار sp<sup>3</sup> نیتروژن(هرم با قاعده سه ضلعی) با تبدیل جفت الکترون
+          غیر پیوندی به یک پیوند
+          پای با خاصیت رزونانسی استثنائا به ساختار sp<sup>2</sup> با ارایش سه ضلعی مسطح (شبیه آرایش کربن با یک پیوند
+          دوگانه)تبدیل
+          می شود و با اتصال به کربن با ساختار sp<sup>2</sup> تشکیل صفحه پپتیدی
+          می دهد<br>
+          <div class="wrap" id="wrap" style="position: relative;">
+            <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="peptidebond.html"></iframe>
+            <div class="reload" onclick=reload()>
+              <image style="width:80%;height: 80%"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
+            </div>
+            <div class="full">
+              <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png">
+              </image>
+              <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png">
+              </image>
+
+            </div>
+          </div>
+          <span style="display:inline-block;color:#e100ff;font-weight: bold"> ب ) </span>
+
+          پیوند دوگانه کربن-کربن (مثل اتِن و اسیدهای چرب غیر اشباع) تشکیل یک صفحه می دهد (عامل ایجاد دو ایزومر سیس و
+          ترانس)
+          <div class="wrap" id="wrap" style="position: relative;">
+            <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="doublebond.html">
+            </iframe>
+            <div class="reload" onclick=reload()>
+              <image style="width:80%;height: 80%"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
+            </div>
+            <div class="full">
+              <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png">
+              </image>
+              <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png">
+              </image>
+
+            </div>
+          </div>
+
+          <span style="display:inline-block;color:#e100ff;font-weight: bold;">● نکته بسیار مهم:</span>اتم های متصل با
+          پیوند یگانه میتوانند
+          حول پیوند یگانه بچرخند اما
+          در پیوند دوگانه اتم ها محدودیت چرخش دارند ← استثنا: وجود گروه‌های بسیار بزرگ یا باردار روی دو اتم متصل با
+          پیوند یگانه ←
+          محدودیت چرخش <br>
+          <div class="wrap" id="wrap" style="position: relative;">
+            <iframe class="iframe" width="640" height="480" id="iframe" frameborder="0" allow="autoplay;"
+              data-src="https://sketchfab.com/models/c9c477288c12452d9f479bac7f784a05/embed"> </iframe>
+            <div class="reload" onclick=reload()>
+              <image style="width:80%;height: 80%"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
+            </div>
+            <div class="full">
+              <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png">
+              </image>
+              <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
+                src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png">
+              </image>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
       <div class="h1parrent" id="biomolecules">
         <div class="h1" id="h1" style="color:#ff00f7"> بیومولکول ها
           <a style="width: 100%;position: absolute;height:100% ;" href="#biomolecules"></a>
@@ -6396,549 +6911,6 @@
 
 
         </div><br>
-        <div class="h2parrent" id="orbitals">
-          <div class="h2" style="color:#ff00f7"> ساختار الکترونی ، اوربیتال ها و زوایای پیوندی عناصر مهم بیولوژیک
-            <a style="width: 100%;position: absolute;height:100% ;" href="#orbitals"></a>
-          </div>
-
-
-          <div class="content" id="content">
-            <span style="display:inline-block; color:#e100ff;font-weight: bold;">● الکترون های لایه ظرفیت(یا
-              والانس):</span>
-            بیرونی ترین لایه الکترونی عناصر که در پیوندهای شیمیایی مشارکت میکنند . به
-            همین دلیل اشتراک این الکترون ها پیوند کووالانسی نام دارد(کو:پیشوند به معنای مشترک)<br>
-
-            <div class="soundplayer" data-src="valence.m4a" dir="ltr" style="display: grid;">
-              <div
-                style=" text-align: center; top: -10px;position: relative;align-items: center; height: 15px;font-size: x-small;">
-                لایه الکترونی ظرفیت </div>
-              <div style="display: flex;">
-                <div class="play-pause-btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
-                    <path class="play-pause-icon" d="M18 12L0 24V0" />
-                  </svg>
-                </div>
-                <div class="speed-btn">1X</div>
-                <div class="controls">
-                  <span class="current-time time">0:00</span>
-                  <div class="lessonslider">
-                    <div class="progress"></div>
-                  </div>
-                  <span class="total-time time">0:00</span>
-                </div>
-                <audio></audio>
-              </div>
-            </div>
-
-            <div class="soundplayer" data-src="octet rule.m4a" dir="ltr" style="display: grid;">
-              <div
-                style="text-align: center; top: -10px; position: relative; align-items: center; height: 15px; font-size: x-small;">
-                قانون اوکتت(هشت تایی شدن)
-              </div>
-              <div class="soundcontrol" style="display: flex;">
-                <div class="play-pause-btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
-                    <path class="play-pause-icon" d="M18 12L0 24V0" />
-                  </svg>
-                </div>
-
-                <div class="speed-btn">1X</div>
-
-                <div class="controls">
-                  <span class="current-time time">0:00</span>
-                  <div class="lessonslider">
-                    <div class="progress"></div>
-                  </div>
-                  <span class="total-time time">0:00</span>
-                </div>
-                <audio src="octet rule.m4a"></audio>
-              </div>
-            </div>
-
-
-            <div class="content" id="content" style="margin-top: 15px;">
-
-              <div class="image-container" id="imagecontainer">
-                <img src="Carbon.png" alt="Image to magnify" class="main-image" id="mainImage">
-              </div>
-              <div class="magnifier-view" id="magnifierView">
-                <img src="Carbon.png" alt="Magnified Image" class="magnified-image" id="magnifiedImage">
-              </div>
-              <img class="zoomin" id="zoomin"
-                style="border-raius:10px;backdrop-filter: blur(5px);width: 15px;height: 15px;position: absolute;top:5px;right:12px;display: flex;z-index: 100;cursor: pointer;padding: 5px;background: rgba(0, 0, 0, 0.4);border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.4);"
-                src="zoomin.png">
-              <img class="zoomout" id="zoomout"
-                style="border-raius:10px;backdrop-filter: blur(5px);width: 15px;height: 15px;position: absolute;top:5px;right:12px;display: none;z-index: 100;cursor: pointer;padding: 5px;background: rgba(0, 0, 0, 0.4);border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.4);"
-                onclick="zoomo()" src="zoomout.png">
-
-            </div>
-
-            <div class="soundplayer" data-src="carbon octete.m4a" dir="ltr" style="display: grid;">
-              <div
-                style=" text-align: center; top: -10px;position: relative;align-items: center; height: 15px;font-size: x-small;">
-                توضیح جدول کربن</div>
-              <div style="display: flex;">
-                <div class="play-pause-btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
-                    <path class="play-pause-icon" d="M18 12L0 24V0" />
-                  </svg>
-                </div>
-                <div class="controls">
-                  <span class="current-time time">0:00</span>
-                  <div class="lessonslider">
-                    <div class="progress"></div>
-                  </div>
-                  <span class="total-time time">0:00</span>
-                </div>
-                <audio></audio>
-              </div>
-            </div>
-            <div class="content" id="content" style="margin-top: 15px;">
-
-              <div class="image-container" id="imagecontainer">
-                <img src="nitrogen.png" alt="Image to magnify" class="main-image" id="mainImage">
-              </div>
-              <div class="magnifier-view" id="magnifierView">
-                <img src="nitrogen.png" alt="Magnified Image" class="magnified-image" id="magnifiedImage">
-              </div>
-              <img class="zoomin" id="zoomin"
-                style="border-raius:10px;backdrop-filter: blur(5px);width: 15px;height: 15px;position: absolute;top:5px;right:12px;display: flex;z-index: 100;cursor: pointer;padding: 5px;background: rgba(0, 0, 0, 0.4);border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.4);"
-                src="zoomin.png">
-              <img class="zoomout" id="zoomout"
-                style="border-raius:10px;backdrop-filter: blur(5px);width: 15px;height: 15px;position: absolute;top:5px;right:12px;display: none;z-index: 100;cursor: pointer;padding: 5px;background: rgba(0, 0, 0, 0.4);border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.4);"
-                onclick="zoomo()" src="zoomout.png">
-
-            </div>
-            <div class="soundplayer" data-src="nitrogen octete.m4a" dir="ltr" style="display: grid;">
-              <div
-                style=" text-align: center; top: -10px;position: relative;align-items: center; height: 15px;font-size: x-small;">
-                توضیح جدول نیتروژن</div>
-              <div style="display: flex;">
-                <div class="play-pause-btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
-                    <path class="play-pause-icon" d="M18 12L0 24V0" />
-                  </svg>
-                </div>
-                <div class="controls">
-                  <span class="current-time time">0:00</span>
-                  <div class="lessonslider">
-                    <div class="progress"></div>
-                  </div>
-                  <span class="total-time time">0:00</span>
-                </div>
-                <audio></audio>
-              </div>
-            </div>
-
-            <div class="content" id="content" style="margin-top: 15px;">
-
-              <div class="image-container" id="imagecontainer">
-                <img src="Oxygen.png" alt="Image to magnify" class="main-image" id="mainImage">
-              </div>
-              <div class="magnifier-view" id="magnifierView">
-                <img src="Oxygen.png" alt="Magnified Image" class="magnified-image" id="magnifiedImage">
-              </div>
-              <img class="zoomin" id="zoomin"
-                style="border-raius:10px;backdrop-filter: blur(5px);width: 15px;height: 15px;position: absolute;top:5px;right:12px;display: flex;z-index: 100;cursor: pointer;padding: 5px;background: rgba(0, 0, 0, 0.4);border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.4);"
-                src="zoomin.png">
-              <img class="zoomout" id="zoomout"
-                style="border-raius:10px;backdrop-filter: blur(5px);width: 15px;height: 15px;position: absolute;top:5px;right:12px;display: none;z-index: 100;cursor: pointer;padding: 5px;background: rgba(0, 0, 0, 0.4);border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.4);"
-                onclick="zoomo()" src="zoomout.png">
-
-
-            </div>
-
-            <div class="soundplayer" data-src="Oxygen.m4a" dir="ltr" style="display: grid;">
-              <div
-                style=" text-align: center; top: -10px;position: relative;align-items: center; height: 15px;font-size: x-small;">
-                توضیح جدول نیتروژن</div>
-              <div style="display: flex;">
-                <div class="play-pause-btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
-                    <path class="play-pause-icon" d="M18 12L0 24V0" />
-                  </svg>
-                </div>
-                <div class="controls">
-                  <span class="current-time time">0:00</span>
-                  <div class="lessonslider">
-                    <div class="progress"></div>
-                  </div>
-                  <span class="total-time time">0:00</span>
-                </div>
-                <audio></audio>
-              </div>
-            </div>
-            <span style="display:inline-block; color:#e100ff;font-weight: bold;">● اوربیتال:</span>
-
-            به معنای مدار است که از مدل های قدیمی اتمی مثل مدل بور گرفته شده و تصور میکردند الکترون در
-            مسیر مشخصی دور هسته میچرخه اما زهی خیال باطل...مدل جدید مکانیک کوانتومی طبق معادله موجی داداشمون شرودینگر
-            میگه ما فقط میتونیم احتمال حضور
-            الکترون در یک نقطه رو مشخص کنیم و بخشی از فضای اطراف هسته اتم که احتمال حضور
-            الکترون توش خیلی بالاست میگن اوربیتال که به مجموع اوربیتال های یک اتم ابر الکترونی گفته میشه.این کلمه ابر
-            یعنی
-            الکترون میتونه هرجایی از این
-            ابر باشه در هر لحظه و در واقع احتمال حضور الکترون توی کل نقاط تشکیل دهنده ابر توزیع شده مثل اینکه ی نفر به
-            صورت رندوم هر روز یا میره رستوران یا پارک یا باشگاه پس احتمال حضورش تو هر کدوم هست چون رندومه و نمیتونیم
-            با
-            قطعیت بگیم هر روز کجاست اما میدونیم احتمال داره تو هر کدوم از این سه تا باشه پس مکان و مسیر دقیق الکترون
-            مشخص نیست ولی میدونیم
-            احتمال حضورش تو قسمتی از فضای اطراف هسته خیلی بالاست که بهش میگن اوربیتال . با حل معادله شرودینگر عددهایی
-            بدست
-            میاد که سطح انرژی و اندازه اوربیتال، شکل اوربیتال و جهت گیری فضایی اوربیتال هارو مشخص میکنه .
-            <br>
-            <div class="wrap" id="wrap" style="position: relative;">
-              <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="orbitalsp.html"></iframe>
-              <div class="reload" onclick=reload()>
-                <image style="width:80%;height: 80%"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
-              </div>
-              <div class="full">
-                <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png"></image>
-                <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png"></image>
-
-              </div>
-            </div>
-            <span style="display:inline-block; color:#e100ff;font-weight: bold;">● زیر لایه S:</span>
-
-            یک اوربیتال کروی<br>
-            <span style="display:inline-block; color:#e100ff;font-weight: bold;">● زیر لایه p:</span>
-
-            سه اوربیتال دمبلی انگار سه تا دمبل بر هم عمود هستن و به نقاط وسط دمبل ها که احتمال حضور
-            الکترون
-            در اونجا صفره میگن گره و احتمال حضور الکترون در سر دمبل ها بالاتر است<br>
-            نکته:هرچقد فاصله از هسته بیشتر میشه انرژی الکترون ها بیشتر و اوربیتال ها بزرگتر میشه(شکل زیر)<br>
-            <div class="wrap" id="wrap" style="position: relative;">
-              <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="orbitalsize.html"></iframe>
-              <div class="reload" onclick=reload()>
-                <image style="width:80%;height: 80%"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
-              </div>
-              <div class="full">
-                <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png"></image>
-                <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png"></image>
-
-              </div>
-            </div>
-            <span style="display:inline-block; color:#e100ff;font-weight: bold;">● نکته:</span>
-            دقت کنید اطراف هسته شکل کروی و یا دمبلی وجود ندارد و این اشکال فقط نشان دهنده
-            مکان هایی هستن که احتمال حضور الکترون در اونها بالاست و مجموعه این نقاط این شکل هارو پدید میارن.به شکل های
-            زیر
-            دقت کنید<br>
-
-            <div class="wrap" id="wrap" style="position: relative;">
-              <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="sorbitaldot.html"></iframe>
-              <div class="reload" onclick=reload()>
-                <image style="width:80%;height: 80%"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
-              </div>
-              <div class="full">
-                <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png"></image>
-                <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png"></image>
-
-              </div>
-            </div>
-            <span style="display:inline-block; color:#e100ff;font-weight: bold;">● نکته:</span>
-
-            دقت کنید این نقطه ها الکترون نیستند بلکه نقاطی هستند که احتمال حضور الکترون در آنجا بالا است یعنی
-            هرچقد تراکم نقاط در مکانی بیشتر باشد احتمال حضور الکترون بیشتر است و مجموع این نقاط شکل های اوربیتال
-            ها(کروی، دمبلی و...)را پدید می آورد
-            <br>
-            <span style="display:inline-block;color:#e100ff;font-weight: bold;">● اوربیتال های هیبریدی یا مولکولی
-              :</span>
-            حالا وقتی یک اتم میخواد با یک اتم دیگه پیوند بده اوربیتال ها ی لایه آخر جوری تغییر
-            میکنه که محکم ترین پیوند تشکیل بشه و الکترون ها همدیگرو دفع نکنن. یعنی الکترون های هر اتم اول فقط دور یک
-            هسته
-            حضور داشتن حالا دور دو تا هسته همزمان
-            حضور دارن که باعث میشه مثل یک طناب که دور دو تا چیز میپیچی الکترون هم هسته دو اتم رو کنار هم نگه داره و
-            پیوند
-            تشکیل بشه .حالا
-            به این اوربیتال های جدید که حاصل مخلوط شدن یا هیبرید
-            شدن چند تا اوربیتاله میگن اوربیتال هیبریدی
-            <div class="wrap" id="wrap" style="position: relative;">
-              <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="hybrid types.html"></iframe>
-              <div class="reload" onclick=reload()>
-                <image style="width:80%;height: 80%"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
-              </div>
-              <div class="full">
-                <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png"></image>
-                <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png"></image>
-
-              </div>
-            </div>
-
-            <br>
-            <div class="soundplayer" data-src="1.m4a" dir="ltr">
-              <div class="play-pause-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
-                  <path class="play-pause-icon" d="M18 12L0 24V0" />
-                </svg>
-              </div>
-              <div class="controls">
-                <span class="current-time time">0:00</span>
-                <div class="lessonslider">
-                  <div class="progress"></div>
-                </div>
-                <span class="total-time time">0:00</span>
-              </div>
-              <audio></audio>
-            </div>
-
-            <span
-              style="color:#e100ff;font-weight: bold;display: flex; border-bottom: 1px solid; text-align: center;justify-content: center;">
-              انواع هم پوشانی اوربیتال ها در پیوندها</span>
-
-            <div class="wrap" id="wrap" style="position: relative;">
-              <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="sigmapibond.html"></iframe>
-              <div class="reload" onclick=reload()>
-                <image style="width:80%;height: 80%"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
-              </div>
-              <div class="full">
-                <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png"></image>
-                <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png"></image>
-
-              </div>
-
-            </div><br>
-            <span
-              style="color:#e100ff;font-weight: bold;display: flex; border-bottom: 1px solid; text-align: center;justify-content: center;">
-              انواع هندسه های مولکولی و زوایای پیوندی عناصر کربن، نیتروژن و اکسیژن
-            </span>
-            <span style="display:inline-block;color:#e100ff;font-weight: bold;">● نکته:</span>
-            در اشکال سه بعدی زیر فقط اتم مورد نظر به صورت رنگی نشان داده شده و بقیه اتم ها به صورت سفید نمایش داده
-            شده
-            <br><br><br>
-            <span style="display:inline-block;color:#e100ff;font-weight: bold;">●هیبریداسیون sp<sup>3</sup>:</span> همه
-            پیوندها یگانه
-            <div class="wrap" id="wrap" style="position: relative;">
-              <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="sp3.html"></iframe>
-              <div class="reload" onclick=reload()>
-                <image style="width:80%;height: 80%"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
-              </div>
-              <div class="full">
-                <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png"></image>
-                <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png"></image>
-
-              </div>
-            </div> <br>
-            <span style="display:inline-block;color:#e100ff;font-weight: bold;">● هیبریداسیون sp<sup>2</sup>: </span>
-            یک پیوند دوگانه و بقیه پیوندها یگانه
-
-            <div class="wrap" id="wrap" style="position: relative;">
-              <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="sp2.html"></iframe>
-              <div class="reload" onclick=reload()>
-                <image style="width:80%;height: 80%"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
-              </div>
-              <div class="full">
-                <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png"></image>
-                <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png"></image>
-
-              </div>
-            </div> <br>
-            <span style="display:inline-block;color:#e100ff;font-weight: bold;">● هیبریداسیون sp<sup></sup>: </span>
-            دو پیوند دوگانه(فقط در کربن وجود دارد)
-
-            <div class="wrap" id="wrap" style="position: relative;">
-              <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="sp.html"></iframe>
-              <div class="reload" onclick=reload()>
-                <image style="width:80%;height: 80%"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
-              </div>
-              <div class="full">
-                <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png"></image>
-                <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png"></image>
-
-              </div>
-            </div>
-            <span
-              style="color:#e100ff;font-weight: bold;display: flex; border-bottom: 1px solid; text-align: center;justify-content: center;">
-              مهم ترین اوربیتال های هیبریدی در بیوشیمی</span>
-
-
-
-            <span style="display:inline-block;color:#e100ff;font-weight: bold;"> ۱-اوربیتال های هیبریدی sp<sup>3</sup>
-            </span>
-            در کربن با آرایش چهاروجهی که مشخص کننده شکل سه بعدی بیومولکول هایی مثل
-            قندهاست
-
-            <div class="wrap" id="wrap" style="position: relative;">
-              <iframe class="iframe" id="iframe" loading="lazy" tabindex="0"
-                data-src="https://raw.githack.com/Science2023/3dbiochemistry/main/methane.html"></iframe>
-              <div class="reload" onclick=reload()>
-                <image style="width:80%;height: 80%"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
-              </div>
-              <div class="full">
-                <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png">
-                </image>
-                <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png">
-                </image>
-
-              </div>
-            </div>
-            <span style="display:inline-block;color:#e100ff;font-weight: bold;">●</span>
-
-            در پیوند یگانه کربن-کربن: هر کربن یک ساختار چهار
-            وجهی (مثل اتان)
-            <br>
-
-
-            <div class="wrap" id="wrap" style="position: relative;">
-              <iframe class="iframe" id="iframe" loading="lazy" tabindex="0"
-                data-src="https://raw.githack.com/Science2023/3dbiochemistry/main/ethane.html"></iframe>
-              <div class="reload" onclick=reload()>
-                <image style="width:80%;height: 80%"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
-              </div>
-              <div class="full">
-                <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png">
-                </image>
-                <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png">
-                </image>
-
-              </div> <br>
-            </div>
-            <span style="display:inline-block;color:#e100ff;font-weight: bold">● نکته:</span>در مولکول های آلی مثل گلوکز
-            هر کربن با چهار
-            پیوند
-            یگانه
-            دارای ساختار چهار وجهی است <br>
-            <br>
-            <span style="display:inline-block;color:#e100ff;font-weight: bold;">● مولکول
-              گلوکز:</span>دقت کنید
-            .هر اتم کربن(آبی) دارای ساختار چهار وجهی با چهار اتم متصل به آن است و به همین دلیل کونفورماسیون های قایق و
-            صندلی در گلوکز شکل میگیرد</p><br>
-
-            <div class="wrap" id="wrap" style="position: relative;">
-
-              <iframe class="iframe" id="iframe" loading="lazy" tabindex="0"
-                data-src="https://raw.githack.com/Science2023/3dbiochemistry/main/Glucose-chair.html">
-              </iframe>
-              <div class="reload" onclick=reload()>
-                <image style="width:80%;height: 80%"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
-              </div>
-              <div class="full">
-                <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png">
-                </image>
-                <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png">
-                </image>
-
-              </div>
-            </div>
-            <style>
-              @media all and (orientation: portrait) {
-                #glucose {
-                  height: fit-content
-                }
-              }
-            </style><br>
-            <span style="display:inline-block;color:#e100ff;font-weight: bold;"> ۲-اوربیتال های sp<sup>2</sup> </span>
-            با آرایش سه ضلعی مسطح که اگر دو اتم با این ارایش به هم متصل شوند(با پیوند
-            دوگانه مثل اتان و یا با پیوند رزونانسی مثل پیوند پپتیدی) انگار دو مثلث از روبرو به هم میچسبند و تشکیل ساختار
-            صفحه ای می دهند یعنی اتم ها در یک سطح قرار می گیرند<br>
-            <span style="display:inline-block;color:#e100ff;font-weight: bold">● دو نوع مهم هیبریداسیون sp<sup>2</sup>
-              در بیوشیمی:</span>
-            <br>
-            <span style="display:inline-block;color:#e100ff;font-weight: bold"> الف )</span>
-
-            پیوند پپتیدی کربن-نیتروژن به علت خاصیت رزونانسی تشکیل صفحات پپتیدی می دهد که باعث محدودیت چرخش پیوند
-            پپتیدی و پایداری آن می شود که در تعیین ساختار سه بعدی پروتئین ها نقش دارد <br>
-            نکته:در هنگام برقراری پیوند پپتیدی ساختار sp<sup>3</sup> نیتروژن(هرم با قاعده سه ضلعی) با تبدیل جفت الکترون
-            غیر پیوندی به یک پیوند
-            پای با خاصیت رزونانسی استثنائا به ساختار sp<sup>2</sup> با ارایش سه ضلعی مسطح (شبیه آرایش کربن با یک پیوند
-            دوگانه)تبدیل
-            می شود و با اتصال به کربن با ساختار sp<sup>2</sup> تشکیل صفحه پپتیدی
-            می دهد<br>
-            <div class="wrap" id="wrap" style="position: relative;">
-              <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="peptidebond.html"></iframe>
-              <div class="reload" onclick=reload()>
-                <image style="width:80%;height: 80%"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
-              </div>
-              <div class="full">
-                <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png">
-                </image>
-                <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png">
-                </image>
-
-              </div>
-            </div>
-            <span style="display:inline-block;color:#e100ff;font-weight: bold"> ب ) </span>
-
-            پیوند دوگانه کربن-کربن (مثل اتِن و اسیدهای چرب غیر اشباع) تشکیل یک صفحه می دهد (عامل ایجاد دو ایزومر سیس و
-            ترانس)
-            <div class="wrap" id="wrap" style="position: relative;">
-              <iframe class="iframe" id="iframe" loading="lazy" tabindex="0" data-src="doublebond.html">
-              </iframe>
-              <div class="reload" onclick=reload()>
-                <image style="width:80%;height: 80%"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
-              </div>
-              <div class="full">
-                <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png">
-                </image>
-                <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png">
-                </image>
-
-              </div>
-            </div>
-
-            <span style="display:inline-block;color:#e100ff;font-weight: bold;">● نکته بسیار مهم:</span>اتم های متصل با
-            پیوند یگانه میتوانند
-            حول پیوند یگانه بچرخند اما
-            در پیوند دوگانه اتم ها محدودیت چرخش دارند ← استثنا: وجود گروه‌های بسیار بزرگ یا باردار روی دو اتم متصل با
-            پیوند یگانه ←
-            محدودیت چرخش <br>
-            <div class="wrap" id="wrap" style="position: relative;">
-              <iframe class="iframe" width="640" height="480" id="iframe" frameborder="0" allow="autoplay;"
-                data-src="https://sketchfab.com/models/c9c477288c12452d9f479bac7f784a05/embed"> </iframe>
-              <div class="reload" onclick=reload()>
-                <image style="width:80%;height: 80%"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/refresh.png"></image>
-              </div>
-              <div class="full">
-                <image class="fullpng" id="full1" style="width:80%;height: 80%;position:absolute;visibility: visible;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen.png">
-                </image>
-                <image class="fullpng" id="full2" style="width:80%;height: 80%;position:absolute;visibility: hidden;"
-                  src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/fullscreen1.png">
-                </image>
-
-              </div>
-
-            </div>
-          </div>
-        </div>
 
         <div class="h2parrent" id="commonmolecules">
           <div class="h2" style="z-index: 400;color:#ff00f7"> مولکول‌های کوچک مشترک در سلول‌ها
@@ -8465,29 +8437,38 @@
             <div id="titr3"
               style="position: relative;width: 95%;height:fit-content;margin: auto;top: 10px;text-align: right;padding: 5px;">
 
-              <a class="tableitems" style="color:#00fff6;background: ;" href="#dynamic">■ موجودات زنده: در حالت ثابت
+              <a class="tableitems three" style="color:#00fff6;background: ;" href="#dynamic">■ موجودات زنده: در حالت
+                ثابت
                 پویا(نه در تعادل با محیط)</a><br>
-              <a class="tableitems" style="color:#00fff6;" href="#matter&energy">■ موجودات زنده: تغییر شکل ماده و انرژی
+              <a class="tableitems three" style="color:#00fff6;" href="#matter&energy">■ موجودات زنده: تغییر شکل ماده و
+                انرژی
                 دریافتی از محیط</a><br>
 
-              <a class="tableitems" style="color:#00fff6;" href="#firstrule">■ قانون اول ترمودینامیک(بقای انرژی در طی
+              <a class="tableitems three" style="color:#00fff6;" href="#firstrule">■ قانون اول ترمودینامیک(بقای انرژی در
+                طی
                 تغییرات شیمیایی و فیزیکی)</a><br>
 
-              <a class="tableitems" style="color:#00fff6;" href="#secoundrule">■ قانون دوم ترمودینامیک (تمایل فرایندهای
+              <a class="tableitems three" style="color:#00fff6;" href="#secoundrule">■ قانون دوم ترمودینامیک (تمایل
+                فرایندهای
                 طبیعی به افزایش انتروپی)
               </a><br>
-              <a class="tableitems" style="color:#00fff6;" href="#order">■ ایجاد و حفظ نظم (کاهش انتروپی) نیازمند کار و
+              <a class="tableitems three" style="color:#00fff6;" href="#order">■ ایجاد و حفظ نظم (کاهش انتروپی) نیازمند
+                کار و
                 انرژی </a><br>
-              <a class="tableitems" style="color:#00fff6;" href="#energycoupling">■ ارتباط واکنش ها در بیولوژی با جفت
+              <a class="tableitems three" style="color:#00fff6;" href="#energycoupling">■ ارتباط واکنش ها در بیولوژی با
+                جفت
                 شدن انرژی واکنش ها</a><br>
-              <a class="tableitems" style="color:#00fff6;" href="#gibsfreeenergy">■ثابت تعادل (Keq) وانرژی آزاد
+              <a class="tableitems three" style="color:#00fff6;" href="#gibsfreeenergy">■ثابت تعادل (Keq) وانرژی آزاد
                 استاندارد (°ΔG) :
                 دو روش سنجش میزان خودبخودی بودن واکنش</a><br>
-              <a class="tableitems" style="color:#00fff6;" href="#gibbs">■ ΔG هر واکنش تابع °ΔG (ΔG استاندارد) آن واکنش
+              <a class="tableitems three" style="color:#00fff6;" href="#gibbs">■ ΔG هر واکنش تابع °ΔG (ΔG استاندارد) آن
+                واکنش
                 است</a><br>
-              <a class="tableitems" style="color:#00fff6;" href="#enzymes">■ آنزیم ها(کاتالیزورهای زیستی): تسریع انجام
+              <a class="tableitems three" style="color:#00fff6;" href="#enzymes">■ آنزیم ها(کاتالیزورهای زیستی): تسریع
+                انجام
                 واکنش های بیوشیمیایی</a><br>
-              <a class="tableitems" style="color:#00fff6;" href="#metabolism_regulation">■ تنظیم متابولیسم:رسیدن به
+              <a class="tableitems three" style="color:#00fff6;" href="#metabolism_regulation">■ تنظیم متابولیسم:رسیدن
+                به
                 تعادل و صرفه جویی</a><br>
 
             </div><br>
@@ -9078,9 +9059,10 @@
             <div id="titr4"
               style="position: relative;width: 95%;height:fit-content;margin: auto;top: 10px;text-align: right;padding: 5px;font-weight: bold;">
 
-              <a class="tableitems" style="color: #ff0000;" href="#geneticscontinuity">■ تداوم ژنتیک:وظیفه مولکول های
+              <a class="tableitems four" style="color: #ff0000;" href="#geneticscontinuity">■ تداوم ژنتیک:وظیفه مولکول
+                های
                 DNA</a><br>
-              <a class="tableitems" class="tableitems" style="color: #ff0000;" href="#dnasequence">■ توالی خطی DNA: کد
+              <a class="tableitems four" style="color: #ff0000;" href="#dnasequence">■ توالی خطی DNA: کد
                 کننده پروتئین ها</a><br>
 
 
@@ -9182,21 +9164,25 @@
             <div id="titr2"
               style="position: relative;width: 95%;height:fit-content;margin: auto;top: 10px;text-align: right;padding: 5px;">
 
-              <a class="tableitems" style="color:#ff6831;" href="#cell">■ سلول: واحد ساختاری و عملکردی همه موجودات
+              <a class="tableitems five" style="color:#ff6831;" href="#cell">■ سلول: واحد ساختاری و عملکردی همه موجودات
                 زنده</a><br>
-              <a class="tableitems" style="color:#ff6831;" href="#celltypes">■ انواع سلول ها از نظر ساختار:باکتری
+              <a class="tableitems five" style="color:#ff6831;" href="#celltypes">■ انواع سلول ها از نظر ساختار:باکتری
                 ها،آرکی ها و یوکاریوت ها</a><br>
 
-              <a class="tableitems" style="color:#ff6831;" href="#energyresource">■ انواع سلول ها از نظر منبع انرژی و
+              <a class="tableitems five" style="color:#ff6831;" href="#energyresource">■ انواع سلول ها از نظر منبع انرژی
+                و
                 کربن</a><br>
 
-              <a class="tableitems" style="color:#ff6831;" href="#bactervsarchi">■ شباهت ها و تفاوت های باکتری ها و آرکی
+              <a class="tableitems five" style="color:#ff6831;" href="#bactervsarchi">■ شباهت ها و تفاوت های باکتری ها و
+                آرکی
                 ها</a><br>
-              <a class="tableitems" style="color:#ff6831;" href="#eucaryotes">■ سلول های یوکاریوتی:دارای اندامک های
+              <a class="tableitems five" style="color:#ff6831;" href="#eucaryotes">■ سلول های یوکاریوتی:دارای اندامک های
                 غشایی(امکان جداسازی برای مطالعه)</a><br>
-              <a class="tableitems" style="color:#ff6831;" href="#cytoplasm">■ سیتوپلاسم:سازماندهی توسط سیتواسکلتون و
+              <a class="tableitems five" style="color:#ff6831;" href="#cytoplasm">■ سیتوپلاسم:سازماندهی توسط سیتواسکلتون
+                و
                 بسیار پویا</a><br>
-              <a class="tableitems" style="color:#ff6831;" href="#invitro">■مطالعات In vitro(آزمایشگاهی): احتمال چشم
+              <a class="tableitems five" style="color:#ff6831;" href="#invitro">■مطالعات In vitro(آزمایشگاهی): احتمال
+                چشم
                 پوشی از برهمکنش های مهم بین مولکولی</a><br>
 
             </div><br>
@@ -9911,18 +9897,22 @@
           <div Style="width:100%;position: relative;">
             <div id="titr2"
               style="position: relative;width: 95%;height:fit-content;margin: auto;top: 10px;text-align: right;padding: 5px;">
-              <a class="tableitems" style="color:#6bff00;" href="#twoimportant">■دو نکته مهم </a><br>
-              <a class="tableitems" style="color:#6bff00;" href="#evolutiontheories">■ نظریه های تکاملی</a><br>
-              <a class="tableitems" style="color:#6bff00;" href="#firstbiomolecules">■ تکامل شیمیایی:ظهور بیومولکول های
+              <a class="tableitems six" style="color:#6bff00;" href="#twoimportant">■دو نکته مهم </a><br>
+              <a class="tableitems six" style="color:#6bff00;" href="#evolutiontheories">■ نظریه های تکاملی</a><br>
+              <a class="tableitems six" style="color:#6bff00;" href="#firstbiomolecules">■ تکامل شیمیایی:ظهور بیومولکول
+                های
                 اولیه</a><br>
-              <a class="tableitems" style="color:#6bff00;" href="#firstgenes">■ ژن ها و آنزیم های اولیه: احتمالا از جنس
+              <a class="tableitems six" style="color:#6bff00;" href="#firstgenes">■ ژن ها و آنزیم های اولیه: احتمالا از
+                جنس
                 RNA </a><br>
 
-              <a class="tableitems" style="color:#6bff00;" href="#eucaryticcells">■ ظهور سلول های یوکاریوتی</a><br>
+              <a class="tableitems six" style="color:#6bff00;" href="#eucaryticcells">■ ظهور سلول های یوکاریوتی</a><br>
 
-              <a class="tableitems" style="color:#6bff00;" href="#genomics">■ مطالعه ژنوم(ژنومیکس): اختصاص هر ژن به یک
+              <a class="tableitems six" style="color:#6bff00;" href="#genomics">■ مطالعه ژنوم(ژنومیکس): اختصاص هر ژن به
+                یک
                 فرایند خاص سلولی</a><br>
-              <a class="tableitems" style="color:#6bff00;" href="#genomicsinmed">■ اهمیت مقایسه ژنومیک در پزشکی</a><br>
+              <a class="tableitems six" style="color:#6bff00;" href="#genomicsinmed">■ اهمیت مقایسه ژنومیک در
+                پزشکی</a><br>
 
 
             </div><br>
@@ -10185,16 +10175,16 @@
           <div Style="width:100%;position: relative;">
             <div id="titr2"
               style="position: relative;width: 95%;height:fit-content;margin: auto;top: 10px;text-align: right;padding: 5px;font-weight: bold;">
-              <a class="tableitems" style="color:#ff1f71;" href="#equation&graph">■ معادله و نمودار</a><br>
+              <a class="tableitems seven" style="color:#ff1f71;" href="#equation&graph">■ معادله و نمودار</a><br>
 
-              <a class="tableitems" style="color:#ff1f71;" href="#fracture">■ کسر و قوانین آن</a><br>
+              <a class="tableitems seven" style="color:#ff1f71;" href="#fracture">■ کسر و قوانین آن</a><br>
 
-              <a class="tableitems" style="color:#ff1f71;" href="#exponent">■ توان و قوانین آن </a><br>
+              <a class="tableitems seven" style="color:#ff1f71;" href="#exponent">■ توان و قوانین آن </a><br>
 
-              <a class="tableitems" style="color:#ff1f71;" href="#exponentialnotation">■ نماد علمی</a><br>
-              <a class="tableitems" style="color:#ff1f71;" href="#logarithm">■ لگاریتم و قوانین آن</a><br>
+              <a class="tableitems seven" style="color:#ff1f71;" href="#exponentialnotation">■ نماد علمی</a><br>
+              <a class="tableitems seven" style="color:#ff1f71;" href="#logarithm">■ لگاریتم و قوانین آن</a><br>
 
-              <a class="tableitems" style="color:#ff1f71;" href="#prefix">■ پیشوندهای مهم ریاضی</a><br>
+              <a class="tableitems seven" style="color:#ff1f71;" href="#prefix">■ پیشوندهای مهم ریاضی</a><br>
 
 
 
