@@ -1412,6 +1412,7 @@
     }
 
     .maintitrintable {
+      position: relative;
       cursor: pointer;
       font-family: 'Shabnam';
       text-decoration: none;
@@ -1424,6 +1425,17 @@
       width: 180px;
       margin: 20px;
     }
+    .maintitrintable::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.25), transparent);
+    transform: skewX(45deg) translate(0);
+    transition: 0.5s;
+    filter: blur(0px);}
 
 
     .tableitems {
@@ -1433,7 +1445,7 @@
       display: inline-block;
       border-radius: 5px;
       margin-top: 15px;
-      padding: 10px;
+      padding-right: 5px;
       width: 98%;
       box-sizing: border-box;
     }
@@ -4746,7 +4758,7 @@
 
 
   <div id="musicmenu">
-    <h1 class="musich1">موسیقی سه بعدی( لطفا با هندزفری گوش بدهید)</h1>
+    <h1 class="musich1">موزیک سه بعدی( با هندزفری گوش بده)</h1>
     <div class="songplayer">
 
       <div id="musicpics" style="  scroll-behavior: smooth;
@@ -9019,21 +9031,21 @@
 
         <div class="content" id="content">
           <span style='display:inline-block;color:#00fff6'>●</span>
-          سلول‌های زنده سنتز هزاران نوع کربوهیدرات ، چربی ، پروتئین و نوکلئیک اسید در نسبت‌های دقیق مورد نیاز سلول
-          در شرایط مختلف ← مثال: سنتز زیاد پیش سازهای پروتئین‌ها و نوکلئیک اسیدها در زمان رشد سریع سلول ← تنظیم
-          آنزیم‌های اصلی مسیرهای متابولیک ← تولید مولکول های پیش ساز به مقدار مناسب شرایط فعلی سلول<br>
+           سنتز هزاران نوع کربوهیدرات ، چربی ، پروتئین و نوکلئیک اسید در نسبت‌های دقیق مورد نیاز سلول
+          در شرایط مختلف ← مثال: افزایش سنتز پیش سازهای پروتئین‌ها و نوکلئیک اسیدها در زمان رشد سریع سلول ← تنظیم
+          آنزیم‌های اصلی مسیرهای متابولیک برای تولید مولکول های پیش ساز به مقدار مناسب <br>
           <span style='display:inline-block;color:#00fff6'>●</span>
           مثال: مسیر سنتز آمینو اسید ایزولوسین از ترئونین در پنج مرحله آنزیمی در E.coli <br>
 
           <img src="Isolucinpathway.jpg" alt="Image to magnify" class="main-image" id="mainImage">
           <span style='display:inline-block;color:#00fff6'>●</span>
 
-          تولید بیش از حد نیاز سلول ← تجمع ایزولوسین ← مهار فعالیت کاتالیتیک آنزیم اول مسیر(مهار فیدبکی) ← کاهش سریع
-          تولید ایزولسین و حفظ تعادل بین تولید و مصرف حد واسط‌های متابولیک<br>
+          تولید بیش از حد نیاز سلول ← تجمع ایزولوسین  و مهار فعالیت کاتالیتیک آنزیم اول مسیر(مهار فیدبکی) ← کاهش سریع
+          تولید ایزولوسین و حفظ تعادل بین تولید و مصرف حد واسط‌ های متابولیک<br>
 
           <span style="display:inline-block;color:#00fff6;">● سیستم بیولوژی:</span>
-          مطالعه سراسری تنظیم متابولیسم (کل نگر)← مطالعه متابولیسم به شکل یک شبکه در هم تنیده با مسیرهای در هم تنیده و
-          مرتبط و تغییر در غلظت هر متابولیت باعث ایجاد یک اثر موجی ← تاثیر بر جریان مواد در مسیرهای دیگر<br>
+          مطالعه سراسری تنظیم متابولیسم (کل نگر)← مطالعه متابولیسم به شکل یک شبکه با مسیرهای در هم تنیده و
+          مرتبط زیرا تغییر غلظت هر متابولیت باعث ایجاد یک اثر موجی می شود یعنی بر جریان مواد در مسیرهای دیگر اثر می گذارد<br>
           <span style="display:inline-block;color:#00fff6;">● نکته:</span>
 
           تنظیم سنتز آنزیم‌ها (در پاسخ به افزایش یا کاهش نیاز به یک فرآورده متابولیک )و تنظیم بیان ژن ← لایه‌های
