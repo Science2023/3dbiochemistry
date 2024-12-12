@@ -37,7 +37,7 @@
     }
 
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
- 
+
 
     @font-face {
       font-family: "Iranian";
@@ -1399,7 +1399,7 @@
       border-radius: 5px;
       margin: 2px;
       margin-bottom: 20px;
-           top: 10px;
+      top: 10px;
       padding: 5px;
       padding-bottom: 20px;
       background: rgba(0, 0, 0, 0.5);
@@ -1425,17 +1425,19 @@
       width: 180px;
       margin: 20px;
     }
+
     .maintitrintable::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0.25), transparent);
-    transform: skewX(45deg) translate(0);
-    transition: 0.5s;
-    filter: blur(0px);}
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(to left, rgba(255, 255, 255, 0.25), transparent);
+      transform: skewX(45deg) translate(0);
+      transition: 0.5s;
+      filter: blur(0px);
+    }
 
 
     .tableitems {
@@ -1478,6 +1480,46 @@
       box-shadow: 2px 2px 5px rgb(255, 60, 0);
     }
 
+
+    .abstract-imagecontainer img {
+      width: 150px;
+      cursor: pointer;
+      border-radius: 10px;
+      margin: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .zoom-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 1);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      overflow: scroll;
+    }
+
+    @media all and (orientation: landscape) {
+      .zoom-container {
+        align-items: unset;
+
+      }
+    }
+
+    .zoom-image {
+      width: 100vw;
+      height: fit-content;
+      cursor: grab;
+      position: relative;
+      transform-origin: center center;
+      /* نقطه مرجع زوم */
+      transition: transform 0.3s ease-in-out;
+      /* انیمیشن زوم */
+    }
 
     @media all and (orientation: landscape) {
 
@@ -3121,7 +3163,7 @@
       top: 0px;
       margin: auto;
       position: sticky;
-      z-index: 1001;
+      z-index: 1000;
       width: 100%;
       height: 5vh;
       backdrop-filter: blur(5px);
@@ -3135,6 +3177,7 @@
       }
 
     }
+
 
 
     @media all and (orientation: landscape) {
@@ -3774,7 +3817,7 @@
       position: fixed;
       bottom: -1%;
       justify-content: space-around;
-      z-index: 1000;
+      z-index: 3;
       display: flex;
       flex-direction: row-reverse;
       place-items: center;
@@ -3812,9 +3855,26 @@
       visibility: visible;
 
     }
-
     #chaptermap::-webkit-scrollbar {
-      display: none;
+      width: 5px;
+      height: 5px;
+    }
+
+    /* Track */
+    #chaptermap::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+    }
+
+    /* Handle */
+    #chaptermap::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 50px;
+    }
+
+    /* Handle on hover */
+    #chaptermap::-webkit-scrollbar-thumb:hover {
+      background: #d1ae14ca;
     }
 
     #list {
@@ -3863,7 +3923,7 @@
         z-index: 999;
         height: 100%;
         width: 300px;
-        
+
       }
     }
 
@@ -4518,7 +4578,7 @@
       justify-content: center;
       position: sticky;
       top: 11.2vh;
-      z-index: 1000;
+      z-index: 3;
       border-radius: 5px;
       border: 2px solid
     }
@@ -5222,41 +5282,45 @@
 
 
 
-      <div style="position: relative;
-    width: 100%;
-    border-radius: 5px;
-    backdrop-filter: blur(10px);
-   ;display: flex;flex-wrap: wrap;padding-bottom: 20px;justify-content: right;">
+      <div class="abstractborder"
+        style="position: relative; width: 100%;border-radius: 5px;backdrop-filter: blur(10px);display: flex;flex-wrap: wrap;padding-bottom: 20px;justify-content: right;">
 
         <a class="maintitrintable"
           style="padding: 10px; color:#00ff15;width: 100%;box-shadow: 0 0 5px #00ff15, 0 0 5px #00ff15, 0 0 5px #00ff15, 0 0 10px #00ff15, 0 0 50px #00ff15;"
           href="#titrone">مقدمه ای بر علم بیوشیمی </a>
-          <div style="width:98% ;justify-content: center;display: flex;flex-wrap: wrap;">
-        <div style="display: grid;width: 300px;margin: 5px">
-          <a class="tableitems one" style=";color:#00ff15;" href="#history">■ تاریخچه </a><br>
-          <div style="border:1px solid green;border-radius: 5px;height: 100px;width: 98%;"></div>
+        <div style="width:98% ;justify-content: center;display: flex;flex-wrap: wrap;">
+          <div style="display: grid;width: 300px;margin: 5px">
+            <a class="tableitems one" style=";color:#00ff15;" href="#history">■ تاریخچه </a><br>
+            <div style="border:1px solid green;border-radius: 5px;height: 100px;width: 98%;"></div>
 
-        </div>
-        <div style="display: grid;width: 300px;margin: 5px">
-
-          <a class="tableitems one" style=";color:#00ff15;" href="#interdisciplinary">■ بیوشیمی علمی بین رشته ای</a><br>
-          <div style="border:1px solid green;border-radius: 5px;height: 100px;width: 98%">
-
-            <img src="abstract.png"
-            style="position: relative;height: fit-content;top:20px;width: 280px;background: rgb(0,0,0,0.5);margin: auto;margin-top: 10px;"><br>
           </div>
-        </div>
-        <div style="display: grid;width: 300px;margin: 5px">
+          <div style="display: grid;width: 300px;margin: 5px">
 
-          <a class="tableitems one" style=";color:#00ff15" href="#livethings">■ ویژگی های موجودات زنده</a><br>
-          <div style="border:1px solid green;border-radius: 5px;height: 100px;width: 98%"></div>
+            <a class="tableitems one" style=";color:#00ff15;" href="#interdisciplinary">■ بیوشیمی علمی بین رشته
+              ای</a><br>
+            <div class="abstract-imagecontainer"
+              style="border:1px solid green;border-radius: 5px;width: 98%;justify-content: center;">
+
+              <img src="abstract.png"
+                style="position: relative;height: fit-content;width: 280px;background: rgb(0,0,0,0.5);margin: auto;"
+                class="zoomable"><br>
+            </div>
+          </div>
+          <div style="display: grid;width: 300px;margin: 5px">
+
+            <a class="tableitems one" style=";color:#00ff15" href="#livethings">■ ویژگی های موجودات زنده</a><br>
+            <div style="border:1px solid green;border-radius: 5px;height: 100px;width: 98%"></div>
+
+          </div>
+          <div class="zoom-container" id="zoom-container">
+            <img src="" alt="magnified" id="zoom-image" class="zoom-image">
+          </div>
 
         </div>
-</div>
       </div>
 
     </div>
-    <div class="maintitr" id="maintitr" style="z-index: 1000;color:#ff00f7;"> مبانی شیمیایی
+    <div class="maintitr" id="maintitr" style="color:#ff00f7;"> مبانی شیمیایی
     </div>
     <div style="position: relative;
     width: 100%;
@@ -5266,7 +5330,7 @@
 
 
       <img src="map1.png"
-        style="position: relative;height: fit-content;top:20px;width: 280px;background: rgb(0,0,0,0.5);margin: auto;margin-top: 10px;"><br>
+        style="position: relative;height: fit-content;top:20px;width: 280px;background: rgb(0,0,0,0.5);margin: auto;margin-top: 10px;"  class="zoomable"><br>
       <img src="map2.png"
         style="position: relative;height: fit-content;top:20px;width: 280px;background: rgb(0,0,0,0.5);margin: auto;margin-top: 10px;"><br><br><br><br>
 
@@ -9031,7 +9095,7 @@
 
         <div class="content" id="content">
           <span style='display:inline-block;color:#00fff6'>●</span>
-           سنتز هزاران نوع کربوهیدرات ، چربی ، پروتئین و نوکلئیک اسید در نسبت‌های دقیق مورد نیاز سلول
+          سنتز هزاران نوع کربوهیدرات ، چربی ، پروتئین و نوکلئیک اسید در نسبت‌های دقیق مورد نیاز سلول
           در شرایط مختلف ← مثال: افزایش سنتز پیش سازهای پروتئین‌ها و نوکلئیک اسیدها در زمان رشد سریع سلول ← تنظیم
           آنزیم‌های اصلی مسیرهای متابولیک برای تولید مولکول های پیش ساز به مقدار مناسب <br>
           <span style='display:inline-block;color:#00fff6'>●</span>
@@ -9040,12 +9104,13 @@
           <img src="Isolucinpathway.jpg" alt="Image to magnify" class="main-image" id="mainImage">
           <span style='display:inline-block;color:#00fff6'>●</span>
 
-          تولید بیش از حد نیاز سلول ← تجمع ایزولوسین  و مهار فعالیت کاتالیتیک آنزیم اول مسیر(مهار فیدبکی) ← کاهش سریع
+          تولید بیش از حد نیاز سلول ← تجمع ایزولوسین و مهار فعالیت کاتالیتیک آنزیم اول مسیر(مهار فیدبکی) ← کاهش سریع
           تولید ایزولوسین و حفظ تعادل بین تولید و مصرف حد واسط‌ های متابولیک<br>
 
           <span style="display:inline-block;color:#00fff6;">● سیستم بیولوژی:</span>
           مطالعه سراسری تنظیم متابولیسم (کل نگر)← مطالعه متابولیسم به شکل یک شبکه با مسیرهای در هم تنیده و
-          مرتبط زیرا تغییر غلظت هر متابولیت باعث ایجاد یک اثر موجی می شود یعنی بر جریان مواد در مسیرهای دیگر اثر می گذارد<br>
+          مرتبط زیرا تغییر غلظت هر متابولیت باعث ایجاد یک اثر موجی می شود یعنی بر جریان مواد در مسیرهای دیگر اثر می
+          گذارد<br>
           <span style="display:inline-block;color:#00fff6;">● نکته:</span>
 
           تنظیم سنتز آنزیم‌ها (در پاسخ به افزایش یا کاهش نیاز به یک فرآورده متابولیک )و تنظیم بیان ژن ← لایه‌های
@@ -12617,10 +12682,51 @@
         window.scrollBy(0, 10); // Scroll down
       }
     });
+    const images = document.querySelectorAll('.zoomable');
+    const zoomContainer = document.getElementById('zoom-container');
+    const zoomImage = document.getElementById('zoom-image');
+    const abstractborder = document.querySelector('.abstractborder');
 
+    // کلیک روی تصاویر کوچک
+    images.forEach(image => {
+      image.addEventListener('click', (e) => {
+        const src = image.src;
+        zoomImage.src = src;
+        abstractborder.style.setProperty('backdrop-filter', 'none');
 
+        // نمایش تصویر زوم‌شده
+        zoomContainer.style.display = 'flex';
 
+        // ابتدا تصویر کوچک می‌شود، سپس به اندازه واقعی زوم می‌شود
+        zoomImage.style.transform = 'scale(0.1)';
+        setTimeout(() => {
+          zoomImage.style.transform = 'scale(1)';
+        }, 50);
+      });
+    });
 
+    // بستن تصویر بزرگ با کلیک روی تصویر زوم‌شده
+    zoomImage.addEventListener('click', closeZoomImage);
+
+    function closeZoomImage() {
+     
+
+      zoomImage.style.transform = 'scale(0.1)'; // کوچک کردن تصویر
+      setTimeout(() => {
+        zoomContainer.style.display = 'none';
+        abstractborder.style.setProperty('backdrop-filter', 'blur(10px)');
+        // مخفی کردن کانتینر زوم
+      }, 300); // پس از 300 میلی‌ثانیه (طول انیمیشن)
+    }
+
+    // کنترل اسکرول برای زوم بیشتر
+    zoomImage.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      let scale = parseFloat(zoomImage.style.transform.match(/scale\(([^)]+)\)/)?.[1] || 1);
+      scale += e.deltaY * -0.001;
+      scale = Math.max(1, Math.min(scale, 3)); // محدودیت زوم از 1x تا 3x
+      zoomImage.style.transform = `scale(${scale})`;
+    });
 
   </script>
 
