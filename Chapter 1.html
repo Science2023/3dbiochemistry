@@ -1367,8 +1367,6 @@
       width: 100%;
       box-sizing: border-box;
       background: rgba(0, 0, 0, 0.5);
-      height: 100vh;
-      overflow: scroll
     }
 
     .tableofcontents::-webkit-scrollbar {
@@ -1481,6 +1479,17 @@
     }
 
 
+    .tableitemsinmap {
+      cursor: pointer;
+      font-family: 'Shabnam';
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 5px;
+      margin-top: 15px;
+      padding-right: 5px;
+      width: 98%;
+      box-sizing: border-box;
+    }
     .abstract-imagecontainer img {
       width: 150px;
       cursor: pointer;
@@ -3880,13 +3889,13 @@
     #list {
       position: fixed;
       right: 0px;
-      width: 100vw;
+      width: 300px;
       height: 83%;
+      overflow: hidden;
       background-color: rgba(0, 0, 0, 0.3);
       border: 1px solid rgba(255, 255, 255, 0.3);
       border-radius: 5px;
       top: 11%;
-      backdrop-filter: blur(5px);
       z-index: 999;
       visibility: hidden;
       font-family: 'Shabnam'
@@ -3911,6 +3920,23 @@
     }
 
 
+    /* width */
+    .listcontent::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    /* Track */
+    .listcontent::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.5);
+      border-radius: 100px;
+    }
+
+    /* Handle */
+    .listcontent::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 100px;
+    }
+
 
     #list.show {
       visibility: visible;
@@ -3922,7 +3948,6 @@
         top: -1px;
         z-index: 999;
         height: 100%;
-        width: 300px;
 
       }
     }
@@ -5120,10 +5145,14 @@
 
 
   <div id="list" dir="rtl">
-    <p
-      style="text-align: center;position: sticky;top:0px;color:yellow;backdrop-filter: blur(5px);z-index: 5;margin:10px;padding-top: 10px;padding-bottom: 10px;border:2px solid;border-radius: 5px;">
-      فهرست مطالب فصل </p>
-
+    <div class="listtitr" style="width: 100%;height: fit-content;backdrop-filter: blur(10px);position: absolute;z-index: 1;">
+    <p style="text-align: center;position: sticky;top:0px;color:yellow;z-index: 5;margin:10px;padding-top: 10px;padding-bottom: 10px;border:2px solid;border-radius: 5px;">
+      فهرست مطالب فصل </p></div>
+<div  class="listcontent" style="overflow: scroll;position: absolute;
+height: 100%;
+top: 0;
+margin-top:65px;
+backdrop-filter: blur(10px);">
     <div class="tableofcontents">
       <div class="table">
         <a class="maintitrintable"
@@ -5272,7 +5301,7 @@
 
 
     </div>
-
+</div>
   </div>
 
 
@@ -5294,9 +5323,9 @@
             <div style="border:1px solid green;border-radius: 5px;height: 100px;width: 98%;"></div>
 
           </div>
-          <div style="display: grid;width: 300px;margin: 5px">
+          <div  class="tableitemsinmap" style="display: grid;width: 300px;margin: 5px">
 
-            <a class="tableitems one" style=";color:#00ff15;" href="#interdisciplinary">■ بیوشیمی علمی بین رشته
+            <a  style=";color:#00ff15;" href="#interdisciplinary">■ بیوشیمی علمی بین رشته
               ای</a><br>
             <div class="abstract-imagecontainer"
               style="border:1px solid green;border-radius: 5px;width: 98%;justify-content: center;">
@@ -5308,7 +5337,7 @@
           </div>
           <div style="display: grid;width: 300px;margin: 5px">
 
-            <a class="tableitems one" style=";color:#00ff15" href="#livethings">■ ویژگی های موجودات زنده</a><br>
+            <a class="tableitemsinmap" style=";color:#00ff15" href="#livethings">■ ویژگی های موجودات زنده</a><br>
             <div style="border:1px solid green;border-radius: 5px;height: 100px;width: 98%"></div>
 
           </div>
@@ -12683,27 +12712,34 @@
       }
     });
     const images = document.querySelectorAll('.zoomable');
-    const zoomContainer = document.getElementById('zoom-container');
-    const zoomImage = document.getElementById('zoom-image');
-    const abstractborder = document.querySelector('.abstractborder');
+const zoomContainer = document.getElementById('zoom-container');
+const zoomImage = document.getElementById('zoom-image');
+const abstractborder = document.querySelector('.abstractborder');
+const tableitemsinmap = document.querySelectorAll('.tableitemsinmap');
 
-    // کلیک روی تصاویر کوچک
-    images.forEach(image => {
-      image.addEventListener('click', (e) => {
-        const src = image.src;
-        zoomImage.src = src;
-        abstractborder.style.setProperty('backdrop-filter', 'none');
+// کلیک روی آیتم‌های جدول نقشه
+tableitemsinmap.forEach(tableitem => {
+  tableitem.addEventListener('click', (e) => {
+    const image = tableitem.querySelector('img'); // اطمینان از اینکه تصویر داخل tableitem انتخاب می‌شود
+    
+    if (image) { 
+      const src = image.src; // دریافت آدرس تصویر
+      zoomImage.src = src; // قرار دادن آدرس تصویر در تصویر زوم‌شده
+    } 
 
-        // نمایش تصویر زوم‌شده
-        zoomContainer.style.display = 'flex';
+    abstractborder.style.setProperty('backdrop-filter', 'none'); // حذف فیلتر پس‌زمینه
 
-        // ابتدا تصویر کوچک می‌شود، سپس به اندازه واقعی زوم می‌شود
-        zoomImage.style.transform = 'scale(0.1)';
-        setTimeout(() => {
-          zoomImage.style.transform = 'scale(1)';
-        }, 50);
-      });
-    });
+    // نمایش تصویر زوم‌شده
+    zoomContainer.style.display = 'flex';
+
+    // ابتدا تصویر کوچک می‌شود، سپس به اندازه واقعی زوم می‌شود
+    zoomImage.style.transform = 'scale(0.1)';
+    setTimeout(() => {
+      zoomImage.style.transform = 'scale(1)';
+    }, 50);
+  }); 
+});
+
 
     // بستن تصویر بزرگ با کلیک روی تصویر زوم‌شده
     zoomImage.addEventListener('click', closeZoomImage);
