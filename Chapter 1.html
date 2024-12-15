@@ -510,11 +510,14 @@
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-position: center center;
+    
     }
-
     body::-webkit-scrollbar {
       display: none;
     }
+
+
+   
 
 
 
@@ -1417,11 +1420,11 @@
       text-align: center;
       display: block;
       font-size: medium;
-      border: 2px solid;
+      border: 1px solid;
       border-radius: 50px;
-      padding: 5px;
-      width: 180px;
+      width: 200px;
       margin: 20px;
+      padding: 10px;
     }
 
     .maintitrintable::before {
@@ -1436,8 +1439,32 @@
       transition: 0.5s;
       filter: blur(0px);
     }
-
-
+    .maintitrinmap {
+      position: relative;
+      cursor: pointer;
+      font-family: 'Shabnam';
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      font-size: medium;
+      border: 2px solid;
+      border-radius: 50px;
+      width: 200px;
+      margin: 20px;
+      padding: 10px;
+    }
+    .maintitrinmap::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(to left, rgba(255, 255, 255, 0.25), transparent);
+      transform: skewX(45deg) translate(0);
+      transition: 0.5s;
+      filter: blur(0px);
+    }
     .tableitems {
       cursor: pointer;
       font-family: 'Shabnam';
@@ -1445,20 +1472,20 @@
       display: inline-block;
       border-radius: 5px;
       margin-top: 15px;
-      padding-right: 5px;
+      padding: 5px;
       width: 98%;
       box-sizing: border-box;
     }
 
-    .tableitems.one {
+    .tableitems.one, .tableitemsinmaptitr.one  {
       box-shadow: 2px 2px 5px rgb(51, 255, 0);
     }
 
-    .tableitems.two {
+    .tableitems.two, .tableitemsinmaptitr.two {
       box-shadow: 2px 2px 5px rgb(255, 0, 251);
     }
 
-    .tableitems.three {
+    .tableitems.three, .tableitemsinmaptitr.three {
       box-shadow: 2px 2px 5px rgb(0, 217, 255);
     }
 
@@ -1477,18 +1504,38 @@
     .tableitems.seven {
       box-shadow: 2px 2px 5px rgb(255, 60, 0);
     }
+    .tableitemsinmap{
+      display: flex;
+      align-items: stretch;
+      width: 280px;
+      margin: 5px;
+      font-size: smaller;
 
-
-    .tableitemsinmap {
+    }
+.abstractborder{
+ position: relative;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  justify-content: center;
+  border:2px solid ;
+  box-sizing: border-box;
+}
+    .tableitemsinmaptitr {
       cursor: pointer;
       font-family: 'Shabnam';
       text-decoration: none;
       display: inline-block;
       border-radius: 5px;
       margin-top: 15px;
-      padding-right: 5px;
+      padding: 5px;
       width: 98%;
       box-sizing: border-box;
+      text-decoration: none;
+      display:flex;
+      align-items: center;
     }
     .abstract-imagecontainer img {
       width: 150px;
@@ -1504,14 +1551,35 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background-color: rgba(0, 0, 0, 1);
-      display: none;
       justify-content: center;
       align-items: center;
       z-index: 1000;
-      overflow: scroll;
+      overflow: auto;
+      display: none;
+      backdrop-filter: blur(50px);
+    }
+    .zoom-container::-webkit-scrollbar {
+      width:10px;
+      height: 10px;
     }
 
+
+    /* Track */
+    .zoom-container::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+    }
+
+    /* Handle */
+    .zoom-container::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 50px;
+    }
+
+    /* Handle on hover */
+    .zoom-container::-webkit-scrollbar-thumb:hover {
+      background: #d1ae14ca;
+    }
     @media all and (orientation: landscape) {
       .zoom-container {
         align-items: unset;
@@ -1520,10 +1588,12 @@
     }
 
     .zoom-image {
-      width: 100vw;
-      height: fit-content;
-      cursor: grab;
+      height:auto;
+      width: 95%;
+      cursor: pointer;
       position: relative;
+      margin: auto;
+      background: rgba(0,0,0,0.3);
       transform-origin: center center;
       /* نقطه مرجع زوم */
       transition: transform 0.3s ease-in-out;
@@ -1532,7 +1602,9 @@
 
     @media all and (orientation: landscape) {
 
-
+.zoom-image{
+  width: 450px;
+}
       #titrone {
 
         top: -100px
@@ -3111,7 +3183,7 @@
       margin: auto;
       top: 48vh;
       width: 100%;
-      height: 86vh;
+      height: 83vh;
       background: rgba(0, 0, 0, 0);
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       backdrop-filter: blur(5px);
@@ -3175,15 +3247,28 @@
       z-index: 1000;
       width: 100%;
       height: 5vh;
+     
+    box-sizing: border-box;
       backdrop-filter: blur(5px);
     }
 
     @media all and (orientation:landscape) {
       .chaptermaph1 {
         height: 9vh;
-        font-size: 2.5vw;
+        font-size: 2vw;
 
       }
+
+    
+    }
+    .chaptermapframe{
+      width: 100%;
+       position: relative;
+        display: grid;
+        justify-content: center;
+        padding: 10px;
+        backdrop-filter: blur(10px);
+        box-sizing: border-box;
 
     }
 
@@ -3840,15 +3925,13 @@
     }
 
     #chaptermap {
-      overflow: scroll;
+      overflow: overlay;
       position: fixed;
       margin: auto;
       top: 11.3%;
       width: 100%;
       height: 83.5vh;
       background: rgba(0, 0, 0, 0.2);
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       transition: all 0.5s ease-in-out;
       background-size: cover;
@@ -3865,14 +3948,15 @@
 
     }
     #chaptermap::-webkit-scrollbar {
-      width: 5px;
-      height: 5px;
+      width: 10px;
+      height: 0;
     }
 
     /* Track */
     #chaptermap::-webkit-scrollbar-track {
       box-shadow: inset 0 0 rgba(0, 0, 0, 0.5);
       border-radius: 10px;
+      background: black;
     }
 
     /* Handle */
@@ -3883,7 +3967,7 @@
 
     /* Handle on hover */
     #chaptermap::-webkit-scrollbar-thumb:hover {
-      background: #d1ae14ca;
+      background: #ffffff;
     }
 
     #list {
@@ -3936,6 +4020,9 @@
       background: rgba(255, 255, 255, 0.5);
       border-radius: 100px;
     }
+    .listcontent::-webkit-scrollbar-thumb:hover {
+      background: #ffffff;
+    }
 
 
     #list.show {
@@ -3968,7 +4055,7 @@
     @media all and (orientation: landscape) {
       #chaptermap {
         top: 0%;
-        height: 99.5vh;
+        height: 100vh;
 
       }
     }
@@ -3997,6 +4084,7 @@
       #musicmenu {
         width: 88%;
       }
+ 
     }
 
     @media (max-width:1500px) and (orientation: landscape) {
@@ -4025,6 +4113,7 @@
       #muscimenu {
         width: 87.5%;
       }
+   
     }
 
     @media (max-width:1200px) and (orientation: landscape) {
@@ -4110,6 +4199,7 @@
       #musicmenu {
         width: 86%;
       }
+   
     }
 
 
@@ -5224,8 +5314,7 @@ backdrop-filter: blur(10px);">
           دو روش سنجش میزان خودبخودی بودن واکنش
           تعیین
           جهت پیشرفت واکنش </a><br>
-        <a class="tableitems three" style=";color:#00fff6;" href="#gibbs">■ ΔG هر واکنش تابع °ΔG (ΔG استاندارد) آن واکنش
-          است</a><br>
+      
         <a class="tableitems three" style=";color:#00fff6;" href="#enzymes">■ آنزیم ها(کاتالیزورهای زیستی): تسریع انجام
           واکنش های بیوشیمیایی</a><br>
         <a class="tableitems three" style=";color:#00fff6;" href="#metabolism_regulation">■ تنظیم متابولیسم:رسیدن به
@@ -5306,39 +5395,33 @@ backdrop-filter: blur(10px);">
 
 
   <div id="chaptermap" dir="rtl">
-    <h1 class="chaptermaph1">خلاصه فصل</h1>
-    <div style="width: 100%; position: relative; display: grid;">
+    <h1 class="chaptermaph1" >خلاصه فصل</h1>
+    <div class="chaptermapframe" >
+      <div class="abstractborder"  style="color: #00ff15;" >
 
-
-
-      <div class="abstractborder"
-        style="position: relative; width: 100%;border-radius: 5px;backdrop-filter: blur(10px);display: flex;flex-wrap: wrap;padding-bottom: 20px;justify-content: right;">
-
-        <a class="maintitrintable"
-          style="padding: 10px; color:#00ff15;width: 100%;box-shadow: 0 0 5px #00ff15, 0 0 5px #00ff15, 0 0 5px #00ff15, 0 0 10px #00ff15, 0 0 50px #00ff15;"
+        <a class="maintitrinmap"style=" color:#00ff15;box-shadow: 0 0 5px #00ff15, 0 0 5px #00ff15, 0 0 5px #00ff15, 0 0 10px #00ff15, 0 0 50px #00ff15;"
           href="#titrone">مقدمه ای بر علم بیوشیمی </a>
         <div style="width:98% ;justify-content: center;display: flex;flex-wrap: wrap;">
-          <div style="display: grid;width: 300px;margin: 5px">
-            <a class="tableitems one" style=";color:#00ff15;" href="#history">■ تاریخچه </a><br>
-            <div style="border:1px solid green;border-radius: 5px;height: 100px;width: 98%;"></div>
+          <div class="tableitemsinmap"  >
+            <a class="tableitemsinmaptitr one" style=";color:#00ff15;" href="#history">■ تاریخچه </a><br>
+            <div style="display: none;"></div>
 
           </div>
-          <div  class="tableitemsinmap" style="display: grid;width: 300px;margin: 5px">
+          <div  class="tableitemsinmap" >
 
-            <a  style=";color:#00ff15;" href="#interdisciplinary">■ بیوشیمی علمی بین رشته
+            <a class="tableitemsinmaptitr one" style="color:#00ff15;" href="#interdisciplinary">■ بیوشیمی علمی بین رشته
               ای</a><br>
             <div class="abstract-imagecontainer"
-              style="border:1px solid green;border-radius: 5px;width: 98%;justify-content: center;">
+              style="display: none;">
 
               <img src="abstract.png"
-                style="position: relative;height: fit-content;width: 280px;background: rgb(0,0,0,0.5);margin: auto;"
                 class="zoomable"><br>
             </div>
           </div>
-          <div style="display: grid;width: 300px;margin: 5px">
+          <div  class="tableitemsinmap">
 
-            <a class="tableitemsinmap" style=";color:#00ff15" href="#livethings">■ ویژگی های موجودات زنده</a><br>
-            <div style="border:1px solid green;border-radius: 5px;height: 100px;width: 98%"></div>
+            <a class="tableitemsinmaptitr one" style=";color:#00ff15" href="#livethings">■ ویژگی های موجودات زنده</a><br>
+            <div class="abstract-imagecontainer"style="display: none;"></div>
 
           </div>
           <div class="zoom-container" id="zoom-container">
@@ -5349,24 +5432,71 @@ backdrop-filter: blur(10px);">
       </div>
 
     </div>
-    <div class="maintitr" id="maintitr" style="color:#ff00f7;"> مبانی شیمیایی
+    <div class="chaptermapframe" >
+      <div class="abstractborder"  style="color: #e800ff;" >
+
+        <a class="maintitrinmap"
+          style=" color:#e800ff;box-shadow: 0 0 5px #ff00f7, 0 0 5px #ff00f7, 0 0 5px #ff00f7, 0 0 10px #ff00f7, 0 0 50px #ff00f7;"
+          href="#titrone">مبانی شیمیایی</a>
+        <div style="width:98% ;justify-content: center;display: flex;flex-wrap: wrap;">
+          <div class="tableitemsinmap"  >
+            <a class="tableitemsinmaptitr two" style=";color:#e800ff;" href="#history">■ انواع مواد(آلی و معدنی) </a><br>
+            <div style="display: none;"></div>
+
+          </div>
+          <div  class="tableitemsinmap" >
+
+            <a class="tableitemsinmaptitr two" style=";color:#e800ff;" href="#interdisciplinary">■ ساختار الکترونی، اوربیتال ها و زوایای پیوند عناصر مهم بیولوژی</a><br>
+            <div class="abstract-imagecontainer"
+              style="display: none;">
+
+              <img src="abstract.png"
+                class="zoomable"><br>
+            </div>
+          </div>
+          <div  class="tableitemsinmap">
+
+            <a class="tableitemsinmaptitr two" style=";color:#e800ff" href="#livethings">■ بیومولکول ها</a><br>
+            <div class="abstract-imagecontainer"style="display: none;"></div>
+
+          </div>
+          <div  class="tableitemsinmap" >
+
+            <a class="tableitemsinmaptitr two" style=";color:#e800ff;" href="#interdisciplinary">■ ساختار الکترونی، اوربیتال ها و زوایای پیوند عناصر مهم بیولوژی</a><br>
+            <div class="abstract-imagecontainer"
+              style="display: none;">
+
+              <img src="abstract.png"
+                class="zoomable"><br>
+            </div>
+          </div><div  class="tableitemsinmap" >
+
+            <a class="tableitemsinmaptitr two" style=";color:#e800ff;" href="#interdisciplinary">■ ساختار الکترونی، اوربیتال ها و زوایای پیوند عناصر مهم بیولوژی</a><br>
+            <div class="abstract-imagecontainer"
+              style="display: none;">
+
+              <img src="abstract.png"
+                class="zoomable"><br>
+            </div>
+          </div><div  class="tableitemsinmap" >
+
+            <a class="tableitemsinmaptitr two" style=";color:#e800ff;" href="#interdisciplinary">■ ساختار الکترونی، اوربیتال ها و زوایای پیوند عناصر مهم بیولوژی</a><br>
+            <div class="abstract-imagecontainer"
+              style="display: none;">
+
+              <img src="abstract.png"
+                class="zoomable"><br>
+            </div>
+          </div>
+          <div class="zoom-container" id="zoom-container">
+            <img src="" alt="magnified" id="zoom-image" class="zoom-image">
+          </div>
+
+        </div>
+      </div>
+
     </div>
-    <div style="position: relative;
-    width: 100%;
-    border-radius: 5px;
-    backdrop-filter: blur(10px);
-   ;display: flex;flex-wrap: wrap;padding-bottom: 20px;justify-content: right;">
-
-
-      <img src="map1.png"
-        style="position: relative;height: fit-content;top:20px;width: 280px;background: rgb(0,0,0,0.5);margin: auto;margin-top: 10px;"  class="zoomable"><br>
-      <img src="map2.png"
-        style="position: relative;height: fit-content;top:20px;width: 280px;background: rgb(0,0,0,0.5);margin: auto;margin-top: 10px;"><br><br><br><br>
-
-
-    </div>
-  </div>
-
+</div>
 
 
   <section class="titr zero" id="titr zero" dir="rtl" style="padding-bottom: 22vw;">
@@ -8566,9 +8696,7 @@ backdrop-filter: blur(10px);">
               <a class="tableitems three" style="color:#00fff6;" href="#gibsfreeenergy">■ثابت تعادل (Keq) وانرژی آزاد
                 استاندارد (°ΔG) :
                 دو روش سنجش میزان خودبخودی بودن واکنش</a><br>
-              <a class="tableitems three" style="color:#00fff6;" href="#gibbs">■ ΔG هر واکنش تابع °ΔG (ΔG استاندارد) آن
-                واکنش
-                است</a><br>
+           
               <a class="tableitems three" style="color:#00fff6;" href="#enzymes">■ آنزیم ها(کاتالیزورهای زیستی): تسریع
                 انجام
                 واکنش های بیوشیمیایی</a><br>
@@ -12683,38 +12811,10 @@ backdrop-filter: blur(10px);">
     });
 
 
-    document.addEventListener('mousemove', function (event) {
-      const mouseY = event.clientY; // Get mouse Y position
-      const windowHeight = window.innerHeight; // Get window height
-
-      // Check if mouse is near the top of the page
-      if (mouseY < 20) {
-        window.scrollBy(0, -15); // Scroll up
-      }
-
-      // Check if mouse is near the bottom of the page
-      if (mouseY > windowHeight - 20) {
-        window.scrollBy(0, 15); // Scroll down
-      }
-    });
-    document.addEventListener('mousemove', function (event) {
-      const mouseY = event.clientY; // Get mouse Y position
-      const windowHeight = window.innerHeight; // Get window height
-
-      // Check if mouse is near the top of the page
-      if (mouseY < 20) {
-        window.scrollBy(0, -15); // Scroll up
-      }
-
-      // Check if mouse is near the bottom of the page
-      if (mouseY > windowHeight - 20) {
-        window.scrollBy(0, 10); // Scroll down
-      }
-    });
     const images = document.querySelectorAll('.zoomable');
 const zoomContainer = document.getElementById('zoom-container');
 const zoomImage = document.getElementById('zoom-image');
-const abstractborder = document.querySelector('.abstractborder');
+const chaptermapframe = document.querySelector('.chaptermapframe');
 const tableitemsinmap = document.querySelectorAll('.tableitemsinmap');
 
 // کلیک روی آیتم‌های جدول نقشه
@@ -12727,7 +12827,7 @@ tableitemsinmap.forEach(tableitem => {
       zoomImage.src = src; // قرار دادن آدرس تصویر در تصویر زوم‌شده
     } 
 
-    abstractborder.style.setProperty('backdrop-filter', 'none'); // حذف فیلتر پس‌زمینه
+    chaptermapframe.style.setProperty('backdrop-filter', 'none'); // حذف فیلتر پس‌زمینه
 
     // نمایش تصویر زوم‌شده
     zoomContainer.style.display = 'flex';
@@ -12750,7 +12850,7 @@ tableitemsinmap.forEach(tableitem => {
       zoomImage.style.transform = 'scale(0.1)'; // کوچک کردن تصویر
       setTimeout(() => {
         zoomContainer.style.display = 'none';
-        abstractborder.style.setProperty('backdrop-filter', 'blur(10px)');
+        chaptermapframe.style.setProperty('backdrop-filter', 'blur(10px)');
         // مخفی کردن کانتینر زوم
       }, 300); // پس از 300 میلی‌ثانیه (طول انیمیشن)
     }
