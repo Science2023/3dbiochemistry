@@ -1474,6 +1474,45 @@
       padding: 5px;
       width: 98%;
       box-sizing: border-box;
+      position: relative;
+    }
+    .tableitems::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width:90%;
+      height: 100%;
+      transform: skewX(45deg) translate(0);
+      filter: blur(0px);
+    }
+    .tableitems.one::before,.tableitemsinmaptitr.one::before{
+      background: linear-gradient(to left, rgba(3, 255, 28, 0.3), transparent);
+
+    }
+    .tableitems.two::before , .tableitemsinmaptitr.two::before{
+      background: linear-gradient(to left, rgba(247, 0, 255, 0.3), transparent);
+
+    }
+
+    .tableitems.three::before , .tableitemsinmaptitr.three::before{
+      background: linear-gradient(to left, rgba(0, 234, 255, 0.3), transparent);
+
+    }
+    .tableitems.four::before, .tableitemsinmaptitr.four::before{
+      background: linear-gradient(to left, rgba(255, 0, 0, 0.3), transparent);
+
+    }
+    .tableitems.five::before, .tableitemsinmaptitr.five::before{
+      background: linear-gradient(to left, rgba(255, 119, 0, 0.3), transparent);
+
+    }
+    .tableitems.six::before, .tableitemsinmaptitr.six::before{
+      background: linear-gradient(to left, rgba(132, 255, 0, 0.3), transparent);
+
+    }  .tableitems.seven::before, .tableitemsinmaptitr.seven::before{
+      background: linear-gradient(to left, rgba(255, 68, 0, 0.3), transparent);
+
     }
 
     .tableitems.one, .tableitemsinmaptitr.one  {
@@ -1488,19 +1527,19 @@
       box-shadow: 2px 2px 5px rgb(0, 217, 255);
     }
 
-    .tableitems.four {
+    .tableitems.four, .tableitemsinmaptitr.four {
       box-shadow: 2px 2px 5px rgb(255, 0, 0);
     }
 
-    .tableitems.five {
+    .tableitems.five, .tableitemsinmaptitr.five{
       box-shadow: 2px 2px 5px rgb(255, 145, 0);
     }
 
-    .tableitems.six {
+    .tableitems.six, .tableitemsinmaptitr.six {
       box-shadow: 2px 2px 5px rgb(128, 255, 0);
     }
 
-    .tableitems.seven {
+    .tableitems.seven, .tableitemsinmaptitr.seven {
       box-shadow: 2px 2px 5px rgb(255, 60, 0);
     }
     .tableitemsinmap{
@@ -1509,6 +1548,7 @@
       width: 280px;
       margin: 5px;
       font-size: smaller;
+      height: 60px;
 
     }
 .abstractborder{
@@ -1535,6 +1575,19 @@
       text-decoration: none;
       display:flex;
       align-items: center;
+      position: relative;
+    }
+    .tableitemsinmaptitr::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 90%;
+      height: 100%;
+      background: linear-gradient(to left, rgba(255, 255, 255, 0.25), transparent);
+      transform: skewX(45deg) translate(0);
+      transition: 0.5s;
+      filter: blur(0px);
     }
     .abstract-imagecontainer img {
       width: 150px;
@@ -3185,8 +3238,8 @@
       height: 83vh;
       background: rgba(0, 0, 0, 0);
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       transition: all 0.5s ease-in-out;
       background-size: cover;
@@ -3922,7 +3975,7 @@
       padding: 2px;
 
     }
-
+  
     #chaptermap {
       overflow: overlay;
       position: fixed;
@@ -3941,6 +3994,7 @@
       z-index: 3;
       opacity: 1
     }
+
 
     #chaptermap.show {
       visibility: visible;
@@ -5140,6 +5194,12 @@
     <div id="scrollToTop" class="pagehandling" onclick="scrollToTop()">
       <img src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/top.png" id="scrollimg">
     </div>
+    <div id="up"  class="pagehandling" onclick="scrollup()">
+      <img src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/Up.png" id="scrollimg" >
+    </div>
+    <div id="down" class="pagehandling" onclick="scrolldown()">
+      <img src="https://raw.githubusercontent.com/Science2023/3dbiochemistry/main/down.png"  id="scrollimg" >
+    </div>
 
 
     <div id="scrollToEnd" class="pagehandling" onclick="scrollToEnd()">
@@ -5392,9 +5452,9 @@ backdrop-filter: blur(10px);">
 </div>
   </div>
 
-
   <div id="chaptermap" dir="rtl">
     <h1 class="chaptermaph1" >خلاصه فصل(روی تیترهای فرعی کلیک کنید)</h1>
+
     <div class="chaptermapframe" >
       <div class="abstractborder"  style="color: #00ff15;" >
 
@@ -5484,6 +5544,326 @@ backdrop-filter: blur(10px);">
           </div><div  class="tableitemsinmap" >
 
             <a class="tableitemsinmaptitr two" style=";color:#e800ff;" href="#interdisciplinary">■ ساختار الکترونی، اوربیتال ها و زوایای پیوند عناصر مهم بیولوژی</a><br>
+            <div class="abstract-imagecontainer"
+              style="display: none;">
+
+              <img src="abstract.png"
+                class="zoomable"><br>
+            </div>
+          </div>
+          <div class="zoom-container" id="zoom-container">
+            <img src="" alt="magnified" id="zoom-image" class="zoom-image">
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="chaptermapframe" >
+      <div class="abstractborder"  style="color: #1ed2ff;" >
+
+        <a class="maintitrinmap"
+          style=" color:#1ed2ff;box-shadow: 0 0 5px #1ed2ff, 0 0 5px #1ed2ff, 0 0 5px #1ed2ff, 0 0 10px #1ed2ff, 0 0 50px #1ed2ff;">
+         مبانی فیزیکی</a>
+        <div style="width:98% ;justify-content: center;display: flex;flex-wrap: wrap;">
+          <div class="tableitemsinmap"  >
+            <a class="tableitemsinmaptitr three" style=";color:#1ed2ff;" >■ انواع مواد(آلی و معدنی) </a><br>
+            <div style="display: none;"></div>
+
+          </div>
+          <div  class="tableitemsinmap" >
+
+            <a class="tableitemsinmaptitr three" style=";color:#1ed2ff;" >■ ساختار الکترونی، اوربیتال ها و زوایای پیوند عناصر مهم بیولوژی</a><br>
+            <div class="abstract-imagecontainer"
+              style="display: none;">
+
+              <img src="electronstructure.webp"
+                class="zoomable"><br>
+            </div>
+          </div>
+          <div  class="tableitemsinmap">
+
+            <a class="tableitemsinmaptitr three" style=";color:#1ed2ff" href="#livethings">■ بیومولکول ها</a><br>
+            <div class="abstract-imagecontainer"style="display: none;"></div>
+
+          </div>
+          <div  class="tableitemsinmap" >
+
+            <a class="tableitemsinmaptitr three" style=";color:#1ed2ff;" href="#interdisciplinary">■ ساختار الکترونی، اوربیتال ها و زوایای پیوند عناصر مهم بیولوژی</a><br>
+            <div class="abstract-imagecontainer"
+              style="display: none;">
+
+              <img src="abstract.png"
+                class="zoomable"><br>
+            </div>
+          </div><div  class="tableitemsinmap" >
+
+            <a class="tableitemsinmaptitr three" style=";color:#1ed2ff;" href="#interdisciplinary">■ ساختار الکترونی، اوربیتال ها و زوایای پیوند عناصر مهم بیولوژی</a><br>
+            <div class="abstract-imagecontainer"
+              style="display: none;">
+
+              <img src="abstract.png"
+                class="zoomable"><br>
+            </div>
+          </div><div  class="tableitemsinmap" >
+
+            <a class="tableitemsinmaptitr three" style=";color:#1ed2ff;" href="#interdisciplinary">■ ساختار الکترونی، اوربیتال ها و زوایای پیوند عناصر مهم بیولوژی</a><br>
+            <div class="abstract-imagecontainer"
+              style="display: none;">
+
+              <img src="abstract.png"
+                class="zoomable"><br>
+            </div>
+          </div>
+          <div class="zoom-container" id="zoom-container">
+            <img src="" alt="magnified" id="zoom-image" class="zoom-image">
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="chaptermapframe" >
+      <div class="abstractborder"  style="color: #ff0000;" >
+
+        <a class="maintitrinmap"
+          style=" color:#ff0000;box-shadow: 0 0 5px #ff0000, 0 0 5px #ff0000, 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 50px #ff0000;">
+         مبانی ژنتیکی</a>
+        <div style="width:98% ;justify-content: center;display: flex;flex-wrap: wrap;">
+          <div class="tableitemsinmap"  >
+            <a class="tableitemsinmaptitr four" style=";color:#ff0000;" >■ انواع مواد(آلی و معدنی) </a><br>
+            <div style="display: none;"></div>
+
+          </div>
+          <div  class="tableitemsinmap" >
+
+            <a class="tableitemsinmaptitr four" style=";color:#ff0000;" >■ ساختار الکترونی، اوربیتال ها و زوایای پیوند عناصر مهم بیولوژی</a><br>
+            <div class="abstract-imagecontainer"
+              style="display: none;">
+
+              <img src="electronstructure.webp"
+                class="zoomable"><br>
+            </div>
+          </div>
+          <div  class="tableitemsinmap">
+
+            <a class="tableitemsinmaptitr four" style=";color:#ff0000" href="#livethings">■ بیومولکول ها</a><br>
+            <div class="abstract-imagecontainer"style="display: none;"></div>
+
+          </div>
+          <div  class="tableitemsinmap" >
+
+            <a class="tableitemsinmaptitr four" style=";color:#ff0000;" href="#interdisciplinary">■ ساختار الکترونی، اوربیتال ها و زوایای پیوند عناصر مهم بیولوژی</a><br>
+            <div class="abstract-imagecontainer"
+              style="display: none;">
+
+              <img src="abstract.png"
+                class="zoomable"><br>
+            </div>
+          </div><div  class="tableitemsinmap" >
+
+            <a class="tableitemsinmaptitr four" style=";color:#ff0000;" href="#interdisciplinary">■ ساختار الکترونی، اوربیتال ها و زوایای پیوند عناصر مهم بیولوژی</a><br>
+            <div class="abstract-imagecontainer"
+              style="display: none;">
+
+              <img src="abstract.png"
+                class="zoomable"><br>
+            </div>
+          </div><div  class="tableitemsinmap" >
+
+            <a class="tableitemsinmaptitr four" style=";color:#ff0000;" href="#interdisciplinary">■ ساختار الکترونی، اوربیتال ها و زوایای پیوند عناصر مهم بیولوژی</a><br>
+            <div class="abstract-imagecontainer"
+              style="display: none;">
+
+              <img src="abstract.png"
+                class="zoomable"><br>
+            </div>
+          </div>
+          <div class="zoom-container" id="zoom-container">
+            <img src="" alt="magnified" id="zoom-image" class="zoom-image">
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="chaptermapframe" >
+      <div class="abstractborder"  style="color: #ff6831;" >
+
+        <a class="maintitrinmap"
+          style=" color:#ff6831;box-shadow: 0 0 5px #ff6831, 0 0 5px #ff6831, 0 0 5px #ff6831, 0 0 10px #ff6831, 0 0 50px #ff6831;">
+         مبانی سلولی</a>
+        <div style="width:98% ;justify-content: center;display: flex;flex-wrap: wrap;">
+          <div class="tableitemsinmap"  >
+            <a class="tableitemsinmaptitr five" style=";color:#ff6831;" >■ انواع مواد(آلی و معدنی) </a><br>
+            <div style="display: none;"></div>
+
+          </div>
+          <div  class="tableitemsinmap" >
+
+            <a class="tableitemsinmaptitr five" style=";color:#ff6831;" >■ ساختار الکترونی، اوربیتال ها و زوایای پیوند عناصر مهم بیولوژی</a><br>
+            <div class="abstract-imagecontainer"
+              style="display: none;">
+
+              <img src="electronstructure.webp"
+                class="zoomable"><br>
+            </div>
+          </div>
+          <div  class="tableitemsinmap">
+
+            <a class="tableitemsinmaptitr five" style=";color:#ff6831" href="#livethings">■ بیومولکول ها</a><br>
+            <div class="abstract-imagecontainer"style="display: none;"></div>
+
+          </div>
+          <div  class="tableitemsinmap" >
+
+            <a class="tableitemsinmaptitr five" style=";color:#ff6831;" href="#interdisciplinary">■ ساختار الکترونی، اوربیتال ها و زوایای پیوند عناصر مهم بیولوژی</a><br>
+            <div class="abstract-imagecontainer"
+              style="display: none;">
+
+              <img src="abstract.png"
+                class="zoomable"><br>
+            </div>
+          </div><div  class="tableitemsinmap" >
+
+            <a class="tableitemsinmaptitr five" style=";color:#ff6831;" href="#interdisciplinary">■ ساختار الکترونی، اوربیتال ها و زوایای پیوند عناصر مهم بیولوژی</a><br>
+            <div class="abstract-imagecontainer"
+              style="display: none;">
+
+              <img src="abstract.png"
+                class="zoomable"><br>
+            </div>
+          </div><div  class="tableitemsinmap" >
+
+            <a class="tableitemsinmaptitr five" style=";color:#ff6831;" href="#interdisciplinary">■ ساختار الکترونی، اوربیتال ها و زوایای پیوند عناصر مهم بیولوژی</a><br>
+            <div class="abstract-imagecontainer"
+              style="display: none;">
+
+              <img src="abstract.png"
+                class="zoomable"><br>
+            </div>
+          </div>
+          <div class="zoom-container" id="zoom-container">
+            <img src="" alt="magnified" id="zoom-image" class="zoom-image">
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="chaptermapframe" >
+      <div class="abstractborder"  style="color: #6bff00;" >
+
+        <a class="maintitrinmap"
+          style=" color:#6bff00;box-shadow: 0 0 5px #6bff00, 0 0 5px #6bff00, 0 0 5px #6bff00, 0 0 10px #6bff00, 0 0 50px #6bff00;">
+         مبانی تکاملی</a>
+        <div style="width:98% ;justify-content: center;display: flex;flex-wrap: wrap;">
+          <div class="tableitemsinmap"  >
+            <a class="tableitemsinmaptitr six" style=";color:#6bff00;" >■ انواع مواد(آلی و معدنی) </a><br>
+            <div style="display: none;"></div>
+
+          </div>
+          <div  class="tableitemsinmap" >
+
+            <a class="tableitemsinmaptitr six" style=";color:#6bff00;" >■ ساختار الکترونی، اوربیتال ها و زوایای پیوند عناصر مهم بیولوژی</a><br>
+            <div class="abstract-imagecontainer"
+              style="display: none;">
+
+              <img src="electronstructure.webp"
+                class="zoomable"><br>
+            </div>
+          </div>
+          <div  class="tableitemsinmap">
+
+            <a class="tableitemsinmaptitr six" style=";color:#6bff00" href="#livethings">■ بیومولکول ها</a><br>
+            <div class="abstract-imagecontainer"style="display: none;"></div>
+
+          </div>
+          <div  class="tableitemsinmap" >
+
+            <a class="tableitemsinmaptitr six" style=";color:#6bff00;" href="#interdisciplinary">■ ساختار الکترونی، اوربیتال ها و زوایای پیوند عناصر مهم بیولوژی</a><br>
+            <div class="abstract-imagecontainer"
+              style="display: none;">
+
+              <img src="abstract.png"
+                class="zoomable"><br>
+            </div>
+          </div><div  class="tableitemsinmap" >
+
+            <a class="tableitemsinmaptitr six" style=";color:#6bff00;" href="#interdisciplinary">■ ساختار الکترونی، اوربیتال ها و زوایای پیوند عناصر مهم بیولوژی</a><br>
+            <div class="abstract-imagecontainer"
+              style="display: none;">
+
+              <img src="abstract.png"
+                class="zoomable"><br>
+            </div>
+          </div><div  class="tableitemsinmap" >
+
+            <a class="tableitemsinmaptitr six" style=";color:#6bff00;" href="#interdisciplinary">■ ساختار الکترونی، اوربیتال ها و زوایای پیوند عناصر مهم بیولوژی</a><br>
+            <div class="abstract-imagecontainer"
+              style="display: none;">
+
+              <img src="abstract.png"
+                class="zoomable"><br>
+            </div>
+          </div>
+          <div class="zoom-container" id="zoom-container">
+            <img src="" alt="magnified" id="zoom-image" class="zoom-image">
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="chaptermapframe" >
+      <div class="abstractborder"  style="color: #ff1f71;" >
+
+        <a class="maintitrinmap"
+          style=" color:#ff1f71;box-shadow: 0 0 5px #ff1f71, 0 0 5px #ff1f71, 0 0 5px #ff1f71, 0 0 10px #ff1f71, 0 0 50px #ff1f71;">
+         مباحث مهم ریاضی</a>
+        <div style="width:98% ;justify-content: center;display: flex;flex-wrap: wrap;">
+          <div class="tableitemsinmap"  >
+            <a class="tableitemsinmaptitr seven" style=";color:#ff1f71;" >■ انواع مواد(آلی و معدنی) </a><br>
+            <div style="display: none;"></div>
+
+          </div>
+          <div  class="tableitemsinmap" >
+
+            <a class="tableitemsinmaptitr seven" style=";color:#ff1f71;" >■ ساختار الکترونی، اوربیتال ها و زوایای پیوند عناصر مهم بیولوژی</a><br>
+            <div class="abstract-imagecontainer"
+              style="display: none;">
+
+              <img src="electronstructure.webp"
+                class="zoomable"><br>
+            </div>
+          </div>
+          <div  class="tableitemsinmap">
+
+            <a class="tableitemsinmaptitr seven" style=";color:#ff1f71" href="#livethings">■ بیومولکول ها</a><br>
+            <div class="abstract-imagecontainer"style="display: none;"></div>
+
+          </div>
+          <div  class="tableitemsinmap" >
+
+            <a class="tableitemsinmaptitr seven" style=";color:#ff1f71;" href="#interdisciplinary">■ ساختار الکترونی، اوربیتال ها و زوایای پیوند عناصر مهم بیولوژی</a><br>
+            <div class="abstract-imagecontainer"
+              style="display: none;">
+
+              <img src="abstract.png"
+                class="zoomable"><br>
+            </div>
+          </div><div  class="tableitemsinmap" >
+
+            <a class="tableitemsinmaptitr seven" style=";color:#ff1f71;" href="#interdisciplinary">■ ساختار الکترونی، اوربیتال ها و زوایای پیوند عناصر مهم بیولوژی</a><br>
+            <div class="abstract-imagecontainer"
+              style="display: none;">
+
+              <img src="abstract.png"
+                class="zoomable"><br>
+            </div>
+          </div><div  class="tableitemsinmap" >
+
+            <a class="tableitemsinmaptitr seven" style=";color:#ff1f71;" href="#interdisciplinary">■ ساختار الکترونی، اوربیتال ها و زوایای پیوند عناصر مهم بیولوژی</a><br>
             <div class="abstract-imagecontainer"
               style="display: none;">
 
@@ -12308,7 +12688,7 @@ backdrop-filter: blur(10px);">
     function scrollup() {
 
       window.scrollBy({
-        top: -200,
+        top: -300,
         behavior: 'smooth'
       });
     }
@@ -12316,7 +12696,7 @@ backdrop-filter: blur(10px);">
     function scrolldown() {
 
       window.scrollBy({
-        top: 200,
+        top: 300,
         behavior: 'smooth'
       });
     }
