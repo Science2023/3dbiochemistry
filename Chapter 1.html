@@ -604,7 +604,7 @@
       left: 0;
       width: 50%;
       height: 100%;
-      background: linear-gradient(to left, rgba(255, 255, 255, 0.25), transparent);
+      background: linear-gradient(to left, rgba(255, 255, 255, 0.3), transparent);
       transform: skewX(45deg) translate(0);
       transition: 0.5s;
       filter: blur(0px);
@@ -1465,6 +1465,7 @@
       filter: blur(0px);
     }
     .tableitems {
+      overflow: hidden;
       cursor: pointer;
       font-family: 'Shabnam';
       text-decoration: none;
@@ -1481,7 +1482,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      right:40px;
+      right:20px;
       width:90%;
       height: 100%;
       transform: skewX(45deg) translate(0);
@@ -2443,7 +2444,7 @@
     #resttime {
       padding: 5px;
       width: 90%;
-      height: 40%;
+      height: fit-content;
       background: rgba(255, 255, 255, 0);
       display: grid;
       justify-content: center;
@@ -2472,8 +2473,8 @@
     }
 
     .OK {
-      position: absolute;
-      bottom: 10px;
+      position: relative;
+      cursor: pointer;
       justify-self: center;
       border-radius: 50px;
       background: rgba(255, 255, 255, 1);
@@ -5143,10 +5144,11 @@
       <div class="timertitle" style="color:yellow;">تایمر مطالعه</div>
       <div class="timer">
 
-        <button onclick='set_timer()' id="timerbutton1" class='timerbutton'>شروع</button>
-        <div class="timernumber" dir="ltr" style="padding-top: 3px;"><label id="minutes">00</label><span
-            class='bigger'>:</span><label id="seconds">00</label></div>
-        <button onclick='stop_timer()' id="timerbutton2" class='timerbutton'>توقف</button>
+        <button onclick="toggleTimer()" id="timerbutton1" class="timerbutton">شروع</button>
+        <div class="timernumber" dir="ltr" style="padding-top: 3px;">
+            <label id="minutes">00</label><span class="bigger">:</span><label id="seconds">00</label>
+        </div>
+        <button onclick="resetTimer()" id="timerbutton2" class="timerbutton">ریست</button>
       </div>
     </div>
 
@@ -12600,47 +12602,90 @@ backdrop-filter: blur(10px);">
         return valString;
       }
     }
+    let totalSeconds = 0;
+let timerInterval = null;
+let isRunning = false;
+let restTimeout = null;   // متغیر برای نگه‌داری timeout
+const before = document.getElementById("restscreen");
+const timerButton = document.getElementById("timerbutton1");
+const resetButton = document.getElementById("timerbutton2");
 
+function pad(value) {
+    return value.toString().padStart(2, '0');
+}
+
+function updateTimerDisplay() {
+    const minutesLabel = document.getElementById("minutes");
+    const secondsLabel = document.getElementById("seconds");
+    secondsLabel.innerHTML = pad(totalSeconds % 60);
+    minutesLabel.innerHTML = pad(Math.floor(totalSeconds / 60));
+}
+
+
+function toggleTimer() {
+    if (isRunning) {
+     
+        // متوقف کردن تایمر
+        clearInterval(timerInterval);
+        timerInterval = null;
+        timerButton.innerHTML = "شروع";
+        $("#timerbutton1").removeClass("active");
+        isRunning = false; // تنظیم وضعیت به غیرفعال
+    
+    } else {
+        // شروع تایمر
+        timerInterval = setInterval(() => {
+            totalSeconds++;
+            updateTimerDisplay();
+        }, 1000);
+        timerButton.innerHTML = "توقف";
+        $("#timerbutton1").addClass("active");
+        isRunning = true; // تنظیم وضعیت به فعال
+   
+        // نمایش پیام استراحت بعد از یک ساعت (اینجا 5 ثانیه برای تست)
+        restTimeout = setTimeout(() => {
+            before.style.visibility = "visible";
+            clearInterval(timerInterval);
+        timerInterval = null; // توقف تایمر
+        isRunning = false;
+        }, 5000)
+    }
+}
+
+function resetTimer() {
+    // توقف تایمر
+    clearInterval(timerInterval);
+    timerInterval = null;
+    // بازنشانی شمارش‌گر و نمایش
     totalSeconds = 0;
-    function setTime(minutesLabel, secondsLabel) {
-      totalSeconds++;
-      secondsLabel.innerHTML = pad(totalSeconds % 60);
-      minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
-    }
-    const before = document.getElementById("before");
-    const timerbutton1 = document.getElementById("timerbutton1")
-    function set_timer() {
-      if (!timerbutton1.classList.contains('active')) {
-        $("#timerbutton1").addClass('active');
-        $('#timerbutton2').removeClass('active');
-        minutesLabel = document.getElementById("minutes");
-        secondsLabel = document.getElementById("seconds");
-        my_int = setInterval(function () { setTime(minutesLabel, secondsLabel) }, 1000);
+    updateTimerDisplay();
+    clearTimeout(restTimeout);
 
-        restinterval = setInterval(function () {
-          before.style.visibility = "visible";
-          stop_timer();
-          clearInterval(restinterval);
-        }
-          , 3600000);
-      }
-    }
+    restTimeout= null;
+    // بازگرداندن دکمه "شروع" به حالت اولیه
+    timerButton.innerHTML = "شروع";
+    $("#timerbutton1").removeClass("active");
+
+    // بازنشانی وضعیت
+    isRunning = false;
+
+    // بازگرداندن امکان کلیک روی دکمه شروع
+    timerButton.disabled = false;
+}
 
 
+
+
+
+    
+    
     function exitrest() {
       before.style.visibility = "hidden";
-      set_timer();
+      toggleTimer()
     }
 
 
-    function stop_timer() {
-      if (timerbutton1.classList.contains('active')) {
-        $('#timerbutton1').removeClass('active');
-        $("#timerbutton2").addClass('active')
-        clearInterval(my_int);
-      }
-    }
-
+   
     $(document).on('click', '.timerbutton', function () {
 
     })
