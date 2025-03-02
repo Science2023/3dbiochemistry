@@ -706,6 +706,9 @@
       margin-bottom: 3px;
     }
 
+    filter: drop-shadow(0px 2px 6px rgb(255, 242, 4));
+
+
     .shadowfilter {
       -webkit-filter: drop-shadow(0px 12px 7px rgb(255, 221, 4));
       filter: drop-shadow(0px 2px 6px rgb(255, 242, 4));
@@ -2207,6 +2210,18 @@
       border: 1px solid rgba(255, 255, 255, 0.3);
       text-justify: auto;
       display: inline-block;
+    }
+
+    .medical {
+      cursor: pointer;
+    }
+
+    .medical:hover {
+      filter: drop-shadow(0px 2px 6px rgb(4, 255, 255));
+      transition: 0.3s ease-in-out;
+      /* برای افکت نرم‌تر */
+
+
     }
 
     .scrollindicator {
@@ -6961,195 +6976,269 @@ backdrop-filter: blur(10px);">
             انواع مهار آنزیمی:</span><br>
           ۱ - مهار برگشت‌ پذیر: آنزیم پس از جدا شدن مهارکننده، فعالیت خود را بازیابی می‌کند<br>
           ۲ - مهار برگشت‌ ناپذیر: مهارکننده به‌طور دائمی به آنزیم متصل شده و آن را غیرفعال می‌کند<br>
+        </div>
+        <div class="h2parrent" id="reversibleinhibition">
+          <div class="h2" style="z-index: 400;color:#00fff6;"> مهار برگشت پذیر
+            <a style="width: 100%;position: absolute;height:100% ;" href="#reversibleinhibition"></a>
           </div>
-          <div class="h2parrent" id="reversibleinhibition">
-            <div class="h2" style="z-index: 400;color:#00fff6;">انواع مهار برگشت پذیر 
-              <a style="width: 100%;position: absolute;height:100% ;" href="#reversibleinhibition"></a></div>
-          
-            <div class="content" id="content">
-              <span style="display:inline-block;color:#00fff6">
+
+          <div class="content" id="content">
+            <span style="display:inline-block;color:#00fff6">
 
               ۱ - مهار رقابتی : </span>
-              مهار کننده فقط به جایگاه فعال آنزیم آزاد(E)  متصل می شود <br>
-              <span style="display:inline-block;color:#00fff6">
+            مهار کننده فقط به جایگاه فعال آنزیم آزاد(E) متصل می شود <br>
+            <span style="display:inline-block;color:#00fff6">
               ۲ - مهار نارقابتی :</span>
-              مهار کننده فقط به کمپلکس آنزیم-سوبسترا (ES) در جایگاهی غیر از جایگاه فعال متصل می شود <br>
-              <span style="display:inline-block;color:#00fff6">
+            مهار کننده فقط به کمپلکس آنزیم-سوبسترا (ES) در جایگاهی غیر از جایگاه فعال متصل می شود <br>
+            <span style="display:inline-block;color:#00fff6">
               ۳ - مهار مخلوط و غیر رقابتی(نوع خاصی مهار مخلوط):</span>
-               مهار کننده هم به آنزیم آزاد و هم به کمپلکس آنزیم-سوبسترا و در جایگاهی غیر از جایگاه فعال متصل می شود
-              <br><br><br><br>
-          <p style="color:#00fff6;border-bottom:1px solid #00fff6;text-align: center;"> مهار رقابتی (Competitive Inhibition)</p><br>
-          <span style="display:inline-block;color:#00fff6">●</span>
-          مهار کننده رقابتی فقط به آنزیم آزاد(E) متصل می شود.یعنی 
-          مهارکننده (I) با سوبسترا (S) برای اتصال به جایگاه فعال (E) رقابت می‌کند.بسیاری از مهار کننده های رقابتی از
-          نظر ساختار مشابه سوبسترای عادی هستند.حتی اتصال بسیار گذرای این نوع مهار کننده بازده آنزیم را کاهش می دهد.
-          این نوع مهار با افزایش غلظت سوبسترا قابل غلبه است<br><br>
-          <span style="display:inline-block;color:#00fff6">● اثر بر K<sub>m</sub> و  V<sub>max</sub>:</span>
-          مهار رقابتی، مقدار K<sub>m</sub> ظاهری(αK<sub>m</sub>) را افزایش می دهد اما V<sub>max</sub> بدون تغییر
-          می‌ماند<br>
-          <span style="display:inline-block;color:#00fff6">●
-            تغییرات معادله میکائیلیس-منتن با حضور مهار کننده رقابتی:</span><br>
+            مهار کننده هم به آنزیم آزاد و هم به کمپلکس آنزیم-سوبسترا و در جایگاهی غیر از جایگاه فعال متصل می شود
+            <br><br><br><br>
+            <p style="color:#00fff6;border-bottom:1px solid #00fff6;text-align: center;"> مهار رقابتی (Competitive
+              Inhibition)</p><br>
+            <span style="display:inline-block;color:#00fff6">●</span>
+            مهار کننده رقابتی فقط به آنزیم آزاد(E) متصل می شود.یعنی
+            مهارکننده (I) با سوبسترا (S) برای اتصال به جایگاه فعال (E) رقابت می‌کند.بسیاری از مهار کننده های رقابتی از
+            نظر ساختار مشابه سوبسترای عادی هستند.حتی اتصال بسیار گذرای این نوع مهار کننده بازده آنزیم را کاهش می دهد.
+            این نوع مهار با افزایش غلظت سوبسترا قابل غلبه است<br><br>
+            <span style="display:inline-block;color:#00fff6">●
+              کدگذاری:</span>فرض کن آنزیم ها پسرن و سوبستراها دختر و میخوان با هم ازدواج کنن و مهارکننده پلیسه. چون مهار
+            کننده رقابتی
+            فقط پسرای مجرد(E) رو دستگیر میکنه مقدار اکثر زادولد(V<sub>max</sub>) کم نمیشه چون متاهلا(ES) زادولد میکنن پس
+            بین
+            پلیس و دخترا رقابت هست برای گرفتن پسرا. اما
+            برای اینکه به همون مقدار زادولد برسیم باید دخترا دور مجردا رو بگیرن تا دستگیر نشن تا با اینا ازدواج کنن پس
+            تعداد دخترهای لازم برای نصف حداکثرزادولد بیشتر میشه(افزایش K<sub>m</sub>)<br>
+            <span style="display:inline-block;color:#00fff6">● اثر بر K<sub>m</sub> و V<sub>max</sub>:</span>
+            مهار رقابتی، مقدار K<sub>m</sub> ظاهری(αK<sub>m</sub>) را افزایش می دهد اما V<sub>max</sub> بدون تغییر
+            می‌ماند<br>
+            <span style="display:inline-block;color:#00fff6">●
+              تغییرات معادله میکائیلیس-منتن با حضور مهار کننده رقابتی:</span><br>
 
-          <img src="competitivemichaelis.png" alt="Image to magnify" class="main-image" id="mainImage">
-          <span style="display:inline-block;color:#00fff6">●کلید تشخیص مهار رقابتی از نمودار لاینویور-برگ :</span> تقاطع
-          خطوط بر روی محور y <br>
-          <span style="display:inline-block;color:#00fff6">●
-            نکته مهم:</span> چون مهار کننده رقابتی در اتصال به آنزیم با سوبسترا رقابت می کند پس مقدار سوبسترای لازم برای
-          رسیدن آنزیم به نصف سرعت حداکثر یعنی
-          K<sub>m</sub> افزایش می یابد و چون مهار کننده قدرت کاتالیز آنزیم را تغییر نمی دهد یعنی پس V<sub>max</sub> ثابت
-          می
-          ماند<br>
+            <img src="competitivemichaelis.png" alt="Image to magnify" class="main-image" id="mainImage">
+            <span style="display:inline-block;color:#00fff6">●کلید تشخیص مهار رقابتی از نمودار لاینویور-برگ :</span>
+            تقاطع
+            خطوط بر روی محور y <br>
+            <span style="display:inline-block;color:#00fff6">●
+              نکته مهم:</span> چون مهار کننده رقابتی در اتصال به آنزیم با سوبسترا رقابت می کند پس مقدار سوبسترای لازم
+            برای
+            رسیدن آنزیم به نصف سرعت حداکثر یعنی
+            K<sub>m</sub> افزایش می یابد و چون مهار کننده قدرت کاتالیز آنزیم را تغییر نمی دهد یعنی پس V<sub>max</sub>
+            ثابت
+            می
+            ماند<br>
 
-          <span style="display:inline-block;color:#00fff6">● K<sub>m</sub> ظاهری(αK<sub>m</sub>):</span> K<sub>m</sub>
-          اندازه گیری شده در حضور مهار کننده <br>
+            <span style="display:inline-block;color:#00fff6">● K<sub>m</sub> ظاهری(αK<sub>m</sub>):</span> K<sub>m</sub>
+            اندازه گیری شده در حضور مهار کننده <br>
 
-          <img src="competitive.png" alt="Image to magnify" class="main-image" id="mainImage">
+            <img src="competitive.png" alt="Image to magnify" class="main-image" id="mainImage">
 
-          <div class="medicalbox"
-            style="position: relative;width: 95%;border: 1px solid #00fff6; border-radius: 5px;padding:10px;text-align: justify;margin: auto;">
-            <img src="medical.png" style="width: 150px;float: right; ">
-            <span style="display:inline-block;color:#00fff6;border-bottom: 2px solid;">
+            <div class="medicalbox"
+              style="position: relative;width: 95%;border: 1px solid #00fff6; border-radius: 5px;padding:10px;text-align: justify;margin: auto;">
+              <img class="medical" src="medical.png" style="width: 150px;float: right;
+ ">
+              <span style="display:inline-block;color:#00fff6;border-bottom: 2px solid;">
 
-              کادر بالینی:درمان مسمومیت با متانول </span><br>
-            متانول موجود در ضدیخ و برخی حلال ها برای انسان سمی است.
-            زیرا آنزیم الکل دهیدروژناز، متانول را به فرمالدهید (ماده‌ای سمی) تبدیل می‌کند که باعث آسیب به بافت های مختلف
-            می شود و کوری یکی از عوارض مسمومیت با متانول است.
+                کادر بالینی:درمان مسمومیت با متانول </span><br>
+              متانول موجود در ضدیخ و برخی حلال ها برای انسان سمی است.
+              زیرا آنزیم الکل دهیدروژناز، متانول را به فرمالدهید (ماده‌ای سمی) تبدیل می‌کند که باعث آسیب به بافت های
+              مختلف
+              می شود و کوری یکی از عوارض مسمومیت با متانول است.
 
-            اتانول به‌عنوان یک مهارکننده رقابتی با متانول رقابت می‌کند و سرعت تولید فرمالدهید را کاهش می‌دهد.البته خود
-            اتانول نیز سوبسترای این آنزیم است و به استالدهید تبدیل می شود و غلظت آن کاهش می یابد.
-            تزریق آهسته داخل وریدی اتانول به بیماران باعث می‌شود که کلیه‌ها متانول را از بدن دفع کنند.
+              اتانول به‌عنوان یک مهارکننده رقابتی با متانول رقابت می‌کند و سرعت تولید فرمالدهید را کاهش می‌دهد.البته خود
+              اتانول نیز سوبسترای این آنزیم است و به استالدهید تبدیل می شود و غلظت آن کاهش می یابد.
+              تزریق آهسته داخل وریدی اتانول به بیماران باعث می‌شود که کلیه‌ها متانول را از بدن دفع کنند.
 
-          </div>
-          <p style="color:#00fff6;border-bottom:1px solid #00fff6;text-align: center;">  مهار نارقابتی (Uncompetitive Inhibition)</p><br>
+            </div>
+            <p style="color:#00fff6;border-bottom:1px solid #00fff6;text-align: center;"> مهار نارقابتی (Uncompetitive
+              Inhibition)</p><br>
 
-          <span style="display:inline-block;color:#00fff6">●
+            <span style="display:inline-block;color:#00fff6">●</span>
 
             مهار کننده نارقابتی به جایگاهی غیر از جایگاه فعال
 
-          اما فقط به کمپلکس آنزیم-سوبسترا (ES) متصل می‌شود، نه به آنزیم آزاد.هم K<sub>m</sub>> و هم V,<sub>max</sub>
-          کاهش می‌یابند.
-          افزایش غلظت سوبسترا نمی‌تواند بر این نوع مهار غلبه کند<br>
-          <span style="display:inline-block;color:#00fff6">●
-            تغییرات معادله میکائیلیس-منتن در حضور مهار کننده نارقابتی:</span><br>
-          <img src="Uncompetitivemichaelis.png" alt="Image to magnify" class="main-image" id="mainImage">
-          <span style="display:inline-block;color:#00fff6">●کلید تشخیص مهار نارقابتی از نمودار لاینویور-برگ :</span>
-          خطوط موازی<br>
-          <span style="display:inline-block;color:#00fff6">●
-            نکته مهم:</span> چون مهار کننده غیر رقابتی فقط به کمپلکس آنزیم-سوبسترا (ES) متصل می شود پس فقط کمپلکس
-          آنزیم-سوبسترا غیر فعال می شود نه آنزیم آزاد پس همان آنزیم هایی که غیرفعال شدن آنها باعث کاهش پس مقدار سوبسترای
-          لازم برای رسیدن آنزیم به نصف سرعت حداکثر یعنی
-          K<sub>m</sub> کاهش می یابد و چون مهار کننده قدرت کاتالیز آنزیم را تغییر می دهد پس V<sub>max</sub> کاهش می
-          یابد.نکته مهم این است که چون K<sub>m</sub> و V<sub>max</sub> به یک نسبت کاهش می یابند و شیب نمودار لاینویور
-          برگ حاصل تقسیم این دو است شیب خطوط هنگام افزایش مهارکننده یکسان است و خطوط موازی هستند
-          <img src="Uncompetitive.png" alt="Image to magnify" class="main-image" id="mainImage">
-
-
-          <span style="display:inline-block;color:#00fff6">●
-
-            مهار غیر رقابتی (Noncompetitive Inhibition) (نوع خاصی از مهار مخلوط):</span>در این مورد نیز مهار کننده
-          به
-          جایگاهی غیر از جایگاه فعال متصل می شود اما هم در حضور سوبسترا و هم در غیاب سوبسترا پس هر دو کمپلکس
-          آنزیم-مهار کننده(EI) و آنزیم-مهارکننده-سوبسترا(EIS) شکل می گیرد . وقتی مهار کننده همزمان با سوبسترا به آنزیم
-          متصل
-          است قدرت کاتالیزی آنزیم کاهش می یابد. پس K<sub>m</sub> ثابت می ماند اما V<sub>max</sub> کاهش می یابد<br>
-
-          <span style="display:inline-block;color:#00fff6">●
-            تغییرات معادله میکائیلیس-منتن در حضور مهار کننده غیر رقابتی:</span>
-          <img src="competitivemichaelis.png" alt="Image to magnify" class="main-image" id="mainImage">
-          <span style="display:inline-block;color:#00fff6">●کلید تشخیص مهار غیر رقابتی از نمودار لاینویور-برگ :</span>
-          تقاطع
-          خطوط بر روی محور x <br>
-
-          <img src="Noncompetitive.png" alt="Image to magnify" class="main-image" id="mainImage">
-
-
-          <span style="display:inline-block;color:#00fff6">●
-
-            مهار مخلوط (Mixed Inhibition):</span>
-          مهارکننده می‌تواند هم به آنزیم آزاد (E) و هم به کمپلکس آنزیم-سوبسترا (ES) متصل شود.
-          هم Km و هم Vmax تغییر می‌کنند، اما مقدار Km ممکن است افزایش یا کاهش یابد.
-          در شرایط خاص که مهارکننده اثر برابری بر E و ES دارد، این مهار به عنوان مهار غیررقابتی (Noncompetitive
-          Inhibition) شناخته می‌شود<br>
-          <span style="display:inline-block;color:#00fff6">●
-            تغییرات معادله میکائیلیس-منتن در حضور مهار کننده نارقابتی:</span>
-          <img src="competitivemichaelis.png" alt="Image to magnify" class="main-image" id="mainImage">
-          <span style="display:inline-block;color:#00fff6">●کلید تشخیص مهار غیر رقابتی از نمودار لاینویور-برگ :</span>خطوط متقاطع  در بالا(افزایشK<sub>m</sub> ) یا پایین(کاهش K<sub>m</sub>) محور x<br>
-
-          <img src="Mixed.png" alt="Image to magnify" class="main-image" id="mainImage">
-          <span style="display:inline-block;color:#00fff6">● نکته مهم:</span>مهار کننده های غیر رقابتی، نارقابتی و مخلوط
-          می توانند برای آنزیم تک سوبسترایی تعریف شوند اما عملا فقط در آنزیم های دو یا چند سوبسترایی دیده می شوند<br>
-
-
-          <span style="display:inline-block;color:#00fff6">●
-
-            روش‌های بررسی مهار آنزیمی:</span>
-          برای تحلیل اثر مهارکننده‌ها، از رسم نمودارهای سینتیکی استفاده می‌شود:<br>
-
-
-          نمودار Lineweaver-Burk برای شناسایی نوع مهار آنزیمی استفاده می شود.
-          پارامترهای Km و Vmax از طریق این تحلیل‌ها به دست می‌آیند.
-          </div>
-
-          <p style="color:#00fff6;border-bottom:1px solid #00fff6;text-align: center;"> مهار برگشت ‌ناپذیر</p><br>
-          <span style="display:inline-block;color:#00fff6">●</span>
-
-          مهارکننده‌های غیرقابل برگشت به‌صورت کووالانسی با آنزیم پیوند می‌خورند یا یک گروه عملکردی ضروری را تخریب
-          می‌کنند و آنزیم را غیرفعال می‌سازند. همچنین برخی از مهارکننده‌ها ممکن است یک پیوند غیرکووالانسی بسیار پایدار
-          با آنزیم تشکیل دهند که باعث مهار دائمی آن می‌شود<br>
-          <span style="display:inline-block;color:#00fff6">●
-
-            استفاده در مطالعات آنزیمی:</span>
-          از این مهارکننده‌ها برای بررسی مکانیسم‌های واکنش آنزیمی استفاده می‌شود. با تحلیل باقی‌مانده‌های آمینواسیدی که
-          پس از مهار کووالانسی درگیر می‌شوند، می‌توان مکان‌های فعال آنزیم را شناسایی کرد<br>
-          مثال: دی‌ایزوپروپیل‌فلوروفُسفات (DIFP) روی آنزیم کیموتریپسین اثر گذاشته و به سرین 195 (Ser195)متصل می شود .
-          این آزمایش
-          نشان داده که Ser195 بخش کلیدی جایگاه فعال این آنزیم است<br>
-          <span style="display:inline-block;color:#00fff6">●
-
-            غیر فعال کننده های خودکشی(Suicide Inactivators) یا غیرفعال کننده های مبتنی بر مکانیسم :</span>
-          این ترکیبات بی‌اثر هستند تا زمانی که به جایگاه فعال آنزیم متصل شوند. پس از شروع واکنش طبیعی، این مهارکننده‌ها
-          به جای محصول عادی به یک ترکیب بسیار واکنش‌ پذیر تبدیل شده و به‌طور غیرقابل برگشت به آنزیم متصل می‌شوند و آن را
-          غیر فعال می کنند .چون خود آنزیم باعث فعال شدن مهار کننده میشه بهشون میگن غیر فعال کننده های خودکشی<br>
-          <span style="display:inline-block;color:#00fff6">●
-            کاربرد در داروسازی:</span>
-          این مهارکننده‌ها در روش "طراحی داروی منطقی" مورد استفاده قرار می‌گیرند. روشی که از اطللاعات سوبسترا و مکانیسم
-          خود آنزیم برای طراحی دارو استفاده می کند. یک مهارکننده خودکشی اختصاصی یک آنزیم خاص
-          بوده و تا زمانی که در جایگاه فعال آن آنزیم قرار نگیرد، غیرفعال می‌ماند. این ویژگی باعث کاهش عوارض جانبی
-          می‌شود<br>
-          <div
-            style="position: relative;width: 95%;border: 1px solid #00fff6; border-radius: 5px;padding:10px;text-align: justify;margin: auto;">
-            <img src="medical.png" style="width: 150px;float: right; ">
-            <span style="display:inline-block;color:#00fff6;border-bottom: 2px solid;">
-
-              کادر بالینی: درمان بیماری خواب آفریقایی</span>
+            اما فقط به کمپلکس آنزیم-سوبسترا (ES) متصل می‌شود، نه به آنزیم آزاد<br>
 
             <br>
-            این بیماری توسط تک‌ یاخته‌های تریپانوزوما ایجاد می‌شود. سیستم ایمنی نمی‌تواند آن را به‌طور مؤثر شناسایی کند،
-            زیرا این انگل پوشش پروتئینی خود را تغییر می‌دهد و باعث عفونت مزمن و مرگ بیمار می‌شود<br>
-            <img src="Africansleeping.png" alt="Image to magnify" class="main-image" id="mainImage">
+            <span style="display:inline-block;color:#00fff6">●</span>
+
+            هم K<sub>m</sub>و هم V<sub>max</sub> به یک نسبت
+            کاهش می‌یابند و به همین دلیل شیب خطوط یکسان است و خطوط موازی هستند.افزایش غلظت سوبسترا نمی‌تواند بر این نوع
+            مهار غلبه کند(چون اتفاقا دنبال بهانه است آنزیم و
+            سوبسترا رو با هم ببینه)<br>
+            <span style="display:inline-block;color:#00fff6">●
+              تغییرات معادله میکائیلیس-منتن در حضور مهار کننده نارقابتی:</span><br>
+            <img src="Uncompetitivemichaelis.png" alt="Image to magnify" class="main-image" id="mainImage">
+            <span style="display:inline-block;color:#00fff6">●کلید تشخیص مهار نارقابتی از نمودار لاینویور-برگ :</span>
+            خطوط موازی<br>
+            <span style="display:inline-block;color:#00fff6">●
+              کدگذاری:</span> مهار کننده نا رقابتی
+            نامرده. کمین کرده هر آنزیمی که به عشقش رسید (به سوبسترا وصل شد) میره جفتشونو با هم
+            (کمپلکس ES)دستگیر می کنه.با آنزیم آزاد کاری نداره
+            پس زاد ولد کم میشه(کاهش V<sub>max</sub>) پس تعداد دخترهای لازم برای
+            رسیدن به نصف حداکثر زادولد هم کمتر میشه(کاهش K<sub>m</sub>)
+            و چون فقط زوج هارو دستگیر میکنه حداکثر زاد ولد و تعداد دختر لازم برای این مقدار زادولد یعنی K<sub>m</sub> و
+            V<sub>max</sub> هر دو به یک نسبت کاهش پیدا میکنن
+            (چون همون دخترایی که قرار بود بچه بیارن دستگیر شدن)
+
+            <img src="Uncompetitive.png" alt="Image to magnify" class="main-image" id="mainImage">
+
+
+            <p style="color:#00fff6;border-bottom:1px solid #00fff6;text-align: center;"> مهار مخلوط (Mixed
+              Inhibition)</p><br>
+            <span style="display:inline-block;color:#00fff6">●</span>
+            مهارکننده می‌تواند هم به آنزیم آزاد (E) و هم به کمپلکس آنزیم-سوبسترا (ES) متصل شود<br>
+            <span style="display:inline-block;color:#00fff6">● اثر بر V<sub>max</sub> و K<sub>m</sub>:</span>
+            V<sub>max</sub> کاهش می یابد ، اما اگر مهار کننده به آنزیم آزاد(E)بیشتر متصل شود K<sub>m</sub> افزایش پیدا
+            می
+            کند و اگر به کمپلکس آنزیم-سوبسترا(ES) بیشتر متصل شود K<sub>m</sub> کاهش می یابد<br>
+
 
             <span style="display:inline-block;color:#00fff6">●
-              نقش غیرفعال کننده های خودکشی در درمان:</span>
-            یکی از نقاط ضعف متابولیسم تریپانوزوم، مسیر بیوسنتز پلی‌آمین‌ها است. پلی‌آمین‌هایی مانند اسپرمین و اسپرمیدین
-            برای رشد سریع سلول‌ها حیاتی هستند. اولین مرحله سنتز آن‌ها توسط آنزیم اورنیتین دکربوکسیلاز (Ornithine
-            Decarboxylase) انجام می‌شود که به پیریدوکسال فسفات (PLP) نیاز دارد<br>
+              تغییرات معادله میکائیلیس-منتن در حضور مهار کننده نارقابتی:</span>
+            <img src="competitivemichaelis.png" alt="Image to magnify" class="main-image" id="mainImage">
+            <span style="display:inline-block;color:#00fff6">●کلید تشخیص مهار غیر رقابتی از نمودار لاینویور-برگ
+              :</span>خطوط متقاطع در بالا(افزایشK<sub>m</sub> ) یا پایین(کاهش K<sub>m</sub>) محور x<br>
+            <span style="display:inline-block;color:#00fff6">●
+              کدگذاری:</span>مهار کننده مخلوط هم مجردا(E) رو دستگیر میکنه هم متاهل هارو(ES). حالا اگر مجردا رو بیشتر
+            دستگیر کنه چون متاهل ها راحت تر دارن زاد ولد میکنن پس تعداد دخترای لازم برای اون مقدار زاد
+            ولد(K<sub>m</sub>) بیشتر میشه و اگر متاهل هارو بیشتر دستگیر کنه چون کاهش زادولد بیشتره پس تعداد دخترای لازم
+            برای زادولد (K<sub>m</sub>) کمتر میشه و البته در هر دو صورت چون تعدادی آدم متاهل(ES) دستگیر میشن پس
+            زادولد(V<sub>max</sub>) کم میشه .ی حالت خاص هم اینکه تعداد مجرد و متاهلای دستگیر شده برابر باشه چون همون
+            تعداد دختری که برای زادولد لازم بود کم شده همون تعداد برای اینکه بخواد دور مجردا رو بگیره بیشتر شده پس تعداد
+            دختر مورد نیاز برای نصف حداکثر زادولد ثابت می مونه
+            <img src="Mixed.png" alt="Image to magnify" class="main-image" id="mainImage">
+
+            <span style="display:inline-block;color:#00fff6">●
+              مهار غیر رقابتی (Noncompetitive Inhibition) (نوع خاصی از مهار مخلوط):</span>
+            در شرایط خاص که مهارکننده مخلوط اتصال برابری به E و ES دارد، این مهار به عنوان مهار غیررقابتی شناخته
+            می‌شود که در این نوع مهار V<sub>max</sub> کاهش می یابد اما K<sub>m</sub> ثابت می ماند<br>
+
+            <span style="display:inline-block;color:#00fff6">●
+              تغییرات معادله میکائیلیس-منتن در حضور مهار کننده غیر رقابتی:</span>
+            <img src="competitivemichaelis.png" alt="Image to magnify" class="main-image" id="mainImage">
+            <span style="display:inline-block;color:#00fff6">●کلید تشخیص مهار غیر رقابتی از نمودار لاینویور-برگ :</span>
+            تقاطع
+            خطوط بر روی محور x <br>
+
+            <img src="Noncompetitive.png" alt="Image to magnify" class="main-image" id="mainImage"><br>
+
+            <span style="display:inline-block;color:#00fff6">● نکته مهم:</span>مهار کننده های غیر رقابتی، نارقابتی و
+            مخلوط
+            می توانند برای آنزیم تک سوبسترایی تعریف شوند اما عملا فقط در آنزیم های دو یا چند سوبسترایی دیده می شوند<br>
+
+
             <span style="display:inline-block;color:#00fff6">●
 
-              استفاده از داروی DFMO (دی‌فلوئورومتیل‌اورنیتین):</span>
-            DFMO یک مهارکننده خودکشی است که فقط در حضور اورنیتین دکربوکسیلاز فعال می‌شود. این ترکیب باعث مهار دائمی
-            آنزیم
-            در تریپانوزوم شده و از تکثیر انگل جلوگیری می‌کند، درحالی‌که تأثیر کمی بر سلول‌های انسانی دارد، زیرا آن‌ها
-            می‌توانند آنزیم جدید تولید کنند
+              روش‌های بررسی مهار آنزیمی:</span>
+            برای تحلیل اثر مهارکننده‌ها، از رسم نمودارهای سینتیکی استفاده می‌شود:<br>
+
+
+            نمودار Lineweaver-Burk برای شناسایی نوع مهار آنزیمی استفاده می شود.
+            پارامترهای Km و Vmax از طریق این تحلیل‌ها به دست می‌آیند<br>
+            <p style="color:#00fff6;border-bottom:1px solid #00fff6;text-align: center;"> انواع مهار برگشت پذیر در یک
+              نگاه</p><br><br>
+            <div class="content" id="content">
+
+              <div class="image-container" id="imagecontainer">
+                <img src="inhibitors.png" alt="Image to magnify" class="main-image" id="mainImage">
+              </div>
+              <div class="magnifier-view" id="magnifierView">
+                <img src="inhibitors.png" alt="Magnified Image" class="magnified-image" id="magnifiedImage">
+              </div>
+              <img class="zoomin" id="zoomin" src="zoomin.png">
+              <img class="zoomout" id="zoomout" onclick="zoomo()" src="zoomout.png">
+
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="h2parrent" id="reversibleinhibition">
+          <div class="h2" style="z-index: 400;color:#00fff6;"> مهار برگشت ناپذیر
+            <a style="width: 100%;position: absolute;height:100% ;" href="#reversibleinhibition"></a>
           </div>
 
+          <div class="content" id="content">
+            <span style="display:inline-block;color:#00fff6">●</span>
+
+            مهارکننده‌های غیرقابل برگشت به‌صورت کووالانسی با آنزیم پیوند می‌خورند یا یک گروه عملکردی ضروری را تخریب
+            می‌کنند و آنزیم را غیرفعال می‌سازند. همچنین برخی از مهارکننده‌ها ممکن است یک پیوند غیرکووالانسی بسیار پایدار
+            با آنزیم تشکیل دهند که باعث مهار دائمی آن می‌شود<br>
+            <span style="display:inline-block;color:#00fff6">●
+
+              استفاده در مطالعات آنزیمی:</span>
+            از این مهارکننده‌ها برای بررسی مکانیسم‌های واکنش آنزیمی استفاده می‌شود. با تحلیل ریشه ی آمینواسیدی
+            که
+            پس از مهار کووالانسی درگیر می‌شوند، می‌توان مکان‌های فعال آنزیم را شناسایی کرد<br>
+            مثال: دی‌ایزوپروپیل‌فلوروفُسفات (DIFP) روی آنزیم کیموتریپسین اثر گذاشته و به سرین 195 (Ser195)متصل می شود .
+            این آزمایش
+            نشان داده که Ser195 بخش کلیدی جایگاه فعال این آنزیم است<br>
+            <span style="display:inline-block;color:#00fff6">●
+
+              غیر فعال کننده های خودکشی(Suicide Inactivators) یا غیرفعال کننده های مبتنی بر مکانیسم :</span>
+            این ترکیبات بی‌اثر هستند تا زمانی که به جایگاه فعال آنزیم متصل شوند. پس از شروع واکنش طبیعی، این
+            مهارکننده‌ها
+            به جای محصول عادی به یک ترکیب بسیار واکنش‌ پذیر تبدیل شده و به‌طور غیرقابل برگشت به آنزیم متصل می‌شوند و آن
+            را
+            غیر فعال می کنند .چون خود آنزیم باعث فعال شدن مهار کننده میشه بهشون میگن غیر فعال کننده های خودکشی<br>
+            <span style="display:inline-block;color:#00fff6">●
+              کاربرد در داروسازی:</span>
+            این مهارکننده‌ها در روش "طراحی داروی منطقی" مورد استفاده قرار می‌گیرند. در این روش از اطللاعات سوبسترا و
+            مکانیسم
+            خود آنزیم برای طراحی دارو استفاده می شود. یک مهارکننده خودکشی برای یک آنزیم اختصاصی
+            بوده و تا زمانی که در جایگاه فعال آن آنزیم قرار نگیرد، غیرفعال می‌ماند. این ویژگی باعث کاهش عوارض جانبی
+            می‌شود<br>
+            <div
+              style="position: relative;width: 95%;border: 1px solid #00fff6; border-radius: 5px;padding:10px;text-align: justify;margin: auto;">
+              <img class="medical" src="medical.png" style="width: 150px;float: right; ">
+              <span style="display:inline-block;color:#00fff6;border-bottom: 2px solid;">
+
+                کادر بالینی: درمان بیماری خواب آفریقایی</span>
+
+              <br>
+              این بیماری توسط تک‌ یاخته‌های تریپانوزوما ایجاد می‌شود. سیستم ایمنی نمی‌تواند آن را به‌طور مؤثر شناسایی
+              کند،
+              زیرا این انگل پوشش پروتئینی خود را تغییر می‌دهد و باعث عفونت مزمن و مرگ بیمار می‌شود<br>
+              <img src="Africansleeping.png" alt="Image to magnify" class="main-image" id="mainImage">
+
+              <span style="display:inline-block;color:#00fff6">●
+                نقش غیرفعال کننده های خودکشی در درمان:</span>
+              یکی از نقاط ضعف متابولیسم تریپانوزوم، مسیر بیوسنتز پلی‌آمین‌ها است. پلی‌آمین‌هایی مانند اسپرمین و
+              اسپرمیدین
+              برای رشد سریع سلول‌ها حیاتی هستند. اولین مرحله سنتز آن‌ها توسط آنزیم اورنیتین دکربوکسیلاز (Ornithine
+              Decarboxylase) انجام می‌شود که به پیریدوکسال فسفات (PLP) نیاز دارد<br>
+              <span style="display:inline-block;color:#00fff6">●
+
+                استفاده از داروی DFMO (دی‌فلوئورومتیل‌اورنیتین):</span>
+              DFMO یک مهارکننده خودکشی است که فقط در حضور اورنیتین دکربوکسیلاز فعال می‌شود. این ترکیب باعث مهار دائمی
+              آنزیم
+              در تریپانوزوم شده و از تکثیر انگل جلوگیری می‌کند، درحالی‌که تأثیر کمی بر سلول‌های انسانی دارد، زیرا آن‌ها
+              می‌توانند آنزیم جدید تولید کنند
+            </div>
+
+            <span style="display:inline-block;color:#00fff6">● روش طراحی مهارکننده ی برگشت ناپذیر قوی:</span>آنزیم‌ها به
+            حالت گذار واکنش‌ ها اتصال محکم تری دارند، پس طراحی مولکول‌هایی شبیه به حالت گذار که به آنها "آنالوگ های حالت
+            گذار" گفته می شود منجر به مهار مؤثرتر می‌شود .
+            .این ایده در طراحی داروها، مانند مهارگر پروتئاز HIV، کاربرد زیادی دارد.<br>
+            <span style="display:inline-block;color:#00fff6">● آنالوگ های حالت گذار:</span>حالت گذار نسبت به سوبسترا و
+            محصول ناپایدار است، اما در برخی موارد می‌توان مولکول‌ های پایداری را طراحی کرد که شبیه به حالت گذار
+            باشند.این آنالوگ ها می‌توانند بسیار  محکم تر از سوبسترای طبیعی به آنزیم متصل می‌شوند(از 10<sup>2</sup> تا 10<sup>8</sup> برابر) زیرا تعداد بیشتری
+            از برهم‌کنش‌های ضعیف را تشکیل می‌دهند<br>
+            مثال :آنالوگ‌های حالت گذار طراحی‌شده برای بازدارندگی آنزیم آلدولاز (Aldolase) در مسیر گلیکولیز، تا چهار
+            مرتبه‌ی بزرگی (بیش از 10,000 برابر) محکم‌تر از سوبستراهای طبیعی به این آنزیم متصل می‌شوند<br>
+            <span style="display:inline-block;color:#00fff6">● نکته مهم:</span>اتصال محکمتر این آنالوگ ها نسبت به سوبسترا نشان می دهد که اتصال آنزیم ها به حالت گذار قوی تر از اتصال آنها به سوبستراست<br>
+            <span style="display:inline-block;color:#00fff6">●
+            اهمیت آنالوگ‌ های حالت گذار در طراحی داروهای جدید :</span>
+             به‌عنوان نمونه، داروهای ضد HIV موسوم به مهارکننده پروتئاز (Protease Inhibitors) بر اساس همین ایده طراحی شده‌اند.
 
 
 
 
 
-
+          </div>
         </div>
-      </div>
   </section>
   <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 
@@ -9602,24 +9691,24 @@ backdrop-filter: blur(10px);">
 
 
     $(document).on("scroll", function () {
-    var pixels = $(document).scrollTop();
-    var pageHeight = $(document).height() - $(window).innerHeight();
-    var progress = 100 * pixels / pageHeight;
+      var pixels = $(document).scrollTop();
+      var pageHeight = $(document).height() - $(window).innerHeight();
+      var progress = 100 * pixels / pageHeight;
 
-    $(".progressbar").css("width", progress + "%");
-    $(".frame span").css("left", progress + "%");
-    if (progress <= 100) {
+      $(".progressbar").css("width", progress + "%");
+      $(".frame span").css("left", progress + "%");
+      if (progress <= 100) {
         $(".percent").html(Math.ceil(progress) + "%");
         $(".pct").html(Math.ceil(progress) + '%');
         $("#text").html(Math.ceil(progress) + '<sup>%</sup>');
         $("#tube").css("--percent", progress);
-    }
-});
+      }
+    });
 
-// وقتی صفحه بارگذاری شد، این تابع فراخوانی می‌شود
-$(document).ready(function() {
-    $(document).trigger("scroll");
-});
+    // وقتی صفحه بارگذاری شد، این تابع فراخوانی می‌شود
+    $(document).ready(function () {
+      $(document).trigger("scroll");
+    });
 
 
 
@@ -10225,25 +10314,24 @@ $(document).ready(function() {
     }
 
     function scrollToEnd() {
-    window.scrollTo({
+      window.scrollTo({
         top: document.documentElement.scrollHeight,
-    });
+      });
 
-    const tubeElement = document.getElementById("tube");
-    const verticalpercent = document.getElementById("text");
-    const horrizontalpercent = document.getElementById("percent");
+      const tubeElement = document.getElementById("tube");
+      const horrizontalpercent = document.getElementById("text");
+      const verticalpercent = document.getElementById("percent");
 
-    if (tubeElement) {
+      if (tubeElement) {
         tubeElement.style.setProperty("--percent", "100");
-    }
+      }
 
-        if (verticalpercent) {
-            verticalpercent.innerText = "100%"; 
-        }
-        if(horrizontalpercent)
-        {
-          horrizontalpercent.innerText = "100%"; 
-        }
+      if (verticalpercent) {
+        verticalpercent.innerText = "100%";
+      }
+      if (horrizontalpercent) {
+        horrizontalpercent.innerHTML = "100<sup>%</sup>";
+      }
     }
 
 
